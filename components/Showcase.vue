@@ -1,14 +1,14 @@
 <template>
     <div class="container">
         <div class="projects">
-            <h1 class="title">Projects</h1>
-            <Project title="LTracker" />
-            <Project title="LadeiraCooking" />
-            <Project title="BingBong" />
+            <h1 class="title">{{ $t("showcase1") }}</h1>
+            <Project title="LTracker" image1="/images/ltracker-1.png" image2="/images/ltracker-2.png" />
+            <Project title="LadeiraCooking" image1="/images/cooking-1.png" image2="/images/cooking-2.png" />
+            <Project title="AswPlus" image1="/images/asw-1.png" image2="/images/asw-2.png" />
         </div>
 
         <div class="links">
-            <h1 class="title">Socials</h1>
+            <h1 class="title">{{ $t("showcase2") }}</h1>
 
             <div class="socials">
                 <a class="social" href="https://github.com/dladeira">
@@ -34,20 +34,37 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include tablet-only {
+        flex-direction: column;
+    }
 }
 
 .projects {
     width: 70%;
+
+    @include tablet-only {
+        width: 100%;
+    }
 }
 
 .links {
     width: 20%;
+
+    @include tablet-only {
+        width: 100%;
+    }
 }
 
 .title {
     margin-bottom: 80px;
 
     text-align: center;
+
+    @include tablet-only {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
 }
 
 .social {
@@ -60,6 +77,10 @@
 
     text-decoration: none;
     color: white;
+
+    @include tablet-only {
+        justify-content: center;
+    }
 }
 
 .icon {
@@ -71,3 +92,7 @@
     border-radius: 50px;
 }
 </style>
+
+<script>
+
+</script>

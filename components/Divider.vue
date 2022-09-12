@@ -15,9 +15,13 @@
 
     width: 100%;
 
-    margin: 100px 0;
-    margin-top: 0;
+    margin-bottom: 100px;
     padding-top: 100px;
+
+    @include tablet-only {
+        margin-bottom: 50px;
+        padding-top: 50px;
+    }
 }
 
 .line {

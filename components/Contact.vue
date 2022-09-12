@@ -1,44 +1,44 @@
 <template>
     <div class="container">
         <div class="text">
-            <h2 class="subtitle">Send me a message</h2>
-            <h1 class="title">I'll give you a cookie</h1>
+            <h2 class="subtitle">{{ $t("contact1") }}</h2>
+            <h1 class="title">{{ $t("contact2") }}</h1>
         </div>
 
         <nuxt-img class="image" src="/images/profile-2.jpg" height="375" width="375" quality="100" />
 
         <div class="form1">
             <div class="input name">
-                <label class="label">Name</label>
-                <input class="select" type="text" placeholder="First Last" />
+                <label class="label">{{ $t("input1") }}</label>
+                <input class="select" type="text" :placeholder=" $t('placeholder1') " />
             </div>
 
             <div class="input email">
-                <label class="label">Email</label>
+                <label class="label">{{ $t("input2") }}</label>
                 <input class="select" type="text" placeholder="user@example.com" />
             </div>
 
             <div class="input budget">
-                <label class="label">Budget</label>
+                <label class="label">{{ $t("input3") }}</label>
                 <input class="select" type="text" placeholder="$100" />
             </div>
 
             <div class="input scale">
-                <label class="label">Project Scale</label>
+                <label class="label">{{ $t("input4") }}</label>
                 <select class="select" type="text">
-                    <option value="small">Small - 5 static pages</option>
-                    <option value="medium">Medium - 7 dynamic pages</option>
-                    <option value="small">Large - Full web application</option>
+                    <option value="small">{{ $t("option1") }}</option>
+                    <option value="medium">{{ $t("option2") }}</option>
+                    <option value="small">{{ $t("option3") }}</option>
                 </select>
             </div>
         </div>
         <div class="form2">
             <div class="input message">
-                <label class="label">Message</label>
-                <textarea class="select textarea" placeholder="Describe your project in 3-5 sentences"/>
+                <label class="label">{{ $t("input5") }}</label>
+                <textarea class="select textarea" :placeholder=" $t('placeholder2') " />
             </div>
         </div>
-        <button class="send">Send</button>
+        <button class="send">{{ $t("send") }}</button>
     </div>
 </template>
 
@@ -49,6 +49,16 @@
     grid-template-columns: 60% 40%;
 
     margin-bottom: 100px;
+
+    @include tablet-only {
+        grid-template-rows: 120px 250px 200px 90px;
+    }
+}
+
+.text {
+    @include tablet-only {
+        grid-column: 1 / 3;
+    }
 }
 
 .subtitle {
@@ -57,6 +67,13 @@
     font-weight: 700;
     font-size: 2.25rem;
     color: white;
+
+    @include tablet-only {
+        margin-bottom: 10px;
+
+        font-size: 1.75rem;
+        text-align: center;
+    }
 }
 
 .title {
@@ -65,6 +82,11 @@
     font-weight: 700;
     font-size: 4rem;
     color: #008BFF;
+
+    @include tablet-only {
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 
 .image {
@@ -77,6 +99,10 @@
 
     border: 8px solid white;
     border-radius: 100%;
+
+    @include tablet-only {
+        display: none;
+    }
 }
 
 .form1 {
@@ -85,6 +111,10 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+
+    @include tablet-only {
+        grid-column: 1 / 3;
+    }
 }
 
 .input {
@@ -168,5 +198,14 @@
 
         cursor: pointer;
     }
+
+    @include tablet-only {
+        grid-column: 1 / 3;
+        width: 100%;
+    }
 }
 </style>
+
+<script>
+
+</script>

@@ -4,7 +4,7 @@
             <h1 class="title">Frontend</h1>
 
             <div class="category">
-                <h2 class="subtitle">Frameworks</h2>
+                <h2 class="subtitle">{{ $t("skill1") }}</h2>
                 <div class="items">
                     <nuxt-img class="item" src="/images/logo-react.png" height="40" width="70" />
                     <nuxt-img class="item" src="/images/logo-next.png" height="40" width="70" />
@@ -14,7 +14,7 @@
             </div>
 
             <div class="category">
-                <h2 class="subtitle">Styling</h2>
+                <h2 class="subtitle">{{ $t("skill2") }}</h2>
                 <div class="items">
                     <nuxt-img class="item background" src="/images/logo-sass.png" height="40" width="70" />
                     <nuxt-img class="item" src="/images/logo-tailwind.png" height="40" width="70" />
@@ -26,7 +26,7 @@
             <h1 class="title">Backend</h1>
 
             <div class="category">
-                <h2 class="subtitle">Engines</h2>
+                <h2 class="subtitle">{{ $t("skill3") }}</h2>
                 <div class="items">
                     <nuxt-img class="item" src="/images/logo-node.png" height="40" width="70" />
                     <nuxt-img class="item" src="/images/logo-passport.webp" height="40" width="70" />
@@ -34,7 +34,7 @@
             </div>
 
             <div class="category">
-                <h2 class="subtitle">Databases</h2>
+                <h2 class="subtitle">{{ $t("skill4") }}</h2>
                 <div class="items">
                     <nuxt-img class="item" src="/images/logo-mongodb.jpg" height="40" width="70" />
                 </div>
@@ -45,7 +45,7 @@
             <h1 class="title">Extra</h1>
 
             <div class="category">
-                <h2 class="subtitle">Tools</h2>
+                <h2 class="subtitle">{{ $t("skill5") }}</h2>
                 <div class="items">
                     <nuxt-img class="item" src="/images/logo-github.png" height="40" width="70" />
                     <nuxt-img class="item" src="/images/logo-figma.png" height="40" width="70" />
@@ -54,7 +54,7 @@
             </div>
 
             <div class="category">
-                <h2 class="subtitle">Languages</h2>
+                <h2 class="subtitle">{{ $t("skill6") }}</h2>
                 <div class="items">
                     <nuxt-img class="item" src="/images/flag-us.png" height="40" width="70" />
                     <nuxt-img class="item" src="/images/flag-pl.png" height="40" width="70" />
@@ -73,16 +73,30 @@
     align-items: center;
 
     width: 100%;
+
+    @include tablet-only {
+        flex-direction: column;
+    }
 }
 
 .column {
     width: 30%;
+
+    @include tablet-only {
+        width: 100%;
+
+        margin-bottom: 50px;
+    }
 }
 
 .title {
     margin-bottom: 70px;
 
     text-align: center;
+
+    @include tablet-only {
+        margin-bottom: 30px;
+    }
 }
 
 .subtitle {
@@ -99,6 +113,10 @@
     align-items: center;
 
     margin-bottom: 50px;
+
+    @include tablet-only {
+        margin-bottom: 25px;
+    }
 }
 
 .item {
@@ -114,3 +132,6 @@
     background-color: $primary;
 }
 </style>
+
+<script>
+</script>

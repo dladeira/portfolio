@@ -8,6 +8,25 @@
     "navbar1": "Habilidades",
     "navbar2": "Portfólio",
     "navbar3": "Contato",
-    "heading1": "Habilidades"
-
+    "skill1": "Estruturas",
+    "skill2": "Estilos",
+    "skill3": "Motores",
+    "skill4": "Bases de dados",
+    "skill5": "Ferramentas",
+    "skill6": "Línguas",
+    "showcase1": "Projetos",
+    "showcase2": "Sociais",
+    "contact1": "Manda-me uma mensagem",
+    "contact2": "Dou te uma bolacha",
+    "input1": "Nome",
+    "input2": "Email",
+    "input3": "Orçamento",
+    "input4": "Escala do Projeto",
+    "input5": "Mensagem",
+    "option1": "Pequeno - 5 páginas estáticas",
+    "option2": "Médio - 7 páginas dinâmicas",
+    "option3": "Grande - Aplicaçâo web completa",
+    "placeholder1": "Nome Sobrenome",
+    "placeholder2": "Descreva o seu projeto em 3-5 frases",
+    "send": "Envia"
 }

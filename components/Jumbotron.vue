@@ -9,7 +9,7 @@
                 <a class="info" @click="scrollTo('skills')">{{ $t("button2") }}</a>
             </div>
         </div>
-        <nuxt-img class="profile" src="/images/profile-1.jpg" height="400" width="400" quality="100" />
+        <nuxt-img class="profile" src="/images/profile-1.jpg" sizes="1100:300 xl:400" quality="100" />
     </div>
 </template>
 
@@ -20,8 +20,17 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 150px;
-    margin-bottom: 500px;
+    height: 100vh;
+
+    padding-top: 50px;
+    padding-bottom: 200px;
+
+    @include tablet-only {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding-bottom: 0;
+    }
 }
 
 .text {
@@ -36,6 +45,10 @@
     font-weight: 700;
     font-size: 2.25rem;
     color: $secondary;
+
+    @include tablet-only {
+        font-size: 2rem;
+    }
 }
 
 .title {
@@ -46,6 +59,10 @@
     font-weight: 700;
     font-size: 4rem;
     color: $primary;
+
+    @include tablet-only {
+        font-size: 2.25rem;
+    }
 }
 
 .subtitle {
@@ -56,6 +73,10 @@
     font-weight: 400;
     font-size: 2.25rem;
     color: $tertiary;
+
+    @include tablet-only {
+        font-size: 1.5rem;
+    }
 }
 
 .buttons {
@@ -68,6 +89,12 @@
     height: 60px;
 
     margin-top: 30px;
+
+    @include tablet-only {
+        height: 45px;
+
+        margin-top: 20px;
+    }
 }
 
 .button {
@@ -91,6 +118,10 @@
     }
 
     transition: background-color 400ms cubic-bezier(.22, .61, .36, 1);
+
+    @include tablet-only {
+        font-size: 1rem;
+    }
 }
 
 .contact {
@@ -118,6 +149,10 @@
 .profile {
     border: 8px solid $primary;
     border-radius: 100%;
+
+    @include tablet-only {
+
+    }
 }
 </style>
 

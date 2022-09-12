@@ -4,15 +4,15 @@
         <div class="content">
             <Jumbotron />
 
-            <Divider :title="$t('heading1')" id="skills" />
+            <Divider :title="$t('navbar1')" id="skills" />
 
             <Skills />
 
-            <Divider title="Showcase" id="showcase" />
+            <Divider :title="$t('navbar2')" id="showcase" />
 
             <Showcase />
 
-            <Divider title="Contact" id="contact" />
+            <Divider :title="$t('navbar3')" id="contact" />
 
             <Contact />
         </div>
@@ -25,6 +25,10 @@
     max-width: $max-width;
 
     margin: 0 auto;
+
+    @include tablet-only {
+        width: 90%;
+    }
 }
 </style>
 

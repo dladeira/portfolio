@@ -5,6 +5,12 @@ $tertiary: #BFBFBF;
 
 $max-width: 1100px;
 
+@mixin tablet-only {
+    @media (max-width: $max-width) {
+        @content;
+    }
+}
+
 html, body {
     margin: 0px;
     padding: 0px;

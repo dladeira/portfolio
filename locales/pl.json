@@ -8,6 +8,25 @@
     "navbar1": "Umiejętności",
     "navbar2": "Projekty",
     "navbar3": "Kontakt",
-    "heading1": "Umiejętności"
-
+    "skill1": "Frameworki",
+    "skill2": "Stylizacja",
+    "skill3": "Silniki",
+    "skill4": "Bazy danych",
+    "skill5": "Narzędzia",
+    "skill6": "Języki",
+    "showcase1": "Projekty",
+    "showcase2": "Kontakty",
+    "contact1": "Wyślij mi wiadomość",
+    "contact2": "Dam ci ciastko",
+    "input1": "Imię",
+    "input2": "Email",
+    "input3": "Budżet",
+    "input4": "Skala Projektu",
+    "input5": "Treść",
+    "option1": "Mały - 5 statycznych stron",
+    "option2": "Średni - 7 dynamicznych stron",
+    "option3": "Duży - Pełna aplikacja internetowa",
+    "placeholder1": "Imię Nazwisko",
+    "placeholder2": "Opisz swój projekt w  3-5 zdaniach",
+    "send": "Wyślij"
 }

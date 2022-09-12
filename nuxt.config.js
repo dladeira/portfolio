@@ -5,7 +5,7 @@ import pt from './locales/pt.json'
 export default {
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'portfolio',
+        title: 'Daniel Ladeira - Web Developer',
         htmlAttrs: {
             lang: 'en'
         },
@@ -48,7 +48,6 @@ export default {
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
         '@nuxtjs/style-resources',
-        '@nuxt/image',
         '@nuxtjs/i18n'
     ],
 
@@ -78,6 +77,7 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
+        '@nuxt/image'
     ],
 
     image: {

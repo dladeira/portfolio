@@ -1,23 +1,3 @@
-<script>
-
-
-export default {
-    props: {
-        title: String
-    },
-    data() {
-        return {
-            isActive: false
-        }
-    },
-    methods: {
-        toggleActive() {
-            this.isActive = !this.isActive
-        }
-    }
-}
-</script>
-
 <template>
     <div class="wrapper" :class="{ 'wrapperActive': isActive }">
         <div class="container" @click="toggleActive()" :class="{ 'containerActive': isActive }">
@@ -26,14 +6,16 @@ export default {
         </div>
         <div class="expand" :class="{ 'expandShow': isActive}">
             <div class="images">
-                <div class="image" />
-                <div class="image" />
+                <nuxt-img height="187" width="300" :src="image1" class="image" alt="Showcase Image 1" />
+                <nuxt-img height="187" width="300" :src="image2" class="image secondImage" alt="Showcase Image 2" />
             </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+$expandHeight: 250px;
+
 .wrapper {
     position: relative;
 
@@ -44,7 +26,7 @@ export default {
     transition: margin 300ms cubic-bezier(.22, .61, .36, 1);
 
     &Active {
-        margin-bottom: 330px;
+        margin-bottom: calc($expandHeight + 30px);
     }
 }
 
@@ -86,8 +68,9 @@ export default {
     background-color: #0D3051;
 
     &Show {
-        height: 300px;
+        height: $expandHeight;
         padding-top: 20px;
+        padding-bottom: 10px;
     }
 }
 
@@ -143,19 +126,45 @@ export default {
 .images {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
     height: 85%;
-    width: 90%;
+    width: 100%;
 
     margin: 20px auto;
 }
 
 .image {
     height: 100%;
-    width: 47%;
+    width: 300px;
 
     background-color: $tertiary;
 }
+
+.secondImage {
+    @include tablet-only {
+        display: none;
+    }
+}
 </style>
+
+<script>
+export default {
+    props: {
+        title: String,
+        image1: String,
+        image2: String
+    },
+    data() {
+        return {
+            isActive: false
+        }
+    },
+    methods: {
+        toggleActive() {
+            this.isActive = !this.isActive
+        }
+    }
+}
+</script>

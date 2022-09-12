@@ -44,13 +44,16 @@
     &:hover {
         background-color: #103455;
     }
+
+    @include tablet-only {
+        height: fit-content;
+    }
 }
 
 .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    ;
     align-items: center;
 
     height: 100%;
@@ -58,6 +61,12 @@
     max-width: $max-width;
 
     margin: 0 auto;
+
+    @include tablet-only {
+        flex-direction: column;
+
+        margin-bottom: 5px;
+    }
 }
 
 .links,
@@ -66,6 +75,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.languages {
+    @include tablet-only {
+        margin-top: 5px;
+    }
 }
 
 .link {
@@ -81,6 +96,10 @@
         transform: scale(1.2);
 
         cursor: pointer;
+    }
+
+    @include tablet-only {
+        margin: 0 10px;
     }
 }
 
@@ -102,6 +121,10 @@
     &:hover {
         transform: scale(1.2);
         cursor: pointer;
+    }
+
+    @include tablet-only {
+        margin: 0 10px;
     }
 }
 </style>
