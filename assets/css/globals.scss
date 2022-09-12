@@ -1,0 +1,23 @@
+$background: #0A2239;
+$primary: #FFFFFF;
+$secondary: #60CD6B;
+$tertiary: #BFBFBF;
+
+$max-width: 1100px;
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+
+    font-size: 16px;
+    font-family: 'Public Sans', sans-serif;
+
+    background-color: $background;
+    color: white;
+
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
