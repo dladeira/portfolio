@@ -7,8 +7,9 @@
                 <h2 class="subtitle">Frameworks</h2>
                 <div class="items">
                     <nuxt-img class="item" src="/images/logo-react.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/logo-angular.png" height="40" width="70" />
                     <nuxt-img class="item" src="/images/logo-next.png" height="40" width="70" />
+                    <nuxt-img class="item" src="/images/logo-vue.png" height="40" width="70" />
+                    <nuxt-img class="item" src="/images/logo-nuxt.jpg" height="40" width="70" />
                 </div>
             </div>
 
