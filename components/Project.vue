@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" :class="{ 'wrapperActive': isActive }">
+    <div class="wrapper" @mouseover="isActive = true" @mouseleave="isActive = false" :class="{ 'wrapperActive': isActive }">
         <div class="container" @click="toggleActive()" :class="{ 'containerActive': isActive }">
             <h1 class="title">{{title}}</h1>
             <div class="triangle" />
@@ -23,7 +23,7 @@ $expandHeight: 250px;
 
     border-radius: 20px 20px 0 0;
 
-    transition: margin 300ms cubic-bezier(.22, .61, .36, 1);
+    transition: margin 600ms cubic-bezier(.22, .61, .36, 1);
 
     &Active {
         margin-bottom: calc($expandHeight + 30px);
