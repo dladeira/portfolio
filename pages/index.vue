@@ -1,6 +1,22 @@
 <template>
     <div>
         <Navbar />
+
+        <Floater float="left" margin="-50px" top="625px" type="blob" />
+        <Floater float="left" margin="250px" top="775px" type="blob" />
+
+        <Floater float="right" margin="-175px" top="450px" type="circle" />
+
+        <Floater float="right" margin="-150px" top="1100px" type="blob" />
+
+        <Floater float="left" margin="-175px" top="2000px" type="blob" />
+
+        <Floater float="right" margin="-125px" top="2500px" type="blob" />
+        <Floater float="left" margin="-160px" top="2975px" type="blob" />
+
+        <Floater float="left" margin="-10px" top="1400px" type="triangle" degrees="10" />
+        <Floater float="right" margin="150px" top="2000px" type="triangle" degrees="70" />
+
         <div class="content">
             <Jumbotron />
 

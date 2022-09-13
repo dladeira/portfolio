@@ -1,0 +1,95 @@
+<template>
+    <div class="container" :style="getStyles()">
+        <div :class="{triangle: type == 'triangle'}" :style="getTriangle()" />
+    </div>
+</template>
+
+<style lang="scss" scoped>
+.container {
+    position: absolute;
+
+    background-color: #357752;
+
+    border-radius: 1000px;
+
+    @include tablet-only {
+        display: none;
+    }
+}
+
+.triangle {
+    position: relative;
+
+    background-color: #357752;
+}
+
+.triangle:before,
+.triangle:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+
+.triangle,
+.triangle:before,
+.triangle:after {
+    width: 6rem;
+    height: 6rem;
+
+    border-top-right-radius: 40%;
+}
+
+.triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+.triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+</style>
+
+<script>
+export default {
+    props: {
+        float: String,
+        margin: String,
+        top: String,
+        width: String,
+        height: String,
+        type: String,
+        degrees: String
+    },
+    methods: {
+        getStyles() {
+            var styles = {}
+            styles.marginTop = this.top
+
+            styles[this.float == "left" ? "left" : "right"] = this.margin
+
+            switch (this.type) {
+                case "blob":
+                    styles.height = "100px"
+                    styles.width = "260px"
+                    break
+                case "circle":
+                    styles.height = "350px"
+                    styles.width = "350px"
+                    break
+                default:
+                    styles['background-color'] = "transparent"
+                    break
+            }
+
+            return styles
+        },
+        getTriangle() {
+            if (this.type == "triangle") {
+                var styles = {}
+                styles.transform = "rotate(" + (this.degrees - 180) + "deg) skewX(-30deg) scale(1, .866)"
+
+                return styles
+            }
+        }
+    }
+}
+</script>

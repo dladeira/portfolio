@@ -18,17 +18,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     height: 100vh;
 
-    padding-top: 50px;
+    padding-top: 150px;
     padding-bottom: 200px;
 
     @include tablet-only {
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
 
+        padding-top: 50px;
         padding-bottom: 0;
     }
 }
