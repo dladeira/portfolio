@@ -12,15 +12,15 @@
 
             <div class="socials">
                 <a class="social" href="https://github.com/dladeira">
-                    <nuxt-img class="icon" src="/images/icon-github.png" height="30" width="30" />
+                    <nuxt-img class="icon" src="/images/icon-github.png" height="30" width="30" alt="Github" />
                     <div class="link">dladeira</div>
                 </a>
                 <a class="social" href="https://stackoverflow.com/users/9564834/daniel-ladeira">
-                    <nuxt-img class="icon" src="/images/icon-overflow.png" height="30" width="30" />
+                    <nuxt-img class="icon" src="/images/icon-overflow.png" height="30" width="30" alt="Stack Overflow" />
                     <div class="link">Daniel Ladeira</div>
                 </a>
                 <a class="social" href="https://bukkit.org/members/chr0mosom3.91305050/">
-                    <nuxt-img class="icon" src="/images/icon-bukkit.png" height="30" width="30" />
+                    <nuxt-img class="icon" src="/images/icon-bukkit.png" height="30" width="30" alt="Bukkit" />
                     <div class="link">Chr0mosom3</div>
                 </a>
             </div>

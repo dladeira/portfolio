@@ -6,18 +6,18 @@
             <div class="category">
                 <h2 class="subtitle">{{ $t("skill1") }}</h2>
                 <div class="items">
-                    <nuxt-img class="item" src="/images/logo-react.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/logo-next.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/logo-vue.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/logo-nuxt.jpg" height="40" width="70" />
+                    <nuxt-img class="item" src="/images/logo-react.png" height="40" width="70" format="webp" alt="React"/>
+                    <nuxt-img class="item" src="/images/logo-next.png" height="40" width="70" format="webp" alt="Next"/>
+                    <nuxt-img class="item" src="/images/logo-vue.png" height="40" width="70" format="webp" alt="Vue"/>
+                    <nuxt-img class="item" src="/images/logo-nuxt.jpg" height="40" width="70" format="webp" alt="Nuxt"/>
                 </div>
             </div>
 
             <div class="category">
                 <h2 class="subtitle">{{ $t("skill2") }}</h2>
                 <div class="items">
-                    <nuxt-img class="item background" src="/images/logo-sass.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/logo-tailwind.png" height="40" width="70" />
+                    <nuxt-img class="item background" src="/images/logo-sass.png" height="40" width="70" format="webp" alt="Sass"/>
+                    <nuxt-img class="item" src="/images/logo-tailwind.png" height="40" width="70" format="webp" alt="Tailwind"/>
                 </div>
             </div>
         </div>
@@ -28,15 +28,15 @@
             <div class="category">
                 <h2 class="subtitle">{{ $t("skill3") }}</h2>
                 <div class="items">
-                    <nuxt-img class="item" src="/images/logo-node.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/logo-passport.webp" height="40" width="70" />
+                    <nuxt-img class="item" src="/images/logo-node.png" height="40" width="70" format="webp" alt="Node"/>
+                    <nuxt-img class="item" src="/images/logo-passport.webp" height="40" width="70" format="webp" alt="Passport"/>
                 </div>
             </div>
 
             <div class="category">
                 <h2 class="subtitle">{{ $t("skill4") }}</h2>
                 <div class="items">
-                    <nuxt-img class="item" src="/images/logo-mongodb.jpg" height="40" width="70" />
+                    <nuxt-img class="item" src="/images/logo-mongodb.jpg" height="40" width="70" format="webp" alt="MongoDB"/>
                 </div>
             </div>
         </div>
@@ -47,18 +47,18 @@
             <div class="category">
                 <h2 class="subtitle">{{ $t("skill5") }}</h2>
                 <div class="items">
-                    <nuxt-img class="item" src="/images/logo-github.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/logo-figma.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/logo-asana.png" height="40" width="70" />
+                    <nuxt-img class="item" src="/images/logo-github.png" height="40" width="70" format="webp" alt="Github"/>
+                    <nuxt-img class="item" src="/images/logo-figma.png" height="40" width="70" format="webp" alt="Figma"/>
+                    <nuxt-img class="item" src="/images/logo-asana.png" height="40" width="70" format="webp" alt="Asana"/>
                 </div>
             </div>
 
             <div class="category">
                 <h2 class="subtitle">{{ $t("skill6") }}</h2>
                 <div class="items">
-                    <nuxt-img class="item" src="/images/flag-us.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/flag-pl.png" height="40" width="70" />
-                    <nuxt-img class="item" src="/images/flag-pt.png" height="40" width="70" />
+                    <nuxt-img class="item" src="/images/flag-us.png" height="40" width="70" format="webp" alt="Flag US"/>
+                    <nuxt-img class="item" src="/images/flag-pl.png" height="40" width="70" format="webp" alt="Flag PL"/>
+                    <nuxt-img class="item" src="/images/flag-pt.png" height="40" width="70" format="webp" alt="Flag PT"/>
                 </div>
             </div>
         </div>

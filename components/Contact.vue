@@ -5,7 +5,7 @@
             <h1 class="title">{{ $t("contact2") }}</h1>
         </div>
 
-        <nuxt-img class="image" src="/images/profile-2.jpg" height="375" width="375" quality="100" />
+        <nuxt-img class="image" src="/images/profile-2.jpg" height="375" width="375" quality="100" format="webp" alt="Me eating a cookie" />
 
         <div class="form1">
             <div class="input name">

@@ -9,7 +9,7 @@
                 <a class="info" @click="scrollTo('skills')">{{ $t("button2") }}</a>
             </div>
         </div>
-        <nuxt-img class="profile" src="/images/profile-1.jpg" sizes="1100:300 xl:400" quality="100" />
+        <nuxt-img class="profile" src="/images/profile-1.jpg" sizes="1100:300 xl:400" quality="100" format="webp" alt="Me" />
     </div>
 </template>
 

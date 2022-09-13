@@ -7,19 +7,19 @@
                 <a class="link" @click="scrollTo('contact')">{{ $t("navbar3") }}</a>
             </div>
             <div class="languages">
-                <nuxt-link :to="switchLocalePath('en')">
+                <nuxt-link :to="switchLocalePath('en')" aria-label="Switch language to English">
                     <nuxt-img class="language" src="/images/flag-us.png" height="30" width="45"
-                        :placeholder="[45, 30, 10]" />
+                        :placeholder="[45, 30, 10]" format="webp" alt="Flag US" />
                 </nuxt-link>
 
-                <nuxt-link :to="switchLocalePath('pl')">
+                <nuxt-link :to="switchLocalePath('pl')" aria-label="Switch language to Polish">
                     <nuxt-img class="language" src="/images/flag-pl.png" height="30" width="45"
-                        :placeholder="[45, 30, 10]" />
+                        :placeholder="[45, 30, 10]" format="webp" alt="Flag PL" />
                 </nuxt-link>
 
-                <nuxt-link :to="switchLocalePath('pt')">
+                <nuxt-link :to="switchLocalePath('pt')" aria-label="Switch language to Portuguese" >
                     <nuxt-img class="language" src="/images/flag-pt.png" height="30" width="45"
-                        :placeholder="[45, 30, 10]" />
+                        :placeholder="[45, 30, 10]" format="webp" alt="Flag PT" />
                 </nuxt-link>
             </div>
         </div>
