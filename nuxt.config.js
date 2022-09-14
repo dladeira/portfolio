@@ -3,6 +3,8 @@ import pl from './locales/pl.json'
 import pt from './locales/pt.json'
 
 export default {
+    target: 'static',
+
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         title: 'Daniel Ladeira - Web Developer',
@@ -12,24 +14,11 @@ export default {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: '' },
-            { name: 'format-detection', content: 'telephone=no' }
+            { hid: 'description', name: 'description', content: 'I am a low-budget web developer who speaks English, Portuguese, and Polish fluently. This is my portfolio showcasing my work and skills.' },
+            { name: 'format-detection', content: 'telephone=no' },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            {
-                rel: "preconnect",
-                href: "https://fonts.googleapis.com"
-            },
-            {
-                rel: "preconnect",
-                href: "https://fonts.gstatic.com",
-                crossOrigin: true
-            },
-            {
-                rel: "stylesheet",
-                href: "https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-            }
         ]
     },
 
@@ -48,7 +37,8 @@ export default {
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
         '@nuxtjs/style-resources',
-        '@nuxtjs/i18n'
+        '@nuxtjs/i18n',
+        '@nuxtjs/google-fonts'
     ],
 
     styleResources: {
@@ -75,16 +65,27 @@ export default {
         }
     },
 
+    googleFonts: {
+        families: {
+            "Public Sans": {
+                wght: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+            },
+        }
+    },
+
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         '@nuxt/image'
     ],
 
     image: {
-
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
+    },
+
+    server: {
+        host: "0.0.0.0"
     }
 }

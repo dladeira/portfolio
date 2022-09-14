@@ -2,9 +2,9 @@
     <div class="container">
         <div class="wrapper">
             <div class="links">
-                <a class="link" @click="scrollTo('skills')" >{{ $t("navbar1") }}</a>
-                <a class="link" @click="scrollTo('showcase')">{{ $t("navbar2") }}</a>
-                <a class="link" @click="scrollTo('contact')">{{ $t("navbar3") }}</a>
+                <div class="link" href="#skills" @click="scrollTo('skills')">{{ $t("navbar1") }}</div>
+                <div class="link" href="#skills" @click="scrollTo('showcase')">{{ $t("navbar2") }}</div>
+                <div class="link" href="#skills" @click="scrollTo('contact')">{{ $t("navbar3") }}</div>
             </div>
             <div class="languages">
                 <nuxt-link :to="switchLocalePath('en')" aria-label="Switch language to English">
@@ -17,7 +17,7 @@
                         :placeholder="[45, 30, 10]" format="webp" alt="Flag PL" />
                 </nuxt-link>
 
-                <nuxt-link :to="switchLocalePath('pt')" aria-label="Switch language to Portuguese" >
+                <nuxt-link :to="switchLocalePath('pt')" aria-label="Switch language to Portuguese">
                     <nuxt-img class="language" src="/images/flag-pt.png" height="30" width="45"
                         :placeholder="[45, 30, 10]" format="webp" alt="Flag PT" />
                 </nuxt-link>

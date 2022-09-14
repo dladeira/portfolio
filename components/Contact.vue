@@ -5,7 +5,7 @@
             <h1 class="title">{{ $t("contact2") }}</h1>
         </div>
 
-        <nuxt-img class="image" src="/images/profile-2.jpg" height="375" width="375" quality="100" format="webp" alt="Me eating a cookie" />
+        <nuxt-img class="image" src="/images/profile-2.jpg" height="360" width="360" quality="100" format="webp" alt="Me eating a cookie" />
 
         <div class="form1">
             <div class="input name">
@@ -15,12 +15,12 @@
 
             <div class="input email">
                 <label class="label">{{ $t("input2") }}</label>
-                <input class="select" type="text" placeholder="user@example.com" />
+                <input class="select" type="email" placeholder="user@example.com" />
             </div>
 
             <div class="input budget">
                 <label class="label">{{ $t("input3") }}</label>
-                <input class="select" type="text" placeholder="$100" />
+                <input class="select" type="number" placeholder="$100" />
             </div>
 
             <div class="input scale">
@@ -43,10 +43,17 @@
 </template>
 
 <style lang="scss" scoped>
+@mixin barely-tablet {
+    @media (max-width: 1275px) {
+        @content;
+    }
+}
+
 .container {
     display: grid;
     grid-template-rows: 150px 250px 200px 90px;
     grid-template-columns: 60% 40%;
+    gap: 10px;
 
     margin-bottom: 100px;
 
@@ -82,6 +89,10 @@
     font-weight: 700;
     font-size: 4rem;
     color: #008BFF;
+
+    @include barely-tablet {
+        font-size: 3.5rem;
+    }
 
     @include tablet-only {
         font-size: 2rem;

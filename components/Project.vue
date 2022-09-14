@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper" @mouseover="isActive = true" @mouseleave="isActive = false" :class="{ 'wrapperActive': isActive }">
-        <div class="container" @click="toggleActive()" :class="{ 'containerActive': isActive }">
+        <div class="container" :class="{ 'containerActive': isActive }">
             <h1 class="title">{{title}}</h1>
             <div class="triangle" />
         </div>

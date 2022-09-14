@@ -9,7 +9,7 @@
                 <a class="info" @click="scrollTo('skills')">{{ $t("button2") }}</a>
             </div>
         </div>
-        <nuxt-img class="profile" src="/images/profile-1.jpg" sizes="1100:300 xl:400" quality="100" format="webp" alt="Me" />
+        <nuxt-img class="profile" src="/images/profile-1.jpg" sizes="sm:200px md:400px lg:800px" alt="Me" height="2612" width="2612" quality="75" format="webp" placeholder="[100, 100, 15]" />
     </div>
 </template>
 
@@ -149,11 +149,15 @@
 }
 
 .profile {
+    height: 400px;
+    width: 400px;
+
     border: 8px solid $primary;
     border-radius: 100%;
 
     @include tablet-only {
-
+        height: 300px;
+        width: 300px;
     }
 }
 </style>
