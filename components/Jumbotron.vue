@@ -88,7 +88,7 @@
     }
 
     @include tablet-only {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 }
 
