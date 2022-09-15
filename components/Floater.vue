@@ -5,12 +5,34 @@
 </template>
 
 <style lang="scss" scoped>
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 .container {
     position: absolute;
 
     background-color: #357752;
 
     border-radius: 1000px;
+
+    animation: 2s ease-out 0s 1 slideFromRight;
 
     @include tablet-only {
         display: none;
@@ -65,6 +87,12 @@ export default {
             styles.marginTop = this.top
 
             styles[this.float == "left" ? "left" : "right"] = this.margin
+
+            // if (this.float == "left") {
+            //     styles.animation = "2s ease-out 0s 1 slideFromLeft"
+            // } else {
+            //     styles.animation = "2s ease-out 0s 1 slideFromRight"
+            // }
 
             switch (this.type) {
                 case "blob":

@@ -6,8 +6,8 @@
         </div>
         <div class="expand" :class="{ 'expandShow': isActive}">
             <div class="images">
-                <nuxt-img height="187" width="300" :src="image1" class="image" alt="Showcase Image 1" format="webp" />
-                <nuxt-img height="187" width="300" :src="image2" class="image secondImage" alt="Showcase Image 2" format="webp" />
+                <nuxt-img height="374" width="600" :src="image1" class="image" alt="Showcase Image 1" format="webp" quality="100" />
+                <nuxt-img height="374" width="600" :src="image2" class="image secondImage" alt="Showcase Image 2" format="webp" quality="100" />
             </div>
         </div>
     </div>

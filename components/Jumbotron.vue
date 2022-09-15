@@ -1,19 +1,44 @@
 <template>
     <div class="container">
-        <div class="text">
-            <p class="name">Daniel Ladeira</p>
-            <h1 class="title">{{ $t("title1") }}<br />{{ $t("title2") }}</h1>
-            <h2 class="subtitle">{{ $t("subtitle1") }}<br />{{ $t("subtitle2") }}</h2>
+        <div class="content">
+            <div class="text">
+                <p class="name">Daniel Ladeira</p>
+                <h1 class="title">{{ $t("title1") }}<br />{{ $t("title2") }}</h1>
+                <h2 class="subtitle">{{ $t("subtitle1") }}<br />{{ $t("subtitle2") }}</h2>
+            </div>
             <div class="buttons">
                 <a class="contact" @click="scrollTo('contact')">{{ $t("button1") }}</a>
                 <a class="info" @click="scrollTo('skills')">{{ $t("button2") }}</a>
             </div>
         </div>
-        <nuxt-img class="profile" src="/images/profile-1.jpg" sizes="sm:200px md:400px lg:800px" alt="Me" height="2612" width="2612" quality="75" format="webp" placeholder="[100, 100, 15]" />
+        <nuxt-img class="profile" src="/images/profile-1.jpg" sizes="sm:200px md:400px lg:800px" alt="Me" height="2612"
+            width="2612" quality="75" format="webp" placeholder="[100, 100, 15]" />
     </div>
 </template>
 
 <style lang="scss" scoped>
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -35,8 +60,14 @@
     }
 }
 
+.content {
+    width: fit-content;
+}
+
 .text {
     width: fit-content;
+
+    animation: 2s ease-out 0s 1 fadeIn;
 }
 
 .name {
@@ -91,6 +122,8 @@
     height: 60px;
 
     margin-top: 30px;
+
+    animation: 2s cubic-bezier(.22, .61, .36, 1) 0s 1 slideIn;
 
     @include tablet-only {
         height: 45px;
@@ -154,6 +187,8 @@
 
     border: 8px solid $primary;
     border-radius: 100%;
+
+    animation: 2s ease-out 0s 1 fadeIn;
 
     @include tablet-only {
         height: 300px;
