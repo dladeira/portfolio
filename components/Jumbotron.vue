@@ -67,7 +67,7 @@
 .text {
     width: fit-content;
 
-    animation: 2s ease-out 0s 1 fadeIn;
+    animation: 1s ease-out 0s 1 fadeIn;
 }
 
 .name {
@@ -78,6 +78,14 @@
     font-weight: 700;
     font-size: 2.25rem;
     color: $secondary;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.1);
+
+        cursor: default;
+    }
 
     @include tablet-only {
         font-size: 2rem;
@@ -93,6 +101,14 @@
     font-size: 4rem;
     color: $primary;
 
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.1);
+
+        cursor: default;
+    }
+
     @include tablet-only {
         font-size: 2.25rem;
     }
@@ -106,6 +122,14 @@
     font-weight: 400;
     font-size: 2.25rem;
     color: $tertiary;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.1);
+
+        cursor: default;
+    }
 
     @include tablet-only {
         font-size: 1.5rem;
@@ -123,7 +147,7 @@
 
     margin-top: 30px;
 
-    animation: 2s cubic-bezier(.22, .61, .36, 1) 0s 1 slideIn;
+    animation: 1s cubic-bezier(.22, .61, .36, 1) 0s 1 slideIn;
 
     @include tablet-only {
         height: 45px;
@@ -146,13 +170,14 @@
     background-color: transparent;
     color: white;
 
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1), background-color 400ms cubic-bezier(.22, .61, .36, 1);
+
     &:hover {
         background-color: white;
 
+        transform: scale(1.1);
         cursor: pointer;
     }
-
-    transition: background-color 400ms cubic-bezier(.22, .61, .36, 1);
 
     @include tablet-only {
         font-size: 1rem;
@@ -188,8 +213,16 @@
     border: 8px solid $primary;
     border-radius: 100%;
 
-    animation: 2s ease-out 0s 1 fadeIn;
+    animation: 1s ease-out 0s 1 fadeIn;
 
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.1);
+
+        cursor: default;
+    }
+    
     @include tablet-only {
         height: 300px;
         width: 300px;

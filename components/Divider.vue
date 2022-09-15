@@ -36,6 +36,14 @@
 
     color: $secondary;
     font-size: 2rem;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.2);
+
+        cursor: default;
+    }
 }
 </style>
 

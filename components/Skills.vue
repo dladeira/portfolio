@@ -97,6 +97,14 @@
     @include tablet-only {
         margin-bottom: 30px;
     }
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.2);
+
+        cursor: default;
+    }
 }
 
 .subtitle {
@@ -104,6 +112,14 @@
     font-size: 1.25rem;
     text-align: center;
     color: $tertiary;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.2);
+
+        cursor: default;
+    }
 }
 
 .items {
@@ -126,6 +142,12 @@
     margin: 0 10px;
 
     border-radius: 10px;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 .background {

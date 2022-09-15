@@ -5,7 +5,8 @@
             <h1 class="title">{{ $t("contact2") }}</h1>
         </div>
 
-        <nuxt-img class="image" src="/images/profile-2.jpg" height="360" width="360" quality="100" format="webp" alt="Me eating a cookie" />
+        <nuxt-img class="image" src="/images/profile-2.jpg" height="360" width="360" quality="100" format="webp"
+            alt="Me eating a cookie" />
 
         <div class="form1">
             <div class="input name">
@@ -69,11 +70,21 @@
 }
 
 .subtitle {
+    width: fit-content;
+
     margin: 0;
 
     font-weight: 700;
     font-size: 2.25rem;
     color: white;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.1);
+
+        cursor: default;
+    }
 
     @include tablet-only {
         margin-bottom: 10px;
@@ -89,6 +100,14 @@
     font-weight: 700;
     font-size: 4rem;
     color: #008BFF;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.1);
+
+        cursor: default;
+    }
 
     @include barely-tablet {
         font-size: 3.5rem;
@@ -110,6 +129,14 @@
 
     border: 8px solid white;
     border-radius: 100%;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.1);
+
+        cursor: default;
+    }
 
     @include tablet-only {
         display: none;
@@ -134,12 +161,22 @@
 }
 
 .label {
+    width: fit-content;
+
     margin-left: 20px;
     margin-bottom: 10px;
 
     font-size: 1.5rem;
     font-weight: 700;
     color: $tertiary;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.2);
+
+        cursor: default;
+    }
 }
 
 .select {

@@ -1,5 +1,6 @@
 <template>
-    <div class="container" :style="getStyles()">
+    <div class="container" :class="{ slideLeft: this.float == 'right', slideRight: this.float == 'left' }"
+        :style="getStyles()">
         <div :class="{triangle: type == 'triangle'}" :style="getTriangle()" />
     </div>
 </template>
@@ -7,6 +8,10 @@
 <style lang="scss" scoped>
 @keyframes slideFromRight {
     0% {
+        transform: translateX(-200%);
+    }
+
+    20% {
         transform: translateX(-100%);
     }
 
@@ -17,6 +22,10 @@
 
 @keyframes slideFromLeft {
     0% {
+        transform: translateX(200%);
+    }
+
+    20% {
         transform: translateX(100%);
     }
 
@@ -32,11 +41,25 @@
 
     border-radius: 1000px;
 
-    animation: 2s ease-out 0s 1 slideFromRight;
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.1);
+
+        cursor: default;
+    }
 
     @include tablet-only {
         display: none;
     }
+}
+
+.slideLeft {
+    animation: 900ms ease-out 0s 1 slideFromLeft;
+}
+
+.slideRight {
+    animation: 900ms ease-out 0s 1 slideFromRight;
 }
 
 .triangle {

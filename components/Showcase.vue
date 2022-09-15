@@ -16,7 +16,8 @@
                     <div class="link">dladeira</div>
                 </a>
                 <a class="social" href="https://stackoverflow.com/users/9564834/daniel-ladeira">
-                    <nuxt-img class="icon" src="/images/icon-overflow.png" height="30" width="30" alt="Stack Overflow" />
+                    <nuxt-img class="icon" src="/images/icon-overflow.png" height="30" width="30"
+                        alt="Stack Overflow" />
                     <div class="link">Daniel Ladeira</div>
                 </a>
                 <a class="social" href="https://bukkit.org/members/chr0mosom3.91305050/">
@@ -60,6 +61,14 @@
     margin-bottom: 80px;
 
     text-align: center;
+
+    transition: transform 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        transform: scale(1.2);
+
+        cursor: default;
+    }
 
     @include tablet-only {
         margin-top: 50px;
