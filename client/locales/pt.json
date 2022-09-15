@@ -28,5 +28,6 @@
     "option3": "Grande - Aplicação web completa",
     "placeholder1": "Nome Sobrenome",
     "placeholder2": "Descreva o seu projeto em 3-5 frases",
-    "send": "Envia"
+    "send": "Envia",
+    "sent": "Enviado"
 }

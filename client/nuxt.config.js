@@ -75,11 +75,23 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
-        '@nuxt/image'
+        '@nuxt/image',
+        '@nuxtjs/axios',
+        '@nuxtjs/proxy'
     ],
 
     image: {
     },
+
+    axios: {
+        proxy: true
+    },
+
+    proxy: {
+        '/api': process.env.API,
+        '/api/msg': process.env.API
+    },
+
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {

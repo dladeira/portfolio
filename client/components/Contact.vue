@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <form @submit="onSubmit" class="container">
         <div class="text">
             <h2 class="subtitle">{{ $t("contact1") }}</h2>
             <h1 class="title">{{ $t("contact2") }}</h1>
@@ -11,22 +11,22 @@
         <div class="form1">
             <div class="input name">
                 <label class="label">{{ $t("input1") }}</label>
-                <input class="select" type="text" :placeholder=" $t('placeholder1') " />
+                <input name="name" class="select" type="text" :placeholder=" $t('placeholder1') " />
             </div>
 
             <div class="input email">
                 <label class="label">{{ $t("input2") }}</label>
-                <input class="select" type="email" placeholder="user@example.com" />
+                <input name="email" class="select" type="email" placeholder="user@example.com" />
             </div>
 
             <div class="input budget">
                 <label class="label">{{ $t("input3") }}</label>
-                <input class="select" type="number" placeholder="$100" />
+                <input name="budget" class="select" type="number" placeholder="$100" />
             </div>
 
             <div class="input scale">
                 <label class="label">{{ $t("input4") }}</label>
-                <select class="select" type="text">
+                <select name="scale" class="select" type="text">
                     <option value="small">{{ $t("option1") }}</option>
                     <option value="medium">{{ $t("option2") }}</option>
                     <option value="small">{{ $t("option3") }}</option>
@@ -36,11 +36,11 @@
         <div class="form2">
             <div class="input message">
                 <label class="label">{{ $t("input5") }}</label>
-                <textarea class="select textarea" :placeholder=" $t('placeholder2') " />
+                <textarea name="message" class="select textarea" :placeholder=" $t('placeholder2') " />
             </div>
         </div>
-        <button class="send">{{ $t("send") }}</button>
-    </div>
+        <button type="submit" :class="{ sent: sent, send: notSent }">{{ notSent ? $t("send") : $t("sent") }}</button>
+    </form>
 </template>
 
 <style lang="scss" scoped>
@@ -240,6 +240,8 @@
     background-color: #60cd6bc9;
     color: rgba(255, 255, 255, 0.75);
 
+    transition: background-color 300ms cubic-bezier(.22, .61, .36, 1);
+
     &:hover {
         background-color: #60cd6b;
         color: white;
@@ -252,8 +254,52 @@
         width: 100%;
     }
 }
+
+.sent {
+    @extend .send;
+
+    background-color: rgb(4, 4, 215);
+
+    transition: background-color 300ms cubic-bezier(.22, .61, .36, 1);
+
+    &:hover {
+        background-color: rgb(4, 4, 215);
+
+        color: rgba(255, 255, 255, 0.75);
+        cursor: not-allowed;
+    }
+}
 </style>
 
 <script>
+export default {
+    data: () => {
+        return {
+            sent: false,
+            notSent: true
+        }
+    },
+    methods: {
+        async onSubmit(e) {
+            e.preventDefault()
 
+            if (this.notSent) {
+                await this.$axios.post('/api/msg', {
+                    message: e.target.message.value,
+                    scale: e.target.scale.value,
+                    budget: e.target.budget.value,
+                    email: e.target.email.value,
+                    name: e.target.name.value,
+                })
+                this.sent = true
+                this.notSent = false
+            }
+        },
+        async query(e) {
+            e.preventDefault()
+            let data = await this.$axios.get('/api')
+            console.log(data)
+        }
+    }
+}
 </script>
