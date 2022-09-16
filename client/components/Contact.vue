@@ -258,12 +258,12 @@
 .sent {
     @extend .send;
 
-    background-color: rgb(4, 4, 215);
+    background-color: #008bff;
 
     transition: background-color 300ms cubic-bezier(.22, .61, .36, 1);
 
     &:hover {
-        background-color: rgb(4, 4, 215);
+        background-color: #008bff;
 
         color: rgba(255, 255, 255, 0.75);
         cursor: not-allowed;
@@ -291,6 +291,13 @@ export default {
                     email: e.target.email.value,
                     name: e.target.name.value,
                 })
+
+                e.target.message.disabled = true
+                e.target.scale.disabled = true
+                e.target.budget.disabled = true
+                e.target.email.disabled = true
+                e.target.name.disabled = true
+
                 this.sent = true
                 this.notSent = false
             }
