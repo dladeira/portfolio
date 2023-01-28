@@ -25,7 +25,7 @@
                 <div class="line" />
             </div>
             <div class="socials right">
-                <div class="email">daniel@ladeira.eu</div>
+                <nuxt-link class="email" href="mailto: daniel@ladeira.eu">daniel@ladeira.eu</nuxt-link>
                 <div class="line" />
             </div>
         </div>
@@ -167,15 +167,24 @@
     margin-bottom: 1rem;
 
     filter: invert(100%);
+
+    &:hover {
+        filter: invert(90%);
+    }
 }
 
 .email {
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
 
     margin-bottom: 1rem;
 
+    text-decoration: none;
+    text-orientation: sideways;
+    writing-mode: vertical-rl;
     color: white;
+
+    &:hover {
+        color: darken(white, 10);
+    }
 }
 
 .line {
