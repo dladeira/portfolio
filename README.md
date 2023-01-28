@@ -1,20 +1,16 @@
 # My portfolio
 
-## Build Setup
+Live website at [https://ladeira.eu](https://ladeira.eu)
 
-```bash
-# install dependencies
-$ npm install
+For this app you need two `.env` files, one in `/frontend`, and one in `/backend`
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+Frontend `.env`:
+```
+API_SERVER=http://localhost:3001
+ORIGIN=http://localhost:3000
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+Backend `.env`:
+```
+MONGODB_URI=mongodb://127.0.0.1:27017/portfolio
+```

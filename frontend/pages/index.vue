@@ -1,3 +1,9 @@
 <template>
-    welcome to my youtube channel guys!
+    <LandingSecHero />
 </template>
+
+<style lang="scss" scoped>
+.fake {
+    color: white;
+}
+</style>

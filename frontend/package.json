@@ -12,6 +12,7 @@
     "nuxt": "^3.1.0"
   },
   "dependencies": {
+    "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
     "nuxt-proxy": "^0.3.12",
     "sass": "^1.57.1"
   }

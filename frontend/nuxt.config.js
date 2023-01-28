@@ -12,6 +12,10 @@ export default defineNuxtConfig({
             }
         }
     },
+    modules: [
+        'nuxt-proxy',
+        '@nuxt/image-edge', 
+    ],
     runtimeConfig: {
         proxy: {
             options: [{

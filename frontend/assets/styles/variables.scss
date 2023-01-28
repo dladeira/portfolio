@@ -1,4 +1,5 @@
 $blue: #007FDB;
+$gray: #676767;
 
 $gradient-main: linear-gradient(to top,
         rgba($blue, 0.5),
@@ -8,7 +9,7 @@ $gradient-main: linear-gradient(to top,
 // RESPONSIVENESS
 // ==========
 
-$desktop-width: 1600px;
+$desktop-width: 1512px;
 
 @mixin desktop-only {
     @media (min-width: $desktop-width) {
