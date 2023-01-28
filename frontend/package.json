@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "NODE_NO_WARNINGS=1 nuxt dev --port 3000",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "NITRO_PORT=3030 node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nuxt": "^3.1.0"
+  },
+  "dependencies": {
+    "nuxt-proxy": "^0.3.12",
+    "sass": "^1.57.1"
+  }
+}

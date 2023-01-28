@@ -1,0 +1,17 @@
+$blue: #007FDB;
+
+$gradient-main: linear-gradient(to top,
+        rgba($blue, 0.5),
+        rgba($blue, 0.75) 25%);
+
+// ==========
+// RESPONSIVENESS
+// ==========
+
+$desktop-width: 1600px;
+
+@mixin desktop-only {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}

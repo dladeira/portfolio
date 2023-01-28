@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js --port=3001",
+    "start": "nodemon index.js --port=3031"
+
   },
   "repository": {
     "type": "git",
