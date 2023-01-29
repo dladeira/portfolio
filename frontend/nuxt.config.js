@@ -30,7 +30,7 @@ export default defineNuxtConfig({
             }]
         },
         public: {
-            origin: process.env.ORIGIN
+            WEB_SERVER: process.env.WEB_SERVER
         }
     },
 })

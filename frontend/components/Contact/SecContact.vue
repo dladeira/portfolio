@@ -122,7 +122,7 @@ async function sendForm(e) {
     verifyPopup.value = true
     messageSent.value = true
 
-    const { error } = await useFetch(config.origin + "/api/msg", {
+    const { error } = await useFetch(config.WEB_SERVER + "/api/msg", {
         method: "POST",
         body: {
             name: e.target.name.value,

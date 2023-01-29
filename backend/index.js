@@ -1,5 +1,4 @@
-const dotenv = require('dotenv')
-dotenv.config()
+require('dotenv').config({ path: '../.env' })
 
 
 const app = require('./app.js')
@@ -9,7 +8,7 @@ const argv = require('minimist')(process.argv.slice(2))
 const port = argv["port"]
 
 async function bootstrap() {
-    
+
     await mongoose.connect(process.env.MONGODB_URI)
     console.log(`Connected to Mongodb`)
 

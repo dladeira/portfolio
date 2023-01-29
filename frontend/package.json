@@ -1,12 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "NODE_NO_WARNINGS=1 nuxt dev --port 3000",
+    "build": "NODE_NO_WARNINGS=1 nuxt build --dotenv ../.env",
+    "dev": "NODE_NO_WARNINGS=1 nuxt dev --port 3000 --dotenv ../.env",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "start": "NITRO_PORT=3030 node .output/server/index.mjs"
+    "start": "NITRO_PORT=3030 node ./.output/server/index.mjs"
   },
   "devDependencies": {
     "nuxt": "^3.1.0"

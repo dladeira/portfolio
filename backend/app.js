@@ -42,16 +42,17 @@ app.get("/confirm/:code", async (req, res) => {
         await msg.save()
 
         confirmations = confirmations.filter(i => i.code != code)
-        return res.redirect(process.env.ORIGIN + "/confirm")
+        return res.redirect(process.env.WEB_SERVER + "/confirm")
     }
 
     return res.send("ERROR: Invalid Code")
 })
 
+
 app.post("/msg", async (req, res) => {
     const { name, email, budget, message } = req.body
     let code = Math.round(Math.random() * 1000000000)
-    let confirmLink = process.env.API + "/confirm/" + code
+    let confirmLink = process.env.API_SERVER + "/confirm/" + code
 
     confirmations.push({
         code,
@@ -83,7 +84,7 @@ app.post("/msg", async (req, res) => {
         Sincerely,
         Daniel Ladeira.`
         })
-    } catch {}
+    } catch { }
 
     res.status(200).json({ success: 'true' })
 })
