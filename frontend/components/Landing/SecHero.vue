@@ -107,7 +107,7 @@
     width: 450px;
 
     transform: translate(5px, -120px);
-
+    user-select: none;
 }
 
 .buttons {
