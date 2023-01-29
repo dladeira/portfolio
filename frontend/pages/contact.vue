@@ -1,3 +1,4 @@
 <template>
         <SecSnip />
+        <ContactSecContact />
 </template>

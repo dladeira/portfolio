@@ -12,7 +12,7 @@
                         <div class="output-label">
                             Upfront Cost
                         </div>
-                        <div class="output-value">
+                        <div class="output-value upfront">
                             ~${{ getUpfront() }}
                         </div>
                     </div>
@@ -20,7 +20,7 @@
                         <div class="output-label">
                             Monthly Cost
                         </div>
-                        <div class="output-value">
+                        <div class="output-value monthly">
                             ~${{ getMonthly() }} / month
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                         <div class="output-label">
                             Project Duration
                         </div>
-                        <div class="output-value">
+                        <div class="output-value duration">
                             {{ getDuration() }}
                         </div>
                     </div>
@@ -116,12 +116,28 @@
     }
 
     &-value {
-        margin-left: 2rem;
-
         font-size: 1.75rem;
         font-weight: 700;
         color: $blue;
     }
+}
+
+.upfront {
+    min-width: 7rem;
+
+    text-align: right;
+}
+
+.monthly {
+    min-width: 13rem;
+
+    text-align: right;
+}
+
+.duration {
+    min-width: 15rem;
+
+    text-align: right;
 }
 </style>
 
@@ -144,11 +160,32 @@ function getUpfront() {
     const backend = fields.value.backend == 'basic' ? 15 : fields.value.backend == 'advanced' ? 30 : 0
     const updates = fields.value.updates == 'panel' ? 30 : 0
 
-    return (pages * pagesMultiplier) + backend + updates
+    const final = (pages * pagesMultiplier) + backend + updates
+
+    return Math.round(final)
 }
 
 function getMonthly() {
-    return '50'
+    const updates = fields.value.updates == 'request' ? 10 : 0
+
+    const hostingMultiplier = fields.value.backend == 'none' ? 1 : fields.value.backend == 'basic' ? 1.2 : 1.5
+    const hosting = fields.value.hosting == 'included' ? (20 + fields.value.pages) : 0
+
+    const final = updates + (hosting * hostingMultiplier)
+
+    return Math.round(final)
+}
+
+function getDays() {
+    const pages = fields.value.pages * 3
+    const pagesMultiplier = fields.value.frontend == 'dynamic' ? 1.3 : 1
+
+    const backend = fields.value.backend == 'basic' ? 4 : fields.value.backend == 'advanced' ? 7 : 0
+
+    const updates = fields.value.updates == 'panel' ? 7 : 0
+    const updatesMultiplier = 1 + (pages / 10)
+
+    return Math.round((pages * pagesMultiplier) + (backend) + (updates * updatesMultiplier))
 }
 
 function getDuration() {
@@ -163,10 +200,6 @@ function getDuration() {
     const monthText = months > 1 ? 'months' : 'month'
 
     return `${months != 0 ? `${months} ${monthText} ` : ``}${days != 0 ? `${days} ${dayText}` : ``}`
-}
-
-function getDays() {
-    return 62
 }
 
 const radios = [
