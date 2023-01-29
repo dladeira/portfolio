@@ -13,7 +13,7 @@
 .container {
     width: 100%;
 
-    padding: 10rem 0;
+    padding: 7rem 0;
 
     background-color: #FBFBFB;
 }
@@ -42,6 +42,8 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    flex-wrap: wrap;
+
     width: 100%;
 }
 </style>
@@ -60,6 +62,10 @@ Static website means that the website looks the same for every client and no dat
 
 Dynamic website means that content changes based on who\'s viewing it, allowing for control panels and accounts (logging in).`,
         price: '45'
+    }, {
+        name: 'Budget Web App',
+        desc: `A lightweight web application with hosting included and a control panel to facilitate changes.`,
+        price: '100'
     }, {
         name: 'Full Web App',
         desc: `A fully fledged and performante web application with the infrastructure in place to support a large customer base. Web hosting included and a control panel to facilitate changes.`,

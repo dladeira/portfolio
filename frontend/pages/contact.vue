@@ -1,3 +1,3 @@
 <template>
-    this is contact...
+        <SecSnip />
 </template>

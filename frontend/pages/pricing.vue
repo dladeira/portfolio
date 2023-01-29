@@ -1,3 +1,7 @@
 <template>
-    this is pricing...
+    <SecSnip />
+    <PricingSecDisclaimer />
+    <PricingSecServices />
+    <PricingSecEstimator />
+    <PricingSecCTA />
 </template>

@@ -1,24 +1,7 @@
 <template>
     <div class="container">
         <div class="inner-container">
-            <div class="text">
-                <div class="title">
-                    <div class="title1">Daniel</div>
-                    <div class="title2">Ladeira</div>
-                </div>
-                <div class="subtitle">
-                    <div class="subtitle1">Full-Stack</div>
-                    <div class="subtitle2">Web Developer</div>
-                </div>
-            </div>
-            <div class="hero-wrapper" id="hero-wrapper">
-                <nuxt-img class="hero" src="/hero.png" />
-            </div>
-
-            <div class="buttons">
-                <nuxt-link to="/contact" class="button contact">Contact</nuxt-link>
-                <nuxt-link to="/#projects" class="button showcase">Showcase</nuxt-link>
-            </div>
+            <nuxt-img class="hero" src="/hero.png" />
 
             <div class="socials left">
                 <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" /></nuxt-link>
@@ -42,7 +25,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    height: 100vh;
+    height: 25vh;
 
     overflow: hidden;
 }
@@ -104,9 +87,9 @@
 }
 
 .hero {
-    width: 450px;
+    width: 200px;
 
-    transform: translate(5px, -120px);
+    transform: translate(5px, 110px);
 
 }
 
@@ -192,38 +175,9 @@
 }
 
 .line {
-    height: 200px;
+    height: 25px;
     width: 2px;
 
     background-color: white;
 }
 </style>
-
-<script setup>
-function onMouseMove(e) {
-    const hero = document.getElementById('hero-wrapper')
-    const [x, y] = getPixelsOffCenter(e.clientX, e.clientY)
-    const multiplier = 0.05
-
-    hero.style.transform = `translate(${Math.round(x * multiplier)}px, ${Math.round(y * multiplier)}px)`
-
-    // console.log(`translate(${Math.round(e.screenX / 10)}px, ${Math.round(e.screenY / 10)}px)`)
-
-    // console.log(getPixelsOffCenter(e.screenX, e.screenY))
-}
-
-function getPixelsOffCenter(x, y) {
-    const newX = x - (window.screen.width / 2)
-    const newY = y - (window.screen.height / 2)
-
-    return [newX, newY]
-}
-
-onMounted(() => {
-    document.addEventListener('mousemove', onMouseMove)
-})
-
-onBeforeUnmount(() => {
-    document.removeEventListener('mousemove', onMouseMove)
-})
-</script>

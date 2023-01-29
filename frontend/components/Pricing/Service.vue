@@ -14,6 +14,7 @@
 .service {
     width: 31%;
 
+    margin-bottom: 3rem;
     padding: 1.25rem 1.75rem;
 
     border-radius: 10px;
