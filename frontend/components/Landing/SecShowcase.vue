@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="projects">
         <div class="content">
             <div class="title">Project Showcase</div>
             <div class="showcase">

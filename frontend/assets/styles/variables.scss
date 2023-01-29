@@ -3,8 +3,10 @@ $gray: #676767;
 $green: #00C714;
 
 $gradient-main: linear-gradient(to top,
-        rgba($blue, 0.5),
-        rgba($blue, 0.75) 25%);
+        rgba($blue, 0.4),
+        rgba($blue, 0.6) 10%,
+        rgba($blue, 0.8) 30%,
+        rgba($blue, 1) 50%);
 
 // ==========
 // RESPONSIVENESS

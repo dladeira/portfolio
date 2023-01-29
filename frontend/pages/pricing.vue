@@ -1,0 +1,3 @@
+<template>
+    this is pricing...
+</template>

@@ -14,8 +14,8 @@
             <nuxt-img class="hero" src="/hero.png" />
 
             <div class="buttons">
-                <nuxt-link href="/" class="button contact">Contact</nuxt-link>
-                <nuxt-link href="/" class="button showcase">Showcase</nuxt-link>
+                <nuxt-link to="/contact" class="button contact">Contact</nuxt-link>
+                <nuxt-link to="/#projects" class="button showcase">Showcase</nuxt-link>
             </div>
 
             <div class="socials left">
@@ -137,8 +137,8 @@
     }
 }
 
-.showcase {
-    margin-left: 2.5rem;
+.contact {
+    margin-right: 2.5rem;
     background-color: $blue;
 }
 

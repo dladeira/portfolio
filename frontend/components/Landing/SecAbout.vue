@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="about">
         <div class="content">
             <nuxt-img class="img" src="/hero2.png" />
             <div class="text">
