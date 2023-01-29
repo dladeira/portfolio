@@ -2,7 +2,7 @@ cd frontend
 npm i
 cd ../backend
 npm i
-cd frontend
+cd ../frontend
 pm2 start
 cd ../backend
 pm2 start
