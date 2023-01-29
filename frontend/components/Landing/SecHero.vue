@@ -203,13 +203,9 @@
 function onMouseMove(e) {
     const hero = document.getElementById('hero-wrapper')
     const [x, y] = getPixelsOffCenter(e.clientX, e.clientY)
-    const multiplier = 0.05
+    const multiplier = 0.02
 
     hero.style.transform = `translate(${Math.round(x * multiplier)}px, ${Math.round(y * multiplier)}px)`
-
-    // console.log(`translate(${Math.round(e.screenX / 10)}px, ${Math.round(e.screenY / 10)}px)`)
-
-    // console.log(getPixelsOffCenter(e.screenX, e.screenY))
 }
 
 function getPixelsOffCenter(x, y) {
