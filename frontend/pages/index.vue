@@ -3,6 +3,7 @@
     <LandingSecAbout />
     <LandingSecShowcase />
     <LandingSecServices />
+    <LandingSecCTA />
 </template>
 
 <style lang="scss" scoped>

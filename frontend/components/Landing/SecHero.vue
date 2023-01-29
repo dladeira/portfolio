@@ -11,7 +11,9 @@
                     <div class="subtitle2">Web Developer</div>
                 </div>
             </div>
-            <nuxt-img class="hero" src="/hero.png" />
+            <div class="hero-wrapper" id="hero-wrapper">
+                <nuxt-img class="hero" src="/hero.png" />
+            </div>
 
             <div class="buttons">
                 <nuxt-link to="/contact" class="button contact">Contact</nuxt-link>
@@ -19,9 +21,9 @@
             </div>
 
             <div class="socials left">
-                <nuxt-link href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" /></nuxt-link>
-                <nuxt-link href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" /></nuxt-link>
-                <nuxt-link href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" /></nuxt-link>
                 <div class="line" />
             </div>
             <div class="socials right">
@@ -164,12 +166,14 @@
     height: 20px;
     width: 20px;
 
-    margin-bottom: 1rem;
-
     filter: invert(100%);
 
     &:hover {
-        filter: invert(90%);
+        filter: invert(80%);
+    }
+
+    &-wrapper {
+        margin-bottom: 1rem;
     }
 }
 
@@ -194,3 +198,32 @@
     background-color: white;
 }
 </style>
+
+<script setup>
+function onMouseMove(e) {
+    const hero = document.getElementById('hero-wrapper')
+    const [x, y] = getPixelsOffCenter(e.clientX, e.clientY)
+    const multiplier = 0.05
+
+    hero.style.transform = `translate(${Math.round(x * multiplier)}px, ${Math.round(y * multiplier)}px)`
+
+    // console.log(`translate(${Math.round(e.screenX / 10)}px, ${Math.round(e.screenY / 10)}px)`)
+
+    // console.log(getPixelsOffCenter(e.screenX, e.screenY))
+}
+
+function getPixelsOffCenter(x, y) {
+    const newX = x - (window.screen.width / 2)
+    const newY = y - (window.screen.height / 2)
+
+    return [newX, newY]
+}
+
+onMounted(() => {
+    document.addEventListener('mousemove', onMouseMove)
+})
+
+onBeforeUnmount(() => {
+    document.removeEventListener('mousemove', onMouseMove)
+})
+</script>
