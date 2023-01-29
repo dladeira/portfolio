@@ -2,10 +2,23 @@ const express = require('express')
 const Message = require('./models/Message.js')
 const app = express()
 const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer')
 
 app.use(bodyParser.json())
 
-app.get("/api", (req, res) => {
+let confirmations = []
+
+let transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    secure: true,
+    auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
+    }
+})
+
+app.get("/", (req, res) => {
     Message.find({}, (err, msgs) => {
         if (err)
             return res.status(400).json(msgs)
@@ -13,17 +26,66 @@ app.get("/api", (req, res) => {
     })
 })
 
-app.post("/api/msg", async (req, res) => {
-    let msg = new Message({
-        name: req.body.name,
-        email: req.body.email,
-        budget: req.body.budget,
-        scale: req.body.scale,
-        message: req.body.message
+app.get("/confirm/:code", async (req, res) => {
+    const code = req.params.code
+
+    const confirmation = confirmations.find(i => i.code == code)
+
+    if (confirmation) {
+        let msg = new Message({
+            name: confirmation.body.name,
+            email: confirmation.body.email,
+            budget: confirmation.body.budget,
+            message: confirmation.body.message
+        })
+
+        await msg.save()
+
+        confirmations = confirmations.filter(i => i.code != code)
+        return res.redirect(process.env.ORIGIN + "/confirm")
+    }
+
+    return res.send("ERROR: Invalid Code")
+})
+
+app.post("/msg", async (req, res) => {
+    const { name, email, budget, message } = req.body
+    let code = Math.round(Math.random() * 1000000000)
+    let confirmLink = process.env.API + "/confirm/" + code
+
+    confirmations.push({
+        code,
+        body: {
+            name, email, budget, message
+        }
     })
 
-    await msg.save()
-    res.status(200).send()
+    try {
+        transporter.sendMail({
+            from: '"Daniel Ladeira" <confirm@ladeira.eu>',
+            to: req.body.email,
+            subject: 'Ladeira.eu Email Verification',
+            html: `Hey ${req.body.name},<br/>
+        <br/>
+        Click <a href="${confirmLink}">here</a> to confirm your email and send your message.<br/>
+        <br/>
+        Name: ${req.body.name}<br/>
+        Email: ${req.body.email}<br/>
+        Budget: ${req.body.budget}<br/>
+        <br/>
+        Sincerely,<br/>
+        Daniel Ladeira.`,
+            text: `Hey ${req.body.name},
+
+        Paste the following link in your browser to confirm your email and send your message.
+        ${confirmLink}
+        
+        Sincerely,
+        Daniel Ladeira.`
+        })
+    } catch {}
+
+    res.status(200).json({ success: 'true' })
 })
 
 module.exports = app

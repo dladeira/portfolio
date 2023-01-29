@@ -17,7 +17,6 @@
                 </div>
             </form>
         </div>
-        <ContactPopup v-if="contactPopup" />
     </div>
 </template>
 
@@ -94,8 +93,9 @@
 
     &:disabled {
         background-color: lighten($blue, 30);
+
         &:hover {
-        background-color: lighten($blue, 30);
+            background-color: lighten($blue, 30);
 
             cursor: default;
         }
@@ -114,11 +114,25 @@
 </style>
 
 <script setup>
-const contactPopup = useState('contactPopup', () => false)
-const messageSent = useState('messageSent', () => false)
+const verifyPopup = useState('popupVerify')
+const messageSent = useState('messageSent')
+const config = useRuntimeConfig()
 
-function sendForm(e) {
-    contactPopup.value = true
+async function sendForm(e) {
+    verifyPopup.value = true
     messageSent.value = true
+
+    const { error } = await useFetch(config.origin + "/api/msg", {
+        method: "POST",
+        body: {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            budget: e.target.budget.value,
+            message: e.target.message.value
+        }
+    })
+
+    if (error.value)
+        return console.log(error.value)
 }
 </script>

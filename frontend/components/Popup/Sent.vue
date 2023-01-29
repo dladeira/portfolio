@@ -2,10 +2,10 @@
     <div class="popup-wrapper">
         <div class="popup">
             <div class="popup-title">
-                One last step!
+                Email sent!
             </div>
             <div class="popup-desc">
-                Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!
+                I will get back to you within 48 hours
             </div>
             <button class="ok" @click="closePopup">Ok</button>
         </div>
@@ -75,9 +75,9 @@
 </style>
 
 <script setup>
-const contactPopup = useState('contactPopup', () => false)
+const sentPopup = useState('popupSent')
 
 function closePopup(e) {
-    contactPopup.value = false
+    sentPopup.value = false
 }
 </script>
