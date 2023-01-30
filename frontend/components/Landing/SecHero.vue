@@ -231,7 +231,7 @@
 }
 
 .line {
-    height: 200px;
+    height: 15vh;
     width: 2px;
 
     background-color: white;

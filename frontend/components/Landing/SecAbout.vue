@@ -5,7 +5,7 @@
             <div class="text">
                 <h3 class="title">Ambitious Programmer</h3>
                 <p class="desc">My name is Daniel Ladeira and I am a trilingual developer based in Warsaw, Poland.<br /><br />
-                    I started my coding journey when I just 11 years old making Minecraft mods and plugins and from there branched out into other fields of Software Development. Fast-forward a couple years and now I'm building full-stack web applications with fastest and newest technologies on the market such as React and Vue.
+                    I started my coding journey when I was 11 years old coding Minecraft mods and plugins and from there branched out into other fields of Software Development. Fast-forward a couple years and now I'm building full-stack web applications with fastest and newest technologies on the market such as React and Vue.
                 </p>
                 <div class="tags">
                     <div class="tag tech">React / NEXT</div>
