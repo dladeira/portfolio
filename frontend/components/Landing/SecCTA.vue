@@ -1,12 +1,12 @@
 <template>
-    <div class="container">
-        <div class="subtitle">Have an idea?</div>
-        <div class="title">Lets Get In Touch</div>
+    <section class="container">
+        <h4 class="subtitle">Have an idea?</h4>
+        <h3 class="title">Lets Get In Touch</h3>
         <div class="buttons">
             <nuxt-link to="/contact" class="button contact">Contact me</nuxt-link>
             <nuxt-link to="/pricing" class="button">View pricing</nuxt-link>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -23,14 +23,14 @@
 }
 
 .subtitle {
-    margin-bottom: 1.25rem;
+    margin: 0 0 1.25rem;
 
     font-size: 2rem;
     font-weight: 400;
 }
 
 .title {
-    margin-bottom: 2rem;
+    margin: 0 0 2rem;
 
     font-size: 3rem;
     font-weight: 700;

@@ -1,12 +1,12 @@
 <template>
-    <div class="container" id="projects">
+    <section class="container" id="projects">
         <div class="content">
-            <div class="title">Project Showcase</div>
+            <h3 class="title">Project Showcase</h3>
             <div class="showcase">
                 <LandingProject v-for="project of projects" :name="project.name" :desc="project.desc" :img="project.img" :tags="project.tags" :website="project.website" :source="project.source" />
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -30,7 +30,7 @@
 }
 
 .title {
-    margin-bottom: 6rem;
+    margin: 0 0 6rem;
 
     font-size: 2rem;
     font-weight: 700;

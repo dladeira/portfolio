@@ -1,18 +1,18 @@
 <template>
-    <div class="container">
+    <section class="container">
         <div class="inner-container">
             <div class="text">
-                <div class="title">
-                    <div class="title1">Daniel</div>
-                    <div class="title2">Ladeira</div>
-                </div>
-                <div class="subtitle">
-                    <div class="subtitle1">Full-Stack</div>
-                    <div class="subtitle2">Web Developer</div>
-                </div>
+                <h1 class="title">
+                    <span class="title1">Daniel</span>
+                    <span class="title2">Ladeira</span>
+                </h1>
+                <h2 class="subtitle">
+                    <span class="subtitle1">Full-Stack</span>
+                    <span class="subtitle2">Web Developer</span>
+                </h2>
             </div>
             <div class="hero-wrapper" id="hero-wrapper">
-                <nuxt-img class="hero" src="/hero.png" />
+                <nuxt-img class="hero" src="/hero.png" alt="Hero" />
             </div>
 
             <div class="buttons">
@@ -31,7 +31,7 @@
                 <div class="line" />
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -63,7 +63,11 @@
 
     width: 100%;
 
-    margin-top: 180px;
+    margin-top: 11.25rem;
+
+    @include phone-only {
+        margin-top: 6rem;
+    }
 }
 
 .title,
@@ -72,9 +76,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    color: white;
+
+    margin: 0;
 
     font-weight: 900;
-    color: white;
+
+    @include phone-only {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .subtitle {
@@ -85,6 +96,11 @@
     width: 100%;
 
     color: #9FCFF1;
+
+    @include phone-only {
+        position: relative;
+        top: 0;
+    }
 }
 
 .title1 {
@@ -103,11 +119,30 @@
     font-size: 4rem;
 }
 
+.title1,
+.title2 {
+    @include phone-only {
+        font-size: 6rem;
+    }
+}
+
+.subtitle1,
+.subtitle2 {
+    @include phone-only {
+        font-size: 3.5rem;
+    }
+}
+
 .hero {
     width: 450px;
 
     transform: translate(5px, -120px);
     user-select: none;
+
+    @include phone-only {
+        width: 300px;
+        transform: translate(5px, 20px);
+    }
 }
 
 .buttons {
@@ -118,6 +153,10 @@
 
     position: absolute;
     bottom: 9rem;
+
+    @include phone-only {
+        display: none;
+    }
 }
 
 .button {

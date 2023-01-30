@@ -1,12 +1,12 @@
 <template>
-    <div class="container">
+    <section class="container">
         <div class="content">
-            <div class="title">Pricing & Services</div>
+            <h3 class="title">Pricing & Services</h3>
             <div class="services">
                 <PricingService v-for="service in services" :name="service.name" :desc="service.desc" :price="service.price" />
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -30,7 +30,7 @@
 }
 
 .title {
-    margin-bottom: 6rem;
+    margin: 0 0 6rem 0;
 
     font-size: 2rem;
     font-weight: 700;

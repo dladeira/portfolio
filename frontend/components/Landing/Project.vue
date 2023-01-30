@@ -1,18 +1,18 @@
 <template>
-    <div class="project">
+    <article class="project">
         <nuxt-img class="image" :src="img" />
-        <div class="name">{{ name }}</div>
+        <h4 class="name">{{ name }}</h4>
         <div class="tags">
             <div class="tag" v-for="tag in tags">{{ tag }}</div>
         </div>
-        <div class="desc">
+        <p class="desc">
             {{ desc }}
-        </div>
+        </p>
         <div class="buttons">
             <nuxt-link :href="website ? website : ''" :class="website ? 'website' : 'website-disabled'">Live Website</nuxt-link>
             <nuxt-link :href="source ? source : ''" :class="source ? 'source' : 'source-disabled'">Source Code</nuxt-link>
         </div>
-    </div>
+    </article>
 </template>
 
 <style lang="scss" scoped>
@@ -56,6 +56,8 @@
 
 .desc {
     height: 9rem;
+
+    margin: 0;
 
     line-height: 1.4rem;
 }

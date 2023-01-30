@@ -1,13 +1,13 @@
 <template>
-    <div class="service">
-        <div class="name">{{ name }}</div>
+    <article class="service">
+        <h4 class="name">{{ name }}</h4>
         <pre class="desc">{{ desc }}</pre>
 
         <div class="bot">
             <div class="price">Starting from <span class="number">${{ price }}</span></div>
             <nuxt-link to="/contact" class="order">Order</nuxt-link>
         </div>
-    </div>
+    </article>
 </template>
 
 <style lang="scss" scoped>
@@ -25,7 +25,7 @@
 }
 
 .name {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
 
     font-size: 2rem;
     font-weight: 700;

@@ -25,7 +25,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    height: 25vh;
+    height: 250px;
 
     overflow: hidden;
 }

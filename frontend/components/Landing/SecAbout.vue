@@ -1,12 +1,12 @@
 <template>
-    <div class="container" id="about">
+    <section class="container" id="about">
         <div class="content">
-            <nuxt-img class="img" src="/hero2.png" />
+            <nuxt-img class="img" src="/hero2.png" alt="Little Daniel Ladeira" />
             <div class="text">
-                <div class="title">Ambitious Programmer</div>
-                <div class="desc">My name is Daniel Ladeira and I am a trilingual developer based in Warsaw, Poland.<br /><br />
+                <h3 class="title">Ambitious Programmer</h3>
+                <p class="desc">My name is Daniel Ladeira and I am a trilingual developer based in Warsaw, Poland.<br /><br />
                     I started my coding journey when I just 11 years old making Minecraft mods and plugins and from there branched out into other fields of Software Development. Fast-forward a couple years and now I'm building full-stack web applications with fastest and newest technologies on the market such as React and Vue.
-                </div>
+                </p>
                 <div class="tags">
                     <div class="tag tech">React / NEXT</div>
                     <div class="tag tech">Vue / NUXT</div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -52,14 +52,14 @@
 }
 
 .title {
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.5rem;
 
     font-size: 2rem;
     font-weight: 700;
 }
 
 .desc {
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.5rem;
 
     font-size: 1.25rem;
     font-weight: 400;

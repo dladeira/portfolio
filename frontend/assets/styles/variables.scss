@@ -19,3 +19,11 @@ $desktop-width: 1512px;
         @content;
     }
 }
+
+$phone-width: 500px;
+
+@mixin phone-only {
+    @media (max-width: $phone-width) {
+        @content;
+    }
+}
