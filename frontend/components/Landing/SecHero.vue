@@ -28,9 +28,9 @@
             </div>
             <div class="socials right">
                 <!-- <nuxt-link class="email" href="mailto: daniel@ladeira.eu">daniel@ladeira.eu</nuxt-link> -->
-                <nuxt-link :to="switchLocalePath('en')"><nuxt-img class="flag" src="/flag-us.png" /></nuxt-link>
-                <nuxt-link :to="switchLocalePath('pl')"><nuxt-img class="flag" src="/flag-pl.png" /></nuxt-link>
-                <nuxt-link :to="switchLocalePath('pt')"><nuxt-img class="flag" src="/flag-pt.png" /></nuxt-link>
+                <nuxt-link :to="switchLocalePath('en')"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" /></nuxt-link>
+                <nuxt-link :to="switchLocalePath('pl')"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" /></nuxt-link>
+                <nuxt-link :to="switchLocalePath('pt')"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" /></nuxt-link>
                 <div class="line" />
             </div>
         </div>
@@ -247,9 +247,15 @@
 
     margin-bottom: 1rem;
 
-    border-radius: 5px;
+    border-radius: 3px;
 
     opacity: 0.5;
+
+    &-active {
+        @extend .flag;
+
+        opacity: 1;
+    }
 
     &:hover {
         cursor: pointer;
