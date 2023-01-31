@@ -3,8 +3,8 @@
         <h4 class="subtitle">Have an idea?</h4>
         <h3 class="title">Lets Get In Touch</h3>
         <div class="buttons">
-            <nuxt-link to="/contact" class="button contact">Contact me</nuxt-link>
-            <nuxt-link to="/pricing" class="button">View pricing</nuxt-link>
+            <nuxt-link :href="localePath('/contact')" class="button contact">Contact me</nuxt-link>
+            <nuxt-link :href="localePath('/pricing')" class="button">View pricing</nuxt-link>
         </div>
     </section>
 </template>
@@ -67,3 +67,6 @@
     }
 }
 </style>
+
+<script setup>
+</script>

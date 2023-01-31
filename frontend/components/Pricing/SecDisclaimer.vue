@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="title">All prices are just estimates, for actual quotes <nuxt-link to="/contact" class="contact">contact me</nuxt-link></div>
+        <div class="title">All prices are just estimates, for actual quotes <nuxt-link :href="localePath('/contact')" class="contact">contact me</nuxt-link></div>
     </div>
 </template>
 
@@ -28,3 +28,6 @@
     color: $blue;
 }
 </style>
+
+<script setup>
+</script>

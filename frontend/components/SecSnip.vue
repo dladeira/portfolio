@@ -10,7 +10,9 @@
                 <div class="line" />
             </div>
             <div class="socials right">
-                <nuxt-link class="email" href="mailto: daniel@ladeira.eu">daniel@ladeira.eu</nuxt-link>
+                <nuxt-link :href="switchLocalePath('en')"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pl')"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pt')"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" /></nuxt-link>
                 <div class="line" />
             </div>
         </div>
@@ -160,17 +162,25 @@
     }
 }
 
-.email {
+.flag {
+    height: 20px;
+    width: 30px;
 
     margin-bottom: 1rem;
 
-    text-decoration: none;
-    text-orientation: sideways;
-    writing-mode: vertical-rl;
-    color: white;
+    border-radius: 3px;
+
+    opacity: 0.5;
+
+    &-active {
+        @extend .flag;
+
+        opacity: 1;
+    }
 
     &:hover {
-        color: darken(white, 10);
+        cursor: pointer;
+        opacity: 1;
     }
 }
 
@@ -181,3 +191,6 @@
     background-color: white;
 }
 </style>
+
+<script setup>
+</script>

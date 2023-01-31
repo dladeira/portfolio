@@ -5,7 +5,7 @@
 
         <div class="bot">
             <div class="price">Starting from <span class="number">${{ price }}</span></div>
-            <nuxt-link to="/contact" class="order">Order</nuxt-link>
+            <nuxt-link :href="localePath('/contact')" class="order">Order</nuxt-link>
         </div>
     </article>
 </template>

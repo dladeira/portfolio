@@ -3,7 +3,7 @@
         <div class="subtitle">Have a plan?</div>
         <div class="title">Lets Get In Touch</div>
         <div class="buttons">
-            <nuxt-link to="/contact" class="button contact">Contact me</nuxt-link>
+            <nuxt-link :href="localePath('/contact')" class="button contact">Contact me</nuxt-link>
         </div>
     </div>
 </template>
@@ -66,3 +66,6 @@
     }
 }
 </style>
+
+<script setup>
+</script>

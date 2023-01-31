@@ -16,8 +16,8 @@
             </div>
 
             <div class="buttons">
-                <nuxt-link to="/contact" class="button contact">{{ $t('button1') }}</nuxt-link>
-                <nuxt-link to="/#projects" class="button showcase">{{ $t('button2') }}</nuxt-link>
+                <nuxt-link :href="localePath('/contact')" class="button contact">{{ $t('button1') }}</nuxt-link>
+                <nuxt-link :href="localePath('/') + '#projects'" class="button showcase">{{ $t('button2') }}</nuxt-link>
             </div>
 
             <div class="socials left">
@@ -27,10 +27,9 @@
                 <div class="line" />
             </div>
             <div class="socials right">
-                <!-- <nuxt-link class="email" href="mailto: daniel@ladeira.eu">daniel@ladeira.eu</nuxt-link> -->
-                <nuxt-link :to="switchLocalePath('en')"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" /></nuxt-link>
-                <nuxt-link :to="switchLocalePath('pl')"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" /></nuxt-link>
-                <nuxt-link :to="switchLocalePath('pt')"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('en')"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pl')"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pt')"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" /></nuxt-link>
                 <div class="line" />
             </div>
         </div>
@@ -227,20 +226,6 @@
     }
 }
 
-// .email {
-
-//     margin-bottom: 1rem;
-
-//     text-decoration: none;
-//     text-orientation: sideways;
-//     writing-mode: vertical-rl;
-//     color: white;
-
-//     &:hover {
-//         color: darken(white, 10);
-//     }
-// }
-
 .flag {
     height: 20px;
     width: 30px;
@@ -272,7 +257,6 @@
 </style>
 
 <script setup>
-
 function onMouseMove(e) {
     const hero = document.getElementById('hero-wrapper')
     const [x, y] = getPixelsOffCenter(e.clientX, e.clientY)
