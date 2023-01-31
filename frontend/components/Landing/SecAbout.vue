@@ -3,10 +3,9 @@
         <div class="content">
             <nuxt-img class="img" src="/hero2.png" alt="Little Daniel Ladeira" />
             <div class="text">
-                <h3 class="title">Ambitious Programmer</h3>
-                <p class="desc">My name is Daniel Ladeira and I am a trilingual developer based in Warsaw, Poland.<br /><br />
-                    I started my coding journey when I was 11 years old coding Minecraft mods and plugins and from there branched out into other fields of Software Development. Fast-forward a couple years and now I'm building full-stack web applications with fastest and newest technologies on the market such as React and Vue.
-                </p>
+                <h3 class="title">{{ $t('about.title') }}</h3>
+                <pre class="desc">{{ $t('about.desc') }}
+                </pre>
                 <div class="tags">
                     <div class="tag tech">React / NEXT</div>
                     <div class="tag tech">Vue / NUXT</div>
@@ -14,9 +13,9 @@
                     <div class="tag tech">NodeJS</div>
                 </div>
                 <div class="tags">
-                    <div class="tag english">English</div>
-                    <div class="tag portuguese">Portuguese</div>
-                    <div class="tag polish">Polish</div>
+                    <div class="tag english">{{$t('about.lang1')}}</div>
+                    <div class="tag portuguese">{{$t('about.lang2')}}</div>
+                    <div class="tag polish">{{$t('about.lang3')}}</div>
                 </div>
             </div>
         </div>
@@ -62,6 +61,8 @@
     margin: 0 0 1.5rem;
 
     font-size: 1.25rem;
+    font-family: 'Outfit', sans-serif;
+    white-space: pre-wrap;
     font-weight: 400;
 }
 
@@ -96,3 +97,6 @@
     background-color: #D22630;
 }
 </style>
+
+<script setup>
+</script>

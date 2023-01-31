@@ -1,16 +1,18 @@
 <template>
     <div class="container">
         <div class="content">
-            <div class="title">Pricing Estimator</div>
+            <div class="title">{{ $t('estimator.title') }}</div>
             <div class="estimator">
                 <div class="inputs">
-                    <PricingInputSlider title="1. How many pages?" :range="[1, 10]" :default="fields['pages']" id="pages" @change="updateField" />
-                    <PricingInputRadio v-for="radio in radios" :id="radio.id" :default="fields[radio.id]" :title="radio.title" :help="radio.help" :values="radio.values" @change="updateField" />
+                    <PricingInputSlider :title="$t('estimator.inputs.1.question')" :range="[1, 10]" :default="fields['pages']"
+                        id="pages" @change="updateField" />
+                    <PricingInputRadio v-for="radio in radios" :id="radio.id" :default="fields[radio.id]"
+                        :title="radio.title" :help="radio.help" :values="radio.values" @change="updateField" />
                 </div>
                 <div class="outputs">
                     <div class="output">
                         <div class="output-label">
-                            Upfront Cost
+                            {{ $t('estimator.output.1') }}
                         </div>
                         <div class="output-value upfront">
                             ~${{ getUpfront() }}
@@ -18,15 +20,15 @@
                     </div>
                     <div class="output">
                         <div class="output-label">
-                            Monthly Cost
+                            {{ $t('estimator.output.2') }}
                         </div>
                         <div class="output-value monthly">
-                            ~${{ getMonthly() }} / month
+                            ~${{ getMonthly() }} / {{$t('month')}}
                         </div>
                     </div>
                     <div class="output">
                         <div class="output-label">
-                            Project Duration
+                            {{ $t('estimator.output.3') }}
                         </div>
                         <div class="output-value duration">
                             {{ getDuration() }}
@@ -142,6 +144,8 @@
 </style>
 
 <script setup>
+const { t } = useI18n()
+
 const fields = ref({
     pages: 3,
     frontend: 'static',
@@ -196,8 +200,8 @@ function getDuration() {
     days = totalDays % 30
     months = (totalDays - days) / 30
 
-    const dayText = days > 1 ? 'days' : 'day'
-    const monthText = months > 1 ? 'months' : 'month'
+    const dayText = days > 1 ? t('days') : t('day')
+    const monthText = months > 1 ? t('months') : t('month')
 
     return `${months != 0 ? `${months} ${monthText} ` : ``}${days != 0 ? `${days} ${dayText}` : ``}`
 }
@@ -205,55 +209,37 @@ function getDuration() {
 const radios = [
     {
         id: 'frontend',
-        title: "2. Website Type",
-        help: `Dynamic - Content changes depends on who is visiting (allows for users to log in)
-
-        Static - Content is same for all visitors (no logging in or storing session data)`,
+        title: t('estimator.inputs.2.question'),
+        help:  t('estimator.inputs.2.question_help'),
         values: [
-            ["Static", "static"],
-            ["Dynamic", "dynamic"]
+            [t('estimator.inputs.2.values.1'), "static"],
+            [t('estimator.inputs.2.values.2'), "dynamic"]
         ]
     }, {
         id: 'backend',
-        title: "3. Backend Type",
-        help: `A custom communications server
-
-        None - No communication with custom server
-
-        Basic - Basic server (logging in and storing basic user data)
-
-        Advanced - A optimized, secure, and complex custom server (allows using custom email servers, and complex math operations)`,
+        title: t('estimator.inputs.3.question'),
+        help:  t('estimator.inputs.3.question_help'),
         values: [
-            ["None", "none"],
-            ["Basic", "basic"],
-            ["Advanced", "advanced"]
-        ]
+            [t('estimator.inputs.3.values.1'), "none"],
+            [t('estimator.inputs.3.values.2'), "basic"],
+            [t('estimator.inputs.3.values.3'), "advanced"]
+        ],
     }, {
         id: 'hosting',
-        title: "4. Hosting",
-        help: `How the website is rendered on the internet
-        
-        Not included - You host the website yourself, I give you the code for everything and tell you how to set it up
-        
-        Included - I host the website on my servers and you don't have to worry about setting anything up (monthly cost included, calculated based on website popularity and application complexity)`,
+        title: t('estimator.inputs.4.question'),
+        help:  t('estimator.inputs.4.question_help'),
         values: [
-            ["Not included", "none"],
-            ["Included", "included"]
+            [t('estimator.inputs.4.values.1'), "none"],
+            [t('estimator.inputs.4.values.2'), "included"]
         ]
     }, {
         id: 'updates',
-        title: "5. Website Updates",
-        help: `How content on the website is changed
-        
-        None - You make the necessary changes to the codebase yourself to change the values that you want to change
-
-        On Request - You tell me what you want to be changed on the website and I will change it (monthly fee)
-
-        Control Panel - I will build a dedicated control panel for administrators to make it easy for you to make large changes on the website without any coding experience (expensive and requires Basic Backend Type)`,
+        title: t('estimator.inputs.5.question'),
+        help:  t('estimator.inputs.5.question_help'),
         values: [
-            ["None", "none"],
-            ["On Request", "request"],
-            ["Control Panel", "panel"]
+            [t('estimator.inputs.5.values.1'), "none"],
+            [t('estimator.inputs.5.values.2'), "request"],
+            [t('estimator.inputs.5.values.3'), "panel"]
         ]
     }
 ]

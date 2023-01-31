@@ -7,8 +7,8 @@
                     <span class="title2">Ladeira</span>
                 </h1>
                 <h2 class="subtitle">
-                    <span :class="$i18n.locale == 'en' ? 'subtitle1' : 'subtitle1-small'">{{ $t('subtitle1') }}</span>
-                    <span :class="$i18n.locale == 'en' ? 'subtitle2' : 'subtitle2-small'">{{ $t('subtitle2') }}</span>
+                    <span :class="$i18n.locale == 'en' ? 'subtitle1' : 'subtitle1-small'">{{ $t('hero.subtitle1') }}</span>
+                    <span :class="$i18n.locale == 'en' ? 'subtitle2' : 'subtitle2-small'">{{ $t('hero.subtitle2') }}</span>
                 </h2>
             </div>
             <div class="hero-wrapper" id="hero-wrapper">
@@ -16,8 +16,8 @@
             </div>
 
             <div class="buttons">
-                <nuxt-link :href="localePath('/contact')" class="button contact">{{ $t('button1') }}</nuxt-link>
-                <nuxt-link :href="localePath('/') + '#projects'" class="button showcase">{{ $t('button2') }}</nuxt-link>
+                <nuxt-link :href="localePath('/contact')" class="button contact">{{ $t('hero.button1') }}</nuxt-link>
+                <nuxt-link :href="localePath('/') + '#projects'" class="button showcase">{{ $t('hero.button2') }}</nuxt-link>
             </div>
 
             <div class="socials left">

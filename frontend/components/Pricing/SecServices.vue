@@ -49,27 +49,28 @@
 </style>
 
 <script setup>
+const { t } = useI18n()
+
 const services = [
     {
-        name: 'Static Website',
-        desc: `A fast and reliant website with 3 pages included (more on request).
-
-Static website means that the website looks the same for every client and no data is loaded from 3rd party software`,
-        price: '20'
-    }, {
-        name: 'Dynamic Website',
-        desc: `A compact, SEO optimized, dynamic website with 4 pages included (more on request).
-
-Dynamic website means that content changes based on who\'s viewing it, allowing for control panels and accounts (logging in).`,
-        price: '45'
-    }, {
-        name: 'Budget Web App',
-        desc: `A lightweight web application with hosting included and a control panel to facilitate changes.`,
-        price: '100'
-    }, {
-        name: 'Full Web App',
-        desc: `A fully fledged and performante web application with the infrastructure in place to support a large customer base. Web hosting included and a control panel to facilitate changes.`,
-        price: '160'
+        name: t('services.service1.name'),
+        desc: t('services.service1.desc'),
+        price: t('services.service1.price')
+    },
+    {
+        name: t('services.service2.name'),
+        desc: t('services.service2.desc'),
+        price: t('services.service2.price')
+    },
+    {
+        name: t('services.service3.name'),
+        desc: t('services.service3.desc'),
+        price: t('services.service3.price')
+    },
+    {
+        name: t('services.service4.name'),
+        desc: t('services.service4.desc'),
+        price: t('services.service4.price')
     }
 ]
 </script>

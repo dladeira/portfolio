@@ -1,9 +1,10 @@
 <template>
     <section class="container" id="projects">
         <div class="content">
-            <h3 class="title">Project Showcase</h3>
+            <h3 class="title">{{ $t('projects.title') }}</h3>
             <div class="showcase">
-                <LandingProject v-for="project of projects" :name="project.name" :desc="project.desc" :img="project.img" :tags="project.tags" :website="project.website" :source="project.source" />
+                <LandingProject v-for="project of projects" :name="project.name" :desc="project.desc" :img="project.img"
+                    :tags="project.tags" :website="project.website" :source="project.source" />
             </div>
         </div>
     </section>
@@ -47,24 +48,26 @@
 </style>
 
 <script setup>
+const { t } = useI18n()
+
 const projects = [
     {
         name: "MCSS",
         img: "project-mcss.png",
         tags: ["NUXT", "Java", "SocketIO"],
-        desc: "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design.",
+        desc: t('projects.project1'),
         website: "https://mcss.ladeira.eu"
     }, {
         name: "Tracker",
         img: "project-tracker.png",
         tags: ["NEXT", "MongoDB"],
-        desc: "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?",
+        desc: t('projects.project2'),
         source: "https://github.com/dladeira/ltracker"
     }, {
         name: "LCooking",
         img: "project-cooking.png",
         tags: ["React", "MongoDB"],
-        desc: "A simple cooking website showcasing proficiency in using React and hooking it up with a custom built API server. Focus was placed on the back end and good code practices using React.",
+        desc: t('projects.project3'),
         source: "https://github.com/dladeira/lcooking"
     }
 ]

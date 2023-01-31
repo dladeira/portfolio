@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <div class="subtitle">Have a plan?</div>
-        <div class="title">Lets Get In Touch</div>
+        <div class="subtitle">{{ $t('cta.pricing.subtitle') }}</div>
+        <div class="title">{{ $t('cta.pricing.title') }}</div>
         <div class="buttons">
-            <nuxt-link :href="localePath('/contact')" class="button contact">Contact me</nuxt-link>
+            <nuxt-link :href="localePath('/contact')" class="button contact">{{ $t('cta.button1') }}</nuxt-link>
         </div>
     </div>
 </template>

@@ -9,8 +9,8 @@
             {{ desc }}
         </p>
         <div class="buttons">
-            <nuxt-link :href="website ? website : ''" :class="website ? 'website' : 'website-disabled'">Live Website</nuxt-link>
-            <nuxt-link :href="source ? source : ''" :class="source ? 'source' : 'source-disabled'">Source Code</nuxt-link>
+            <nuxt-link :href="website ? website : ''" :class="website ? 'website' : 'website-disabled'">{{$t('projects.button1')}}</nuxt-link>
+            <nuxt-link :href="source ? source : ''" :class="source ? 'source' : 'source-disabled'">{{$t('projects.button2')}}</nuxt-link>
         </div>
     </article>
 </template>

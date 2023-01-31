@@ -1,10 +1,10 @@
 <template>
     <section class="container">
-        <h4 class="subtitle">Have an idea?</h4>
-        <h3 class="title">Lets Get In Touch</h3>
+        <h4 class="subtitle">{{ $t('cta.landing.subtitle') }}</h4>
+        <h3 class="title">{{ $t('cta.landing.title') }}</h3>
         <div class="buttons">
-            <nuxt-link :href="localePath('/contact')" class="button contact">Contact me</nuxt-link>
-            <nuxt-link :href="localePath('/pricing')" class="button">View pricing</nuxt-link>
+            <nuxt-link :href="localePath('/contact')" class="button contact">{{ $t('cta.button1') }}</nuxt-link>
+            <nuxt-link :href="localePath('/pricing')" class="button">{{ $t('cta.button2') }}</nuxt-link>
         </div>
     </section>
 </template>

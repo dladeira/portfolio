@@ -1,6 +1,128 @@
 {
-    "subtitle1": "Full-Stack",
-    "subtitle2": "Web Developer",
-    "button1": "Contact",
-    "button2": "Projects"
+    "navbar": {
+        "about": "About",
+        "projects": "Projects",
+        "pricing": "Pricing",
+        "contact": "Contact"
+    },
+    "hero": {
+        "subtitle1": "Full-Stack",
+        "subtitle2": "Web Developer",
+        "button1": "Contact",
+        "button2": "Projects"
+    },
+    "about": {
+        "title": "Ambitious Programmer",
+        "desc": "My name is Daniel Ladeira and I am a trilingual developer based in Warsaw, Poland.\n\nI started my coding journey when I was 11 years old coding Minecraft mods and plugins and from there branched out into other fields of Software Development. Fast-forward a couple years and now I'm building full-stack web applications with fastest and newest technologies on the market such as React and Vue.",
+        "lang1": "English",
+        "lang2": "Polish",
+        "lang3": "Portuguese"
+    },
+    "projects": {
+        "title": "Project Showcase",
+        "project1": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design.",
+        "project2": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?",
+        "project3": "A simple cooking website showcasing proficiency in using React and hooking it up with a custom built API server. Focus was placed on the back end and good code practices using React.",
+        "button1": "View project",
+        "button2": "Source Code"
+    },
+    "services": {
+        "title": "Pricing & Services",
+        "service1": {
+            "name": "Static Website",
+            "desc": "A fast and reliant website with 3 pages included (more on request).\n\nStatic website means that the website looks the same for every client and no data is loaded from 3rd party software",
+            "price": "$20"
+        },
+        "service2": {
+            "name": "Dynamic Website",
+            "desc": "A compact, SEO optimized, dynamic website with 4 pages included (more on request).\n\nDynamic website means that content changes based on who's viewing it, allowing for control panels and accounts (logging in).",
+            "price": "$45"
+        },
+        "service3": {
+            "name": "Budget Web App",
+            "desc": "A lightweight web application with hosting included and a control panel to facilitate changes.",
+            "price": "$100"
+        },
+        "service4": {
+            "name": "Full Web App",
+            "desc": "A fully fledged and performante web application with the infrastructure in place to support a large customer base. Web hosting included and a control panel to facilitate changes.",
+            "price": "$160"
+        },
+        "button": "Order",
+        "disclaimer1": "All prices are just estimates, for actual quotes",
+        "disclaimer2": "contact me"
+    },
+    "estimator": {
+        "title": "Pricing Estimator",
+        "output": {
+            "1": "Upfront Cost",
+            "2": "Monthly Cost",
+            "3": "Project Duration"
+        },
+        "inputs": {
+            "1": {
+                "question": "1. How many pages"
+            },
+            "2": {
+                "question": "2. Website Type",
+                "question_help": "Dynamic - Content changes depends on who is visiting (allows for users to log in)\n\nStatic - Content is same for all visitors (no logging in or storing session data)",
+                "values": {
+                    "1": "Static",
+                    "2": "Dynamic"
+                }
+            },
+            "3": {
+                "question": "3. Website Type",
+                "question_help": "A custom communications server\n\nNone - No communication with custom server\n\nBasic - Basic server (logging in and storing basic user data)\n\nAdvanced - A optimized, secure, and complex custom server (allows using custom email servers, and complex math operations)",
+                "values": {
+                    "1": "None",
+                    "2": "Basic",
+                    "3": "Advanced"
+                }
+            },
+            "4": {
+                "question": "4. Hosting",
+                "question_help": "How the website is rendered on the internet\n\nNot included - You host the website yourself, I give you the code for everything and tell you how to set it up\n\nIncluded - I host the website on my servers and you don't have to worry about setting anything up (monthly cost included, calculated based on website popularity and application complexity)",
+                "values": {
+                    "1": "Not included",
+                    "2": "Included"
+                }
+            },
+            "5": {
+                "question": "5. Website Updates",
+                "question_help": "How content on the website is changed\n\nNone - You make the necessary changes to the codebase yourself to change the values that you want to change\n\nOn Request - You tell me what you want to be changed on the website and I will change it (monthly fee)\n\nControl Panel - I will build a dedicated control panel for administrators to make it easy for you to make large changes on the website without any coding experience (expensive and requires Basic Backend Type)",
+                "values": {
+                    "1": "None",
+                    "2": "On Request",
+                    "3": "Control Panel"
+                }
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact Me",
+        "name": "Name",
+        "email": "Email",
+        "budget": "Budget",
+        "message": "Message",
+        "message_placeholder": "Describe what you want",
+        "send": "Send",
+        "hint": "A confirmation message will be sent to your email to verify ownership"
+    },
+    "cta": {
+        "landing": {
+            "subtitle": "Have a idea?",
+            "title": "Lets Get In Touch"
+        },
+        "pricing": {
+            "subtitle": "Have a plan?",
+            "title": "Lets Get In Touch"
+        },
+        "button1": "Contact me",
+        "button2": "View pricing"
+    },
+    "month": "month",
+    "months": "months",
+    "day": "day",
+    "days": "days"
 }

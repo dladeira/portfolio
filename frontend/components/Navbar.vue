@@ -1,10 +1,10 @@
 <template>
     <nav class="container">
-        <nuxt-link :href="localePath('/') + '#about'" :class="router.path == 'bing' ? 'link-selected' : 'link'">About</nuxt-link>
-        <nuxt-link :href="localePath('/') + '#projects'" :class="router.path == 'bing' ? 'link-selected' : 'link'">Projects</nuxt-link>
+        <nuxt-link :href="localePath('/') + '#about'" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{$t('navbar.about')}}</nuxt-link>
+        <nuxt-link :href="localePath('/') + '#projects'" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{$t('navbar.projects')}}</nuxt-link>
         <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
-        <nuxt-link :href="localePath('/pricing')" :class="router.path == '/pricing' ? 'link-selected' : 'link'">Pricing</nuxt-link>
-        <nuxt-link :href="localePath('/contact')" :class="router.path == '/contact' ? 'link-selected' : 'link'">Contact</nuxt-link>
+        <nuxt-link :href="localePath('/pricing')" :class="router.path == '/pricing' ? 'link-selected' : 'link'">{{$t('navbar.pricing')}}</nuxt-link>
+        <nuxt-link :href="localePath('/contact')" :class="router.path == '/contact' ? 'link-selected' : 'link'">{{$t('navbar.contact')}}</nuxt-link>
     </nav>
 </template>
 

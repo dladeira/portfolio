@@ -4,16 +4,16 @@
             <div class="title">Contact me</div>
             <form class="form" @submit.prevent="sendForm">
                 <div class="top">
-                    <ContactInputText name="Name" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
-                    <ContactInputText name="Email" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
-                    <ContactInputText name="Budget" id="budget" type="number" placeholder="$100" :disabled="messageSent" />
+                    <ContactInputText :name="$t('contact.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
+                    <ContactInputText :name="$t('contact.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
+                    <ContactInputText :name="$t('contact.budget')" id="budget" type="number" placeholder="$100" :disabled="messageSent" />
                 </div>
                 <div class="mid">
-                    <ContactInputTextArea name="Message" id="message" placeholder="Describe what you want" :disabled="messageSent" />
+                    <ContactInputTextArea :name="$t('contact.message')" id="message" :placeholder="$t('contact.message_placeholder')" :disabled="messageSent" />
                 </div>
                 <div class="bot">
-                    <button type="submit" class="send" :disabled="messageSent">Send</button>
-                    <div class="msg">A confirmation message will be sent to your email to verify ownership</div>
+                    <button type="submit" class="send" :disabled="messageSent">{{$t('contact.send')}}</button>
+                    <div class="msg">{{ $t('contact.hint') }}</div>
                 </div>
             </form>
         </div>

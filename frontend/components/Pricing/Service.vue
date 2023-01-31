@@ -4,8 +4,8 @@
         <pre class="desc">{{ desc }}</pre>
 
         <div class="bot">
-            <div class="price">Starting from <span class="number">${{ price }}</span></div>
-            <nuxt-link :href="localePath('/contact')" class="order">Order</nuxt-link>
+            <div class="price">Starting from <span class="number">{{ price }}</span></div>
+            <nuxt-link :href="localePath('/contact')" class="order">{{ $t('services.button') }}</nuxt-link>
         </div>
     </article>
 </template>
