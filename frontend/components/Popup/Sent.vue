@@ -2,10 +2,10 @@
     <div class="popup-wrapper">
         <div class="popup">
             <div class="popup-title">
-                Email sent!
+                {{ $t('popup.sent.title')}}
             </div>
             <div class="popup-desc">
-                I will get back to you within 48 hours
+                {{ $t('popup.sent.subtitle')}}
             </div>
             <button class="ok" @click="closePopup">Ok</button>
         </div>

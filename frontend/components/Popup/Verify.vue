@@ -2,10 +2,10 @@
     <div class="popup-wrapper">
         <div class="popup">
             <div class="popup-title">
-                One last step!
+                {{ $t('popup.verify.title')}}
             </div>
             <div class="popup-desc">
-                Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!
+                {{ $t('popup.verify.subtitle')}}
             </div>
             <button class="ok" @click="closePopup">Ok</button>
         </div>

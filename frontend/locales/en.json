@@ -121,6 +121,16 @@
         "button1": "Contact me",
         "button2": "View pricing"
     },
+    "popup": {
+        "sent": {
+            "title": "Email sent!",
+            "subtitle": "I will get back to you within 48 hours"
+        },
+        "verify": {
+            "title": "One last step!",
+            "subtitle": "Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!"
+        }
+    },
     "month": "month",
     "months": "months",
     "day": "day",
