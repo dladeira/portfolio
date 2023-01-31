@@ -7,8 +7,8 @@
                     <span class="title2">Ladeira</span>
                 </h1>
                 <h2 class="subtitle">
-                    <span class="subtitle1">Full-Stack</span>
-                    <span class="subtitle2">Web Developer</span>
+                    <span :class="$i18n.locale == 'en' ? 'subtitle1' : 'subtitle1-small'">{{ $t('subtitle1') }}</span>
+                    <span :class="$i18n.locale == 'en' ? 'subtitle2' : 'subtitle2-small'">{{ $t('subtitle2') }}</span>
                 </h2>
             </div>
             <div class="hero-wrapper" id="hero-wrapper">
@@ -16,8 +16,8 @@
             </div>
 
             <div class="buttons">
-                <nuxt-link to="/contact" class="button contact">Contact</nuxt-link>
-                <nuxt-link to="/#projects" class="button showcase">Showcase</nuxt-link>
+                <nuxt-link to="/contact" class="button contact">{{ $t('button1') }}</nuxt-link>
+                <nuxt-link to="/#projects" class="button showcase">{{ $t('button2') }}</nuxt-link>
             </div>
 
             <div class="socials left">
@@ -27,7 +27,10 @@
                 <div class="line" />
             </div>
             <div class="socials right">
-                <nuxt-link class="email" href="mailto: daniel@ladeira.eu">daniel@ladeira.eu</nuxt-link>
+                <!-- <nuxt-link class="email" href="mailto: daniel@ladeira.eu">daniel@ladeira.eu</nuxt-link> -->
+                <nuxt-link :to="switchLocalePath('en')"><nuxt-img class="flag" src="/flag-us.png" /></nuxt-link>
+                <nuxt-link :to="switchLocalePath('pl')"><nuxt-img class="flag" src="/flag-pl.png" /></nuxt-link>
+                <nuxt-link :to="switchLocalePath('pt')"><nuxt-img class="flag" src="/flag-pt.png" /></nuxt-link>
                 <div class="line" />
             </div>
         </div>
@@ -113,10 +116,18 @@
 
 .subtitle1 {
     font-size: 6rem;
+
+    &-small {
+        font-size: 5rem;
+    }
 }
 
 .subtitle2 {
     font-size: 4rem;
+
+    &-small {
+        font-size: 3rem;
+    }
 }
 
 .title1,
@@ -216,17 +227,33 @@
     }
 }
 
-.email {
+// .email {
+
+//     margin-bottom: 1rem;
+
+//     text-decoration: none;
+//     text-orientation: sideways;
+//     writing-mode: vertical-rl;
+//     color: white;
+
+//     &:hover {
+//         color: darken(white, 10);
+//     }
+// }
+
+.flag {
+    height: 20px;
+    width: 30px;
 
     margin-bottom: 1rem;
 
-    text-decoration: none;
-    text-orientation: sideways;
-    writing-mode: vertical-rl;
-    color: white;
+    border-radius: 5px;
+
+    opacity: 0.5;
 
     &:hover {
-        color: darken(white, 10);
+        cursor: pointer;
+        opacity: 1;
     }
 }
 
@@ -239,6 +266,7 @@
 </style>
 
 <script setup>
+
 function onMouseMove(e) {
     const hero = document.getElementById('hero-wrapper')
     const [x, y] = getPixelsOffCenter(e.clientX, e.clientY)
