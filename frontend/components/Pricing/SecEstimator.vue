@@ -4,8 +4,8 @@
             <div class="title">{{ $t('estimator.title') }}</div>
             <div class="estimator">
                 <div class="inputs">
-                    <PricingInputSlider :title="$t('estimator.inputs.1.question')" :range="[1, 10]" :default="fields['pages']"
-                        id="pages" @change="updateField" />
+                    <PricingInputSlider :title="$t('estimator.inputs.1.question')" :range="[1, 10]"
+                        :default="fields['pages']" id="pages" @change="updateField" />
                     <PricingInputRadio v-for="radio in radios" :id="radio.id" :default="fields[radio.id]"
                         :title="radio.title" :help="radio.help" :values="radio.values" @change="updateField" />
                 </div>
@@ -15,7 +15,7 @@
                             {{ $t('estimator.output.1') }}
                         </div>
                         <div class="output-value upfront">
-                            ~${{ getUpfront() }}
+                            ~{{ getPrice(getUpfront()) }}
                         </div>
                     </div>
                     <div class="output">
@@ -23,7 +23,7 @@
                             {{ $t('estimator.output.2') }}
                         </div>
                         <div class="output-value monthly">
-                            ~${{ getMonthly() }} / {{$t('month')}}
+                            ~{{ getPrice(getMonthly()) }} / {{ $t('month') }}
                         </div>
                     </div>
                     <div class="output">
@@ -125,13 +125,13 @@
 }
 
 .upfront {
-    min-width: 7rem;
+    min-width: 8rem;
 
     text-align: right;
 }
 
 .monthly {
-    min-width: 13rem;
+    min-width: 16rem;
 
     text-align: right;
 }
@@ -144,7 +144,7 @@
 </style>
 
 <script setup>
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const fields = ref({
     pages: 3,
@@ -206,11 +206,23 @@ function getDuration() {
     return `${months != 0 ? `${months} ${monthText} ` : ``}${days != 0 ? `${days} ${dayText}` : ``}`
 }
 
+function getPrice(usd) {
+    console.log(locale.value)
+    switch (locale.value) {
+        case "en":
+            return "$" + usd
+        case "pl":
+            return (usd * 4.5) + "zł"
+        case "pt":
+            return "€" + usd
+    }
+}
+
 const radios = [
     {
         id: 'frontend',
         title: t('estimator.inputs.2.question'),
-        help:  t('estimator.inputs.2.question_help'),
+        help: t('estimator.inputs.2.question_help'),
         values: [
             [t('estimator.inputs.2.values.1'), "static"],
             [t('estimator.inputs.2.values.2'), "dynamic"]
@@ -218,7 +230,7 @@ const radios = [
     }, {
         id: 'backend',
         title: t('estimator.inputs.3.question'),
-        help:  t('estimator.inputs.3.question_help'),
+        help: t('estimator.inputs.3.question_help'),
         values: [
             [t('estimator.inputs.3.values.1'), "none"],
             [t('estimator.inputs.3.values.2'), "basic"],
@@ -227,7 +239,7 @@ const radios = [
     }, {
         id: 'hosting',
         title: t('estimator.inputs.4.question'),
-        help:  t('estimator.inputs.4.question_help'),
+        help: t('estimator.inputs.4.question_help'),
         values: [
             [t('estimator.inputs.4.values.1'), "none"],
             [t('estimator.inputs.4.values.2'), "included"]
@@ -235,7 +247,7 @@ const radios = [
     }, {
         id: 'updates',
         title: t('estimator.inputs.5.question'),
-        help:  t('estimator.inputs.5.question_help'),
+        help: t('estimator.inputs.5.question_help'),
         values: [
             [t('estimator.inputs.5.values.1'), "none"],
             [t('estimator.inputs.5.values.2'), "request"],

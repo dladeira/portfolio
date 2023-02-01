@@ -30,7 +30,7 @@
         "title": "Pricing & Services",
         "service1": {
             "name": "Static Website",
-            "desc": "A fast and reliant website with 3 pages included (more on request).\n\nStatic website means that the website looks the same for every client and no data is loaded from 3rd party software",
+            "desc": "A fast and reliant website with 3 pages included (more on request).\n\nStatic website means that the website looks the same for every client and no data is loaded from a 3rd party",
             "price": "$20"
         },
         "service2": {
@@ -73,7 +73,7 @@
                 }
             },
             "3": {
-                "question": "3. Website Type",
+                "question": "3. Backend Type",
                 "question_help": "A custom communications server\n\nNone - No communication with custom server\n\nBasic - Basic server (logging in and storing basic user data)\n\nAdvanced - A optimized, secure, and complex custom server (allows using custom email servers, and complex math operations)",
                 "values": {
                     "1": "None",

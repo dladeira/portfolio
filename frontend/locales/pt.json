@@ -20,119 +20,119 @@
     },
     "projects": {
         "title": "Projetos",
-        "project1": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design.",
-        "project2": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?",
+        "project1": "Um site SEO optimizado que mostra estatísticas de servidores de Minecraft. Este projeto demonstra bom uso de espaco e hierarquia para apresentar uma grande quantidade de informação using um design moderno e de tema escuro.",
+        "project2": "Um calendario para rastrear o seu temo. Um design minimalista e de tema claro destinado a resolver um problema mutio específico, onde estou a gastar demasiado tempo e onde devia gastar mais tempo?",
         "project3": "A simple cooking website showcasing proficiency in using React and hooking it up with a custom built API server. Focus was placed on the back end and good code practices using React.",
-        "button1": "View project",
-        "button2": "Source Code"
+        "button1": "Ver site",
+        "button2": "Código"
     },
     "services": {
-        "title": "Pricing & Services",
+        "title": "Preços & Serviços",
         "service1": {
-            "name": "Static Website",
-            "desc": "A fast and reliant website with 3 pages included (more on request).\n\nStatic website means that the website looks the same for every client and no data is loaded from 3rd party software",
-            "price": "$20"
+            "name": "Site Estático",
+            "desc": "Um site rápido e seguro com 3 páginas.\n\nPágina estática quer dizer que o conteúdo da página é o mesmo para cada visitor e dados não são carregados de terceiros",
+            "price": "€20"
         },
         "service2": {
-            "name": "Dynamic Website",
-            "desc": "A compact, SEO optimized, dynamic website with 4 pages included (more on request).\n\nDynamic website means that content changes based on who's viewing it, allowing for control panels and accounts (logging in).",
-            "price": "$45"
+            "name": "Site dinâmico",
+            "desc": "Um site compacto e SEO optimizado com 3 páginas.\n\nUm site dinâmico quer dizer que o conteúdo da página muda com base em quem está a ver a página, permitindo painéis de controle e contas (fazer login).",
+            "price": "€45"
         },
         "service3": {
-            "name": "Budget Web App",
-            "desc": "A lightweight web application with hosting included and a control panel to facilitate changes.",
-            "price": "$100"
+            "name": "Web App Leve",
+            "desc": "Uma aplicação de web leve com hosting incluído e um painel de controle para facilitar alterações.",
+            "price": "€100"
         },
         "service4": {
-            "name": "Full Web App",
-            "desc": "A fully fledged and performante web application with the infrastructure in place to support a large customer base. Web hosting included and a control panel to facilitate changes.",
-            "price": "$160"
+            "name": "Web App Completo",
+            "desc": "Uma aplicação de web optimizada e completa de alto desempenho peparada para oferecer suporte a uma grande base de clientes. Hosting da aplicação incluída e painel de controle para facilitar as mudanças.",
+            "price": "€160"
         },
-        "button": "Order",
-        "disclaimer1": "All prices are just estimates, for actual quotes",
-        "disclaimer2": "contact me"
+        "button": "Escolhe",
+        "disclaimer1": "Todos os preços são apenas estimativas, para cotações reais ",
+        "disclaimer2": "contate-me"
     },
     "estimator": {
-        "title": "Pricing Estimator",
+        "title": "Estimador de preços",
         "output": {
-            "1": "Upfront Cost",
-            "2": "Monthly Cost",
-            "3": "Project Duration"
+            "1": "Custo inicial",
+            "2": "Custo mensal",
+            "3": "Duração do projeto"
         },
         "inputs": {
             "1": {
-                "question": "1. How many pages"
+                "question": "1. Quantas páginas"
             },
             "2": {
-                "question": "2. Website Type",
-                "question_help": "Dynamic - Content changes depends on who is visiting (allows for users to log in)\n\nStatic - Content is same for all visitors (no logging in or storing session data)",
+                "question": "2. Tipo de site",
+                "question_help": "Dinâmico - O conteúdo do site muda com base em quem esta a ver (permite carregar dados de terceiros)\n\nEstático - O conteúdo do site é o mesmo para todos",
                 "values": {
-                    "1": "Static",
-                    "2": "Dynamic"
+                    "1": "Estático",
+                    "2": "Dinâmico"
                 }
             },
             "3": {
-                "question": "3. Website Type",
-                "question_help": "A custom communications server\n\nNone - No communication with custom server\n\nBasic - Basic server (logging in and storing basic user data)\n\nAdvanced - A optimized, secure, and complex custom server (allows using custom email servers, and complex math operations)",
+                "question": "3. Servidor de Backend",
+                "question_help": "O servidor API\n\nSem - Sem servidor de backend\n\nBásico - Servidor backend basico (permite login)\n\nAdvanced - A optimized, secure, and complex custom server (allows using custom email servers, and complex math operations)",
                 "values": {
-                    "1": "None",
-                    "2": "Basic",
-                    "3": "Advanced"
+                    "1": "Sem",
+                    "2": "Básico",
+                    "3": "Avançado"
                 }
             },
             "4": {
                 "question": "4. Hosting",
                 "question_help": "How the website is rendered on the internet\n\nNot included - You host the website yourself, I give you the code for everything and tell you how to set it up\n\nIncluded - I host the website on my servers and you don't have to worry about setting anything up (monthly cost included, calculated based on website popularity and application complexity)",
                 "values": {
-                    "1": "Not included",
-                    "2": "Included"
+                    "1": "Sem",
+                    "2": "Incluir"
                 }
             },
             "5": {
-                "question": "5. Website Updates",
+                "question": "5. Atualizações do site",
                 "question_help": "How content on the website is changed\n\nNone - You make the necessary changes to the codebase yourself to change the values that you want to change\n\nOn Request - You tell me what you want to be changed on the website and I will change it (monthly fee)\n\nControl Panel - I will build a dedicated control panel for administrators to make it easy for you to make large changes on the website without any coding experience (expensive and requires Basic Backend Type)",
                 "values": {
-                    "1": "None",
-                    "2": "On Request",
-                    "3": "Control Panel"
+                    "1": "Manual",
+                    "2": "A pedido",
+                    "3": "Paínel de controle"
                 }
             }
         }
     },
     "contact": {
-        "title": "Contact Me",
-        "name": "Name",
+        "title": "Contate-me",
+        "name": "Nome",
         "email": "Email",
-        "budget": "Budget",
-        "message": "Message",
-        "message_placeholder": "Describe what you want",
-        "send": "Send",
-        "hint": "A confirmation message will be sent to your email to verify ownership"
+        "budget": "Orçamento",
+        "message": "Mensagem",
+        "message_placeholder": "Descreva o projeto",
+        "send": "Enviar",
+        "hint": "Uma mensagem de confirmação vai ser enviada ao email para verificar a propriedade"
     },
     "cta": {
         "landing": {
-            "subtitle": "Have a idea?",
-            "title": "Lets Get In Touch"
+            "subtitle": "Tem alguma ideia?",
+            "title": "Manda me uma mensagem"
         },
         "pricing": {
             "subtitle": "Have a plan?",
-            "title": "Lets Get In Touch"
+            "title": "Manda me uma mensagem"
         },
-        "button1": "Contact me",
-        "button2": "View pricing"
+        "button1": "Contato",
+        "button2": "Preços"
     },
     "popup": {
         "sent": {
-            "title": "Email sent!",
-            "subtitle": "I will get back to you within 48 hours"
+            "title": "Email enviado!",
+            "subtitle": "Vou responder em máximo 48 horas"
         },
         "verify": {
-            "title": "One last step!",
-            "subtitle": "Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!"
+            "title": "Mais um passo!",
+            "subtitle": "Por favor, clique no link de confirmação que acabou de ser enviado para o seu e-mail. Se você não, nada será enviado para mim!"
         }
     },
-    "month": "month",
-    "months": "months",
-    "day": "day",
-    "days": "days"
+    "month": "mês",
+    "months": "meses",
+    "day": "dia",
+    "days": "dias"
 }

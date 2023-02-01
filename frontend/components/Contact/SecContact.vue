@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="content">
-            <div class="title">Contact me</div>
+            <div class="title">{{ $t('contact.title') }}</div>
             <form class="form" @submit.prevent="sendForm">
                 <div class="top">
                     <ContactInputText :name="$t('contact.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
