@@ -69,7 +69,7 @@
 // ==========
 
 .container-mobile {
-    position: absolute;
+    position: fixed;
     left: 50%;
 
     display: flex;
@@ -84,9 +84,11 @@
     transform: translate(-50%, 0);
     z-index: 2;
 
+    background-color: $blue;
+
     &-open {
         @extend .container-mobile;
-        background-color: #5A5A5A;
+        box-shadow: 0 0 10px 0 rgba(black, 0.5);
     }
 
     @include desktop-only {

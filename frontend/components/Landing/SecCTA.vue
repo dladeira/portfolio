@@ -15,11 +15,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     width: 100%;
 
     padding: 6rem 0;
 
     background-color: white;
+
+    @include phone-only {
+        width: 100%;
+    }
 }
 
 .subtitle {
@@ -27,6 +32,11 @@
 
     font-size: 2rem;
     font-weight: 400;
+    text-align: center;
+
+    @include phone-only {
+        font-size: 1.75rem;
+    }
 }
 
 .title {
@@ -34,6 +44,13 @@
 
     font-size: 3rem;
     font-weight: 700;
+    text-align: center;
+
+    @include phone-only {
+        margin-bottom: 3.5rem;
+
+        font-size: 2.5rem;
+    }
 }
 
 .buttons {
@@ -41,6 +58,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    @include phone-only {
+        flex-direction: column;
+    }
 }
 
 .button {
@@ -55,6 +76,10 @@
     &:hover {
         background-color: darken($gray, 5);
     }
+
+    @include phone-only {
+        padding: 1rem 3rem;
+    }
 }
 
 .contact {
@@ -64,6 +89,10 @@
 
     &:hover {
         background-color: darken($blue, 5);
+    }
+
+    @include phone-only {
+        margin: 0 0 1rem 0;
     }
 }
 </style>

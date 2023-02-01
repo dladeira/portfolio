@@ -29,6 +29,10 @@
     width: 1150px;
 
     margin: 0 auto;
+
+    @include phone-only {
+        width: 90%;
+    }
 }
 
 .copy {

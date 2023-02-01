@@ -22,6 +22,10 @@
     background-color: white;
 
     box-shadow: 0 0 4px 0 rgba(black, 0.25);
+
+    @include phone-only {
+        width: 100%;
+    }
 }
 
 .name {

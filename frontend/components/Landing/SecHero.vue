@@ -7,8 +7,8 @@
                     <span class="title2">Ladeira</span>
                 </h1>
                 <h2 class="subtitle">
-                    <span :class="$i18n.locale == 'en' ? 'subtitle1' : $i18n.locale == 'pl' ? 'subtitle1-small' : 'subtitle1-xs'">{{ $t('hero.subtitle1') }}</span>
-                    <span :class="$i18n.locale != 'pl' ? 'subtitle2' : 'subtitle2-small'">{{ $t('hero.subtitle2') }}</span>
+                    <span :class="$i18n.locale == 'en' ? 'subtitle1' : $i18n.locale == 'pl' ? 'subtitle1-polish' : 'subtitle1-portuguese'">{{ $t('hero.subtitle1') }}</span>
+                    <span ::class="$i18n.locale == 'en' ? 'subtitle2' : $i18n.locale == 'pl' ? 'subtitle2-polish' : 'subtitle2-portuguese'">{{ $t('hero.subtitle2') }}</span>
                 </h2>
             </div>
             <div class="hero-wrapper" id="hero-wrapper">
@@ -29,7 +29,7 @@
             <div class="socials right">
                 <nuxt-link :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" alt="US Flag" /></nuxt-link>
                 <nuxt-link :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" alt="PL Flag" /></nuxt-link>
-                <nuxt-link :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png"  alt="PT Flag"/></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" alt="PT Flag" /></nuxt-link>
                 <div class="line" />
             </div>
         </div>
@@ -86,7 +86,6 @@
 
     @include phone-only {
         flex-direction: column;
-        align-items: flex-start;
     }
 }
 
@@ -102,48 +101,80 @@
     @include phone-only {
         position: relative;
         top: 0;
+
+        align-items: center;
     }
 }
 
 .title1 {
     font-size: 10rem;
+
+    @include phone-only {
+        font-size: 4rem;
+        text-align: center;
+    }
 }
 
 .title2 {
     font-size: 8rem;
+
+    @include phone-only {
+        font-size: 4rem;
+        text-align: center;
+    }
 }
 
 .subtitle1 {
     font-size: 6rem;
 
-    &-small {
-        font-size: 5rem;
+    @include phone-only {
+        font-size: 3rem;
+        text-align: center;
     }
 
-    &-xs {
+    &-polish {
+        font-size: 5rem;
+
+        @include phone-only {
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+
+    &-portuguese {
         font-size: 4.5rem;
+
+        @include phone-only {
+            font-size: 2.5rem;
+            text-align: center;
+        }
     }
 }
 
 .subtitle2 {
     font-size: 4rem;
 
-    &-small {
+    @include phone-only {
         font-size: 3rem;
+        text-align: center;
     }
-}
 
-.title1,
-.title2 {
-    @include phone-only {
-        font-size: 6rem;
+    &-polish {
+        font-size: 3rem;
+
+        @include phone-only {
+            font-size: 2rem;
+            text-align: center;
+        }
     }
-}
 
-.subtitle1,
-.subtitle2 {
-    @include phone-only {
-        font-size: 3.5rem;
+    &-portuguese {
+        font-size: 3rem;
+
+        @include phone-only {
+            font-size: 2.5rem;
+            text-align: center;
+        }
     }
 }
 
@@ -154,8 +185,12 @@
     user-select: none;
 
     @include phone-only {
-        width: 300px;
-        transform: translate(-15px, 20px);
+        position: absolute;
+        top: 60%;
+        left: 50%;
+
+        width: 260px;
+        transform: translate(-53%);
     }
 }
 
@@ -165,11 +200,8 @@
     justify-content: center;
     align-items: center;
 
-    position: absolute;
-    bottom: 9rem;
-
     @include phone-only {
-        display: none;
+        margin-top: 3rem;
     }
 }
 
@@ -189,6 +221,14 @@
 
         box-shadow: 4px 4px 0 0 rgba(black, 0.75);
         transform: translate(4px, 4px);
+    }
+
+    @include phone-only {
+        padding: 10px 25px;
+
+        font-size: 1.25rem;
+
+        box-shadow: 4px 4px 0 0 rgba(black, 0.75);
     }
 }
 
@@ -262,11 +302,13 @@
 
 <script setup>
 function onMouseMove(e) {
-    const hero = document.getElementById('hero-wrapper')
-    const [x, y] = getPixelsOffCenter(e.clientX, e.clientY)
-    const multiplier = 0.02
+    if (window.screen.width > 900) {
+        const hero = document.getElementById('hero-wrapper')
+        const [x, y] = getPixelsOffCenter(e.clientX, e.clientY)
+        const multiplier = 0.02
 
-    hero.style.transform = `translate(${Math.round(x * multiplier)}px, ${Math.round(y * multiplier)}px)`
+        hero.style.transform = `translate(${Math.round(x * multiplier)}px, ${Math.round(y * multiplier)}px)`
+    }
 }
 
 function getPixelsOffCenter(x, y) {

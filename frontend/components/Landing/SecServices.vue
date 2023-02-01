@@ -17,6 +17,10 @@
     padding: 10rem 0;
 
     background-color: #FBFBFB;
+
+    @include phone-only {
+        padding: 5rem 0;
+    }
 }
 
 .content {
@@ -28,6 +32,10 @@
     width: 1100px;
 
     margin: 0 auto;
+
+    @include phone-only {
+        width: 80%;
+    }
 }
 
 .title {
@@ -44,6 +52,10 @@
     align-items: flex-start;
 
     width: 100%;
+
+    @include phone-only {
+        flex-direction: column;
+    }
 }
 </style>
 

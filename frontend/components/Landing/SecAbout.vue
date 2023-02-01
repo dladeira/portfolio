@@ -29,6 +29,10 @@
     padding: 10rem 0;
 
     background-color: #FBFBFB;
+
+    @include phone-only {
+        padding: 5rem 0;
+    }
 }
 
 .content {
@@ -40,14 +44,31 @@
     width: 1150px;
 
     margin: 0 auto;
+
+    @include phone-only {
+        flex-direction: column;
+
+        width: 80%;
+    }
 }
 
 .img {
     width: 30%;
+
+    @include phone-only {
+        height: 300px;
+        width: auto;
+
+        margin-bottom: 3rem;
+    }
 }
 
 .text {
     width: 60%;
+
+    @include phone-only {
+        width: 90%;
+    }
 }
 
 .title {
@@ -55,6 +76,10 @@
 
     font-size: 2rem;
     font-weight: 700;
+
+    @include phone-only {
+        text-align: center;
+    }
 }
 
 .desc {
@@ -64,6 +89,10 @@
     font-family: 'Outfit', sans-serif;
     white-space: pre-wrap;
     font-weight: 400;
+
+    @include phone-only {
+        text-align: center;
+    }
 }
 
 .tags {
@@ -73,6 +102,10 @@
     align-items: center;
 
     margin-bottom: 1.25rem;
+
+    @include phone-only {
+        flex-direction: column;
+    }
 }
 
 .tag {
@@ -83,6 +116,10 @@
     font-weight: 400;
     background-color: black;
     color: white;
+
+    @include phone-only {
+        margin: 0 0 1rem;
+    }
 }
 
 .english {
