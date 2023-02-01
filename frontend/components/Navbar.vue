@@ -1,15 +1,25 @@
 <template>
-    <nav class="container">
-        <nuxt-link :href="localePath('/') + '#about'" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{$t('navbar.about')}}</nuxt-link>
-        <nuxt-link :href="localePath('/') + '#projects'" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{$t('navbar.projects')}}</nuxt-link>
+    <nav class="container-desktop">
+        <nuxt-link :href="localePath('/') + '#about'" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{ $t('navbar.about') }}</nuxt-link>
+        <nuxt-link :href="localePath('/') + '#projects'" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{ $t('navbar.projects') }}</nuxt-link>
         <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
-        <nuxt-link :href="localePath('/pricing')" :class="router.path == '/pricing' ? 'link-selected' : 'link'">{{$t('navbar.pricing')}}</nuxt-link>
-        <nuxt-link :href="localePath('/contact')" :class="router.path == '/contact' ? 'link-selected' : 'link'">{{$t('navbar.contact')}}</nuxt-link>
+        <nuxt-link :href="localePath('/pricing')" :class="router.path == '/pricing' ? 'link-selected' : 'link'">{{ $t('navbar.pricing') }}</nuxt-link>
+        <nuxt-link :href="localePath('/contact')" :class="router.path == '/contact' ? 'link-selected' : 'link'">{{ $t('navbar.contact') }}</nuxt-link>
+    </nav>
+    <nav :class="open ? 'container-mobile-open' : 'container-mobile'">
+        <div class="mobile-header">
+            <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
+            <nuxt-img src="/hamburger.svg" alt="hamburger" class="menu" @click="open = !open"></nuxt-img>
+        </div>
+        <div class="mobile-body" v-if="open">
+            <nuxt-link @click="open = false" :href="localePath('/pricing')" :class="router.path == '/pricing' ? 'link-mobile-selected' : 'link-mobile'">{{ $t('navbar.pricing') }}</nuxt-link>
+            <nuxt-link @click="open = false" :href="localePath('/contact')" :class="router.path == '/contact' ? 'link-mobile-selected' : 'link-mobile'">{{ $t('navbar.contact') }}</nuxt-link>
+        </div>
     </nav>
 </template>
 
 <style lang="scss" scoped>
-.container {
+.container-desktop {
     position: absolute;
     left: 50%;
 
@@ -25,6 +35,10 @@
 
     transform: translate(-50%, 0);
     z-index: 2;
+
+    @include phone-only {
+        display: none;
+    }
 }
 
 .brand {
@@ -49,8 +63,74 @@
         font-weight: 700;
     }
 }
+
+// ==========
+// MOBILE
+// ==========
+
+.container-mobile {
+    position: absolute;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 15px 30px;
+
+    transform: translate(-50%, 0);
+    z-index: 2;
+
+    &-open {
+        @extend .container-mobile;
+        background-color: #5A5A5A;
+    }
+
+    @include desktop-only {
+        display: none;
+    }
+}
+
+.mobile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.link-mobile {
+    padding: 20px 0 10px;
+
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: white;
+
+    &-selected {
+        @extend .link-mobile;
+
+        font-weight: 700;
+    }
+}
 </style>
 
 <script setup>
 const router = useRoute()
+const open = ref(false)
+
+
 </script>

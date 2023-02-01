@@ -155,7 +155,7 @@
 
     @include phone-only {
         width: 300px;
-        transform: translate(5px, 20px);
+        transform: translate(-15px, 20px);
     }
 }
 
