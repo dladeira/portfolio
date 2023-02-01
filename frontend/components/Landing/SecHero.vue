@@ -8,7 +8,7 @@
                 </h1>
                 <h2 class="subtitle">
                     <span :class="$i18n.locale == 'en' ? 'subtitle1' : $i18n.locale == 'pl' ? 'subtitle1-polish' : 'subtitle1-portuguese'">{{ $t('hero.subtitle1') }}</span>
-                    <span ::class="$i18n.locale == 'en' ? 'subtitle2' : $i18n.locale == 'pl' ? 'subtitle2-polish' : 'subtitle2-portuguese'">{{ $t('hero.subtitle2') }}</span>
+                    <span :class="$i18n.locale == 'en' ? 'subtitle2' : $i18n.locale == 'pl' ? 'subtitle2-polish' : 'subtitle2-portuguese'">{{ $t('hero.subtitle2') }}</span>
                 </h2>
             </div>
             <div class="hero-wrapper" id="hero-wrapper">
@@ -142,7 +142,7 @@
     }
 
     &-portuguese {
-        font-size: 4.5rem;
+        font-size: 4rem;
 
         @include phone-only {
             font-size: 2.5rem;
@@ -155,7 +155,7 @@
     font-size: 4rem;
 
     @include phone-only {
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
     }
 
@@ -169,7 +169,7 @@
     }
 
     &-portuguese {
-        font-size: 3rem;
+        font-size: 4rem;
 
         @include phone-only {
             font-size: 2.5rem;
@@ -195,12 +195,16 @@
 }
 
 .buttons {
+    position: absolute;
+    bottom: 9rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
     @include phone-only {
+        position: static;
+        bottom: 0;
         margin-top: 3rem;
     }
 }
