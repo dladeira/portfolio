@@ -1,5 +1,6 @@
 import en from './locales/en.json'
 import pl from './locales/pl.json'
+import pt from './locales/pt.json'
 
 export default defineNuxtConfig({
     css: [
@@ -14,10 +15,15 @@ export default defineNuxtConfig({
             }
         }
     },
+    nitro: {
+        compressPublicAssets: true
+    },
     modules: [
         'nuxt-proxy',
         '@nuxt/image-edge', 
-        '@nuxtjs/i18n'
+        '@nuxtjs/i18n',
+        '@funken-studio/sitemap-nuxt-3',
+        '@nuxtjs/robots'
     ],
     i18n: {
         locales: ['en', 'pl', 'pt'],
@@ -27,7 +33,8 @@ export default defineNuxtConfig({
             locale: 'en',
             messages: {
                 en,
-                pl
+                pl,
+                pt
             }
         }
     },
@@ -47,5 +54,5 @@ export default defineNuxtConfig({
         public: {
             WEB_SERVER: process.env.WEB_SERVER
         }
-    },
+    }
 })

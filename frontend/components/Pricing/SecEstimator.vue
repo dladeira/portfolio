@@ -160,7 +160,7 @@ function updateField(index, value) {
 
 function getUpfront() {
     const pages = fields.value.pages * 7
-    const pagesMultiplier = fields.value.frontend == 'dynamic' ? 1.5 : 1
+    const pagesMultiplier = fields.value.frontend == 'dynamic' ? 1.3 : 1
     const backend = fields.value.backend == 'basic' ? 15 : fields.value.backend == 'advanced' ? 30 : 0
     const updates = fields.value.updates == 'panel' ? 30 : 0
 

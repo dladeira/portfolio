@@ -7,7 +7,7 @@
     },
     "hero": {
         "subtitle1": "Programista",
-        "subtitle2": "Stron internetowych",
+        "subtitle2": "Stron Internetowych",
         "button1": "Kontakt",
         "button2": "Projekty"
     },
@@ -20,32 +20,32 @@
     },
     "projects": {
         "title": "Projekty",
-        "project1": "Pprofesjonalny, SEO zoptymalizowany, strona internetowa do statystyk serwerów Minecraftowych. Projekt demonstruje dobre wykorzystanie przestrzeni i hierarchii aby przedstawić dużo informacji.",
-        "project2": "Kalendarz do śledzenia czasu. Minimalistyczny i jasny projekt mający na celu rozwiązanie bardzo konkretnego problemu, na co spędzam moj czas i na czym powinienm spędzić więcej czasu?",
-        "project3": "Prosta witryna pokazująca umiejętność programowania za pomocą Reactu i serwera API. W tym projekcie skupiłem się na serwerze i pisanie szybkiego i efektywnego kodu.",
-        "button1": "Strona",
-        "button2": "Kod"
+        "project1": "Profesjonalna i zoptymalizowana pod kątem SEO strona internetowa do statystyk serwerów Minecraftowych. Projekt demonstruje dobre wykorzystanie przestrzeni i hierarchii aby przedstawić dużo informacji.",
+        "project2": "Kalendarz do śledzenia czasu. Minimalistyczny i w kolorajch jasnych projekt mający na celu rozwiązanie bardzego konkretnego problemu, na co teraz spędzam moj czas i na czym powinienem spędzić więcej czasu w przysłości?",
+        "project3": "Prosta strona pokazująca umiejętność programowania za pomocą Reactu i serwera API. W tym projekcie skupiłem się na serwerze i pisanie szybkiego i efektywnego kodu.",
+        "button1": "Zobacz",
+        "button2": "Wyświetl kod"
     },
     "services": {
         "title": "Cennik",
         "service1": {
             "name": "Strona Statyczna",
-            "desc": "Szybka i nowoczysna witryna z 3 stronami (więcej na zyczenie).\n\nStatyczna strona znaczy że strona wygląda tak samo dla każdego uzytkownika i żadne dana są ładowane zewnętrzne.",
+            "desc": "Szybka i nowoczysna strona z 3 podstronami (więcej na żądanie).\n\nStatyczna strona znaczy że strona wygląda tak samo dla każdego uzytkownika i żadne dana są ładowane zewnętrzne.",
             "price": "80zł"
         },
         "service2": {
             "name": "Strona Dynamiczna",
-            "desc": "Nowoczesna witryna, SEO zoptymalizoana, dynamiczna witryna z 4 stronami (more on request).\n\nStrona dynamiczna oznacza że treść zmienią się w zależności od tego, kto czyta, co pozwala użytkownikom zalogować się.",
+            "desc": "Nowoczesna i zoptymalizowana pod kątem SEO dynamiczna storna z 5 podstronami (więcej na żądanie).\n\nStrona dynamiczna oznacza że treść zmienią się w zależności od tego, kto czyta, co pozwala użytkownikom zalogować się.",
             "price": "200zł"
         },
         "service3": {
-            "name": "Aplikacja Internetowa",
-            "desc": "Lekka aplikacja internetowa z hostingem i panelem sterowania. Aplikacja internetowa zawiera technologie które nie występuje na normalnych stron internetowych, na przykład SPA i stopniowe ładowanie.",
+            "name": "Standardowa Aplikacja Internetowa",
+            "desc": "Lekka aplikacja internetowa z hostingem i panelem administratora. Aplikacja internetowa zawiera technologie które nie występuje na normalnych stron internetowych, na przykład SPA i stopniowe ładowanie.",
             "price": "430zł"
         },
         "service4": {
             "name": "Profesjonalna Aplikacja Internetowa",
-            "desc": "Kompletna aplikacja internetowa z infastrukturą do obsługi dużej bazy klientów. Pakiet posiada hosting i panel sterowania.  Aplikacja internetowa zawiera technologie które nie występuje na normalnych stron internetowych, na przykład SPA i stopniowe ładowanie.",
+            "desc": "Kompletna aplikacja internetowa z infastrukturą do obsługi dużej bazy klientów. Pakiet posiada hosting i panel administratora.  Aplikacja internetowa zawiera technologie które nie występuje na normalnych stron internetowych, na przykład SPA i stopniowe ładowanie.",
             "price": "700zł"
         },
         "price_lead": "Od",
@@ -65,16 +65,16 @@
                 "question": "1. Ile stron?"
             },
             "2": {
-                "question": "2. Typ witryny",
-                "question_help": "Dynamic - Content changes depends on who is visiting (allows for users to log in)\n\nStatic - Content is same for all visitors (no logging in or storing session data)",
+                "question": "2. Typ strony",
+                "question_help": "Dynamiczna - Treść strony zmienia się w zalezności od tego, kto ją odwiedza (umożliwia logowanie)\n\nStatyczna - Treść strony jest taka sama dla wszystkich użytkowników)",
                 "values": {
-                    "1": "Static",
-                    "2": "Dynamic"
+                    "1": "Statyczna",
+                    "2": "Dynamiczna"
                 }
             },
             "3": {
                 "question": "3. Typ serwera API",
-                "question_help": "A custom communications server\n\nNone - No communication with custom server\n\nBasic - Basic server (logging in and storing basic user data)\n\nAdvanced - A optimized, secure, and complex custom server (allows using custom email servers, and complex math operations)",
+                "question_help": "Serwer komunikacyjny który przechowywa dane\n\nBez - Bez serwera API\n\nPodstatowy - Podwstawoy server (możliwia logowanie i przechowywania podstawowe dane użytkownika)\n\nZaawansowany - Zoptymalizowany, bezpieczny i złożony serwer (pozwala na korzystanie z niestandardowych serwerów pocztowych i przechowywanie dużej ilości danych",
                 "values": {
                     "1": "Bez",
                     "2": "Podstawowy",
@@ -83,7 +83,7 @@
             },
             "4": {
                 "question": "4. Hosting",
-                "question_help": "How the website is rendered on the internet\n\nNot included - You host the website yourself, I give you the code for everything and tell you how to set it up\n\nIncluded - I host the website on my servers and you don't have to worry about setting anything up (monthly cost included, calculated based on website popularity and application complexity)",
+                "question_help": "W jaki sposób strona jest renderowana w internecie\n\nBez - Sam hostujesz strone, ja dam ci kod i pomogę ci go skonfigurować ale będziesz potrzebować własnych serwerów\n\nHosting strony - Hostuję strone na moich serwerach i wszystko skonfiguruje (zaweira koszt miesięczny, który jest obliczany na podstawie popularności strony)",
                 "values": {
                     "1": "Bez",
                     "2": "Hosting strony"
@@ -91,11 +91,11 @@
             },
             "5": {
                 "question": "5. Aktualizacje",
-                "question_help": "How content on the website is changed\n\nNone - You make the necessary changes to the codebase yourself to change the values that you want to change\n\nOn Request - You tell me what you want to be changed on the website and I will change it (monthly fee)\n\nControl Panel - I will build a dedicated control panel for administrators to make it easy for you to make large changes on the website without any coding experience (expensive and requires Basic Backend Type)",
+                "question_help": "W jaki sposób wprowadzane są zminay treści na stronie\n\nBez - Wprowadzasz niezbędne zmiany w bazie kodu samodzielnie\n\nNa życzenie - Ty mi mówisz co chcesz zmienić na stronie (opłata miesięczna)\n\nPanel Administratora - Zbuduję dedykowany panel kontrolny dla administratorów, aby ułatwić Ci dokonywanie dużych zmian na stronie bez żadnego doświadczenia w kodowaniu (drogie i wymaga co najmniej podstawowy serwer API)",
                 "values": {
                     "1": "Bez",
                     "2": "Na żądanie",
-                    "3": "Panel sterowania"
+                    "3": "Panel administratora"
                 }
             }
         }

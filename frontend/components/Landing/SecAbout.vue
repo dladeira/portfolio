@@ -1,7 +1,7 @@
 <template>
     <section class="container" id="about">
         <div class="content">
-            <nuxt-img class="img" src="/hero2.png" alt="Little Daniel Ladeira" />
+            <nuxt-img class="img" src="/hero2.png" alt="Little Daniel Ladeira" format="webp" />
             <div class="text">
                 <h3 class="title">{{ $t('about.title') }}</h3>
                 <pre class="desc">{{ $t('about.desc') }}

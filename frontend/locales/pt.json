@@ -1,25 +1,25 @@
 {
     "navbar": {
-        "about": "About",
-        "projects": "Projects",
-        "pricing": "Pricing",
-        "contact": "Contact"
+        "about": "Sobre mim",
+        "projects": "Projetos",
+        "pricing": "Preços",
+        "contact": "Contato"
     },
     "hero": {
-        "subtitle1": "Full-Stack",
-        "subtitle2": "Web Developer",
-        "button1": "Contact",
-        "button2": "Projects"
+        "subtitle1": "Desenvolvedor",
+        "subtitle2": "Web Full-Stack",
+        "button1": "Contato",
+        "button2": "Projetos"
     },
     "about": {
-        "title": "Ambitious Programmer",
-        "desc": "My name is Daniel Ladeira and I am a trilingual developer based in Warsaw, Poland.\n\nI started my coding journey when I was 11 years old coding Minecraft mods and plugins and from there branched out into other fields of Software Development. Fast-forward a couple years and now I'm building full-stack web applications with fastest and newest technologies on the market such as React and Vue.",
-        "lang1": "English",
-        "lang2": "Polish",
-        "lang3": "Portuguese"
+        "title": "Programador ambicioso",
+        "desc": "O meu nome é Daniel Ladeira e eu sou um programador trilíngue baseado em Varsóvia, Polônia.\n\nComeçei programar quando tinha 11 anos a criar mods e plugins para Minecraft e a partir daí começei a programar em várias línguas de programação e aprendi muitas coisas. Hoje em dia crio aplicaçôes da Web full-stack com as tecnologias mais recentes e rápidas como React e Vue",
+        "lang1": "Inglês",
+        "lang2": "Polonês",
+        "lang3": "Português"
     },
     "projects": {
-        "title": "Project Showcase",
+        "title": "Projetos",
         "project1": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design.",
         "project2": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?",
         "project3": "A simple cooking website showcasing proficiency in using React and hooking it up with a custom built API server. Focus was placed on the back end and good code practices using React.",

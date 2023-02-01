@@ -4,9 +4,9 @@
             <nuxt-img class="hero" src="/hero.png" />
 
             <div class="socials left">
-                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" alt="Mail icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" alt="StackOverflow icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" alt="Github icon" /></nuxt-link>
                 <div class="line" />
             </div>
             <div class="socials right">

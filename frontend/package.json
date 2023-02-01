@@ -12,8 +12,10 @@
     "nuxt": "^3.1.0"
   },
   "dependencies": {
+    "@funken-studio/sitemap-nuxt-3": "^4.0.4",
     "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
     "@nuxtjs/i18n": "^8.0.0-beta.9",
+    "@nuxtjs/robots": "^3.0.0",
     "nuxt-proxy": "^0.3.12",
     "sass": "^1.57.1"
   }

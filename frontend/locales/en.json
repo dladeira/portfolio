@@ -35,7 +35,7 @@
         },
         "service2": {
             "name": "Dynamic Website",
-            "desc": "A compact, SEO optimized, dynamic website with 4 pages included (more on request).\n\nDynamic website means that content changes based on who's viewing it, allowing for control panels and accounts (logging in).",
+            "desc": "A compact, SEO optimized, dynamic website with 5 pages included (more on request).\n\nDynamic website means that content changes based on who's viewing it, allowing for control panels and accounts (logging in).",
             "price": "$45"
         },
         "service3": {
@@ -48,6 +48,7 @@
             "desc": "A fully fledged and performante web application with the infrastructure in place to support a large customer base. Web hosting included and a control panel to facilitate changes.",
             "price": "$160"
         },
+        "price_lead": "Starting from",
         "button": "Order",
         "disclaimer1": "All prices are just estimates, for actual quotes",
         "disclaimer2": "contact me"

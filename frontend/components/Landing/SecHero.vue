@@ -7,12 +7,12 @@
                     <span class="title2">Ladeira</span>
                 </h1>
                 <h2 class="subtitle">
-                    <span :class="$i18n.locale == 'en' ? 'subtitle1' : 'subtitle1-small'">{{ $t('hero.subtitle1') }}</span>
-                    <span :class="$i18n.locale == 'en' ? 'subtitle2' : 'subtitle2-small'">{{ $t('hero.subtitle2') }}</span>
+                    <span :class="$i18n.locale == 'en' ? 'subtitle1' : $i18n.locale == 'pl' ? 'subtitle1-small' : 'subtitle1-xs'">{{ $t('hero.subtitle1') }}</span>
+                    <span :class="$i18n.locale != 'pl' ? 'subtitle2' : 'subtitle2-small'">{{ $t('hero.subtitle2') }}</span>
                 </h2>
             </div>
             <div class="hero-wrapper" id="hero-wrapper">
-                <nuxt-img class="hero" src="/hero.png" alt="Hero" />
+                <nuxt-img class="hero" src="/hero.png" format="webp" alt="Hero" />
             </div>
 
             <div class="buttons">
@@ -21,15 +21,15 @@
             </div>
 
             <div class="socials left">
-                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" format="webp" alt="Mail icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
                 <div class="line" />
             </div>
             <div class="socials right">
-                <nuxt-link :href="switchLocalePath('en')"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" /></nuxt-link>
-                <nuxt-link :href="switchLocalePath('pl')"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" /></nuxt-link>
-                <nuxt-link :href="switchLocalePath('pt')"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" alt="US Flag" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" alt="PL Flag" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png"  alt="PT Flag"/></nuxt-link>
                 <div class="line" />
             </div>
         </div>
@@ -119,6 +119,10 @@
     &-small {
         font-size: 5rem;
     }
+
+    &-xs {
+        font-size: 4.5rem;
+    }
 }
 
 .subtitle2 {
@@ -190,7 +194,7 @@
 
 .contact {
     margin-right: 2.5rem;
-    background-color: $blue;
+    background-color: $darkblue;
 }
 
 .socials {

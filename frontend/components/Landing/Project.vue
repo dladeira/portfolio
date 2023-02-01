@@ -1,6 +1,6 @@
 <template>
     <article class="project">
-        <nuxt-img class="image" :src="img" />
+        <nuxt-img class="image" :src="img" format="webp" alt="Project Preview" />
         <h4 class="name">{{ name }}</h4>
         <div class="tags">
             <div class="tag" v-for="tag in tags">{{ tag }}</div>
@@ -9,8 +9,11 @@
             {{ desc }}
         </p>
         <div class="buttons">
-            <nuxt-link :href="website ? website : ''" :class="website ? 'website' : 'website-disabled'">{{$t('projects.button1')}}</nuxt-link>
-            <nuxt-link :href="source ? source : ''" :class="source ? 'source' : 'source-disabled'">{{$t('projects.button2')}}</nuxt-link>
+            <nuxt-link v-if="website" :href="website" class="website">{{$t('projects.button1')}}</nuxt-link>
+            <div v-else class="website-disabled">{{$t('projects.button1')}}</div>
+
+            <nuxt-link v-if="source" :href="source" class="source">{{$t('projects.button2')}}</nuxt-link>
+            <div v-else class="source-disabled">{{$t('projects.button2')}}</div>
         </div>
     </article>
 </template>
