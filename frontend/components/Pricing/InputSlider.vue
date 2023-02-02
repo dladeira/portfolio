@@ -12,6 +12,10 @@
 <style lang="scss" scoped>
 .input {
     width: 23%;
+
+    @include phone-only {
+        width: 100%;
+    }
 }
 .header {
     display: flex;

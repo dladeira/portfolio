@@ -21,6 +21,15 @@
     font-size: 2rem;
     font-weight: 700;
     color: black;
+
+    @include phone-only {
+        width: 80%;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        line-height: 2.5rem;
+    }
 }
 
 .contact {

@@ -47,6 +47,10 @@
     padding: 7rem 0;
 
     background-color: #f6f6f6;
+
+    @include phone-only {
+        padding: 5rem 0;
+    }
 }
 
 .content {
@@ -58,6 +62,10 @@
     width: 1100px;
 
     margin: 0 auto;
+
+    @include phone-only {
+        width: 90%;
+    }
 }
 
 .title {
@@ -94,6 +102,10 @@
     width: 100%;
 }
 
+.inputs {
+    flex-wrap: wrap;
+}
+
 .outputs {
     $gap: 5rem;
 
@@ -101,6 +113,10 @@
     padding-top: calc($gap / 2);
 
     border-top: 2px solid rgba($gray, 0.3);
+
+    @include phone-only {
+        flex-direction: column;
+    }
 }
 
 .output {
@@ -108,6 +124,15 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
+
+    @include phone-only {
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        margin-bottom: 1rem;
+    }
 
     &-label {
         margin-bottom: 0.75rem;
@@ -140,6 +165,12 @@
     min-width: 15rem;
 
     text-align: right;
+}
+
+.input {
+    @include phone-only {
+        margin-bottom: 2rem;
+    }
 }
 </style>
 
@@ -207,7 +238,6 @@ function getDuration() {
 }
 
 function getPrice(usd) {
-    console.log(locale.value)
     switch (locale.value) {
         case "en":
             return "$" + usd
