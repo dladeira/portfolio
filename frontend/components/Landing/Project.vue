@@ -82,6 +82,12 @@
     align-items: center;
 
     margin-top: 2rem;
+
+    font-size: 1rem;
+
+    @include phone-only {
+        font-size: 0.75rem;
+    }
 }
 
 .website {
@@ -90,7 +96,6 @@
 
     border: 2px solid $green;
 
-    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     color: black;
@@ -108,7 +113,6 @@
 
         border: 2px solid lighten($green, 40);
 
-        font-size: 1rem;
         font-weight: 400;
         text-decoration: none;
         color: lighten(black, 80);
@@ -125,7 +129,6 @@
 
     border: 2px solid black;
 
-    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     color: black;
@@ -143,7 +146,6 @@
 
         border: 2px solid lighten(black, 80);
 
-        font-size: 1rem;
         font-weight: 400;
         text-decoration: none;
         color: lighten(black, 80);

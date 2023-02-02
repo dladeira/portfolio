@@ -127,7 +127,7 @@
 
     @include phone-only {
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
 
         width: 100%;
 
@@ -146,6 +146,10 @@
         font-size: 1.75rem;
         font-weight: 700;
         color: $blue;
+
+        @include phone-only {
+            font-size: 1.25rem;
+        }
     }
 }
 
@@ -153,18 +157,30 @@
     min-width: 8rem;
 
     text-align: right;
+
+    @include phone-only {
+        min-width: fit-content;
+    }
 }
 
 .monthly {
     min-width: 16rem;
 
     text-align: right;
+
+    @include phone-only {
+        min-width: fit-content;
+    }
 }
 
 .duration {
     min-width: 15rem;
 
     text-align: right;
+
+    @include phone-only {
+        min-width: fit-content;
+    }
 }
 
 .input {

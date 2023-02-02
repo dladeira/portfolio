@@ -91,7 +91,7 @@
         box-shadow: 0 0 10px 0 rgba(black, 0.5);
     }
 
-    @include desktop-only {
+    @include not-phone {
         display: none;
     }
 }

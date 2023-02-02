@@ -10,7 +10,8 @@
 
         <div class="values">
             <div class="value" v-for="value of values">
-                <input class="hidden" type="radio" :name="id" :id="id + '-' + value[1]" :value="value[1]" @change="inputChange">
+                <input class="hidden" type="radio" :name="id" :id="id + '-' + value[1]" :value="value[1]"
+                    @change="inputChange">
                 <label class="label" :for="id + '-' + value[1]">
                     <div :class="selected == value[1] ? 'radio-selected' : 'radio'" />
                     <div class="text">{{ value[0] }}</div>
@@ -21,6 +22,10 @@
 </template>
 
 <style lang="scss" scoped>
+.input {
+    font-size: 0.75rem;
+}
+
 .header {
     position: relative;
 
@@ -33,9 +38,12 @@
 
     margin-bottom: 1rem;
 
-    font-size: 1rem;
     font-weight: 400;
     color: black;
+
+    @include phone-only {
+        position: static;
+    }
 }
 
 .help {
@@ -56,11 +64,16 @@
 
     opacity: 0.5;
 
+    @include phone-only {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
     &:hover {
         cursor: pointer;
     }
 
-    &:hover + .help-extended {
+    &:hover+.help-extended {
         display: flex;
         opacity: 1;
     }
@@ -68,7 +81,7 @@
 
 .help-extended {
     position: absolute;
-    right: 0;
+    left: 0;
 
     display: none;
     justify-content: center;
@@ -82,7 +95,7 @@
     border-radius: 5px;
 
     text-align: left;
-    font-family: 'Outfit', sans-serif; 
+    font-family: 'Outfit', sans-serif;
     font-size: 0.75rem;
     white-space: pre-line;
     background-color: $gray;
@@ -92,6 +105,13 @@
     transition: opacity 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     transform: translate(calc(50% - 0.5rem), 10px);
+    z-index: 4;
+
+    @include phone-only {
+        left: 50%;
+
+        transform: translate(-50%, 10px);
+    }
 }
 
 .value {

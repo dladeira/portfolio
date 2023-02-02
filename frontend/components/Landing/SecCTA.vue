@@ -73,12 +73,12 @@
     background-color: $gray;
     color: white;
 
-    &:hover {
-        background-color: darken($gray, 5);
-    }
-
     @include phone-only {
         padding: 1rem 3rem;
+    }
+    
+    &:hover {
+        background-color: darken($gray, 5);
     }
 }
 
@@ -87,12 +87,12 @@
 
     background-color: $blue;
 
-    &:hover {
-        background-color: darken($blue, 5);
-    }
-
     @include phone-only {
         margin: 0 0 1rem 0;
+    }
+
+    &:hover {
+        background-color: darken($blue, 5);
     }
 }
 </style>

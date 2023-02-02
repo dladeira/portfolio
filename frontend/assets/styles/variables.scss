@@ -21,6 +21,12 @@ $desktop-width: 1512px;
     }
 }
 
+@mixin not-phone {
+    @media (min-width: $phone-width) {
+        @content;
+    }
+}
+
 $phone-width: 500px;
 
 @mixin phone-only {

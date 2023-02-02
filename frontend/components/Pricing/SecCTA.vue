@@ -33,6 +33,12 @@
 
     font-size: 3rem;
     font-weight: 700;
+
+    @include phone-only {
+        margin-bottom: 3.5rem;
+
+        font-size: 2.5rem;
+    }
 }
 
 .buttons {
@@ -51,6 +57,10 @@
     background-color: $gray;
     color: white;
 
+    @include phone-only {
+        padding: 1rem 3rem;
+    }
+
     &:hover {
         background-color: darken($gray, 5);
     }
@@ -60,6 +70,10 @@
     margin-right: 2rem;
 
     background-color: $blue;
+
+    @include phone-only {
+        margin: 0 0 1rem 0;
+    }
 
     &:hover {
         background-color: darken($blue, 5);
