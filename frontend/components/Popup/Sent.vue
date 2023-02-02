@@ -41,6 +41,10 @@
     padding: 1.5rem 2rem;
 
     background-color: white;
+
+    @include phone-only {
+        width: 100%;
+    }
 }
 
 .popup-title {

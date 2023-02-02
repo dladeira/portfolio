@@ -31,6 +31,10 @@
     width: 1150px;
 
     margin: 0 auto;
+
+    @include phone-only {
+        width: 90%;
+    }
 }
 
 .title {
@@ -53,6 +57,10 @@
     background-color: white;
 
     box-shadow: 0 0 4px 0 rgba(black, 0.25);
+
+    @include phone-only {
+        padding: 2rem;
+    }
 }
 
 .top,
@@ -66,12 +74,26 @@
     width: 100%;
 
     margin-bottom: 2rem;
+
+    @include phone-only {
+        margin-bottom: 0;
+    }
+}
+
+.top {
+    @include phone-only {
+        flex-direction: column;
+    }
 }
 
 .bot {
     justify-content: flex-start;
 
     margin-bottom: 0;
+
+    @include phone-only {
+        margin-top: 2rem;
+    }
 }
 
 .send {
@@ -109,6 +131,10 @@
 
     &:hover {
         cursor: default;
+    }
+
+    @include phone-only {
+        font-size: 0.75rem;
     }
 }
 </style>
