@@ -249,9 +249,9 @@
     @include phone-only {
         padding: 10px 25px;
 
-        font-size: 1.25rem;
+        font-size: 1.5rem;
 
-        box-shadow: 4px 4px 0 0 rgba(white, 0.75);
+        box-shadow: none;
     }
 }
 
@@ -287,6 +287,11 @@
     background-color: rgba(white, 0.5);
 
     content: '';
+
+    @include phone-only {
+        top: 0;
+        left: 0;
+    }
 }
 
 .socials {

@@ -93,7 +93,7 @@
     transform: translate(-50%, 0);
     z-index: 2;
 
-    background-color: $blue;
+    background-color: $navy;
 
     &-open {
         @extend .container-mobile;
