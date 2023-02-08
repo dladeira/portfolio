@@ -78,11 +78,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: rgba(white, 0.9);
 
     margin: 0;
 
-    font-weight: 900;
+    font-weight: 800;
 
     @include phone-only {
         flex-direction: column;
@@ -96,7 +96,7 @@
 
     width: 100%;
 
-    color: #9FCFF1;
+    color: rgba(white, 0.5);
 
     @include phone-only {
         position: relative;

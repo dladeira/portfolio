@@ -1,13 +1,14 @@
 $blue: #007FDB;
 $darkblue: #0066db;
+$navy: #142D4F;
 $gray: #676767;
 $green: #00C714;
 
 $gradient-main: linear-gradient(to top,
-        rgba($blue, 0.4),
-        rgba($blue, 0.6) 10%,
-        rgba($blue, 0.8) 30%,
-        rgba($blue, 1) 50%);
+        rgba($navy, 0.7) 10%,
+        rgba($navy, 0.8) 30%,
+        rgba($navy, 0.9) 60%,
+        rgba($navy, 1) 90%);
 
 // ==========
 // RESPONSIVENESS
