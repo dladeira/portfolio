@@ -7,8 +7,14 @@
                     <span class="title2">Ladeira</span>
                 </h1>
                 <h2 class="subtitle">
-                    <span :class="$i18n.locale == 'en' ? 'subtitle1' : $i18n.locale == 'pl' ? 'subtitle1-polish' : 'subtitle1-portuguese'">{{ $t('hero.subtitle1') }}</span>
-                    <span :class="$i18n.locale == 'en' ? 'subtitle2' : $i18n.locale == 'pl' ? 'subtitle2-polish' : 'subtitle2-portuguese'">{{ $t('hero.subtitle2') }}</span>
+                    <span
+                        :class="$i18n.locale == 'en' ? 'subtitle1' : $i18n.locale == 'pl' ? 'subtitle1-polish' : 'subtitle1-portuguese'">{{
+                            $t('hero.subtitle1')
+                        }}</span>
+                    <span
+                        :class="$i18n.locale == 'en' ? 'subtitle2' : $i18n.locale == 'pl' ? 'subtitle2-polish' : 'subtitle2-portuguese'">{{
+                            $t('hero.subtitle2')
+                        }}</span>
                 </h2>
             </div>
             <div class="hero-wrapper" id="hero-wrapper">
@@ -17,19 +23,30 @@
 
             <div class="buttons">
                 <nuxt-link :href="localePath('/contact')" class="button contact">{{ $t('hero.button1') }}</nuxt-link>
-                <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="button projects">{{ $t('hero.button2') }}</nuxt-link>
+                <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="button projects">{{
+                    $t('hero.button2')
+                }}</nuxt-link>
             </div>
 
             <div class="socials left">
-                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" format="webp" alt="Mail icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg"
+                        class="icon" format="webp" alt="Mail icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img
+                        src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg"
+                        class="icon" format="webp" alt="Github icon" /></nuxt-link>
                 <div class="line" />
             </div>
             <div class="socials right">
-                <nuxt-link :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" alt="US Flag" /></nuxt-link>
-                <nuxt-link :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" alt="PL Flag" /></nuxt-link>
-                <nuxt-link :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" alt="PT Flag" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img
+                        :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png"
+                        alt="US Flag" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img
+                        :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png"
+                        alt="PL Flag" /></nuxt-link>
+                <nuxt-link :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img
+                        :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png"
+                        alt="PT Flag" /></nuxt-link>
                 <div class="line" />
             </div>
         </div>
@@ -212,19 +229,21 @@
 .button {
     padding: 14px 48px;
 
+    border-radius: 1000px;
+
     font-size: 2.25rem;
     font-weight: 400;
     text-decoration: none;
-    background-color: $gray;
-    color: white;
+    background-color: white;
+    color: black;
 
-    box-shadow: 8px 8px 0 0 rgba(black, 0.75);
+    box-shadow: 8px 8px 0 0 rgba(white, 0.5);
 
     &:hover {
         box-shadow: none;
 
-        box-shadow: 4px 4px 0 0 rgba(black, 0.75);
-        transform: translate(4px, 4px);
+        box-shadow: none;
+        transform: translate(8px, 8px);
     }
 
     @include phone-only {
@@ -232,13 +251,42 @@
 
         font-size: 1.25rem;
 
-        box-shadow: 4px 4px 0 0 rgba(black, 0.75);
+        box-shadow: 4px 4px 0 0 rgba(white, 0.75);
     }
 }
 
-.contact {
-    margin-right: 2.5rem;
-    background-color: $darkblue;
+.projects {
+    position: relative;
+
+    margin-left: 2.5rem;
+
+    border: 2px solid white;
+
+    background: none;
+    color: white;
+
+    box-shadow: none;
+}
+
+.projects:hover::after {
+    top: 0;
+    left: 0;
+}
+
+.projects::after {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 1000px;
+    border: transparent;
+
+    background-color: rgba(white, 0.5);
+
+    content: '';
 }
 
 .socials {
