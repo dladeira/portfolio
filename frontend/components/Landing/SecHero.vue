@@ -17,7 +17,7 @@
 
             <div class="buttons">
                 <nuxt-link :href="localePath('/contact')" class="button contact">{{ $t('hero.button1') }}</nuxt-link>
-                <nuxt-link :href="localePath('/') + '#projects'" class="button showcase">{{ $t('hero.button2') }}</nuxt-link>
+                <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="button projects">{{ $t('hero.button2') }}</nuxt-link>
             </div>
 
             <div class="socials left">
@@ -320,6 +320,13 @@ function getPixelsOffCenter(x, y) {
     const newY = y - (window.screen.height / 2)
 
     return [newX, newY]
+}
+
+function scrollTo(id) {
+    setTimeout(() => {
+        const ele = document.getElementById(id)
+        window.scrollTo(ele.offsetLeft, ele.offsetTop)
+    }, window.location.pathname == "/" ? 0 : 100)
 }
 
 onMounted(() => {
