@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="content">
-            <div class="title">Pricing & Services</div>
+            <div class="title">{{ $t('services.title') }}</div>
             <div class="services">
                 <PricingService v-for="service in services" :name="service.name" :desc="service.desc" :price="service.price" />
             </div>

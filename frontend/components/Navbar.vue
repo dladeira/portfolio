@@ -1,7 +1,7 @@
 <template>
     <nav class="container-desktop">
-        <nuxt-link :href="localePath('/') + '#about'" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{ $t('navbar.about') }}</nuxt-link>
-        <nuxt-link :href="localePath('/') + '#projects'" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{ $t('navbar.projects') }}</nuxt-link>
+        <nuxt-link :href="localePath('/')" @click="scrollTo('about')" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{ $t('navbar.about') }}</nuxt-link>
+        <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" :class="router.path == 'bing' ? 'link-selected' : 'link'">{{ $t('navbar.projects') }}</nuxt-link>
         <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
         <nuxt-link :href="localePath('/pricing')" :class="router.path == '/pricing' ? 'link-selected' : 'link'">{{ $t('navbar.pricing') }}</nuxt-link>
         <nuxt-link :href="localePath('/contact')" :class="router.path == '/contact' ? 'link-selected' : 'link'">{{ $t('navbar.contact') }}</nuxt-link>
@@ -42,10 +42,16 @@
 }
 
 .brand {
+    margin: 0 50px;
+
     font-size: 2.25rem;
     font-weight: 700;
     text-decoration: none;
     color: white;
+
+    @include phone-only {
+        margin: 0;
+    }
 }
 
 .brand-light {
@@ -54,8 +60,11 @@
 
 .link {
     font-size: 1.25rem;
+    text-align: center;
     text-decoration: none;
     color: white;
+    
+    flex-grow: 1;
 
     &-selected {
         @extend .link;
@@ -134,5 +143,10 @@
 const router = useRoute()
 const open = ref(false)
 
-
+function scrollTo(id) {
+    setTimeout(() => {
+        const ele = document.getElementById(id)
+        window.scrollTo(ele.offsetLeft, ele.offsetTop)
+    }, window.location.pathname == "/" ? 0 : 100)
+}
 </script>
