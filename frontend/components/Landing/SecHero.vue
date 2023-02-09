@@ -95,7 +95,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: rgba(white, 0.9);
+    color: rgba(white, 1);
 
     margin: 0;
 
@@ -203,7 +203,7 @@
 
     @include phone-only {
         position: absolute;
-        top: 60%;
+        bottom: 60%;
         left: 50%;
 
         width: 260px;

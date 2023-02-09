@@ -29,23 +29,23 @@
     "services": {
         "title": "Pricing & Services",
         "service1": {
-            "name": "Static Website",
-            "desc": "A fast and reliant website with 3 pages included (more on request).\n\nStatic website means that the website looks the same for every client and no data is loaded from a 3rd party",
+            "name": "Simple Website",
+            "desc": "A fast and reliant website with 3 pages included.\n\nNo logging in or dynamic data (loaded from 3rd party servers). Website updates are manually done by the owner.",
             "price": "$20"
         },
         "service2": {
             "name": "Dynamic Website",
-            "desc": "A compact, SEO optimized, dynamic website with 5 pages included (more on request).\n\nDynamic website means that content changes based on who's viewing it, allowing for control panels and accounts (logging in).",
+            "desc": "A semi-complex and optimized website with 5 pages included.\n\nAllows for simple login systems and loading data from 3rd parties. Website updates are manually done by the owner.",
             "price": "$45"
         },
         "service3": {
-            "name": "Budget Web App",
-            "desc": "A lightweight web application with hosting included and a control panel to facilitate changes.",
+            "name": "Basic Web App",
+            "desc": "A complex website with 6 pages included.\n\nSupports login systems and loading data from 3rd parties. Hosting and a control panel to facilitate changes are included.",
             "price": "$100"
         },
         "service4": {
-            "name": "Full Web App",
-            "desc": "A fully fledged and performante web application with the infrastructure in place to support a large customer base. Web hosting included and a control panel to facilitate changes.",
+            "name": "Complex Web App",
+            "desc": "A SEO optimized and performant website with 7 pages included.\n\nSupports complex login systems and storing large amounts of user data. Hosting and a control panel to facilitate changes are included.",
             "price": "$160"
         },
         "price_lead": "Starting from",
@@ -65,20 +65,21 @@
                 "question": "1. How many pages"
             },
             "2": {
-                "question": "2. Website Type",
-                "question_help": "Dynamic - Content changes depends on who is visiting (allows for users to log in)\n\nStatic - Content is same for all visitors (no logging in or storing session data)",
+                "question": "2. Website Complexity",
+                "question_help": "How complex the website is\n\nBasic - No complicated features required and no data is loaded from 3rd parties\n\nSemi-Complex - Features take a bit of time to implement. Allows loading data from 3rd parties\n\nComplex & Optimized - The features are difficult to implement and speed is crucial",
                 "values": {
-                    "1": "Static",
-                    "2": "Dynamic"
+                    "1": "Basic",
+                    "2": "Semi-Complex",
+                    "3": "Complex & Optimized"
                 }
             },
             "3": {
-                "question": "3. Backend Type",
-                "question_help": "A custom communications server\n\nNone - No communication with custom server\n\nBasic - Basic server (logging in and storing basic user data)\n\nAdvanced - A optimized, secure, and complex custom server (allows using custom email servers, and complex math operations)",
+                "question": "3. Authentication",
+                "question_help": "How users login\n\nNone - Users cannot login\n\nEmail & Password - Users can login using their email and password\n\nSocial Media - Users can login using 3rd party services (Google, Instagram, Facebook)",
                 "values": {
                     "1": "None",
-                    "2": "Basic",
-                    "3": "Advanced"
+                    "2": "Email & Password",
+                    "3": "Social Media"
                 }
             },
             "4": {

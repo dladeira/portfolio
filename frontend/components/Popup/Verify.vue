@@ -67,11 +67,11 @@
     border: none;
 
     font-size: 1.25rem;
-    background-color: $blue;
+    background-color: $navy;
     color: white;
 
     &:hover {
-        background-color: darken($blue, 5);
+        background-color: darken($navy, 5);
 
         cursor: pointer;
     }

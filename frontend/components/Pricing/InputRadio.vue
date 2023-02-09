@@ -81,7 +81,7 @@
 
 .help-extended {
     position: absolute;
-    left: 0;
+    right: 0;
 
     display: none;
     justify-content: center;
@@ -104,13 +104,13 @@
     opacity: 0;
     transition: opacity 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
-    transform: translate(calc(50% - 0.5rem), 10px);
+    transform: translate(50%, 10px);
     z-index: 4;
 
     @include phone-only {
         left: 50%;
 
-        transform: translate(-50%, 10px);
+        transform: translate(-50%, 20px);
     }
 }
 
@@ -143,6 +143,10 @@
         @extend .radio;
 
         background-color: $blue;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 }
 </style>

@@ -85,14 +85,14 @@
 .contact {
     margin-right: 2rem;
 
-    background-color: $blue;
+    background-color: $navy;
 
     @include phone-only {
         margin: 0 0 1rem 0;
     }
 
     &:hover {
-        background-color: darken($blue, 5);
+        background-color: darken($navy, 5);
     }
 }
 </style>

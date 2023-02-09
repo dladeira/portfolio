@@ -195,8 +195,8 @@ const { t, locale } = useI18n()
 
 const fields = ref({
     pages: 3,
-    frontend: 'static',
-    backend: 'none',
+    complexity: 'basic',
+    authentication: 'none',
     hosting: 'none',
     updates: 'none'
 })
@@ -206,12 +206,13 @@ function updateField(index, value) {
 }
 
 function getUpfront() {
-    const pages = fields.value.pages * 7
-    const pagesMultiplier = fields.value.frontend == 'dynamic' ? 1.3 : 1
-    const backend = fields.value.backend == 'basic' ? 15 : fields.value.backend == 'advanced' ? 30 : 0
+    const pages = fields.value.pages * 8
+    const pagesMultiplier = fields.value.complexity == 'basic' ? 1 : fields.value.complexity == 'semi' ? 1.3 : 2
+    console.log(fields.value.authentication)
+    const authentication = fields.value.authentication == 'none' ? 0 : fields.value.authentication == 'email' ? 15 : 30
     const updates = fields.value.updates == 'panel' ? 30 : 0
 
-    const final = (pages * pagesMultiplier) + backend + updates
+    const final = (pages * pagesMultiplier) + authentication + updates
 
     return Math.round(final)
 }
@@ -266,21 +267,22 @@ function getPrice(usd) {
 
 const radios = [
     {
-        id: 'frontend',
+        id: 'complexity',
         title: t('estimator.inputs.2.question'),
         help: t('estimator.inputs.2.question_help'),
         values: [
-            [t('estimator.inputs.2.values.1'), "static"],
-            [t('estimator.inputs.2.values.2'), "dynamic"]
+            [t('estimator.inputs.2.values.1'), "basic"],
+            [t('estimator.inputs.2.values.2'), "semi"],
+            [t('estimator.inputs.2.values.3'), "complex"]
         ]
     }, {
-        id: 'backend',
+        id: 'authentication',
         title: t('estimator.inputs.3.question'),
         help: t('estimator.inputs.3.question_help'),
         values: [
             [t('estimator.inputs.3.values.1'), "none"],
-            [t('estimator.inputs.3.values.2'), "basic"],
-            [t('estimator.inputs.3.values.3'), "advanced"]
+            [t('estimator.inputs.3.values.2'), "email"],
+            [t('estimator.inputs.3.values.3'), "social"]
         ],
     }, {
         id: 'hosting',
