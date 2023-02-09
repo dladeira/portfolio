@@ -29,28 +29,28 @@
     "services": {
         "title": "Cennik",
         "service1": {
-            "name": "Strona Statyczna",
-            "desc": "Szybka i nowoczysna strona z 3 podstronami (więcej na żądanie).\n\nStatyczna strona znaczy że strona wygląda tak samo dla każdego uzytkownika i żadne dana są ładowane zewnętrzne.",
+            "name": "Prosta Witryna",
+            "desc": "Szybka i niezawodna witryna zawierająca 3 strony. Brak logowania i danych dynamicznych (dane ładowanych z zewnętrznych serwerów). Aktualizacje witryny są wykonywane ręcznie przez właściciela.",
             "price": "80zł"
         },
         "service2": {
-            "name": "Strona Dynamiczna",
-            "desc": "Nowoczesna i zoptymalizowana pod kątem SEO dynamiczna storna z 5 podstronami (więcej na żądanie).\n\nStrona dynamiczna oznacza że treść zmienią się w zależności od tego, kto czyta, co pozwala użytkownikom zalogować się.",
+            "name": "Dynamiczna Witryna",
+            "desc": "Zoptymalizowana witryna zawierająca 5 stron.\n\nZawiera prosty system logowania i pozwala ładowania danych z zewnętrznych serwerów. Aktualizacje witryny są wykonywane ręcznie przez właściciela.",
             "price": "200zł"
         },
         "service3": {
-            "name": "Standardowa Aplikacja Internetowa",
-            "desc": "Lekka aplikacja internetowa z hostingem i panelem administratora. Aplikacja internetowa zawiera technologie które nie występuje na normalnych stron internetowych, na przykład SPA i stopniowe ładowanie.",
+            "name": "Podstawowa Aplikacja WWW",
+            "desc": "Zaawansowana witryna zawierająca 6 stron.\n\nZawiera systemy logowania i pozwala ładowania danych z zewnętrznych serwerów. Obejmuje hosting i panel kontrolny ułatwia wprowadzanie zmian na stronie.",
             "price": "430zł"
         },
         "service4": {
-            "name": "Profesjonalna Aplikacja Internetowa",
-            "desc": "Kompletna aplikacja internetowa z infastrukturą do obsługi dużej bazy klientów. Pakiet posiada hosting i panel administratora.  Aplikacja internetowa zawiera technologie które nie występuje na normalnych stron internetowych, na przykład SPA i stopniowe ładowanie.",
+            "name": "Złożona Aplikacja WWW",
+            "desc": "Wydajna witryna zoptymalizowana pod kątem SEO zawierająca 7 stron.\n\nZawiera złożone systemy logowania i umożliwia przechowywania dużych ilości danych użytkowników. Obejmuje hosting i panel kontrolny ułatwia wprowadzanie zmian na stronie.",
             "price": "700zł"
         },
         "price_lead": "Od",
         "button": "Wybierz",
-        "disclaimer1": "Wszystkie ceny są szacunkami, aby uzyskać rzeczywiste oferty, prosze o",
+        "disclaimer1": "Wszystkie ceny są jedynie szacunkami, aby uzyskać rzeczywiste oferty, prosze o",
         "disclaimer2": "kontakt"
     },
     "estimator": {
@@ -65,20 +65,21 @@
                 "question": "1. Ile stron?"
             },
             "2": {
-                "question": "2. Typ strony",
-                "question_help": "Dynamiczna - Treść strony zmienia się w zalezności od tego, kto ją odwiedza (umożliwia logowanie)\n\nStatyczna - Treść strony jest taka sama dla wszystkich użytkowników)",
+                "question": "2. Złożoność Witryny",
+                "question_help": "Jak skomplikowana jest strona internetowa\n\nPodstawowa - Brak skomplikowanych funkcji i dane nie są ładowane z zewnętrznych serwerów\n\nPoł-złożona - Funkcje witryny wymagają trochę czasu na implementację. Pozwala na ładowanie danych z zewnętrznych serwerów\n\nZlozona i zoptymalizowana - Funkcje są trudne do implementowania i witryna muszi być bardzo szybka",
                 "values": {
-                    "1": "Statyczna",
-                    "2": "Dynamiczna"
+                    "1": "Podstawowa",
+                    "2": "Poł-złożona",
+                    "3": "Złożona i zoptymalizowana"
                 }
             },
             "3": {
-                "question": "3. Typ serwera API",
-                "question_help": "Serwer komunikacyjny który przechowywa dane\n\nBez - Bez serwera API\n\nPodstatowy - Podwstawoy server (możliwia logowanie i przechowywania podstawowe dane użytkownika)\n\nZaawansowany - Zoptymalizowany, bezpieczny i złożony serwer (pozwala na korzystanie z niestandardowych serwerów pocztowych i przechowywanie dużej ilości danych",
+                "question": "3. System logowania",
+                "question_help": "Jak użytkownicy się logują\n\nBrak - Użytkownicy nie mogą się zalogować\n\nE-mail i hasło - Użytkownicy mogą się zalogować przy użyciu swojego adresu e-mail i hasła\n\nMedia społecznościowe - Użytkownicy mogą się zalogować przy użyciu Google, Instagram, Facebook, lub innych mediach społecznościowe",
                 "values": {
-                    "1": "Bez",
-                    "2": "Podstawowy",
-                    "3": "Zaawansowany"
+                    "1": "Brak",
+                    "2": "E-mail i hasło",
+                    "3": "Media społecznościowe"
                 }
             },
             "4": {
