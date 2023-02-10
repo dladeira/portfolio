@@ -208,7 +208,6 @@ function updateField(index, value) {
 function getUpfront() {
     const pages = fields.value.pages * 8
     const pagesMultiplier = fields.value.complexity == 'basic' ? 1 : fields.value.complexity == 'semi' ? 1.3 : 2
-    console.log(fields.value.authentication)
     const authentication = fields.value.authentication == 'none' ? 0 : fields.value.authentication == 'email' ? 15 : 30
     const updates = fields.value.updates == 'panel' ? 30 : 0
 
