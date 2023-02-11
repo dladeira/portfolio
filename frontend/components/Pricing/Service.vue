@@ -1,6 +1,6 @@
 <template>
     <article class="service">
-        <h4 class="name">{{ name }}</h4>
+        <h4 :class="$i18n.locale == 'en' ? 'name' : 'name-small'">{{ name }}</h4>
         <pre class="desc">{{ desc }}</pre>
 
         <div class="bot">
@@ -33,6 +33,14 @@
 
     font-size: 2rem;
     font-weight: 700;
+
+    &-small {
+        @extend .name;
+
+        margin: 0 0 1.5rem;
+
+        font-size: 1.5rem;
+    }
 }
 
 .desc {

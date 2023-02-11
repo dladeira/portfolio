@@ -123,6 +123,12 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    &:hover .radio {
+        cursor: pointer;
+
+        background-color: rgba($gray, 0.3);
+    }
 }
 
 .hidden {
@@ -133,8 +139,6 @@
     height: 1rem;
     width: 1rem;
 
-    margin-right: 0.5rem;
-
     border-radius: 1000px;
 
     background-color: rgba($gray, 0.2);
@@ -143,7 +147,17 @@
         @extend .radio;
 
         background-color: $blue;
+
+        &:hover {
+            background-color: $blue;
+        }
     }
+}
+
+.text {
+    height: 100%;
+
+    padding-left: 0.5rem;
 
     &:hover {
         cursor: pointer;
