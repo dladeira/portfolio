@@ -203,7 +203,7 @@
 
     @include phone-only {
         position: absolute;
-        bottom: 60%;
+        top: 60%;
         left: 50%;
 
         width: 260px;
