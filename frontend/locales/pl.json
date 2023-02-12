@@ -13,7 +13,7 @@
     },
     "about": {
         "title": "Ambitny Programista",
-        "desc": "Nazywam się Daniel Ladeira I jestem trójjęzycznym programistą mieszkający w Warszawie.\n\nZacząłem programować w wieku 11 lat tworząc pluginy i mody do Minecraftu, i stamtąd zająłęm się innymi dziedzinami programowania. W codzienności tworze aplikacje internetowe full-stack z z najnowszymi technologiami tak jak React and Vue.",
+        "desc": "Nazywam się Daniel Ladeira i jestem trójjęzycznym programistą mieszkającym w Warszawie.\n\nZacząłem programować w wieku 11 lat tworząc pluginy i mody do Minecraftu, który przyczyniły się do rozwinięcia moich zdnolnośći w innych dziedzinach programowania. Na codzień tworze aplikacje internetowe full-stack z najnowszymi technologiami tak jak React and Vue.",
         "lang1": "Angielski",
         "lang2": "Polski",
         "lang3": "Portugalski"
@@ -21,8 +21,8 @@
     "projects": {
         "title": "Projekty",
         "project1": "Profesjonalna i zoptymalizowana pod kątem SEO strona internetowa do statystyk serwerów Minecraftowych. Projekt demonstruje dobre wykorzystanie przestrzeni i hierarchii aby przedstawić dużo informacji.",
-        "project2": "Kalendarz do śledzenia czasu. Minimalistyczny i w kolorajch jasnych projekt mający na celu rozwiązanie bardzego konkretnego problemu, na co teraz spędzam moj czas i na czym powinienem spędzić więcej czasu w przysłości?",
-        "project3": "Prosta strona pokazująca umiejętność programowania za pomocą Reactu i serwera API. W tym projekcie skupiłem się na serwerze i pisanie szybkiego i efektywnego kodu.",
+        "project2": "Kalendarz do śledzenia czasu. Minimalistyczny i w jasnych kolorajch projekt mający na celu rozwiązanie konkretnego problemu, na przykład jak ulepszyć moj czas.",
+        "project3": "Prosta strona pokazująca umiejętność programowania za pomocą Reactu i serwera API. W tym projekcie skupiłem się na serwerze i na kodyfikowaniu.",
         "button1": "Pokaż stronę",
         "button2": "Otwórz kod"
     },
@@ -30,22 +30,22 @@
         "title": "Cennik",
         "service1": {
             "name": "Prosta Witryna",
-            "desc": "Szybka i niezawodna witryna zawierająca 3 strony. Brak logowania i danych dynamicznych (dane ładowanych z zewnętrznych serwerów). Aktualizacje witryny są wykonywane ręcznie przez właściciela.",
+            "desc": "Szybka i niezawodna witryna zawierająca 3 strony. Brak logowania i danych dynamicznych (dane ładowane z zewnętrznych serwerów). Aktualizacje witryny są wykonywane ręcznie przez właściciela.",
             "price": "80zł"
         },
         "service2": {
             "name": "Dynamiczna Witryna",
-            "desc": "Zoptymalizowana witryna zawierająca 5 stron.\n\nZawiera prosty system logowania i pozwala ładowania danych z zewnętrznych serwerów. Aktualizacje witryny są wykonywane ręcznie przez właściciela.",
+            "desc": "Zoptymalizowana witryna zawierająca 5 stron.\n\nZawiera prosty system logowania i pozwala na ładowanie danych z zewnętrznych serwerów. Aktualizacje witryny są wykonywane ręcznie przez właściciela.",
             "price": "200zł"
         },
         "service3": {
             "name": "Podstawowa Aplikacja WWW",
-            "desc": "Zaawansowana witryna zawierająca 6 stron.\n\nZawiera systemy logowania i pozwala ładowania danych z zewnętrznych serwerów. Obejmuje hosting i panel kontrolny ułatwia wprowadzanie zmian na stronie.",
+            "desc": "Zaawansowana witryna zawierająca 6 stron.\n\nZawiera systemy logowania i pozwala na ładowanie danych z zewnętrznych serwerów. Obejmuje hosting i panel kontrolny, który ułatwia wprowadzanie zmian na stronie.",
             "price": "430zł"
         },
         "service4": {
             "name": "Złożona Aplikacja WWW",
-            "desc": "Wydajna witryna zoptymalizowana pod kątem SEO zawierająca 7 stron.\n\nZawiera złożone systemy logowania i umożliwia przechowywania dużych ilości danych użytkowników. Obejmuje hosting i panel kontrolny ułatwia wprowadzanie zmian na stronie.",
+            "desc": "Wydajna witryna zoptymalizowana pod kątem SEO zawierająca 7 stron.\n\nZawiera złożone systemy logowania i umożliwia przechowywanie dużych ilości danych użytkowników. Obejmuje hosting i panel kontrolny, który ułatwia wprowadzanie zmian na stronie.",
             "price": "700zł"
         },
         "price_lead": "Od",
@@ -69,7 +69,7 @@
                 "question_help": "Jak skomplikowana jest strona internetowa\n\nPodstawowa - Brak skomplikowanych funkcji i dane nie są ładowane z zewnętrznych serwerów\n\nPoł-złożona - Funkcje witryny wymagają trochę czasu na implementację. Pozwala na ładowanie danych z zewnętrznych serwerów\n\nZlozona i zoptymalizowana - Funkcje są trudne do implementowania i witryna muszi być bardzo szybka",
                 "values": {
                     "1": "Podstawowa",
-                    "2": "Poł-złożona",
+                    "2": "Pół-złożona",
                     "3": "Złożona i zoptymalizowana"
                 }
             },
