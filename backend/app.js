@@ -39,6 +39,24 @@ app.get("/confirm/:code", async (req, res) => {
             message: confirmation.body.message
         })
 
+        try {
+            transporter.sendMail({
+                from: '"Portfolio" <portfolio@ladeira.eu>',
+                to: 'daniel@ladeira.eu',
+                subject: 'Portfolio Contact Message',
+                html: `You got a new contact message,<br/>
+                <br/>
+            Name: ${confirmation.body.name}<br/>
+            Email: ${confirmation.body.email}<br/>
+            Budget: ${confirmation.body.budget}<br/>
+            Message: ${confirmation.body.message}<br/>
+            <br/>
+            Sincerely,<br/>
+            Ladeira.eu.
+            `
+            })
+        } catch { }
+
         await msg.save()
 
         confirmations = confirmations.filter(i => i.code != code)
