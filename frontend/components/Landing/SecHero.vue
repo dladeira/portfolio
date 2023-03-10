@@ -383,10 +383,10 @@ function scrollTo(id) {
 }
 
 onMounted(() => {
-    document.addEventListener('mousemove', onMouseMove)
+    // document.addEventListener('mousemove', onMouseMove)
 })
 
 onBeforeUnmount(() => {
-    document.removeEventListener('mousemove', onMouseMove)
+    // document.removeEventListener('mousemove', onMouseMove)
 })
 </script>
