@@ -82,7 +82,7 @@
 
     width: 100%;
 
-    margin-top: 11.25rem;
+    margin-top: 14rem;
 
     @include phone-only {
         margin-top: 6rem;
@@ -198,7 +198,7 @@
 .hero {
     width: 450px;
 
-    transform: translate(5px, -120px);
+    transform: translate(5px, -100px);
     user-select: none;
 
     @include phone-only {
