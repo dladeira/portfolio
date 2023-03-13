@@ -9,9 +9,9 @@ const { t } = useI18n()
 
 useI18n().onLanguageSwitched = (oldLocale, newLocale) => {
     useHead({
-        title: `Daniel Ladeira / ${t('hero.subtitle1')} ${t('hero.subtitle2')}`,
+        title: `Daniel Ladeira / ${t('meta.title')}`,
         meta: [
-            { name: 'description', content: 'Trilingual freelance web developer based in Warsaw, Poland. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS.' }
+            { name: 'description', content: t('meta.description') }
         ],
         htmlAttrs: {
             lang: newLocale
@@ -20,9 +20,9 @@ useI18n().onLanguageSwitched = (oldLocale, newLocale) => {
 }
 
 useHead({
-    title: `Daniel Ladeira / ${t('hero.subtitle1')} ${t('hero.subtitle2')}`,
+    title: `Daniel Ladeira / ${t('meta.title')}`,
     meta: [
-        { name: 'description', content: 'Trilingual freelance web developer based in Warsaw, Poland. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS.' }
+        { name: 'description', content: t('meta.description') }
     ],
     htmlAttrs: {
         lang: useI18n().locale.value

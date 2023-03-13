@@ -1,4 +1,9 @@
+
 {
+    "meta": {
+        "title": "Programista Stron Internetowych",
+        "description": "Trójjęzyczny niezależny programista stron internetowych w Warszawie, Polska. Specjalizuje się w React/NEXT, Vue/NUXT, MongoDB i NodeJS."
+    },
     "navbar": {
         "about": "O mnie",
         "projects": "Projekty",

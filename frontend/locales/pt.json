@@ -1,4 +1,8 @@
 {
+    "meta": {
+        "title": "Desenvolvedor Web Freelancer",
+        "description": "Desenvolvedor web trilingue com base em Varsóvia, Polónia. Especializado em React/NEXT, Vue/NUXT, MongoDB e NodeJS."
+    },
     "navbar": {
         "about": "Sobre mim",
         "projects": "Projetos",

@@ -1,4 +1,8 @@
 {
+    "meta": {
+        "title": "Freelance Web Developer",
+        "description": "Trilingual freelance web developer based in Warsaw, Poland. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
+    },
     "navbar": {
         "about": "About",
         "projects": "Projects",
