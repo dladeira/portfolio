@@ -52,7 +52,7 @@ app.get("/confirm/:code", async (req, res) => {
             Message: ${confirmation.body.message}<br/>
             <br/>
             Sincerely,<br/>
-            Ladeira.eu.
+            Ladeira.eu
             `
             })
         } catch { }
@@ -100,7 +100,7 @@ app.post("/msg", async (req, res) => {
         ${confirmLink}
         
         Sincerely,
-        Daniel Ladeira.`
+        Daniel Ladeira`
         })
     } catch { }
 
