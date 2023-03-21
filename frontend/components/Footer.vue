@@ -3,7 +3,7 @@
         <div class="content">
             <div class="copy">© 2023 Daniel Ladeira</div>
             <div class="icons">
-                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" alt="Mail icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" alt="Dribbble icon" /></nuxt-link>
                 <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" alt="StackOverflow icon" /></nuxt-link>
                 <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" alt="Github icon" /></nuxt-link>
             </div>
@@ -26,13 +26,15 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 1150px;
+    @include desktop-only {
+        width: $content-desktop;
+    }
+
+    @include laptop-only {
+        width: $content-laptop;
+    }
 
     margin: 0 auto;
-
-    @include phone-only {
-        width: 90%;
-    }
 }
 
 .copy {
@@ -44,10 +46,10 @@
     width: 20px;
 
 
-    filter: invert(50%);
+    filter: invert(60%);
 
     &:hover {
-        filter: invert(30%);
+        filter: invert(90%);
     }
 
     &-wrapper {

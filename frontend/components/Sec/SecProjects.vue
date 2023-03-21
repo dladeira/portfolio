@@ -1,6 +1,6 @@
 <template>
-    <section class="section" id="about">
-        <h3 class="section-title"><span class="section-title-index">02.</span> Projects</h3>
+    <section class="section" id="projects">
+        <h3 class="section-title"><span class="section-title-index">02.</span> Works</h3>
         <div class="content">
             <Project v-for="project of projects" :align="(projects.indexOf(project) % 2) == 0" :name="project.name" :desc="project.desc" :img="project.img" :tags="project.tags" :website="project.website" :source="project.source" :view="project.view" />
         </div>

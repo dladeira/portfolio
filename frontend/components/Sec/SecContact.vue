@@ -93,7 +93,7 @@
     margin-right: 2rem;
     padding: 0.5rem 3rem;
 
-    border: 2px solid #007FDB;
+    border: 1px solid #007FDB;
     border-radius: 10px;
 
     font-size: 1rem;

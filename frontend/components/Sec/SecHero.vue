@@ -23,7 +23,7 @@
             </div>
 
             <div class="socials left">
-                <nuxt-link class="icon-wrapper" href="mailto: daniel@ladeira.eu"><nuxt-img src="/icon-mail.svg" class="icon" format="webp" alt="Mail icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
                 <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
                 <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
             </div>
@@ -181,10 +181,10 @@
     height: 24px;
     width: 24px;
 
-    filter: invert(100%);
+    filter: invert(60%);
 
     &:hover {
-        filter: invert(80%);
+        filter: invert(100%);
     }
 
     &-wrapper {

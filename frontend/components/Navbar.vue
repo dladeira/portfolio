@@ -7,7 +7,7 @@
         </nuxt-link>
         <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="link">
             <nuxt-img class="icon" src="/icon-resume.svg" />
-            Resume
+            Works
         </nuxt-link>
         <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
             <nuxt-img class="icon" src="/icon-contact.svg" />
