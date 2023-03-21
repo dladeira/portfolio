@@ -18,14 +18,6 @@ let transporter = nodemailer.createTransport({
     }
 })
 
-app.get("/", (req, res) => {
-    Message.find({}, (err, msgs) => {
-        if (err)
-            return res.status(400).json(msgs)
-        res.status(200).json(msgs)
-    })
-})
-
 app.get("/confirm/:code", async (req, res) => {
     const code = req.params.code
 
