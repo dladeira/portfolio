@@ -40,11 +40,10 @@
 
     padding: 1.5rem 2rem;
 
-    background-color: white;
+    border-radius: 10px;
 
-    @include phone-only {
-        width: 100%;
-    }
+
+    background-color: #2d343c;
 }
 
 .popup-title {
@@ -57,23 +56,40 @@
 .popup-desc {
     width: 100%;
 
-    font-size: 1.25rem;
+    margin-top: 1rem;
+
+    font-size: 1.2rem;
+    line-height: 1.5rem;
 }
 
 .ok {
-    margin-top: 1.5rem;
-    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    padding: 0.5rem 3rem;
 
-    border: none;
+    border: 2px solid #007FDB;
+    border-radius: 10px;
 
-    font-size: 1.25rem;
-    background-color: $navy;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: transparent;
     color: white;
 
     &:hover {
-        background-color: darken($navy, 5);
+        background-color: #007FDB;
+        color: white;
 
         cursor: pointer;
+    }
+
+    &:disabled {
+        opacity: 0.3;
+
+        background-color: #007FDB;
+        color: white;
+
+        &:hover {
+            cursor: default;
+        }
     }
 }
 </style>

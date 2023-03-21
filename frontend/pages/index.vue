@@ -1,9 +1,8 @@
 <template>
-    <LandingSecHero />
-    <LandingSecAbout />
-    <LandingSecShowcase />
-    <LandingSecServices />
-    <LandingSecCTA />
+    <SecHero />
+    <SecAbout />
+    <SecProjects />
+    <SecContact />
 </template>
 
 <style lang="scss" scoped>

@@ -17,7 +17,7 @@
 
     padding: 1.5rem 0;
 
-    background-color: #F4F4F4;
+    background-color: rgba(#101318, 30%);
 }
 
 .content {

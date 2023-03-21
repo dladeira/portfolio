@@ -1,15 +1,15 @@
 <template>
-    <div class="container">
+    <div class="section" id="contact">
+        <h3 class="section-title"><span class="section-title-index">03.</span> Contact</h3>
         <div class="content">
-            <div class="title">{{ $t('contact.title') }}</div>
             <form class="form" @submit.prevent="sendForm">
                 <div class="top">
-                    <ContactInputText :name="$t('contact.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
-                    <ContactInputText :name="$t('contact.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
-                    <ContactInputText :name="$t('contact.budget')" id="budget" type="number" placeholder="$100" :disabled="messageSent" />
+                    <FormText :name="$t('contact.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
+                    <FormText :name="$t('contact.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
+                    <FormText :name="$t('contact.budget')" id="budget" type="number" placeholder="$100" :disabled="messageSent" />
                 </div>
                 <div class="mid">
-                    <ContactInputTextArea :name="$t('contact.message')" id="message" :placeholder="$t('contact.message_placeholder')" :disabled="messageSent" />
+                    <FormTextArea :name="$t('contact.message')" id="message" :placeholder="$t('contact.message_placeholder')" :disabled="messageSent" />
                 </div>
                 <div class="bot">
                     <button type="submit" class="send" :disabled="messageSent">{{$t('contact.send')}}</button>
@@ -21,29 +21,22 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
-    padding: 4rem 0;
+.section {
+    width: 100%;
 
-    background-color: #fbfbfb;
+    padding: 10rem 0;
 }
 
-.content {
-    width: 1150px;
-
-    margin: 0 auto;
-
-    @include phone-only {
-        width: 90%;
-    }
-}
-
-.title {
+.section-title {
     width: fit-content;
 
-    margin: 0 auto 3rem;
+    margin: 0 auto 9rem;
 
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 3rem;
+
+    &-index {
+        color: #1FB3E2;
+    }
 }
 
 .form {
@@ -52,14 +45,14 @@
     justify-content: center;
     align-items: center;
 
-    padding: 2rem 4rem;
+    margin: 0 auto;
 
-    background-color: white;
+    @include desktop-only {
+        width: $content-desktop;
+    }
 
-    box-shadow: 0 0 4px 0 rgba(black, 0.25);
-
-    @include phone-only {
-        padding: 2rem;
+    @include laptop-only {
+        width: $content-laptop;
     }
 }
 
@@ -98,34 +91,37 @@
 
 .send {
     margin-right: 2rem;
-    padding: 0.75rem 2.75rem;
+    padding: 0.5rem 3rem;
 
-    border: none;
+    border: 2px solid #007FDB;
+    border-radius: 10px;
 
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
-    background-color: $navy;
+    background-color: transparent;
     color: white;
 
     &:hover {
-        background-color: darken($navy, 5);
+        background-color: #007FDB;
+        color: white;
 
         cursor: pointer;
     }
 
     &:disabled {
-        background-color: rgba($navy, 0.5);
+        opacity: 0.3;
+
+        background-color: #007FDB;
+        color: white;
 
         &:hover {
-            background-color: rgba($navy, 0.5);
-
             cursor: default;
         }
     }
 }
 
 .msg {
-    color: rgba($gray, 0.5);
+    color: rgba(white, 0.5);
 
     user-select: none;
 

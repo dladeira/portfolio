@@ -1,4 +1,0 @@
-<template>
-        <SecSnip />
-        <ContactSecContact />
-</template>

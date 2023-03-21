@@ -1,49 +1,61 @@
 <template>
     <div class="input-wrapper">
         <div class="name">{{ name }}</div>
-        <textarea class="input" :name="id" :type="type" :placeholder="placeholder" :disabled="disabled" required />
+        <input class="input" :name="id" :type="type" :placeholder="placeholder" step="any" :disabled="disabled" required />
     </div>
 </template>
 
 <style lang="scss" scoped>
 .input-wrapper {
-    width: 100%;
+    width: 30%;
+
+    @include phone-only {
+        width: 100%;
+
+        margin-bottom: 2rem;
+    }
 }
 
 .name {
     width: 100%;
 
     margin-bottom: 1rem;
+    padding-left: 1rem;
 
     font-size: 1rem;
     font-weight: 700;
-    color: black;
+    color: white;
 }
 
 .input {
-    height: 12rem;
     width: 100%;
 
-    padding: 0.75rem 0.75rem;
+    padding: 1rem 1rem;
 
-    border: none;
+    border: 1px solid rgba(white, 0.3);
     border-radius: 5px;
 
-    font-family: 'Outfit', sans-serif;
     font-size: 1rem;
+    font-family: 'League Spartan', sans-serif;
+    background-color: rgba(white, 0.1);
+    color: white;
 
     box-shadow: 0 0 4px 0 rgba(black, 0.25);
     outline: none;
-    resize: none;
 
     &::placeholder {
-        color: rgba($gray, 0.5);
+        color: rgba(white, 0.6);
     }
 
     &:focus {
         outline: none;
 
+        border: 1px solid rgba(white, 1);
         box-shadow: 0 0 8px 0 rgba(black, 0.25);
+    }
+
+    &:disabled {
+        color: rgba(white, 0.3);
     }
 }
 </style>
@@ -55,4 +67,5 @@ const props = defineProps({
     type: String,
     id: String,
     disabled: Boolean
-})</script>
+})
+</script>

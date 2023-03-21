@@ -4,34 +4,50 @@ $navy: #142D4F;
 $gray: #676767;
 $green: #00C714;
 
-$gradient-main: linear-gradient(to top,
-        rgba($navy, 0.7) 10%,
-        rgba($navy, 0.8) 30%,
-        rgba($navy, 0.9) 60%,
-        rgba($navy, 1) 90%);
+$background-color: #141B2D;
+
+$content-desktop: 1300px;
+$content-laptop: 1000px;
+
+$gradient-opacity: 0.05;
+$gradient-main: linear-gradient(to right,
+        rgba(#00FF75, $gradient-opacity),
+        rgba(#00C2FF, $gradient-opacity) 20%,
+        rgba(#00C2FF, $gradient-opacity) 80%,
+        rgba(#FF3030, $gradient-opacity));
+
+$gradient-hero: linear-gradient(to top, #222D40, #131C2D);
 
 // ==========
 // RESPONSIVENESS
 // ==========
 
-$desktop-width: 1512px;
+$laptop_max: 1512px;
+$phone_max: 500px;
 
 @mixin desktop-only {
-    @media (min-width: $desktop-width) {
+    @media (min-width: $laptop_max) {
         @content;
+    }
+}
+
+@mixin laptop-only {
+    @media (max-width: $laptop_max) {
+        @media (min-width: $phone_max) {
+            @content;
+        }
     }
 }
 
 @mixin not-phone {
-    @media (min-width: $phone-width) {
+    @media (min-width: $phone_max) {
         @content;
     }
 }
 
-$phone-width: 500px;
 
 @mixin phone-only {
-    @media (max-width: $phone-width) {
+    @media (max-width: $phone_max) {
         @content;
     }
 }
