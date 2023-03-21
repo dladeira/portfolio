@@ -58,8 +58,8 @@
 }
 
 .img-wrapper {
-    height: 475px;
-    width: 475px;
+    height: 26rem;
+    width: 26rem;
 
     border-radius: 50px;
 
