@@ -14,7 +14,7 @@
             </div>
 
             <div class="buttons">
-                <nuxt-link @click="scrollTo('contact')" class="button about">
+                <nuxt-link @click="scrollTo('about')" class="button about">
                     About me
                 </nuxt-link>
                 <nuxt-link @click="scrollTo('contact')" class=" button contact">
