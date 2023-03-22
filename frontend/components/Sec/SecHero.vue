@@ -264,7 +264,7 @@
 
 @keyframes text-in {
     0% {
-        transform: translateY(40px);
+        transform: translateY(70px);
         opacity: 0;
     }
 
