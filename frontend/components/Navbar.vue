@@ -47,17 +47,6 @@
     }
 }
 
-@keyframes navbar-in {
-    0% {
-        transform: translateY(-100px);
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 .brand {
     margin: 0 auto 0 0;
 
@@ -106,6 +95,17 @@
 
 .icon {
     margin-right: 0.5rem;
+}
+
+@keyframes navbar-in {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 </style>
 
