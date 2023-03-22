@@ -104,7 +104,7 @@
 .hero {
     position: absolute;
     right: -80px;
-    bottom: -900px;
+    bottom: -160px;
     width: 30rem;
 
     filter: drop-shadow(-8px -6px 0 black);
@@ -253,11 +253,12 @@
 
 @keyframes hero-in {
     0% {
-        bottom: -900px;
+        transform: translateY(100%);
+        opacity: 1;
     }
 
     100% {
-        bottom: -160px;
+        transform: translateY(0%);
         opacity: 1;
     }
 }
@@ -296,7 +297,7 @@
 
 .blob {
     position: absolute;
-    
+
     border-radius: 1000px;
 
     background-color: rgba(#007FDB, 0.5);
@@ -360,12 +361,16 @@ function scrollTo(id) {
 }
 
 onBeforeMount(() => {
-    var hero = document.getElementById('hero')
     hero.addEventListener('load', () => {
+        var hero = document.getElementById('hero')
+
         hero.classList.add('hero-loaded')
     })
 
     setTimeout(() => {
+        var hero = document.getElementById('hero')
+
+
         hero.classList.add('hero-loaded')
     }, 500)
 })
