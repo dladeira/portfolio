@@ -1,5 +1,11 @@
 <template>
     <section class="container">
+        <div class="blobs">
+            <div class="blob blob-1" />
+            <div class="blob blob-2" />
+            <div class="blob blob-3" />
+            <div class="blob blob-4" />
+        </div>
         <div class="inner-container">
             <div class="main">
                 <div class="text">
@@ -277,6 +283,70 @@
 
     100% {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// ==========
+// BLOBS
+// ==========
+
+.blobs {
+    position: relative;
+}
+
+.blob {
+    position: absolute;
+    
+    border-radius: 1000px;
+
+    background-color: rgba(#007FDB, 0.5);
+
+    animation: blob-in 1s forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+
+.blob-1 {
+    top: 15vh;
+    left: -8vw;
+
+    height: 8vh;
+    width: 14vw;
+}
+
+.blob-2 {
+    top: 68vh;
+    left: -2vw;
+
+    height: 8vh;
+    width: 16vw;
+}
+
+.blob-3 {
+    top: 82vh;
+    left: -2vw;
+
+    height: 8vh;
+    width: 10vw;
+}
+
+.blob-4 {
+    top: 28vh;
+    right: -107vw;
+
+    height: 30vh;
+    width: 30vh;
+}
+
+@keyframes blob-in {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
         opacity: 1;
     }
 }
