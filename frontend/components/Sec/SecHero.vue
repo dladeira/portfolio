@@ -254,7 +254,6 @@
 @keyframes hero-in {
     0% {
         bottom: -900px;
-        filter: blur(10px);
     }
 
     100% {
@@ -368,6 +367,6 @@ onBeforeMount(() => {
 
     setTimeout(() => {
         hero.classList.add('hero-loaded')
-    }, 200)
+    }, 800)
 })
 </script>
