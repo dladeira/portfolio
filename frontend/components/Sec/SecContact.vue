@@ -12,7 +12,7 @@
                     <FormTextArea :name="$t('contact.message')" id="message" :placeholder="$t('contact.message_placeholder')" :disabled="messageSent" />
                 </div>
                 <div class="bot">
-                    <button type="submit" class="send" :disabled="messageSent">{{$t('contact.send')}}</button>
+                    <button type="submit" class="send" :disabled="messageSent">{{ $t('contact.send') }}</button>
                     <div class="msg">{{ $t('contact.hint') }}</div>
                 </div>
             </form>
@@ -100,6 +100,8 @@
     font-weight: 400;
     background-color: transparent;
     color: white;
+
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &:hover {
         background-color: #007FDB;

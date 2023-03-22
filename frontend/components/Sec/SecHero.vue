@@ -1,25 +1,27 @@
 <template>
     <section class="container">
         <div class="inner-container">
-            <div class="text">
-                <h1 class="title">
-                    Daniel Ladeira
-                </h1>
-                <h2 class="subtitle">
-                    Freelance Web Developer
-                </h2>
-            </div>
-            <div class="hero-wrapper" id="hero-wrapper">
-                <nuxt-img class="hero" src="/hero.png" format="webp" alt="Hero" />
+            <div class="main">
+                <div class="text">
+                    <h1 class="title">
+                        Daniel Ladeira
+                    </h1>
+                    <h2 class="subtitle">
+                        Freelance Web Developer
+                    </h2>
+                </div>
+                <div class="buttons">
+                    <nuxt-link @click="scrollTo('about')" class="button about">
+                        About me
+                    </nuxt-link>
+                    <nuxt-link @click="scrollTo('contact')" class=" button contact">
+                        Contact
+                    </nuxt-link>
+                </div>
             </div>
 
-            <div class="buttons">
-                <nuxt-link @click="scrollTo('about')" class="button about">
-                    About me
-                </nuxt-link>
-                <nuxt-link @click="scrollTo('contact')" class=" button contact">
-                    Contact
-                </nuxt-link>
+            <div class="hero-wrapper" id="hero-wrapper">
+                <nuxt-img class="hero" src="/hero.png" format="webp" alt="Hero" lazy="false" id="hero" />
             </div>
 
             <div class="socials left">
@@ -66,6 +68,13 @@
     overflow: hidden;
 }
 
+.main {
+    animation: text-in 1s forwards;
+    animation-delay: 500ms;
+
+    opacity: 0;
+}
+
 .text {
     margin-top: 15rem;
 }
@@ -89,11 +98,44 @@
 .hero {
     position: absolute;
     right: -80px;
-    bottom: -300px;
+    bottom: -900px;
     width: 30rem;
-    user-select: none;
 
     filter: drop-shadow(-8px -6px 0 black);
+    user-select: none;
+    opacity: 0;
+
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hero-loaded {
+    animation: hero-in 1s forwards;
+}
+
+@keyframes hero-in {
+    0% {
+        bottom: -900px;
+        filter: blur(10px);
+    }
+
+    100% {
+        bottom: -160px;
+        opacity: 1;
+    }
+}
+
+@keyframes text-in {
+    0% {
+        transform: translateY(40px);
+        // filter: blur(5px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        // filter: blur(0);
+        opacity: 1;
+    }
 }
 
 .buttons {
@@ -117,6 +159,7 @@
     color: black;
 
     box-shadow: 8px 8px 0 0 #007FDB;
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &:hover {
         cursor: pointer;
@@ -181,6 +224,9 @@
     height: 24px;
     width: 24px;
 
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+
     filter: invert(60%);
 
     &:hover {
@@ -201,6 +247,7 @@
     border-radius: 3px;
 
     opacity: 0.5;
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &-active {
         @extend .flag;
@@ -212,24 +259,6 @@
         cursor: pointer;
         opacity: 1;
     }
-}
-
-.works {
-    position: absolute;
-    left: 15vw;
-    bottom: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.works-text {
-    margin-bottom: 1rem;
-
-    font-size: 1.5rem;
-    color: white;
 }
 
 .line {
@@ -247,4 +276,15 @@ function scrollTo(id) {
         window.scrollTo(ele.offsetLeft, ele.offsetTop)
     }, window.location.pathname == "/" ? 0 : 100)
 }
+
+onBeforeMount(() => {
+    var hero = document.getElementById('hero')
+    hero.addEventListener('load', () => {
+        hero.classList.add('hero-loaded')
+    })
+
+    setTimeout(() => {
+        hero.classList.add('hero-loaded')
+    }, 200)
+})
 </script>

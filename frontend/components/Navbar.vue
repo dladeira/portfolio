@@ -28,7 +28,13 @@
     min-width: 800px;
 
     margin: 30px auto;
+
+    opacity: 0;
     z-index: 2;
+
+    animation: navbar-in 1s forwards;
+    animation-delay: 500ms;
+
 
     @include desktop-only {
         width: $content-desktop;
@@ -41,6 +47,17 @@
     }
 }
 
+@keyframes navbar-in {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .brand {
     margin: 0 auto 0 0;
 
@@ -48,6 +65,12 @@
     font-weight: 700;
     text-decoration: none;
     color: white;
+
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+        transform: scale(0.9);
+    }
 }
 
 .brand-light {
@@ -55,6 +78,7 @@
 }
 
 .link {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -63,16 +87,20 @@
     border-bottom: 1px solid transparent;
 
 
-    padding-bottom: 5px;
-    margin: 0 2rem;
+    padding: 0.5rem;
+    margin: 0 1rem;
 
     font-size: 1.25rem;
     text-align: center;
     text-decoration: none;
     color: white;
 
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    overflow: hidden;
+
     &:hover {
-        border-color: white;
+        transform: scale(0.9);
     }
 }
 
