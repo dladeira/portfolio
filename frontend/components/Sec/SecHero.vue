@@ -367,6 +367,6 @@ onBeforeMount(() => {
 
     setTimeout(() => {
         hero.classList.add('hero-loaded')
-    }, 800)
+    }, 500)
 })
 </script>
