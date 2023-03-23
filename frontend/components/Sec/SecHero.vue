@@ -363,14 +363,11 @@ function scrollTo(id) {
 onBeforeMount(() => {
     hero.addEventListener('load', () => {
         var hero = document.getElementById('hero')
-
         hero.classList.add('hero-loaded')
     })
 
     setTimeout(() => {
         var hero = document.getElementById('hero')
-
-
         hero.classList.add('hero-loaded')
     }, 500)
 })

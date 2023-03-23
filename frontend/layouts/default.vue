@@ -1,11 +1,9 @@
 <template>
-    <div class="page">
-        <Navbar />
-        <slot />
-        <Footer />
-        <PopupVerify v-if="popupVerify" />
-        <PopupSent v-if="popupSent" />
-    </div>
+    <Navbar />
+    <slot />
+    <Footer />
+    <PopupVerify v-if="popupVerify" />
+    <PopupSent v-if="popupSent" />
 </template>
 
 <script setup>

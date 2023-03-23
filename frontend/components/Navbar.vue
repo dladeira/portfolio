@@ -1,31 +1,47 @@
 <template>
-    <nav class="container">
-        <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
-        <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
-            <nuxt-img class="icon" src="/icon-user.svg" />
-            About me
-        </nuxt-link>
-        <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="link">
-            <nuxt-img class="icon" src="/icon-resume.svg" />
-            Works
-        </nuxt-link>
-        <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
-            <nuxt-img class="icon" src="/icon-contact.svg" />
-            Contact
-        </nuxt-link>
+    <nav class="container" id="navbar-container">
+        <div class="inner-container">
+            <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
+            <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
+                <nuxt-img class="icon" src="/icon-user.svg" />
+                About me
+            </nuxt-link>
+            <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="link">
+                <nuxt-img class="icon" src="/icon-resume.svg" />
+                Works
+            </nuxt-link>
+            <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
+                <nuxt-img class="icon" src="/icon-contact.svg" />
+                Contact
+            </nuxt-link>
+
+        </div>
     </nav>
 </template>
 
 <style lang="scss" scoped>
 .container {
-    position: absolute;
+    position: fixed;
 
+    width: 100%;
+
+    backdrop-filter: blur(20px);
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 4;
+}
+
+.container-effect {
+    background-color: rgba(black, 0.1);
+    box-shadow: 0px 0px 40px 40px rgba(black, 0.2);
+}
+
+.inner-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 
-    min-width: 800px;
+    width: 800px;
 
     margin: 30px auto;
 
@@ -34,7 +50,6 @@
 
     animation: navbar-in 1s forwards;
     animation-delay: 500ms;
-
 
     @include desktop-only {
         width: $content-desktop;
@@ -110,10 +125,31 @@
 </style>
 
 <script setup>
+
 function scrollTo(id) {
     setTimeout(() => {
         const ele = document.getElementById(id)
         window.scrollTo(ele.offsetLeft, ele.offsetTop)
     }, window.location.pathname == "/" ? 0 : 100)
 }
+
+function listener() {
+    var nav = document.getElementById('navbar-container')
+
+    if (window.scrollY > 0) {
+        if (!nav.classList.contains('container-effect'))
+            nav.classList.add('container-effect')
+    } else {
+        if (nav.classList.contains('container-effect'))
+            nav.classList.remove('container-effect')
+    }
+}
+
+onBeforeMount(() => {
+    document.addEventListener('scroll', listener)
+})
+
+onBeforeUnmount(() => {
+    document.removeEventListener('scroll', listener)
+})
 </script>
