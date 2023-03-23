@@ -1,145 +1,72 @@
-
 {
     "meta": {
-        "title": "Programista Stron Internetowych",
-        "description": "Trójjęzyczny niezależny programista stron internetowych w Warszawie, Polska. Specjalizuje się w React/NEXT, Vue/NUXT, MongoDB i NodeJS."
+        "title": "Freelance Web Developer",
+        "description": "Trilingual freelance web developer based in Warsaw, Poland. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
     },
     "navbar": {
-        "about": "O mnie",
-        "projects": "Projekty",
-        "pricing": "Cennik",
-        "contact": "Kontakt"
+        "link1": "About",
+        "link2": "Works",
+        "link3": "Contact"
     },
     "hero": {
-        "subtitle1": "Programista",
-        "subtitle2": "Stron Internetowych",
-        "button1": "Kontakt",
-        "button2": "Projekty"
+        "title": "Daniel Ladeira",
+        "subtitle": "Freelance Web Developer",
+        "button1": "About me",
+        "contact": "Contact"
     },
     "about": {
-        "title": "Ambitny Programista",
-        "desc": "Nazywam się Daniel Ladeira i jestem trójjęzycznym programistą mieszkającym w Warszawie.\n\nZacząłem programować w wieku 11 lat tworząc pluginy i mody do Minecraftu, który przyczyniły się do rozwinięcia moich zdnolnośći w innych dziedzinach programowania. Na codzień tworze aplikacje internetowe full-stack z najnowszymi technologiami tak jak React and Vue.",
-        "lang1": "Angielski",
-        "lang2": "Polski",
-        "lang3": "Portugalski"
+        "header": "01. About me",
+        "title": "Ambitious Programmer",
+        "desc1": "My name is Daniel Ladeira and I am a 'trilingual web developer' based in 'Europe'. I specialize in coding websites but I also have experience in the following fields:",
+        "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
+        "list": {
+            "1": "Web Design/Development",
+            "2": "Data Visualization (dashboards)",
+            "3": "Java Software Development",
+            "4": "System Administration and Hosting"
+        }
     },
-    "projects": {
-        "title": "Projekty",
-        "project1": "Profesjonalna i zoptymalizowana pod kątem SEO strona internetowa do statystyk serwerów Minecraftowych. Projekt demonstruje dobre wykorzystanie przestrzeni i hierarchii aby przedstawić dużo informacji.",
-        "project2": "Kalendarz do śledzenia czasu. Minimalistyczny i w jasnych kolorajch projekt mający na celu rozwiązanie konkretnego problemu, na przykład jak ulepszyć moj czas.",
-        "project3": "Prosta strona pokazująca umiejętność programowania za pomocą Reactu i serwera API. W tym projekcie skupiłem się na serwerze i na kodyfikowaniu.",
-        "button1": "Pokaż stronę",
-        "button2": "Otwórz kod"
-    },
-    "services": {
-        "title": "Cennik",
-        "service1": {
-            "name": "Prosta Witryna",
-            "desc": "Szybka i niezawodna witryna zawierająca 3 strony. Brak logowania i danych dynamicznych (dane ładowane z zewnętrznych serwerów). Aktualizacje witryny są wykonywane ręcznie przez właściciela.",
-            "price": "80zł"
-        },
-        "service2": {
-            "name": "Dynamiczna Witryna",
-            "desc": "Zoptymalizowana witryna zawierająca 5 stron.\n\nZawiera prosty system logowania i pozwala na ładowanie danych z zewnętrznych serwerów. Aktualizacje witryny są wykonywane ręcznie przez właściciela.",
-            "price": "200zł"
-        },
-        "service3": {
-            "name": "Podstawowa Aplikacja WWW",
-            "desc": "Zaawansowana witryna zawierająca 6 stron.\n\nZawiera systemy logowania i pozwala na ładowanie danych z zewnętrznych serwerów. Obejmuje hosting i panel kontrolny, który ułatwia wprowadzanie zmian na stronie.",
-            "price": "430zł"
-        },
-        "service4": {
-            "name": "Złożona Aplikacja WWW",
-            "desc": "Wydajna witryna zoptymalizowana pod kątem SEO zawierająca 7 stron.\n\nZawiera złożone systemy logowania i umożliwia przechowywanie dużych ilości danych użytkowników. Obejmuje hosting i panel kontrolny, który ułatwia wprowadzanie zmian na stronie.",
-            "price": "700zł"
-        },
-        "price_lead": "Od",
-        "button": "Wybierz",
-        "disclaimer1": "Wszystkie ceny są jedynie szacunkami, aby uzyskać rzeczywiste oferty, prosze o",
-        "disclaimer2": "kontakt"
-    },
-    "estimator": {
-        "title": "Kosztorysant",
-        "output": {
-            "1": "Koszt",
-            "2": "Miesięczny koszt",
-            "3": "Czas oczekiwania"
-        },
-        "inputs": {
+    "works": {
+        "header": "02. Works",
+        "projects": {
             "1": {
-                "question": "1. Ile stron?"
+                "title": "MCSS",
+                "description": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
             },
             "2": {
-                "question": "2. Złożoność Witryny",
-                "question_help": "Jak skomplikowana jest strona internetowa\n\nPodstawowa - Brak skomplikowanych funkcji i dane nie są ładowane z zewnętrznych serwerów\n\nPoł-złożona - Funkcje witryny wymagają trochę czasu na implementację. Pozwala na ładowanie danych z zewnętrznych serwerów\n\nZlozona i zoptymalizowana - Funkcje są trudne do implementowania i witryna muszi być bardzo szybka",
-                "values": {
-                    "1": "Podstawowa",
-                    "2": "Pół-złożona",
-                    "3": "Złożona i zoptymalizowana"
-                }
+                "title": "LCooking",
+                "description": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
             },
             "3": {
-                "question": "3. System logowania",
-                "question_help": "Jak użytkownicy się logują\n\nBrak - Użytkownicy nie mogą się zalogować\n\nE-mail i hasło - Użytkownicy mogą się zalogować przy użyciu swojego adresu e-mail i hasła\n\nMedia społecznościowe - Użytkownicy mogą się zalogować przy użyciu Google, Instagram, Facebook, lub innych mediach społecznościowe",
-                "values": {
-                    "1": "Brak",
-                    "2": "E-mail i hasło",
-                    "3": "Media społecznościowe"
-                }
-            },
-            "4": {
-                "question": "4. Hosting",
-                "question_help": "W jaki sposób strona jest renderowana w internecie\n\nBez - Sam hostujesz strone, ja dam ci kod i pomogę ci go skonfigurować ale będziesz potrzebować własnych serwerów\n\nHosting strony - Hostuję strone na moich serwerach i wszystko skonfiguruje (zaweira koszt miesięczny, który jest obliczany na podstawie popularności strony)",
-                "values": {
-                    "1": "Bez",
-                    "2": "Hosting strony"
-                }
-            },
-            "5": {
-                "question": "5. Aktualizacje",
-                "question_help": "W jaki sposób wprowadzane są zminay treści na stronie\n\nBez - Wprowadzasz niezbędne zmiany w bazie kodu samodzielnie\n\nNa życzenie - Ty mi mówisz co chcesz zmienić na stronie (opłata miesięczna)\n\nPanel Administratora - Zbuduję dedykowany panel kontrolny dla administratorów, aby ułatwić Ci dokonywanie dużych zmian na stronie bez żadnego doświadczenia w kodowaniu (drogie i wymaga co najmniej podstawowy serwer API)",
-                "values": {
-                    "1": "Bez",
-                    "2": "Na żądanie",
-                    "3": "Panel administratora"
-                }
+                "title": "Website Prototypes",
+                "description": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
             }
-        }
+
+        },
+        "button1": "View project",
+        "button2": "Source code",
+        "button3": "View collection"
     },
     "contact": {
-        "title": "Kontakt",
-        "name": "Imie",
-        "email": "Email",
-        "budget": "Budżet",
-        "message": "Wiadomość",
-        "message_placeholder": "Opisz co ty chcesz",
-        "send": "Wyślij",
-        "hint": "Wiadomość z potwierdzeniem zostanie wysłana na adres email w celu zweryfikowania własności adresu"
-    },
-    "cta": {
-        "landing": {
-            "subtitle": "Masz pomysł?",
-            "title": "Napisz do mnie"
-        },
-        "pricing": {
-            "subtitle": "Masz plan?",
-            "title": "Napisz do mnie"
-        },
-        "button1": "Kontakt",
-        "button2": "Zobacz oftery"
-    },
-    "popup": {
-        "sent": {
-            "title": "Wiadomość wysłąna!",
-            "subtitle": "Odpisze w ciągu 48 godzin"
-        },
-        "verify": {
-            "title": "Jeszcze tylko jeden krok!",
-            "subtitle": "Kliknij link, który właśnie został wysłany na twój adres email. Jeśli go nie klikniesz, nic nie zostanie do mnie wysłane."
+        "header": "03. Contact",
+        "send": "Send",
+        "send_hint": "A confirmation message will be sent to your email to verify ownership of the email",
+        "inputs": {
+            "name": "Name",
+            "email": "Email",
+            "budget": "Budget",
+            "message": "message",
+            "message_placeholder": "Describe what you want"
         }
     },
-    "month": "miesąc",
-    "months": "miesące",
-    "day": "dzień",
-    "days": "dni"
+    "popups": {
+        "verify": {
+            "title": "One last step!",
+            "desc": "Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!"
+        },
+        "confirm": {
+            "title": "Email sent!",
+            "desc": "I will get back to you within 48 hours"
+        }
+    }
 }

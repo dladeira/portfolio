@@ -4,141 +4,69 @@
         "description": "Trilingual freelance web developer based in Warsaw, Poland. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
     },
     "navbar": {
-        "about": "About",
-        "projects": "Projects",
-        "pricing": "Pricing",
-        "contact": "Contact"
+        "link1": "About",
+        "link2": "Works",
+        "link3": "Contact"
     },
     "hero": {
-        "subtitle1": "Full-Stack",
-        "subtitle2": "Web Developer",
-        "button1": "Contact",
-        "button2": "Projects"
+        "title": "Daniel Ladeira",
+        "subtitle": "Freelance Web Developer",
+        "button1": "About me",
+        "contact": "Contact"
     },
     "about": {
+        "header": "01. About me",
         "title": "Ambitious Programmer",
-        "desc": "My name is Daniel Ladeira and I am a trilingual developer based in Warsaw, Poland.\n\nI started my coding journey when I was 11 years old coding Minecraft mods and plugins and from there branched out into other fields of Software Development. Fast-forward a couple years and now I'm building full-stack web applications with fastest and newest technologies on the market such as React and Vue.",
-        "lang1": "English",
-        "lang2": "Polish",
-        "lang3": "Portuguese"
+        "desc1": "My name is Daniel Ladeira and I am a 'trilingual web developer' based in 'Europe'. I specialize in coding websites but I also have experience in the following fields:",
+        "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
+        "list": {
+            "1": "Web Design/Development",
+            "2": "Data Visualization (dashboards)",
+            "3": "Java Software Development",
+            "4": "System Administration and Hosting"
+        }
     },
-    "projects": {
-        "title": "Project Showcase",
-        "project1": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design.",
-        "project2": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?",
-        "project3": "A simple cooking website showcasing proficiency in using React and hooking it up with a custom built API server. Focus was placed on the back end and good code practices using React.",
-        "button1": "View project",
-        "button2": "Source Code"
-    },
-    "services": {
-        "title": "Pricing & Services",
-        "service1": {
-            "name": "Simple Website",
-            "desc": "A fast and reliant website with 3 pages included.\n\nNo logging in or dynamic data (loaded from 3rd party servers). Website updates are manually done by the owner.",
-            "price": "$20"
-        },
-        "service2": {
-            "name": "Dynamic Website",
-            "desc": "A semi-complex and optimized website with 5 pages included.\n\nAllows for simple login systems and loading data from 3rd parties. Website updates are manually done by the owner.",
-            "price": "$45"
-        },
-        "service3": {
-            "name": "Basic Web App",
-            "desc": "A complex website with 6 pages included.\n\nSupports login systems and loading data from 3rd parties. Hosting and a control panel to facilitate changes are included.",
-            "price": "$100"
-        },
-        "service4": {
-            "name": "Complex Web App",
-            "desc": "A SEO optimized and performant website with 7 pages included.\n\nSupports complex login systems and storing large amounts of user data. Hosting and a control panel to facilitate changes are included.",
-            "price": "$160"
-        },
-        "price_lead": "Starting from",
-        "button": "Order",
-        "disclaimer1": "All prices are just estimates, for actual quotes",
-        "disclaimer2": "contact me"
-    },
-    "estimator": {
-        "title": "Pricing Estimator",
-        "output": {
-            "1": "Upfront Cost",
-            "2": "Monthly Cost",
-            "3": "Project Duration"
-        },
-        "inputs": {
+    "works": {
+        "header": "02. Works",
+        "projects": {
             "1": {
-                "question": "1. How many pages"
+                "title": "MCSS",
+                "description": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
             },
             "2": {
-                "question": "2. Website Complexity",
-                "question_help": "How complex the website is\n\nBasic - No complicated features required and no data is loaded from 3rd parties\n\nSemi-Complex - Features take a bit of time to implement. Allows loading data from 3rd parties\n\nComplex & Optimized - The features are difficult to implement and speed is crucial",
-                "values": {
-                    "1": "Basic",
-                    "2": "Semi-Complex",
-                    "3": "Complex & Optimized"
-                }
+                "title": "LCooking",
+                "description": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
             },
             "3": {
-                "question": "3. Authentication",
-                "question_help": "How users login\n\nNone - Users cannot login\n\nEmail & Password - Users can login using their email and password\n\nSocial Media - Users can login using 3rd party services (Google, Instagram, Facebook)",
-                "values": {
-                    "1": "None",
-                    "2": "Email & Password",
-                    "3": "Social Media"
-                }
-            },
-            "4": {
-                "question": "4. Hosting",
-                "question_help": "How the website is rendered on the internet\n\nNot included - You host the website yourself, I give you the code for everything and tell you how to set it up\n\nIncluded - I host the website on my servers and you don't have to worry about setting anything up (monthly cost included, calculated based on website popularity and application complexity)",
-                "values": {
-                    "1": "Not included",
-                    "2": "Included"
-                }
-            },
-            "5": {
-                "question": "5. Website Updates",
-                "question_help": "How content on the website is changed\n\nNone - You make the necessary changes to the codebase yourself to change the values that you want to change\n\nOn Request - You tell me what you want to be changed on the website and I will change it (monthly fee)\n\nControl Panel - I will build a dedicated control panel for administrators to make it easy for you to make large changes on the website without any coding experience (expensive and requires Basic Backend Type)",
-                "values": {
-                    "1": "None",
-                    "2": "On Request",
-                    "3": "Control Panel"
-                }
+                "title": "Website Prototypes",
+                "description": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
             }
-        }
+
+        },
+        "button1": "View project",
+        "button2": "Source code",
+        "button3": "View collection"
     },
     "contact": {
-        "title": "Contact Me",
-        "name": "Name",
-        "email": "Email",
-        "budget": "Budget",
-        "message": "Message",
-        "message_placeholder": "Describe what you want",
+        "header": "03. Contact",
         "send": "Send",
-        "hint": "A confirmation message will be sent to your email to verify ownership"
-    },
-    "cta": {
-        "landing": {
-            "subtitle": "Have a idea?",
-            "title": "Lets Get In Touch"
-        },
-        "pricing": {
-            "subtitle": "Have a plan?",
-            "title": "Lets Get In Touch"
-        },
-        "button1": "Contact me",
-        "button2": "View pricing"
-    },
-    "popup": {
-        "sent": {
-            "title": "Email sent!",
-            "subtitle": "I will get back to you within 48 hours"
-        },
-        "verify": {
-            "title": "One last step!",
-            "subtitle": "Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!"
+        "send_hint": "A confirmation message will be sent to your email to verify ownership of the email",
+        "inputs": {
+            "name": "Name",
+            "email": "Email",
+            "budget": "Budget",
+            "message": "message",
+            "message_placeholder": "Describe what you want"
         }
     },
-    "month": "month",
-    "months": "months",
-    "day": "day",
-    "days": "days"
+    "popups": {
+        "verify": {
+            "title": "One last step!",
+            "desc": "Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!"
+        },
+        "confirm": {
+            "title": "Email sent!",
+            "desc": "I will get back to you within 48 hours"
+        }
+    }
 }
