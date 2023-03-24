@@ -5,8 +5,6 @@
 </template>
 
 <script setup>
-import { onBeforeMount } from 'vue';
-
 const { t } = useI18n()
 
 useI18n().onLanguageSwitched = (oldLocale, newLocale) => {

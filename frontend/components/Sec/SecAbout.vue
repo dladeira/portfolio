@@ -1,20 +1,20 @@
 <template>
     <section class="section" id="about">
-        <h3 class="section-title"><span class="section-title-index">01.</span> About me</h3>
+        <h3 class="section-title"><span class="section-title-index">01.</span> {{ $t('about.header') }}</h3>
         <div class="content">
             <div class="img-wrapper">
                 <nuxt-img class="img" src="/hero.png" alt="Little Daniel Ladeira" format="webp" />
             </div>
             <div class="text">
-                <h4 class="title">Ambitious Programmer</h4>
-                <p class="paragraph">My name is Daniel Ladeira and I am a <span class="paragraph-highlighted">trilingual web developer</span> based in <span class="paragraph-highlighted">Europe</span>. I specialize in coding websites but I also have experience in the following fields:</p>
+                <h4 class="title">{{ $t('about.title') }}</h4>
+                <p class="paragraph" v-html="formatMsg(t('about.desc1'))" />
                 <div class="list">
-                    <li class="list-item">Web Design/Development</li>
-                    <li class="list-item">Data Visualization (dashboards)</li>
-                    <li class="list-item">Java Software Development</li>
-                    <li class="list-item">System Administration and Hosting</li>
+                    <li class="list-item">{{ t('about.list.1') }}</li>
+                    <li class="list-item">{{ t('about.list.2') }}</li>
+                    <li class="list-item">{{ t('about.list.3') }}</li>
+                    <li class="list-item">{{ t('about.list.4') }}</li>
                 </div>
-                <p class="paragraph">I also speak <span class="paragraph-highlighted">English</span>, <span class="paragraph-highlighted">Portuguese</span>, and <span class="paragraph-highlighted">Polish</span> fluently and can translate websites. I love challenges and am always ready to learn something new.</p>
+                <p class="paragraph" v-html="formatMsg(t('about.desc2'))" />
             </div>
         </div>
     </section>
@@ -127,4 +127,22 @@
 </style>
 
 <script setup>
+const { t } = useI18n()
+
+function formatMsg(msg) {
+    var msg = msg.split('\'')
+    var final_msg = ""
+
+    for (var index in msg) {
+        final_msg += msg[index]
+
+        if (index < msg.length - 1)
+            if (index % 2 == 0)
+                final_msg += "<span style=\"color: white\">"
+            else
+                final_msg += "</span>"
+    }
+
+    return final_msg
+}
 </script>

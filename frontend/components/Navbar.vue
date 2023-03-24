@@ -4,15 +4,15 @@
             <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
             <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
                 <nuxt-img class="icon" src="/icon-user.svg" />
-                About me
+                {{ $t('navbar.link1') }}
             </nuxt-link>
             <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="link">
                 <nuxt-img class="icon" src="/icon-resume.svg" />
-                Works
+                {{ $t('navbar.link2') }}
             </nuxt-link>
             <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
                 <nuxt-img class="icon" src="/icon-contact.svg" />
-                Contact
+                {{ $t('navbar.link3') }}
             </nuxt-link>
 
         </div>

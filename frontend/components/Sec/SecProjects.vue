@@ -49,22 +49,22 @@ const { t } = useI18n()
 
 const projects = [
     {
-        name: "MCSS",
+        name: t('works.projects.1.title'),
         img: "project-mcss",
         tags: ["Vue/NUXT", "Java", "SocketIO"],
-        desc: `A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design.`,
+        desc: t('works.projects.1.desc'),
         website: "https://mcss.ladeira.eu"
     }, {
-        name: "Tracker",
+        name: t('works.projects.2.title'),
         img: "project-tracker",
         tags: ["React/NEXT", "MongoDB"],
-        desc: `A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?`,
+        desc: t('works.projects.2.desc'),
         source: "https://github.com/dladeira/ltracker"
     }, {
-        name: "Website Prototypes",
+        name: t('works.projects.3.title'),
         img: "project-prototype",
         tags: ["Figma"],
-        desc: `A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages.`,
+        desc: t('works.projects.3.desc'),
         view: "https://dribbble.com/dladeira"
     }
 ]

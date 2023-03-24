@@ -10,18 +10,18 @@
             <div class="main">
                 <div class="text">
                     <h1 class="title">
-                        Daniel Ladeira
+                        {{ $t('hero.title') }}
                     </h1>
                     <h2 class="subtitle">
-                        Freelance Web Developer
+                        {{ $t('hero.subtitle') }}
                     </h2>
                 </div>
                 <div class="buttons">
                     <nuxt-link @click="scrollTo('about')" class="button about">
-                        About me
+                        {{ $t('hero.button1') }}
                     </nuxt-link>
                     <nuxt-link @click="scrollTo('contact')" class=" button contact">
-                        Contact
+                        {{ $t('hero.button2') }}
                     </nuxt-link>
                 </div>
             </div>
