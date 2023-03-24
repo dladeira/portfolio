@@ -1,6 +1,6 @@
 <template>
     <section class="section" id="projects">
-        <h3 class="section-title"><span class="section-title-index">02.</span> Works</h3>
+        <h3 class="section-title"><span class="section-title-index">02.</span> {{ $t('works.header') }}</h3>
         <div class="content">
             <Project v-for="project of projects" :align="(projects.indexOf(project) % 2) == 0" :name="project.name" :desc="project.desc" :img="project.img" :tags="project.tags" :website="project.website" :source="project.source" :view="project.view" />
         </div>

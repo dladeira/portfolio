@@ -55,7 +55,7 @@
             "name": "Name",
             "email": "Email",
             "budget": "Budget",
-            "message": "message",
+            "message": "Message",
             "message_placeholder": "Describe what you want"
         }
     },

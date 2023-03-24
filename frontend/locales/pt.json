@@ -1,21 +1,21 @@
 {
     "meta": {
-        "title": "Freelance Web Developer",
-        "description": "Trilingual freelance web developer based in Warsaw, Poland. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
+        "title": "Desenvolvedor Web Freelancer",
+        "description": "Desenvolvedor web freelancer trilíngue com base em Varsóvia, Polônia. Especializado em React/NEXT, Vue/NUXT, MongoDB e NodeJS."
     },
     "navbar": {
-        "link1": "About",
-        "link2": "Works",
-        "link3": "Contact"
+        "link1": "Sobre mim",
+        "link2": "Projetos",
+        "link3": "Contacto"
     },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Freelance Web Developer",
-        "button1": "About me",
-        "contact": "Contact"
+        "subtitle": "Desenvolvedor Web Freelancer",
+        "button1": "Sobre mim",
+        "button2": "Contacto"
     },
     "about": {
-        "header": "01. About me",
+        "header": "About me",
         "title": "Ambitious Programmer",
         "desc1": "My name is Daniel Ladeira and I am a 'trilingual web developer' based in 'Europe'. I specialize in coding websites but I also have experience in the following fields:",
         "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
@@ -27,19 +27,19 @@
         }
     },
     "works": {
-        "header": "02. Works",
+        "header": "Works",
         "projects": {
             "1": {
                 "title": "MCSS",
-                "description": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
+                "desc": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
             },
             "2": {
                 "title": "LCooking",
-                "description": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
+                "desc": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
             },
             "3": {
                 "title": "Website Prototypes",
-                "description": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
+                "desc": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
             }
 
         },
@@ -48,14 +48,14 @@
         "button3": "View collection"
     },
     "contact": {
-        "header": "03. Contact",
+        "header": "Contact",
         "send": "Send",
         "send_hint": "A confirmation message will be sent to your email to verify ownership of the email",
         "inputs": {
             "name": "Name",
             "email": "Email",
             "budget": "Budget",
-            "message": "message",
+            "message": "Message",
             "message_placeholder": "Describe what you want"
         }
     },

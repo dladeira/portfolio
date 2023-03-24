@@ -1,61 +1,60 @@
 {
     "meta": {
-        "title": "Freelance Web Developer",
-        "description": "Trilingual freelance web developer based in Warsaw, Poland. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
+        "title": "Freelance Programista Stron WWW",
+        "description": "Trzyjęzyczny freelancer programista stron internetowych z siedzibą w Warszawie. Specjalizuje się w React/NEXT, Vue/NUXT, MongoDB i NodeJS."
     },
     "navbar": {
-        "link1": "About",
-        "link2": "Works",
-        "link3": "Contact"
+        "link1": "O mnie",
+        "link2": "Projekty",
+        "link3": "Kontact"
     },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Freelance Web Developer",
-        "button1": "About me",
-        "contact": "Contact"
+        "subtitle": "Freelancer Programista Stron Internetowych",
+        "button1": "O mnie",
+        "button2": "Kontakt"
     },
     "about": {
-        "header": "01. About me",
-        "title": "Ambitious Programmer",
-        "desc1": "My name is Daniel Ladeira and I am a 'trilingual web developer' based in 'Europe'. I specialize in coding websites but I also have experience in the following fields:",
+        "header": "O mnie",
+        "title": "Ambicyjny Programista",
+        "desc1": "Nazywam się Daniel Ladeira I jestem 'trójjęzycznym programistą' z siedzibą w 'Europie'. Przeważnie programuje strony internetowe ale też mam doświadczenie w następujących dziedzinach:",
         "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
         "list": {
-            "1": "Web Design/Development",
-            "2": "Data Visualization (dashboards)",
-            "3": "Java Software Development",
-            "4": "System Administration and Hosting"
+            "1": "Projektowanie/Tworzenie Stron Internetowych",
+            "2": "Wizualizacja Danych (dashboardy)",
+            "3": "Programowania w Java",
+            "4": "Administracja Systemów i Hosting"
         }
     },
     "works": {
-        "header": "02. Works",
+        "header": "Works",
         "projects": {
             "1": {
                 "title": "MCSS",
-                "description": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
+                "desc": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
             },
             "2": {
                 "title": "LCooking",
-                "description": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
+                "desc": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
             },
             "3": {
                 "title": "Website Prototypes",
-                "description": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
+                "desc": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
             }
-
         },
         "button1": "View project",
         "button2": "Source code",
         "button3": "View collection"
     },
     "contact": {
-        "header": "03. Contact",
+        "header": "Contact",
         "send": "Send",
         "send_hint": "A confirmation message will be sent to your email to verify ownership of the email",
         "inputs": {
             "name": "Name",
             "email": "Email",
             "budget": "Budget",
-            "message": "message",
+            "message": "Message",
             "message_placeholder": "Describe what you want"
         }
     },

@@ -94,10 +94,13 @@
 }
 
 .subtitle {
+    max-width: 40vw;
+
     margin: 1.5rem 0 0;
 
     font-weight: 3;
     font-size: 4rem;
+    line-height: 5rem;
     color: white;
 }
 
@@ -121,7 +124,7 @@
 .buttons {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     margin-top: 3rem;

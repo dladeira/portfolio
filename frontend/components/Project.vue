@@ -16,9 +16,9 @@
             </p>
 
             <div :class="align ? 'buttons' : 'buttons-reversed'">
-                <nuxt-link v-if="!view" :href="website" :class="website ? 'website' : 'website-disabled'">{{ $t('projects.button1') }}</nuxt-link>
-                <nuxt-link v-if="!view" :href="source" :class="source ? 'source' : 'source-disabled'">{{ $t('projects.button2') }}</nuxt-link>
-                <nuxt-link v-if="view" :href="view" :class="view ? 'view' : 'view-disabled'">View collection</nuxt-link>
+                <nuxt-link v-if="!view" :href="website" :class="website ? 'website' : 'website-disabled'">{{ $t('works.button1') }}</nuxt-link>
+                <nuxt-link v-if="!view" :href="source" :class="source ? 'source' : 'source-disabled'">{{ $t('works.button2') }}</nuxt-link>
+                <nuxt-link v-if="view" :href="view" :class="view ? 'view' : 'view-disabled'">{{ $t('works.button3') }}</nuxt-link>
             </div>
         </div>
     </article>

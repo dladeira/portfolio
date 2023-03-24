@@ -1,19 +1,19 @@
 <template>
     <div class="section" id="contact">
-        <h3 class="section-title"><span class="section-title-index">03.</span> Contact</h3>
+        <h3 class="section-title"><span class="section-title-index">03.</span> {{ $t('contact.header') }}</h3>
         <div class="content">
             <form class="form" @submit.prevent="sendForm">
                 <div class="top">
-                    <FormText :name="$t('contact.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
-                    <FormText :name="$t('contact.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
-                    <FormText :name="$t('contact.budget')" id="budget" type="number" placeholder="$100" :disabled="messageSent" />
+                    <FormText :name="$t('contact.inputs.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
+                    <FormText :name="$t('contact.inputs.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
+                    <FormText :name="$t('contact.inputs.budget')" id="budget" type="number" placeholder="$100" :disabled="messageSent" />
                 </div>
                 <div class="mid">
-                    <FormTextArea :name="$t('contact.message')" id="message" :placeholder="$t('contact.message_placeholder')" :disabled="messageSent" />
+                    <FormTextArea :name="$t('contact.inputs.message')" id="message" :placeholder="$t('contact.inputs.message_placeholder')" :disabled="messageSent" />
                 </div>
                 <div class="bot">
                     <button type="submit" class="send" :disabled="messageSent">{{ $t('contact.send') }}</button>
-                    <div class="msg">{{ $t('contact.hint') }}</div>
+                    <div class="msg">{{ $t('contact.send_hint') }}</div>
                 </div>
             </form>
         </div>
