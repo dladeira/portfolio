@@ -94,7 +94,7 @@
 }
 
 .subtitle {
-    max-width: 40vw;
+    max-width: 45vw;
 
     margin: 1.5rem 0 0;
 

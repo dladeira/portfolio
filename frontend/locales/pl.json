@@ -18,7 +18,7 @@
         "header": "O mnie",
         "title": "Ambicyjny Programista",
         "desc1": "Nazywam się Daniel Ladeira I jestem 'trójjęzycznym programistą' z siedzibą w 'Europie'. Przeważnie programuje strony internetowe ale też mam doświadczenie w następujących dziedzinach:",
-        "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
+        "desc2": "Mówię po 'Angielsku', 'Portugalsku', i 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
         "list": {
             "1": "Projektowanie/Tworzenie Stron Internetowych",
             "2": "Wizualizacja Danych (dashboardy)",
@@ -27,45 +27,45 @@
         }
     },
     "works": {
-        "header": "Works",
+        "header": "Projekty",
         "projects": {
             "1": {
                 "title": "MCSS",
-                "desc": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
+                "desc": "Profesjonalna i zoptymalizowana pod kątem SEO strona internetowa do statystyk serwerów Minecraftowych. Projekt demonstruje dobre wykorzystanie przestrzeni i hierarchii aby przedstawić dużo informacji."
             },
             "2": {
                 "title": "LCooking",
-                "desc": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
+                "desc": "Kalendarz do śledzenia czasu. Minimalistyczny i w jasnych kolorajch projekt mający na celu rozwiązanie konkretnego problemu, na przykład jak ulepszyć mój czas."
             },
             "3": {
-                "title": "Website Prototypes",
-                "desc": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
+                "title": "Projekty Stron",
+                "desc": "Zbiór projektów stron internetowych dla lokalnych firm. Zaprojektowany przy użyciu narzędzia do prototypowania o nazwie Figma. Zawiera nowoczesne elementy projektu i pełne informacji strony."
             }
         },
-        "button1": "View project",
-        "button2": "Source code",
-        "button3": "View collection"
+        "button1": "Otwórz stronę",
+        "button2": "Zobacz kod",
+        "button3": "Zobacz"
     },
     "contact": {
-        "header": "Contact",
-        "send": "Send",
-        "send_hint": "A confirmation message will be sent to your email to verify ownership of the email",
+        "header": "Kontakt",
+        "send": "Wyślij",
+        "send_hint": "Wiadomość z potwierdzeniem zostanie wysłana na adres email w celu zweryfikowania własności adresu",
         "inputs": {
-            "name": "Name",
+            "name": "Imie",
             "email": "Email",
-            "budget": "Budget",
-            "message": "Message",
-            "message_placeholder": "Describe what you want"
+            "budget": "Budżet",
+            "message": "Wiadomość",
+            "message_placeholder": "Opisz co ty chcesz"
         }
     },
     "popups": {
         "verify": {
-            "title": "One last step!",
-            "desc": "Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!"
+            "title": "Jeszcze tylko jeden krok!",
+            "desc": "Kliknij link, który właśnie został wysłany na twój adres email. Jeśli go nie klikniesz, nic nie zostanie do mnie wysłane!"
         },
         "confirm": {
-            "title": "Email sent!",
-            "desc": "I will get back to you within 48 hours"
+            "title": "Wiadomość wysłana!",
+            "desc": "Odpisze w ciągu 48 godzin"
         }
     }
 }
