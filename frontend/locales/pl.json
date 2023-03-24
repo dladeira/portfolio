@@ -17,8 +17,8 @@
     "about": {
         "header": "O mnie",
         "title": "Ambicyjny Programista",
-        "desc1": "Nazywam się Daniel Ladeira I jestem 'trójjęzycznym programistą' z siedzibą w 'Europie'. Przeważnie programuje strony internetowe ale też mam doświadczenie w następujących dziedzinach:",
-        "desc2": "Mówię po 'Angielsku', 'Portugalsku', i 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
+        "desc1": "Nazywam się Daniel Ladeira i jestem 'trójjęzycznym programistą' z siedzibą w 'Europie'. Przeważnie programuje strony internetowe ale też mam doświadczenie w następujących dziedzinach:",
+        "desc2": "Mówię po 'Angielsku', 'Portugalsku', i 'Polish' fluently and can translate websites. Uwielbiam wyzwania i uczenie się nowych technologii.",
         "list": {
             "1": "Projektowanie/Tworzenie Stron Internetowych",
             "2": "Wizualizacja Danych (dashboardy)",
@@ -34,7 +34,7 @@
                 "desc": "Profesjonalna i zoptymalizowana pod kątem SEO strona internetowa do statystyk serwerów Minecraftowych. Projekt demonstruje dobre wykorzystanie przestrzeni i hierarchii aby przedstawić dużo informacji."
             },
             "2": {
-                "title": "LCooking",
+                "title": "LTracker",
                 "desc": "Kalendarz do śledzenia czasu. Minimalistyczny i w jasnych kolorajch projekt mający na celu rozwiązanie konkretnego problemu, na przykład jak ulepszyć mój czas."
             },
             "3": {
@@ -68,4 +68,8 @@
             "desc": "Odpisze w ciągu 48 godzin"
         }
     }
-}
+ }
+ 
+ 
+ 
+ 

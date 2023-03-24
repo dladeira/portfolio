@@ -2,10 +2,10 @@
     <div class="popup-wrapper">
         <div class="popup">
             <div class="popup-title">
-                {{ $t('popup.sent.title')}}
+                {{ $t('popups.sent.title')}}
             </div>
             <div class="popup-desc">
-                {{ $t('popup.sent.subtitle')}}
+                {{ $t('popups.sent.subtitle')}}
             </div>
             <button class="ok" @click="closePopup">Ok</button>
         </div>
