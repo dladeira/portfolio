@@ -125,7 +125,7 @@
     @include phone-only {
         width: 90%;
 
-        margin: 10px auto;
+        margin: 10px auto 0;
 
         font-size: 3.5rem;
         line-height: 4rem;
@@ -142,13 +142,15 @@
 
     margin-top: auto;
 
-    filter: drop-shadow(-8px -6px 0 black);
+    filter: drop-shadow(-12px -8px 0 black);
     opacity: 0;
     user-select: none;
 
     @include phone-only {
         position: static;
-        margin-top: 4rem;
+        margin-top: 3rem;
+
+        width: 20rem;
     }
 }
 

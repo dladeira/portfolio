@@ -24,18 +24,34 @@
 
 <style lang="scss" scoped>
 .container {
-    position: fixed;
+    position: absolute;
 
     width: 100%;
 
-    backdrop-filter: blur(20px);
-    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(5px);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index: 4;
+
+    @include phone-only {
+        backdrop-filter: none;
+    }
 }
 
 .container-effect {
-    background-color: rgba(black, 0.1);
+    position: fixed;
+    background-color: rgba(black, 0.3);
     box-shadow: 0px 0px 40px 40px rgba(black, 0.2);
+
+    @include phone-only {
+        background-color: rgba(black, 0.5);
+        box-shadow: none;
+    }
+
+    animation: navbar-in 500ms forwards;
+
+    &-hide {
+        animation: navbar-out 500ms forwards !important;
+    }
 }
 
 .inner-container {
@@ -144,10 +160,23 @@
         opacity: 1;
     }
 }
+
+@keyframes navbar-out {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100px);
+        opacity: 1;
+        background-color: transparent;
+        box-shadow: 0px 0px 40px 40px rgba(black, 0);
+
+    }
+}
 </style>
 
 <script setup>
-
 function scrollTo(id) {
     setTimeout(() => {
         const ele = document.getElementById(id)
@@ -158,12 +187,18 @@ function scrollTo(id) {
 function listener() {
     var nav = document.getElementById('navbar-container')
 
-    if (window.scrollY > 0) {
+    if (window.scrollY > window.innerHeight) {
         if (!nav.classList.contains('container-effect'))
             nav.classList.add('container-effect')
     } else {
-        if (nav.classList.contains('container-effect'))
-            nav.classList.remove('container-effect')
+        if (nav.classList.contains('container-effect')) {
+            nav.classList.add('container-effect-hide')
+            setTimeout(() => {
+                nav.classList.remove('container-effect')
+                nav.classList.remove('container-effect-hide')
+            }, 200)
+        }
+
     }
 }
 
