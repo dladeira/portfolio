@@ -26,14 +26,12 @@
                 </div>
             </div>
 
-            <div class="hero-wrapper" id="hero-wrapper">
-                <nuxt-img class="hero" src="/hero.png" format="webp" alt="Hero" lazy="false" id="hero" />
-            </div>
+            <nuxt-img class="hero" src="/hero.png" format="webp" alt="Hero" lazy="false" id="hero" />
 
             <div class="socials left">
-                    <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
-                    <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
-                    <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
             </div>
             <div class="socials right">
                 <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" alt="US Flag" /></nuxt-link>
@@ -51,19 +49,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
 
     height: 100vh;
 
     margin: 0 auto;
 
-    @include desktop-only {
-        width: $content-desktop;
-    }
-
-    @include laptop-only {
-        width: $content-laptop;
-    }
+    @include resizable-width;
 }
 
 .container {
@@ -75,6 +67,13 @@
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+
     animation: text-in 1s forwards;
     animation-delay: 500ms;
 
@@ -83,6 +82,10 @@
 
 .text {
     margin-top: 15rem;
+
+    @include phone-only {
+        margin-top: 12rem;
+    }
 }
 
 .title {
@@ -91,10 +94,18 @@
     font-weight: 700;
     font-size: 6rem;
     color: white;
+
+    @include phone-only {
+        width: 100%;
+
+        font-size: 6.5rem;
+        line-height: 6.5rem;
+        text-align: center;
+    }
 }
 
 .subtitle {
-    max-width: 45vw;
+    width: 45vw;
 
     margin: 1.5rem 0 0;
 
@@ -102,19 +113,43 @@
     font-size: 4rem;
     line-height: 5rem;
     color: white;
+
+    @include laptop-only {
+        max-width: 80vw;
+    }
+
+    @include tablet-only {
+        max-width: 80vw;
+    }
+
+    @include phone-only {
+        width: 90%;
+
+        margin: 10px auto;
+
+        font-size: 3.5rem;
+        line-height: 4rem;
+        text-align: center;
+    }
 }
 
 .hero {
     position: absolute;
-    right: -80px;
+    right: -50px;
     bottom: -160px;
+
     width: 30rem;
 
-    filter: drop-shadow(-8px -6px 0 black);
-    user-select: none;
-    opacity: 0;
+    margin-top: auto;
 
-    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    filter: drop-shadow(-8px -6px 0 black);
+    opacity: 0;
+    user-select: none;
+
+    @include phone-only {
+        position: static;
+        margin-top: 4rem;
+    }
 }
 
 .hero-loaded {
@@ -127,7 +162,17 @@
     justify-content: flex-start;
     align-items: center;
 
-    margin-top: 3rem;
+    margin-top: 2rem;
+
+
+    @include phone-only {
+        flex-direction: column;
+        justify-content: center;
+
+        width: 90%;
+
+        margin: 2rem auto 0;
+    }
 }
 
 .button {
@@ -135,8 +180,9 @@
 
     border-radius: 1000px;
 
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 400;
+    text-align: center;
     text-decoration: none;
     background-color: white;
     color: black;
@@ -148,6 +194,14 @@
         cursor: pointer;
         box-shadow: none;
         transform: translate(8px, 8px);
+    }
+
+    @include phone-only {
+        width: 90%;
+
+        padding: 1.5rem 0rem;
+
+        font-size: 1.75rem;
     }
 }
 
@@ -162,6 +216,10 @@
     color: white;
 
     box-shadow: none;
+
+    @include phone-only {
+        margin: 2.5rem 0 0;
+    }
 }
 
 .contact:hover::after {
@@ -258,12 +316,12 @@
 
 @keyframes hero-in {
     0% {
-        transform: translateY(100%);
+        transform: translate(0, 100%);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translate(0, 0%);
         opacity: 1;
     }
 }
@@ -298,6 +356,11 @@
 
 .blobs {
     position: relative;
+    margin-right: auto;
+
+    @include phone-only {
+        display: none;
+    }
 }
 
 .blob {

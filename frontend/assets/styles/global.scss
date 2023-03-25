@@ -12,11 +12,19 @@ body,
     font-size: 15px;
     color: white;
 
+    scroll-behavior: smooth;
+
     @include desktop-only {
         font-size: 18px;
     }
 
-    scroll-behavior: smooth;
+    @include tablet-only {
+        font-size: 13px;
+    }
+
+    @include phone-only {
+        font-size: 11px;
+    }
 }
 
 * {

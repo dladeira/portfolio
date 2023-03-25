@@ -38,11 +38,15 @@
     &-reversed {
         @extend .project;
 
-        flex-direction: row-reverse !important;
+        flex-direction: row-reverse;
     }
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include phone-only {
+        flex-direction: column;
     }
 }
 

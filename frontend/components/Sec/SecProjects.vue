@@ -34,13 +34,7 @@
 
     margin: 0 auto;
 
-    @include desktop-only {
-        width: $content-desktop;
-    }
-
-    @include laptop-only {
-        width: $content-laptop;
-    }
+    @include resizable-width;
 }
 </style>
 

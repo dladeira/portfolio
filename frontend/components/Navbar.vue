@@ -1,20 +1,23 @@
 <template>
     <nav class="container" id="navbar-container">
         <div class="inner-container">
-            <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
-            <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
-                <nuxt-img class="icon" src="/icon-user.svg" />
-                {{ $t('navbar.link1') }}
-            </nuxt-link>
-            <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="link">
-                <nuxt-img class="icon" src="/icon-resume.svg" />
-                {{ $t('navbar.link2') }}
-            </nuxt-link>
-            <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
-                <nuxt-img class="icon" src="/icon-contact.svg" />
-                {{ $t('navbar.link3') }}
-            </nuxt-link>
-
+            <div class="brand">
+                <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
+            </div>
+            <div class="links">
+                <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
+                    <nuxt-img class="icon" src="/icon-user.svg" />
+                    {{ $t('navbar.link1') }}
+                </nuxt-link>
+                <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="link">
+                    <nuxt-img class="icon" src="/icon-resume.svg" />
+                    {{ $t('navbar.link2') }}
+                </nuxt-link>
+                <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
+                    <nuxt-img class="icon" src="/icon-contact.svg" />
+                    {{ $t('navbar.link3') }}
+                </nuxt-link>
+            </div>
         </div>
     </nav>
 </template>
@@ -51,14 +54,15 @@
     animation: navbar-in 1s forwards;
     animation-delay: 500ms;
 
-    @include desktop-only {
-        width: $content-desktop;
-        left: calc((100vw - $content-desktop) / 2);
-    }
+    @include resizable-width;
 
-    @include laptop-only {
-        width: $content-laptop;
-        left: calc((100vw - $content-laptop) / 2);
+    @include phone-only {
+        flex-direction: column;
+        justify-content: center;
+
+        width: 90%;
+
+        margin: 1.75rem auto 1.25rem;
     }
 }
 
@@ -75,10 +79,23 @@
     &:hover {
         transform: scale(0.9);
     }
+
+    @include phone-only {
+        margin: 0 auto 1.5rem;
+
+        font-size: 3rem;
+    }
 }
 
 .brand-light {
     color: #9FCFF1;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .link {
@@ -110,6 +127,11 @@
 
 .icon {
     margin-right: 0.5rem;
+
+    @include phone-only {
+        height: 16px;
+        width: 16px;
+    }
 }
 
 @keyframes navbar-in {

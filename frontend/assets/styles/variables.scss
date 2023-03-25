@@ -8,6 +8,8 @@ $background-color: #141B2D;
 
 $content-desktop: 1300px;
 $content-laptop: 1000px;
+$content-tablet: 80vw;
+$content-phone: 90vw;
 
 $gradient-opacity: 0.05;
 $gradient-main: linear-gradient(to right,
@@ -23,7 +25,26 @@ $gradient-hero: linear-gradient(to top, #222D40, #131C2D);
 // ==========
 
 $laptop_max: 1512px;
+$tablet_max: 1200px;
 $phone_max: 500px;
+
+@mixin resizable-width {
+    @include desktop-only {
+        width: $content-desktop;
+    }
+
+    @include laptop-only {
+        width: $content-laptop;
+    }
+
+    @include tablet-only {
+        width: $content-tablet;
+    }
+
+    @include phone-only {
+        width: $content-phone;
+    }
+}
 
 @mixin desktop-only {
     @media (min-width: $laptop_max) {
@@ -33,6 +54,14 @@ $phone_max: 500px;
 
 @mixin laptop-only {
     @media (max-width: $laptop_max) {
+        @media (min-width: $tablet_max) {
+            @content;
+        }
+    }
+}
+
+@mixin tablet-only {
+    @media (max-width: $tablet_max) {
         @media (min-width: $phone_max) {
             @content;
         }

@@ -26,15 +26,9 @@
     justify-content: space-between;
     align-items: center;
 
-    @include desktop-only {
-        width: $content-desktop;
-    }
-
-    @include laptop-only {
-        width: $content-laptop;
-    }
-
     margin: 0 auto;
+
+    @include resizable-width;
 }
 
 .copy {
