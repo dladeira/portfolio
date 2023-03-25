@@ -57,6 +57,10 @@
     &:disabled {
         color: rgba(white, 0.3);
     }
+
+    @include phone-only {
+        font-size: 1.25rem;
+    }
 }
 </style>
 

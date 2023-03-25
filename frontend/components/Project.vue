@@ -38,7 +38,9 @@
     &-reversed {
         @extend .project;
 
-        flex-direction: row-reverse;
+        @include not-phone {
+            flex-direction: row-reverse;
+        }
     }
 
     &:last-child {
@@ -46,7 +48,9 @@
     }
 
     @include phone-only {
-        flex-direction: column;
+        flex-direction: column-reverse;
+
+        margin-bottom: 10rem;
     }
 }
 
@@ -57,7 +61,15 @@ $image-width: 25rem;
 
     width: $image-width;
 
+    padding: 2rem 0;
+
     transform: translate(0, 2rem);
+
+    @include phone-only {
+        width: 80%;
+
+        margin: 0 auto;
+    }
 }
 
 .image-1,
@@ -69,14 +81,31 @@ $image-width: 25rem;
     border-radius: 10px;
 
     box-shadow: 0 0 16px 0 rgba(black, 0.25);
+
+    @include phone-only {
+        width: 100%;
+    }
 }
 
 .image-1 {
-    transform: translate(-5rem, -4rem);
+    position: static;
+}
+
+.image-1 {
+    transform: translate(-2.5rem, -2rem);
+}
+
+.image-2 {
+    transform: translate(2.5rem, 2rem);
+
 }
 
 .text {
     width: 40%;
+
+    @include phone-only {
+        width: 100%;
+    }
 }
 
 .project-header {
@@ -84,6 +113,14 @@ $image-width: 25rem;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @include phone-only {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 0.5em;
+    }
 }
 
 .name {
@@ -91,6 +128,13 @@ $image-width: 25rem;
 
     font-size: 2rem;
     font-weight: 700;
+
+    @include phone-only {
+        margin-bottom: 2rem;
+
+        font-size: 2.5rem;
+        text-align: center;
+    }
 }
 
 .tags {
@@ -108,7 +152,7 @@ $image-width: 25rem;
 
     font-size: 0.9rem;
     font-weight: 400;
-    background-color: rgba(white, 0.2);
+    background-color: rgba(white, 0.1);
     color: white;
 }
 
@@ -118,6 +162,10 @@ $image-width: 25rem;
     font-size: 1.1rem;
     text-indent: 3rem;
     line-height: 1.9rem;
+
+    @include phone-only {
+        display: none;
+    }
 }
 
 .buttons {
@@ -130,6 +178,10 @@ $image-width: 25rem;
         @extend .buttons;
 
         justify-content: flex-start;
+    }
+
+    @include phone-only {
+        display: none;
     }
 }
 
@@ -203,7 +255,7 @@ $image-width: 25rem;
     &-disabled {
         border-color: white;
     }
-    
+
     &:hover {
         background-color: white;
     }

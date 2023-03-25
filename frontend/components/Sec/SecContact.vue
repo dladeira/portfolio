@@ -21,24 +21,6 @@
 </template>
 
 <style lang="scss" scoped>
-.section {
-    width: 100%;
-
-    padding: 10rem 0;
-}
-
-.section-title {
-    width: fit-content;
-
-    margin: 0 auto 9rem;
-
-    font-size: 3rem;
-
-    &-index {
-        color: #1FB3E2;
-    }
-}
-
 .form {
     display: flex;
     flex-direction: column;
@@ -79,6 +61,8 @@
     margin-bottom: 0;
 
     @include phone-only {
+        flex-direction: column;
+
         margin-top: 2rem;
     }
 }
@@ -114,6 +98,18 @@
             cursor: default;
         }
     }
+
+    @include phone-only {
+        width: 100%;
+
+        background-color: #007FDB;
+        color: white;
+
+        margin: 0;
+        padding: 0.75rem 5rem;
+
+        font-size: 1.25rem;
+    }
 }
 
 .msg {
@@ -126,7 +122,11 @@
     }
 
     @include phone-only {
-        font-size: 0.75rem;
+        margin-top: 1.5rem;
+
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
     }
 }
 </style>

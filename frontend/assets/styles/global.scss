@@ -71,3 +71,33 @@ body {
 
     border-radius: 1000px;
 }
+
+// ==========
+// SECTIONS
+// ==========
+
+.section {
+    width: 100%;
+
+    padding: 10rem 0;
+
+    @include phone-only {
+        padding: 7rem 0;
+    }
+}
+
+.section-title {
+    width: fit-content;
+
+    margin: 0 auto 9rem;
+
+    font-size: 3rem;
+
+    &-index {
+        color: #1FB3E2;
+    }
+
+    @include phone-only {
+        margin-bottom: 5rem;
+    }
+}

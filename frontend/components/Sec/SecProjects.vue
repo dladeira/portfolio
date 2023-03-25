@@ -8,23 +8,6 @@
 </template>
 
 <style lang="scss" scoped>
-.section {
-    width: 100%;
-
-    padding: 10rem 0;
-}
-
-.section-title {
-    width: fit-content;
-
-    margin: 0 auto 9rem;
-
-    font-size: 3rem;
-
-    &-index {
-        color: #1FB3E2;
-    }
-}
 
 .content {
     display: flex;
