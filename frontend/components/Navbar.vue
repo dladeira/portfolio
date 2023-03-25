@@ -99,7 +99,7 @@
     @include phone-only {
         margin: 0 auto 1.5rem;
 
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -138,6 +138,11 @@
 
     &:hover {
         transform: scale(0.9);
+    }
+
+    @include phone-only {
+        margin: 0 0.5rem;
+        font-size: 1rem;
     }
 }
 

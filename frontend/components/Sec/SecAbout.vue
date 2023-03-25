@@ -49,6 +49,10 @@
     margin: 0 auto;
 
     @include resizable-width;
+
+    @include phone-only {
+        flex-direction: column;
+    }
 }
 
 .img-wrapper {
@@ -60,6 +64,10 @@
     background-color: rgba(white, 0.1);
 
     overflow: hidden;
+
+    @include phone-only {
+        display: none;
+    }
 }
 
 .img {
@@ -75,6 +83,10 @@
     align-items: center;
 
     width: 50%;
+
+    @include phone-only {
+        width: 90%;
+    }
 }
 
 .title {
@@ -103,6 +115,11 @@
 
     &-item {
         margin-bottom: 1rem;
+    }
+
+    @include phone-only {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 

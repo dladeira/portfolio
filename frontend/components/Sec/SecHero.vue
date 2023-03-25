@@ -84,7 +84,7 @@
     margin-top: 15rem;
 
     @include phone-only {
-        margin-top: 12rem;
+        margin-top: 10rem;
     }
 }
 
@@ -98,8 +98,8 @@
     @include phone-only {
         width: 100%;
 
-        font-size: 6.5rem;
-        line-height: 6.5rem;
+        font-size: 5rem;
+        line-height: 5rem;
         text-align: center;
     }
 }
@@ -125,10 +125,10 @@
     @include phone-only {
         width: 90%;
 
-        margin: 10px auto 0;
+        margin: 1rem auto 0;
 
-        font-size: 3.5rem;
-        line-height: 4rem;
+        font-size: 2.75rem;
+        line-height: 2.75rem;
         text-align: center;
     }
 }
@@ -173,7 +173,7 @@
 
         width: 90%;
 
-        margin: 2rem auto 0;
+        margin: 1.5rem auto 0;
     }
 }
 
@@ -200,10 +200,11 @@
 
     @include phone-only {
         width: 90%;
+        max-width: 250px;
 
-        padding: 1.5rem 0rem;
+        padding: 1.25rem 0rem;
 
-        font-size: 1.75rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -220,7 +221,7 @@
     box-shadow: none;
 
     @include phone-only {
-        margin: 2.5rem 0 0;
+        margin: 2rem 0 0;
     }
 }
 
