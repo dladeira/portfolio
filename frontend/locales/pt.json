@@ -15,19 +15,19 @@
         "button2": "Contacto"
     },
     "about": {
-        "header": "About me",
-        "title": "Ambitious Programmer",
-        "desc1": "My name is Daniel Ladeira and I am a 'trilingual web developer' based in 'Europe'. I specialize in coding websites but I also have experience in the following fields:",
-        "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
+        "header": "Sobre mim",
+        "title": "Programador ambicioso",
+        "desc1": "O meu nome é Daniel Ladeira e sou um programador trilíngue baseado na 'Europa'. Principalmente crio páginas de internet, mas também tenho experiência nas seguintes áreas:",
+        "desc2": "Também falo 'Inglês', 'Português', e 'Polaco' e consigo traduzir sites nessas linguas. Adoro desafios e sempre estou pronto para aprender coisas novas.",
         "list": {
-            "1": "Web Design/Development",
-            "2": "Data Visualization (dashboards)",
-            "3": "Java Software Development",
-            "4": "System Administration and Hosting"
+            "1": "Desenvolvimento Web",
+            "2": "Visualização de Dados",
+            "3": "Desenvolvimento de Software Java",
+            "4": "Administração de Sistemas e Hosting"
         }
     },
     "works": {
-        "header": "Works",
+        "header": "Projetos",
         "projects": {
             "1": {
                 "title": "MCSS",
@@ -41,32 +41,35 @@
                 "title": "Website Prototypes",
                 "desc": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
             }
-
+ 
+ 
         },
-        "button1": "View project",
-        "button2": "Source code",
-        "button3": "View collection"
+        "button1": "Ver página",
+        "button2": "Ver código",
+        "button3": "Ver coleção"
     },
     "contact": {
-        "header": "Contact",
-        "send": "Send",
-        "send_hint": "A confirmation message will be sent to your email to verify ownership of the email",
+        "header": "Contacto",
+        "send": "Enviar",
+        "send_hint": "Uma mensagem de confirmação será enviada para o seu email para verificar a sua propriedade",
         "inputs": {
-            "name": "Name",
+            "name": "Nome",
             "email": "Email",
-            "budget": "Budget",
-            "message": "Message",
-            "message_placeholder": "Describe what you want"
+            "budget": "Orçamento",
+            "message": "Mensagem",
+            "message_placeholder": "Descreva o que você quer"
         }
     },
     "popups": {
         "verify": {
-            "title": "One last step!",
-            "desc": "Please click the confirmation link that was just sent to your email. If you don't click it nothing will be sent to me!"
+            "title": "Último passo!",
+            "desc": "Por favor carregar no link que foi enviado para o vosso email. Se você não carrega no link, nada vai ficar enviado a mim!"
         },
         "confirm": {
-            "title": "Email sent!",
-            "desc": "I will get back to you within 48 hours"
+            "title": "Email enviado!",
+            "desc": "Vou responder em 48 horas"
         }
     }
-}
+ }
+ 
+ 
