@@ -81,6 +81,8 @@
 }
 
 .text {
+    width: 100%;
+
     margin-top: 15rem;
 
     @include phone-only {
@@ -380,34 +382,34 @@
 
 .blob-1 {
     top: 15vh;
-    left: -8vw;
+    right: -8vw;
 
-    height: 8vh;
-    width: 14vw;
+    height: 4rem;
+    width: 15rem;
 }
 
 .blob-2 {
     top: 68vh;
-    left: -2vw;
+    right: -12vw;
 
-    height: 8vh;
-    width: 16vw;
+    height: 4rem;
+    width: 17rem;
 }
 
 .blob-3 {
     top: 82vh;
-    left: -2vw;
+    right: -6vw;
 
-    height: 8vh;
-    width: 10vw;
+    height: 4rem;
+    width: 11rem;
 }
 
 .blob-4 {
     top: 28vh;
-    right: -107vw;
+    right: calc(-100vw - 7rem);
 
-    height: 30vh;
-    width: 30vh;
+    height: 15rem;
+    width: 15rem;
 }
 
 @keyframes blob-in {

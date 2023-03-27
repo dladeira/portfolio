@@ -9,7 +9,6 @@ body,
     margin: 0;
 
     font-family: 'League Spartan', sans-serif;
-    font-size: 15px;
     color: white;
 
     scroll-behavior: smooth;
@@ -18,7 +17,15 @@ body,
         font-size: 18px;
     }
 
+    @include laptop-only {
+        font-size: 15px;
+    }
+
     @include tablet-only {
+        font-size: 14px;
+    }
+
+    @include small-tablet-only {
         font-size: 13px;
     }
 

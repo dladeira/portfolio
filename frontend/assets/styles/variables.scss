@@ -24,9 +24,11 @@ $gradient-hero: linear-gradient(to top, #222D40, #131C2D);
 // RESPONSIVENESS
 // ==========
 
+$desktop_height_min: 900px;
 $laptop_max: 1512px;
-$tablet_max: 1200px;
-$phone_max: 500px;
+$tablet_max: 1340px;
+$small_tablet_max: 1080px;
+$phone_max: 980px;
 
 @mixin resizable-width {
     @include desktop-only {
@@ -48,7 +50,9 @@ $phone_max: 500px;
 
 @mixin desktop-only {
     @media (min-width: $laptop_max) {
-        @content;
+        @media (min-height: $desktop_height_min) {
+            @content;
+        }
     }
 }
 
@@ -58,10 +62,22 @@ $phone_max: 500px;
             @content;
         }
     }
+
+    @media (max-height: $desktop_height_min) {
+        @content;
+    }
 }
 
 @mixin tablet-only {
     @media (max-width: $tablet_max) {
+        @media (min-width: $phone_max) {
+            @content;
+        }
+    }
+}
+
+@mixin small-tablet-only {
+    @media (max-width: $small_tablet_max) {
         @media (min-width: $phone_max) {
             @content;
         }
