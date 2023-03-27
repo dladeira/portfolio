@@ -31,18 +31,16 @@
         "projects": {
             "1": {
                 "title": "MCSS",
-                "desc": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
+                "desc": "Um \"site\" SEO, otimizado para motores de busca, que mostra estatísticas de servidores de Minecraft. Este projeto demonstra como fazer um bom uso de espaço e hierarquia para apresentar uma grande quantidade de informação usando um \"design\" moderno."
             },
             "2": {
                 "title": "LCooking",
-                "desc": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
+                "desc": "Um calendário para controlar o seu uso de tempo com um \"design\" minimalista de tema claro destinado a resolver um problema muito específico: onde estou a perder demasiado tempo e a que é que devia dedicar mais tempo?"
             },
             "3": {
                 "title": "Website Prototypes",
-                "desc": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
+                "desc": "Uma coleção de projetos de páginas para negócios locais. Feitos usando a aplicação de \"design\" Figma. Apresenta elementos de \"design\" modernos e páginas cheias de informação."
             }
- 
- 
         },
         "button1": "Ver página",
         "button2": "Ver código",
@@ -70,6 +68,4 @@
             "desc": "Vou responder em 48 horas"
         }
     }
- }
- 
- 
+}
