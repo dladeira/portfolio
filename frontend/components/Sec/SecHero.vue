@@ -138,9 +138,9 @@
 .hero {
     position: absolute;
     right: -50px;
-    bottom: -160px;
+    bottom: -50px;
 
-    width: 30rem;
+    width: 29rem;
 
     margin-top: auto;
 
