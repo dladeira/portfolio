@@ -433,7 +433,7 @@ function scrollTo(id) {
     }, window.location.pathname == "/" ? 0 : 100)
 }
 
-onBeforeMount(() => {
+onMounted(() => {
     hero.addEventListener('load', () => {
         var hero = document.getElementById('hero')
         hero.classList.add('hero-loaded')

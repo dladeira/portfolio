@@ -2,6 +2,7 @@
     <div class="container">
         <div class="content">
             <div class="copy">© 2023 Daniel Ladeira</div>
+            <nuxt-link to="/tos" class="tos">Terms of Service</nuxt-link>
             <div class="icons">
                 <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" alt="Dribbble icon" /></nuxt-link>
                 <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" alt="StackOverflow icon" /></nuxt-link>
@@ -13,6 +14,8 @@
 
 <style lang="scss" scoped>
 .container {
+    position: absolute;
+    bottom: 0;
     width: 100%;
 
     padding: 1.5rem 0;
@@ -32,6 +35,12 @@
 }
 
 .copy {
+    color: $gray;
+}
+
+.tos {
+    font-size: 0.75rem;
+    text-decoration: none;
     color: $gray;
 }
 
