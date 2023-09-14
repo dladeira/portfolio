@@ -5,7 +5,7 @@
                 {{ $t('popups.sent.title')}}
             </div>
             <div class="popup-desc">
-                {{ $t('popups.sent.subtitle')}}
+                {{ $t('popups.sent.desc')}}
             </div>
             <button class="ok" @click="closePopup">Ok</button>
         </div>

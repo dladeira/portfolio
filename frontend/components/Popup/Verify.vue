@@ -5,7 +5,7 @@
                 {{ $t('popups.verify.title')}}
             </div>
             <div class="popup-desc">
-                {{ $t('popups.verify.subtitle')}}
+                {{ $t('popups.verify.desc')}}
             </div>
             <button class="ok" @click="closePopup">Ok</button>
         </div>
