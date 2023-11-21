@@ -1,6 +1,6 @@
 <template>
     <div class="section" id="contact">
-        <h3 class="section-title"><span class="section-title-index">03.</span> {{ $t('contact.header') }}</h3>
+        <h3 class="section-title"><span class="section-title-index">03.</span> {{ $t("contact.header") }}</h3>
         <div class="content">
             <form class="form" @submit.prevent="sendForm">
                 <div class="top">
@@ -12,8 +12,8 @@
                     <FormTextArea :name="$t('contact.inputs.message')" id="message" :placeholder="$t('contact.inputs.message_placeholder')" :disabled="messageSent" />
                 </div>
                 <div class="bot">
-                    <button type="submit" class="send" :disabled="messageSent">{{ $t('contact.send') }}</button>
-                    <div class="msg">{{ $t('contact.send_hint') }}</div>
+                    <button type="submit" class="send" :disabled="messageSent">{{ $t("contact.send") }}</button>
+                    <div class="msg">{{ $t("contact.send_hint") }}</div>
                 </div>
             </form>
         </div>
@@ -71,7 +71,7 @@
     margin-right: 2rem;
     padding: 0.5rem 3rem;
 
-    border: 1px solid #007FDB;
+    border: 1px solid #007fdb;
     border-radius: 10px;
 
     font-size: 1rem;
@@ -82,7 +82,7 @@
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &:hover {
-        background-color: #007FDB;
+        background-color: #007fdb;
         color: white;
 
         cursor: pointer;
@@ -91,7 +91,7 @@
     &:disabled {
         opacity: 0.3;
 
-        background-color: #007FDB;
+        background-color: #007fdb;
         color: white;
 
         &:hover {
@@ -102,7 +102,7 @@
     @include phone-only {
         width: 100%;
 
-        background-color: #007FDB;
+        background-color: #007fdb;
         color: white;
 
         margin: 0;
@@ -132,13 +132,13 @@
 </style>
 
 <script setup>
-const verifyPopup = useState('popupVerify')
-const messageSent = useState('messageSent')
-const config = useRuntimeConfig()
+const verifyPopup = useState("popupVerify");
+const messageSent = useState("messageSent");
+const config = useRuntimeConfig();
 
 async function sendForm(e) {
-    verifyPopup.value = true
-    messageSent.value = true
+    verifyPopup.value = true;
+    messageSent.value = true;
 
     const { error } = await useFetch(config.WEB_SERVER + "/api/msg", {
         method: "POST",
@@ -146,11 +146,10 @@ async function sendForm(e) {
             name: e.target.name.value,
             email: e.target.email.value,
             budget: e.target.budget.value,
-            message: e.target.message.value
-        }
-    })
+            message: e.target.message.value,
+        },
+    });
 
-    if (error.value)
-        return console.log(error.value)
+    if (error.value) return console.log(error.value);
 }
 </script>

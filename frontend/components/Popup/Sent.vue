@@ -2,10 +2,10 @@
     <div class="popup-wrapper">
         <div class="popup">
             <div class="popup-title">
-                {{ $t('popups.sent.title')}}
+                {{ $t("popups.sent.title") }}
             </div>
             <div class="popup-desc">
-                {{ $t('popups.sent.desc')}}
+                {{ $t("popups.sent.desc") }}
             </div>
             <button class="ok" @click="closePopup">Ok</button>
         </div>
@@ -42,7 +42,6 @@
 
     border-radius: 10px;
 
-
     background-color: #2d343c;
 }
 
@@ -66,7 +65,7 @@
     margin-top: 2rem;
     padding: 0.5rem 3rem;
 
-    border: 2px solid #007FDB;
+    border: 2px solid #007fdb;
     border-radius: 10px;
 
     font-size: 1rem;
@@ -75,7 +74,7 @@
     color: white;
 
     &:hover {
-        background-color: #007FDB;
+        background-color: #007fdb;
         color: white;
 
         cursor: pointer;
@@ -84,7 +83,7 @@
     &:disabled {
         opacity: 0.3;
 
-        background-color: #007FDB;
+        background-color: #007fdb;
         color: white;
 
         &:hover {
@@ -95,9 +94,9 @@
 </style>
 
 <script setup>
-const sentPopup = useState('popupSent')
+const sentPopup = useState("popupSent");
 
 function closePopup(e) {
-    sentPopup.value = false
+    sentPopup.value = false;
 }
 </script>

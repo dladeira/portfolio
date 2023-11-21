@@ -155,7 +155,8 @@ We reserve the right, at our sole discretion, to update, change or replace any p
 SECTION 20 - CONTACT INFORMATION
 
 Questions about the Terms of Service should be sent to us at daniel@ladeira.eu.
-    </pre>
+    </pre
+                >
             </div>
             <div class="panel">
                 <pre class="text">
@@ -215,7 +216,8 @@ CHANGES
 We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.
 CONTACT US
 For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at daniel@ladeira.eu.
-    </pre>
+    </pre
+                >
             </div>
         </div>
     </div>
@@ -238,7 +240,7 @@ For more information about our privacy practices, if you have questions, or if y
     font-size: 3rem;
 
     &-green {
-        color: #00FF75;
+        color: #00ff75;
     }
 }
 
@@ -275,7 +277,7 @@ For more information about our privacy practices, if you have questions, or if y
 
     padding-right: 1rem;
 
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 0.75rem;
 
     overflow-y: scroll;

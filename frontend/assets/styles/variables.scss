@@ -1,10 +1,10 @@
-$blue: #007FDB;
+$blue: #007fdb;
 $darkblue: #0066db;
-$navy: #142D4F;
+$navy: #142d4f;
 $gray: #676767;
-$green: #00C714;
+$green: #00c714;
 
-$background-color: #141B2D;
+$background-color: #141b2d;
 
 $content-desktop: 1300px;
 $content-laptop: 1000px;
@@ -12,13 +12,9 @@ $content-tablet: 80vw;
 $content-phone: 80vw;
 
 $gradient-opacity: 0.05;
-$gradient-main: linear-gradient(to right,
-        rgba(#00FF75, $gradient-opacity),
-        rgba(#00C2FF, $gradient-opacity) 20%,
-        rgba(#00C2FF, $gradient-opacity) 80%,
-        rgba(#FF3030, $gradient-opacity));
+$gradient-main: linear-gradient(to right, rgba(#00ff75, $gradient-opacity), rgba(#00c2ff, $gradient-opacity) 20%, rgba(#00c2ff, $gradient-opacity) 80%, rgba(#ff3030, $gradient-opacity));
 
-$gradient-hero: linear-gradient(to top, #222D40, #131C2D);
+$gradient-hero: linear-gradient(to top, #222d40, #131c2d);
 
 // ==========
 // RESPONSIVENESS
@@ -89,7 +85,6 @@ $phone_max: 980px;
         @content;
     }
 }
-
 
 @mixin phone-only {
     @media (max-width: $phone_max) {

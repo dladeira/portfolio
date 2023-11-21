@@ -10,18 +10,18 @@
             <div class="main">
                 <div class="text">
                     <h1 class="title">
-                        {{ $t('hero.title') }}
+                        {{ $t("hero.title") }}
                     </h1>
                     <h2 class="subtitle">
-                        {{ $t('hero.subtitle') }}
+                        {{ $t("hero.subtitle") }}
                     </h2>
                 </div>
                 <div class="buttons">
                     <nuxt-link @click="scrollTo('about')" class="button about">
-                        {{ $t('hero.button1') }}
+                        {{ $t("hero.button1") }}
                     </nuxt-link>
-                    <nuxt-link @click="scrollTo('contact')" class=" button contact">
-                        {{ $t('hero.button2') }}
+                    <nuxt-link @click="scrollTo('contact')" class="button contact">
+                        {{ $t("hero.button2") }}
                     </nuxt-link>
                 </div>
             </div>
@@ -95,6 +95,7 @@
 
     font-weight: 700;
     font-size: 6rem;
+    letter-spacing: 2px;
     color: white;
 
     @include phone-only {
@@ -109,10 +110,11 @@
 .subtitle {
     width: 45vw;
 
-    margin: 1.5rem 0 0;
+    margin: 0.5rem 0 0;
 
     font-weight: 3;
     font-size: 4rem;
+    letter-spacing: 2px;
     line-height: 5rem;
     color: white;
 
@@ -168,7 +170,6 @@
 
     margin-top: 2rem;
 
-
     @include phone-only {
         flex-direction: column;
         justify-content: center;
@@ -191,7 +192,7 @@
     background-color: white;
     color: black;
 
-    box-shadow: 8px 8px 0 0 #007FDB;
+    box-shadow: 8px 8px 0 0 #007fdb;
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &:hover {
@@ -245,7 +246,7 @@
 
     background-color: rgba(white, 0.2);
 
-    content: '';
+    content: "";
 }
 
 .socials {
@@ -373,7 +374,7 @@
 
     border-radius: 1000px;
 
-    background-color: rgba(#007FDB, 0.5);
+    background-color: rgba(#007fdb, 0.5);
 
     animation: blob-in 1s forwards;
     animation-delay: 1.3s;
@@ -427,21 +428,24 @@
 
 <script setup>
 function scrollTo(id) {
-    setTimeout(() => {
-        const ele = document.getElementById(id)
-        window.scrollTo(ele.offsetLeft, ele.offsetTop)
-    }, window.location.pathname == "/" ? 0 : 100)
+    setTimeout(
+        () => {
+            const ele = document.getElementById(id);
+            window.scrollTo(ele.offsetLeft, ele.offsetTop);
+        },
+        window.location.pathname == "/" ? 0 : 100,
+    );
 }
 
 onMounted(() => {
-    hero.addEventListener('load', () => {
-        var hero = document.getElementById('hero')
-        hero.classList.add('hero-loaded')
-    })
+    hero.addEventListener("load", () => {
+        var hero = document.getElementById("hero");
+        hero.classList.add("hero-loaded");
+    });
 
     setTimeout(() => {
-        var hero = document.getElementById('hero')
-        hero.classList.add('hero-loaded')
-    }, 500)
-})
+        var hero = document.getElementById("hero");
+        hero.classList.add("hero-loaded");
+    }, 500);
+});
 </script>

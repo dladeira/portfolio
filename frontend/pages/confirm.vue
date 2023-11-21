@@ -10,10 +10,10 @@
 </style>
 
 <script setup>
-const popupSent = useState('popupSent')
-popupSent.value = true
+const popupSent = useState("popupSent");
+popupSent.value = true;
 
 onMounted(() => {
-    navigateTo('/')
-})
+    navigateTo("/");
+});
 </script>

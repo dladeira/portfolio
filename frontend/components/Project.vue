@@ -16,9 +16,9 @@
             </p>
 
             <div :class="align ? 'buttons' : 'buttons-reversed'">
-                <nuxt-link v-if="!view" :href="website" :class="website ? 'website' : 'website-disabled'">{{ $t('works.button1') }}</nuxt-link>
-                <nuxt-link v-if="!view" :href="source" :class="source ? 'source' : 'source-disabled'">{{ $t('works.button2') }}</nuxt-link>
-                <nuxt-link v-if="view" :href="view" :class="view ? 'view' : 'view-disabled'">{{ $t('works.button3') }}</nuxt-link>
+                <nuxt-link v-if="!view" :href="website" :class="website ? 'website' : 'website-disabled'">{{ $t("works.button1") }}</nuxt-link>
+                <nuxt-link v-if="!view" :href="source" :class="source ? 'source' : 'source-disabled'">{{ $t("works.button2") }}</nuxt-link>
+                <nuxt-link v-if="view" :href="view" :class="view ? 'view' : 'view-disabled'">{{ $t("works.button3") }}</nuxt-link>
             </div>
         </div>
     </article>
@@ -97,7 +97,6 @@ $image-width: 25rem;
 
 .image-2 {
     transform: translate(2.5rem, 2rem);
-
 }
 
 .text {
@@ -264,14 +263,14 @@ $image-width: 25rem;
 .view {
     @include button;
 
-    border-color: #007FDB;
+    border-color: #007fdb;
 
     &-disabled {
-        border-color: #007FDB;
+        border-color: #007fdb;
     }
 
     &:hover {
-        background-color: #007FDB;
+        background-color: #007fdb;
         color: white;
     }
 }
@@ -286,6 +285,6 @@ const props = defineProps({
     source: String,
     desc: String,
     align: Boolean,
-    view: String
-})
+    view: String,
+});
 </script>

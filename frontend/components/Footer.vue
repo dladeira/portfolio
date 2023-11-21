@@ -48,7 +48,6 @@
     height: 20px;
     width: 20px;
 
-
     filter: invert(60%);
 
     &:hover {

@@ -7,15 +7,15 @@
             <div class="links">
                 <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
                     <nuxt-img class="icon" src="/icon-user.svg" />
-                    {{ $t('navbar.link1') }}
+                    <div class="link-text">{{ $t("navbar.link1") }}</div>
                 </nuxt-link>
                 <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="link">
                     <nuxt-img class="icon" src="/icon-resume.svg" />
-                    {{ $t('navbar.link2') }}
+                    <div class="link-text">{{ $t("navbar.link2") }}</div>
                 </nuxt-link>
                 <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
                     <nuxt-img class="icon" src="/icon-contact.svg" />
-                    {{ $t('navbar.link3') }}
+                    <div class="link-text">{{ $t("navbar.link3") }}</div>
                 </nuxt-link>
             </div>
         </div>
@@ -92,10 +92,6 @@
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
-    &:hover {
-        transform: scale(0.9);
-    }
-
     @include phone-only {
         margin: 0 auto 1.5rem;
 
@@ -104,7 +100,7 @@
 }
 
 .brand-light {
-    color: #9FCFF1;
+    color: #9fcff1;
 }
 
 .links {
@@ -123,7 +119,6 @@
 
     border-bottom: 1px solid transparent;
 
-
     padding: 0.5rem;
     margin: 0 1rem;
 
@@ -136,8 +131,59 @@
 
     overflow: hidden;
 
-    &:hover {
-        transform: scale(0.9);
+    & .link-text {
+        position: relative;
+    }
+
+    &:hover .link-text::before {
+        position: absolute;
+        bottom: -2px;
+
+        height: 1px;
+
+        border-radius: 100px;
+
+        background-color: white;
+
+        content: "";
+
+        animation: slide-in ease-out 300ms forwards;
+    }
+
+    & .link-text::before {
+        position: absolute;
+        bottom: -2px;
+
+        height: 1px;
+        // width: 100%;
+
+        border-radius: 100px;
+
+        background-color: white;
+
+        content: "";
+
+        animation: slide-out ease-out 300ms forwards;
+    }
+
+    @keyframes slide-in {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes slide-out {
+        from {
+            left: 0;
+            width: 100%;
+        }
+        to {
+            left: 100%;
+            width: 0%;
+        }
     }
 
     @include phone-only {
@@ -176,42 +222,42 @@
         opacity: 1;
         background-color: transparent;
         box-shadow: 0px 0px 40px 40px rgba(black, 0);
-
     }
 }
 </style>
 
 <script setup>
 function scrollTo(id) {
-    setTimeout(() => {
-        const ele = document.getElementById(id)
-        window.scrollTo(ele.offsetLeft, ele.offsetTop)
-    }, window.location.pathname == "/" ? 0 : 100)
+    setTimeout(
+        () => {
+            const ele = document.getElementById(id);
+            window.scrollTo(ele.offsetLeft, ele.offsetTop);
+        },
+        window.location.pathname == "/" ? 0 : 100
+    );
 }
 
 function listener() {
-    var nav = document.getElementById('navbar-container')
+    var nav = document.getElementById("navbar-container");
 
-    if (window.scrollY > window.innerHeight) {
-        if (!nav.classList.contains('container-effect'))
-            nav.classList.add('container-effect')
+    if (window.scrollY > window.innerHeight - 20) {
+        if (!nav.classList.contains("container-effect")) nav.classList.add("container-effect");
     } else {
-        if (nav.classList.contains('container-effect')) {
-            nav.classList.add('container-effect-hide')
+        if (nav.classList.contains("container-effect")) {
+            nav.classList.add("container-effect-hide");
             setTimeout(() => {
-                nav.classList.remove('container-effect')
-                nav.classList.remove('container-effect-hide')
-            }, 200)
+                nav.classList.remove("container-effect");
+                nav.classList.remove("container-effect-hide");
+            }, 200);
         }
-
     }
 }
 
 onBeforeMount(() => {
-    document.addEventListener('scroll', listener)
-})
+    document.addEventListener("scroll", listener);
+});
 
 onBeforeUnmount(() => {
-    document.removeEventListener('scroll', listener)
-})
+    document.removeEventListener("scroll", listener);
+});
 </script>

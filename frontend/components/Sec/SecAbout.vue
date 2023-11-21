@@ -1,18 +1,18 @@
 <template>
     <section class="section" id="about">
-        <h3 class="section-title"><span class="section-title-index">01.</span> {{ $t('about.header') }}</h3>
+        <h3 class="section-title"><span class="section-title-index">01.</span> {{ $t("about.header") }}</h3>
         <div class="content">
             <div class="img-wrapper">
                 <nuxt-img class="img" src="/hero.png" alt="Little Daniel Ladeira" format="webp" />
             </div>
             <div class="text">
-                <h4 class="title">{{ $t('about.title') }}</h4>
+                <h4 class="title">{{ $t("about.title") }}</h4>
                 <p class="paragraph" v-html="formatMsg(t('about.desc1'))" />
                 <div class="list">
-                    <li class="list-item">{{ t('about.list.1') }}</li>
-                    <li class="list-item">{{ t('about.list.2') }}</li>
-                    <li class="list-item">{{ t('about.list.3') }}</li>
-                    <li class="list-item">{{ t('about.list.4') }}</li>
+                    <li class="list-item">{{ t("about.list.1") }}</li>
+                    <li class="list-item">{{ t("about.list.2") }}</li>
+                    <li class="list-item">{{ t("about.list.3") }}</li>
+                    <li class="list-item">{{ t("about.list.4") }}</li>
                 </div>
                 <p class="paragraph" v-html="formatMsg(t('about.desc2'))" />
             </div>
@@ -21,7 +21,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 .content {
     display: flex;
     flex-direction: row;
@@ -81,7 +80,7 @@
 .paragraph {
     font-size: 1.2rem;
     line-height: 2rem;
-    color: #AFAFAF;
+    color: #afafaf;
 
     &-highlighted {
         color: white;
@@ -109,7 +108,7 @@
     margin: 0 0 1.5rem;
 
     font-size: 1.25rem;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     white-space: pre-wrap;
     font-weight: 400;
 }
@@ -120,22 +119,20 @@
 </style>
 
 <script setup>
-const { t } = useI18n()
+const { t } = useI18n();
 
 function formatMsg(msg) {
-    var msg = msg.split('\'')
-    var final_msg = ""
+    var msg = msg.split("'");
+    var final_msg = "";
 
     for (var index in msg) {
-        final_msg += msg[index]
+        final_msg += msg[index];
 
         if (index < msg.length - 1)
-            if (index % 2 == 0)
-                final_msg += "<span style=\"color: white\">"
-            else
-                final_msg += "</span>"
+            if (index % 2 == 0) final_msg += '<span style="color: white">';
+            else final_msg += "</span>";
     }
 
-    return final_msg
+    return final_msg;
 }
 </script>

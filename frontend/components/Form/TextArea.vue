@@ -31,7 +31,7 @@
     border-radius: 5px;
 
     font-size: 1rem;
-    font-family: 'League Spartan', sans-serif;
+    font-family: "League Spartan", sans-serif;
     background-color: rgba(white, 0.1);
     color: white;
 
@@ -65,5 +65,6 @@ const props = defineProps({
     placeholder: String,
     type: String,
     id: String,
-    disabled: Boolean
-})</script>
+    disabled: Boolean,
+});
+</script>

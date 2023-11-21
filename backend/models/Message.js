@@ -1,13 +1,13 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const msgSchema = new mongoose.Schema({
     name: String,
     email: String,
     budget: String,
     scale: String,
-    message: String
-})
+    message: String,
+});
 
-const msg = mongoose.model("message", msgSchema)
+const msg = mongoose.model("message", msgSchema);
 
-module.exports = msg
+module.exports = msg;
