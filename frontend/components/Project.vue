@@ -16,9 +16,9 @@
             </p>
 
             <div :class="align ? 'buttons' : 'buttons-reversed'">
-                <nuxt-link v-if="!view" :href="website" :class="website ? 'website' : 'website-disabled'">{{ $t("works.button1") }}</nuxt-link>
-                <nuxt-link v-if="!view" :href="source" :class="source ? 'source' : 'source-disabled'">{{ $t("works.button2") }}</nuxt-link>
-                <nuxt-link v-if="view" :href="view" :class="view ? 'view' : 'view-disabled'">{{ $t("works.button3") }}</nuxt-link>
+                <nuxt-link v-if="website" :href="website" class="website">{{ $t("works.button1") }}</nuxt-link>
+                <nuxt-link v-if="source" :href="source" class="source">{{ $t("works.button2") }}</nuxt-link>
+                <nuxt-link v-if="view" :href="view" class="view">{{ $t("works.button3") }}</nuxt-link>
             </div>
         </div>
     </article>
@@ -206,39 +206,12 @@ $image-width: 25rem;
         background-color: white;
         color: black;
     }
-
-    &-disabled {
-        margin-right: 1rem;
-        padding: 0.5rem 1.5rem;
-
-        border: 2px solid white;
-        border-radius: 10px;
-
-        font-size: 1rem;
-        font-weight: 400;
-        text-decoration: none;
-        color: white;
-
-        transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
-
-        opacity: 0.2;
-        user-select: none;
-
-        &:hover {
-            background-color: transparent !important;
-            color: white;
-        }
-    }
 }
 
 .website {
     @include button;
 
     border-color: $green;
-
-    &-disabled {
-        border-color: $green;
-    }
 
     &:hover {
         background-color: $green;
@@ -250,10 +223,6 @@ $image-width: 25rem;
     @include button;
 
     border-color: white;
-
-    &-disabled {
-        border-color: white;
-    }
 
     &:hover {
         background-color: white;

@@ -40,6 +40,7 @@
     background-color: rgba(white, 0.1);
     color: white;
 
+    appearance: textfield;
     box-shadow: 0 0 4px 0 rgba(black, 0.25);
     outline: none;
 
@@ -56,6 +57,11 @@
 
     &:disabled {
         color: rgba(white, 0.3);
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        appearance: none;
     }
 
     @include phone-only {

@@ -6,6 +6,7 @@ const msgSchema = new mongoose.Schema({
     budget: String,
     scale: String,
     message: String,
+    date: Number,
 });
 
 const msg = mongoose.model("message", msgSchema);

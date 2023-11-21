@@ -29,6 +29,7 @@ app.get("/confirm/:code", async (req, res) => {
             email: confirmation.body.email,
             budget: confirmation.body.budget,
             message: confirmation.body.message,
+            date: Date.now(),
         });
 
         try {
