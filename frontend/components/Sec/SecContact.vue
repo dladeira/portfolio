@@ -21,6 +21,10 @@
 </template>
 
 <style lang="scss" scoped>
+.section {
+    padding-bottom: 7rem;
+}
+
 .form {
     display: flex;
     flex-direction: column;

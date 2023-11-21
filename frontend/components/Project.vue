@@ -1,5 +1,5 @@
 <template>
-    <article :class="align ? 'project' : 'project-reversed'">
+    <article class="project">
         <div class="images">
             <nuxt-img class="image-2" :src="img + '-2.png'" format="webp" alt="Project Preview" />
             <nuxt-img class="image-1" :src="img + '-1.png'" format="webp" alt="Project Preview" />
@@ -15,7 +15,7 @@
                 {{ desc }}
             </p>
 
-            <div :class="align ? 'buttons' : 'buttons-reversed'">
+            <div class="buttons">
                 <nuxt-link v-if="website" :href="website" class="website">{{ $t("works.button1") }}</nuxt-link>
                 <nuxt-link v-if="source" :href="source" class="source">{{ $t("works.button2") }}</nuxt-link>
                 <nuxt-link v-if="view" :href="view" class="view">{{ $t("works.button3") }}</nuxt-link>
@@ -29,19 +29,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     width: 100%;
 
-    margin-bottom: 15rem;
-
-    &-reversed {
-        @extend .project;
-
-        @include not-phone {
-            flex-direction: row-reverse;
-        }
-    }
+    margin-bottom: 5rem;
 
     &:last-child {
         margin-bottom: 0;
@@ -105,6 +97,10 @@ $image-width: 25rem;
     @include phone-only {
         width: 100%;
     }
+
+    @include not-phone {
+        padding-top: 3rem;
+    }
 }
 
 .project-header {
@@ -129,7 +125,7 @@ $image-width: 25rem;
     font-weight: 700;
 
     @include phone-only {
-        margin-bottom: 2rem;
+        margin: 0 0 2rem;
 
         font-size: 2.5rem;
         text-align: center;
@@ -141,6 +137,10 @@ $image-width: 25rem;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    @include phone-only {
+        justify-content: center;
+    }
 }
 
 .tag {
@@ -156,28 +156,23 @@ $image-width: 25rem;
 }
 
 .desc {
-    margin: 2.5rem 0;
+    margin: 1rem 0 1.5rem;
 
     font-size: 1.1rem;
-    text-indent: 3rem;
     line-height: 1.9rem;
 
     @include phone-only {
-        display: none;
+        margin-bottom: 0;
+
+        text-align: center;
     }
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-
-    &-reversed {
-        @extend .buttons;
-
-        justify-content: flex-start;
-    }
 
     @include phone-only {
         display: none;

@@ -88,7 +88,7 @@ body {
 .section {
     width: 100%;
 
-    padding: 10rem 0;
+    padding: 5rem 0;
 
     @include phone-only {
         padding: 7rem 0;
@@ -98,7 +98,7 @@ body {
 .section-title {
     width: fit-content;
 
-    margin: 0 auto 9rem;
+    margin: 0 auto 5rem;
 
     font-size: 3rem;
 

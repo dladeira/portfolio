@@ -108,8 +108,6 @@
 }
 
 .subtitle {
-    width: 45vw;
-
     margin: 0.5rem 0 0;
 
     font-weight: 3;
@@ -151,10 +149,13 @@
     user-select: none;
 
     @include phone-only {
-        position: static;
-        margin-top: 3rem;
+        right: auto;
 
         width: 20rem;
+    }
+
+    @media (max-width: 600px) {
+        bottom: -10rem;
     }
 }
 
@@ -433,7 +434,7 @@ function scrollTo(id) {
             const ele = document.getElementById(id);
             window.scrollTo(ele.offsetLeft, ele.offsetTop);
         },
-        window.location.pathname == "/" ? 0 : 100,
+        window.location.pathname == "/" ? 0 : 100
     );
 }
 
