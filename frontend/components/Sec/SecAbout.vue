@@ -21,6 +21,12 @@
 </template>
 
 <style lang="scss" scoped>
+.section {
+    @include phone-only {
+        padding-top: 7rem;
+    }
+}
+
 .content {
     display: flex;
     flex-direction: row;
@@ -80,6 +86,10 @@
 
     font-size: 1.5rem;
     font-weight: 700;
+
+    @include phone-only {
+        margin-bottom: 0;
+    }
 }
 
 .paragraph {
@@ -97,11 +107,9 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 
-    font-size: 1rem;
+    gap: 1rem;
 
-    &-item {
-        margin-bottom: 1rem;
-    }
+    font-size: 1rem;
 
     @include phone-only {
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -109,17 +117,12 @@
     }
 }
 
-.desc {
-    margin: 0 0 1.5rem;
-
-    font-size: 1.25rem;
-    font-family: "Outfit", sans-serif;
-    white-space: pre-wrap;
-    font-weight: 400;
-}
-
 .paragraph {
     text-indent: 2rem;
+
+    @include phone-only {
+        margin: 1rem 0;
+    }
 }
 </style>
 

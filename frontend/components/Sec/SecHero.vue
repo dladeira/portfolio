@@ -62,8 +62,8 @@
 
     margin-top: 10rem;
 
-    @include phone-only {
-        margin-top: 10rem;
+    @include tablet-only {
+        margin-top: 13rem;
     }
 }
 
@@ -73,6 +73,7 @@
     font-weight: 700;
     font-size: 7rem;
     letter-spacing: 2px;
+    text-align: center;
     color: white;
 
     animation: text-in 1s forwards;
@@ -80,12 +81,16 @@
 
     opacity: 0;
 
-    @include phone-only {
-        width: 100%;
+    @include tablet-only {
+        font-size: 7rem;
+    }
 
+    @include phone-only {
+        font-size: 10vw;
+    }
+
+    @include small-phone-only {
         font-size: 5rem;
-        line-height: 5rem;
-        text-align: center;
     }
 }
 
@@ -95,6 +100,7 @@
     font-weight: 700;
     font-size: 5.25rem;
     letter-spacing: 2px;
+    text-align: center;
     color: $background-color;
 
     animation: text-in 1s forwards;
@@ -104,22 +110,19 @@
 
     @include stroke(rgba(white, 0.2), 2px);
 
-    @include laptop-only {
-        max-width: 80vw;
-    }
-
     @include tablet-only {
-        max-width: 80vw;
+        font-size: 5.5rem;
     }
 
     @include phone-only {
-        width: 90%;
+        font-size: 8vw;
+    }
 
-        margin: 1rem auto 0;
+    @include small-phone-only {
+        margin-top: 1.25rem;
 
-        font-size: 2.75rem;
-        line-height: 2.75rem;
-        text-align: center;
+        font-size: 4rem;
+        @include stroke(rgba(white, 0.2), 1px);
     }
 }
 
@@ -135,14 +138,18 @@
     opacity: 0;
     user-select: none;
 
-    @include phone-only {
-        right: auto;
-
-        width: 20rem;
+    @include tablet-only {
+        width: 26rem;
     }
 
-    @media (max-width: 600px) {
-        bottom: -10rem;
+    @include phone-only {
+        width: 25rem;
+
+        bottom: -3rem;
+    }
+
+    @include small-phone-only {
+        width: 24rem;
     }
 }
 

@@ -43,6 +43,10 @@
     border-radius: 10px;
 
     background-color: #2d343c;
+
+    @include phone-only {
+        width: 90%;
+    }
 }
 
 .popup-title {
@@ -65,30 +69,19 @@
     margin-top: 2rem;
     padding: 0.5rem 3rem;
 
-    border: 2px solid #007fdb;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
 
     font-size: 1rem;
     font-weight: 400;
-    background-color: transparent;
+    background-color: rgba($blue, 0.4);
     color: white;
 
     &:hover {
-        background-color: #007fdb;
+        background-color: rgba($blue, 1);
         color: white;
 
         cursor: pointer;
-    }
-
-    &:disabled {
-        opacity: 0.3;
-
-        background-color: #007fdb;
-        color: white;
-
-        &:hover {
-            cursor: default;
-        }
     }
 }
 </style>

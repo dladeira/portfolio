@@ -7,6 +7,7 @@
         <div class="text">
             <div class="project-header">
                 <h4 class="title">{{ title }}</h4>
+                <h5 class="subtitle-mobile">{{ subtitle }}</h5>
                 <div class="tags">
                     <div class="tag" v-for="tag in tags">{{ tag }}</div>
                 </div>
@@ -17,8 +18,8 @@
             </p>
 
             <div class="buttons">
-                <nuxt-link v-if="website" :href="website" class="website">{{ $t("works.button1") }}</nuxt-link>
-                <nuxt-link v-if="source" :href="source" class="source">{{ $t("works.button2") }}</nuxt-link>
+                <nuxt-link v-if="website" :href="website" class="website" target="_blank">{{ $t("works.button1") }}</nuxt-link>
+                <nuxt-link v-if="source" :href="source" class="source" target="_blank">{{ $t("works.button2") }}</nuxt-link>
             </div>
         </div>
     </article>
@@ -127,9 +128,9 @@ $image-width: 30rem;
     font-weight: 700;
 
     @include phone-only {
-        margin: 0 0 2rem;
+        margin: 0;
 
-        font-size: 2.5rem;
+        font-size: 3rem;
         text-align: center;
     }
 }
@@ -164,6 +165,24 @@ $image-width: 30rem;
     font-size: 1rem;
     font-weight: 400;
     color: $lightblue;
+
+    @include phone-only {
+        display: none;
+    }
+}
+
+.subtitle-mobile {
+    @extend .subtitle;
+
+    margin-bottom: 1.75rem;
+
+    font-size: 1.2rem;
+
+    display: block;
+
+    @include not-phone {
+        display: none;
+    }
 }
 
 .desc {
@@ -177,6 +196,7 @@ $image-width: 30rem;
         margin-bottom: 0;
 
         text-align: center;
+        text-indent: 0;
     }
 }
 
@@ -189,7 +209,9 @@ $image-width: 30rem;
     gap: 1.25rem;
 
     @include phone-only {
-        display: none;
+        justify-content: center;
+
+        margin: 1.5rem 0 0.5rem;
     }
 }
 

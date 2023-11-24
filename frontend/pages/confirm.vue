@@ -3,9 +3,8 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
-    height: 100%;
-    background-image: $gradient-main;
+.blank {
+    color: white;
 }
 </style>
 
