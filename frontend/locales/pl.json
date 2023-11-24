@@ -1,7 +1,7 @@
 {
     "meta": {
-        "title": "Freelance Programista Stron WWW",
-        "description": "Trzyjęzyczny freelancer programista stron internetowych z siedzibą w Warszawie. Specjalizuje się w React/NEXT, Vue/NUXT, MongoDB i NodeJS."
+        "title": "Programista Stron WWW",
+        "description": "Trzyjęzyczny programista stron internetowych z siedzibą w Europie. Specjalizuje się w React/NEXT, Vue/NUXT, MongoDB i NodeJS."
     },
     "navbar": {
         "link1": "O mnie",
@@ -10,41 +10,41 @@
     },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Freelancer Programista Stron Internetowych",
-        "button1": "O mnie",
-        "button2": "Kontakt"
+        "subtitle": "Programista Stron Internetowych"
     },
     "about": {
         "header": "O mnie",
-        "title": "Ambicyjny Programista",
+        "title": "Daniel Ladeira",
         "desc1": "Nazywam się Daniel Ladeira i jestem 'trójjęzycznym programistą' z siedzibą w 'Europie'. Przeważnie programuje strony internetowe ale też mam doświadczenie w następujących dziedzinach:",
-        "desc2": "Mówię po 'Angielsku', 'Portugalsku', i 'Polish' fluently and can translate websites. Uwielbiam wyzwania i uczenie się nowych technologii.",
+        "desc2": "Mówię po 'Angielsku', 'Portugalsku', i 'Polish' fluently and can translate websites.",
         "list": {
-            "1": "Projektowanie Stron Internetowych",
-            "2": "Wizualizacja Danych (dashboardy)",
-            "3": "Programowania w Java",
-            "4": "Administracja Systemów i Hosting"
+            "1": "Aplikacje Rust",
+            "2": "Programowanie w Java",
+            "3": "Wizualizacja Danych",
+            "4": "Administracja Systemów Linux"
         }
     },
     "works": {
         "header": "Projekty",
         "projects": {
             "1": {
-                "title": "MCSS",
-                "desc": "Profesjonalna i zoptymalizowana pod kątem SEO strona internetowa do statystyk serwerów Minecraftowych. Projekt demonstruje dobre wykorzystanie przestrzeni i hierarchii aby przedstawić dużo informacji."
+                "title": "Hoplite",
+                "subtitle": "Lipiec 2023 - Obecnie",
+                "desc": "Strona internetowa prezentująca serwer minecrafta \"Hoplite\". Moja rola polegała na ulepszeniu istniejącej strony internetowej oraz konfiguracji Tebex."
             },
             "2": {
-                "title": "LTracker",
-                "desc": "Kalendarz do śledzenia czasu. Minimalistyczny i w jasnych kolorajch projekt mający na celu rozwiązanie konkretnego problemu, na przykład jak ulepszyć mój czas."
+                "title": "MCSS",
+                "subtitle": "Projekt",
+                "desc": "Aplikacja SaaS do statystyk serwera Minecraft. Integruje się z pluginem aby wyświetlić przydatne statystyki graczy."
             },
             "3": {
-                "title": "Projekty Stron",
-                "desc": "Zbiór projektów stron internetowych dla lokalnych firm. Zaprojektowany przy użyciu narzędzia do prototypowania o nazwie Figma. Zawiera nowoczesne elementy projektu i pełne informacji strony."
+                "title": "Polanner",
+                "subtitle": "Projekt",
+                "desc": "Witryna do śledzenia czasu. Integruje się z aplikacją komputerową oraz mediami społecznościowymi."
             }
         },
         "button1": "Otwórz stronę",
-        "button2": "Zobacz kod",
-        "button3": "Zobacz"
+        "button2": "Zobacz kod"
     },
     "contact": {
         "header": "Kontakt",

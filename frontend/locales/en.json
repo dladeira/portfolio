@@ -1,7 +1,7 @@
 {
     "meta": {
-        "title": "Freelance Web Developer",
-        "description": "Trilingual freelance web developer based in Warsaw, Poland. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
+        "title": "Web Developer",
+        "description": "Trilingual freelance web developer based in Europe. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
     },
     "navbar": {
         "link1": "About me",
@@ -30,7 +30,7 @@
             "1": {
                 "title": "Hoplite",
                 "subtitle": "July 2023 - Present",
-                "desc": "A website featuring the minecraft server Hoplite. My role was to improve the existing website and tebex configuration."
+                "desc": "A website featuring the minecraft server Hoplite. My role was to improve the existing website and Tebex configuration."
             },
             "2": {
                 "title": "MCSS",

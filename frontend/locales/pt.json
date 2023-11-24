@@ -1,7 +1,7 @@
 {
     "meta": {
-        "title": "Desenvolvedor Web Freelancer",
-        "description": "Desenvolvedor web freelancer trilíngue com base em Varsóvia, Polônia. Especializado em React/NEXT, Vue/NUXT, MongoDB e NodeJS."
+        "title": "Desenvolvedor Web",
+        "description": "Desenvolvedor web trilíngue com base em Varsóvia, Polônia. Especializado em React/NEXT, Vue/NUXT, MongoDB e NodeJS."
     },
     "navbar": {
         "link1": "Sobre mim",
@@ -10,20 +10,18 @@
     },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Desenvolvedor Web Freelancer",
-        "button1": "Sobre mim",
-        "button2": "Contacto"
+        "subtitle": "Desenvolvedor Web"
     },
     "about": {
         "header": "Sobre mim",
-        "title": "Programador ambicioso",
+        "title": "Daniel Ladeira",
         "desc1": "O meu nome é Daniel Ladeira e sou um programador trilíngue baseado na 'Europa'. Principalmente crio páginas de internet, mas também tenho experiência nas seguintes áreas:",
-        "desc2": "Também falo 'Inglês', 'Português', e 'Polaco' e consigo traduzir sites nessas linguas. Adoro desafios e sempre estou pronto para aprender coisas novas.",
+        "desc2": "Também falo 'Inglês', 'Português', e 'Polaco' e consigo traduzir sites nessas linguas.",
         "list": {
-            "1": "Desenvolvimento Web",
-            "2": "Visualização de Dados",
-            "3": "Desenvolvimento de Software Java",
-            "4": "Administração de Sistemas e Hosting"
+            "1": "Aplicações de Rust",
+            "2": "Aplicações de Java",
+            "3": "Visualização de Dados",
+            "4": "Administração de Sistemas Linux"
         }
     },
     "works": {
@@ -31,20 +29,22 @@
         "projects": {
             "1": {
                 "title": "MCSS",
-                "desc": "Um \"site\" SEO, otimizado para motores de busca, que mostra estatísticas de servidores de Minecraft. Este projeto demonstra como fazer um bom uso de espaço e hierarquia para apresentar uma grande quantidade de informação usando um \"design\" moderno."
+                "subtitle": "Julho 2023 - Presente",
+                "desc": "Um site sobre o servidor minecraft Hoplite. A minha função era melhorar o site existente e a configuração do Tebex."
             },
             "2": {
-                "title": "LTracker",
-                "desc": "Um calendário para controlar o seu uso de tempo com um \"design\" minimalista de tema claro destinado a resolver um problema muito específico: onde estou a perder demasiado tempo e a que é que devia dedicar mais tempo?"
+                "title": "MCSS",
+                "subtitle": "Projeto Pessoal",
+                "desc": "Uma aplicação de SaaS sobre estatísticas de servidores de Minecraft. Integra-se com um plugin para exibir estatísticas úteis de jogadores."
             },
             "3": {
-                "title": "Website Prototypes",
-                "desc": "Uma coleção de projetos de páginas para negócios locais. Feitos usando a aplicação de \"design\" Figma. Apresenta elementos de \"design\" modernos e páginas cheias de informação."
+                "title": "Polanner",
+                "subtitle": "Projeto Pessoal",
+                "desc": "Um site de controle de tempo. Integra-se com uma aplicação de desktop e redes sociais"
             }
         },
         "button1": "Ver página",
-        "button2": "Ver código",
-        "button3": "Ver coleção"
+        "button2": "Ver código"
     },
     "contact": {
         "header": "Contacto",
