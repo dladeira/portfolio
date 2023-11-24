@@ -42,7 +42,7 @@
 
     border-radius: 50px;
 
-    background-color: rgba(white, 0.1);
+    background-color: rgba(white, 0.05);
 
     overflow: hidden;
 
@@ -52,9 +52,14 @@
 }
 
 .img {
-    width: 90%;
+    display: block;
 
-    transform: translate(0.5rem, 2rem);
+    width: 80%;
+
+    margin: 0 auto;
+
+    filter: drop-shadow(-8px -6px 0 black);
+    transform: translateY(3rem);
 }
 
 .text {

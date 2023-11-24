@@ -32,7 +32,7 @@
 
     padding: 1rem 1rem;
 
-    border: 1px solid rgba(white, 0.3);
+    border: 1px solid transparent;
     border-radius: 5px;
 
     font-size: 1rem;
@@ -41,7 +41,6 @@
     color: white;
 
     appearance: textfield;
-    box-shadow: 0 0 4px 0 rgba(black, 0.25);
     outline: none;
 
     &::placeholder {
@@ -51,8 +50,7 @@
     &:focus {
         outline: none;
 
-        border: 1px solid rgba(white, 1);
-        box-shadow: 0 0 8px 0 rgba(black, 0.25);
+        border: 1px solid rgba(white, 0.4);
     }
 
     &:disabled {

@@ -2,7 +2,7 @@
     <section class="section" id="projects">
         <h3 class="section-title"><span class="section-title-index">02.</span> {{ $t("works.header") }}</h3>
         <div class="content">
-            <Project v-for="project of projects" :align="projects.indexOf(project) % 2 == 0" :name="project.name" :desc="project.desc" :img="project.img" :tags="project.tags" :website="project.website" :source="project.source" :view="project.view" />
+            <Project v-for="project of projects" :title="project.title" :subtitle="project.subtitle" :desc="project.desc" :img="project.img" :tags="project.tags" :website="project.website" :source="project.source" :flip="project.flip" />
         </div>
     </section>
 </template>
@@ -25,25 +25,31 @@ const { t } = useI18n();
 
 const projects = [
     {
-        name: t("works.projects.1.title"),
-        img: "project-mcss",
-        tags: ["Vue/NUXT", "Java", "SocketIO"],
+        title: t("works.projects.1.title"),
+        subtitle: t("works.projects.1.subtitle"),
+        img: "project-hoplite",
+        tags: ["NEXT.js", "Tebex", "Strapi"],
         desc: t("works.projects.1.desc"),
-        website: "https://mcss.ladeira.eu",
+        website: "https://hoplite.gg",
     },
     {
-        name: t("works.projects.2.title"),
-        img: "project-tracker",
-        tags: ["React/NEXT", "MongoDB"],
+        title: t("works.projects.2.title"),
+        subtitle: t("works.projects.2.subtitle"),
+        img: "project-mcss",
+        tags: ["Nuxt", "MongoDB", "Java"],
         desc: t("works.projects.2.desc"),
-        source: "https://github.com/dladeira/ltracker",
+        website: "https://mcss.ladeira.eu",
+        source: "https://github.com/dladeira/mcss",
     },
     {
-        name: t("works.projects.3.title"),
-        img: "project-prototype",
-        tags: ["Figma"],
+        title: t("works.projects.3.title"),
+        subtitle: t("works.projects.3.subtitle"),
+        img: "project-polanner",
+        tags: ["Nuxt", "MongoDB", "Tauri"],
         desc: t("works.projects.3.desc"),
-        view: "https://dribbble.com/dladeira",
+        website: "https://polanner.com",
+        source: "https://github.com/dladeira/polanner",
+        flip: true,
     },
 ];
 </script>

@@ -6,7 +6,7 @@
                 <div class="top">
                     <FormText :name="$t('contact.inputs.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
                     <FormText :name="$t('contact.inputs.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
-                    <FormText :name="$t('contact.inputs.budget')" id="budget" type="number" placeholder="$100" :disabled="messageSent" />
+                    <FormText :name="$t('contact.inputs.budget')" id="budget" type="text" placeholder="$500" :disabled="messageSent" />
                 </div>
                 <div class="mid">
                     <FormTextArea :name="$t('contact.inputs.message')" id="message" :placeholder="$t('contact.inputs.message_placeholder')" :disabled="messageSent" />
@@ -22,7 +22,7 @@
 
 <style lang="scss" scoped>
 .section {
-    padding-bottom: 7rem;
+    padding-bottom: 8rem;
 }
 
 .form {
@@ -73,20 +73,20 @@
 
 .send {
     margin-right: 2rem;
-    padding: 0.5rem 3rem;
+    padding: 0.7rem 4.5rem;
 
-    border: 2px solid #007fdb;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
 
     font-size: 1rem;
     font-weight: 400;
-    background-color: transparent;
+    background-color: rgba($blue, 0.4);
     color: white;
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &:hover {
-        background-color: #007fdb;
+        background-color: rgba($blue, 1);
         color: white;
 
         cursor: pointer;
@@ -106,7 +106,7 @@
     @include phone-only {
         width: 100%;
 
-        background-color: #007fdb;
+        background-color: rgba($blue, 0.2);
         color: white;
 
         margin: 0;

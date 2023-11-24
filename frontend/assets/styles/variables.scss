@@ -1,4 +1,5 @@
 $blue: #007fdb;
+$lightblue: #1fb3e2;
 $darkblue: #0066db;
 $navy: #142d4f;
 $gray: #676767;
@@ -10,11 +11,6 @@ $content-desktop: 1300px;
 $content-laptop: 1000px;
 $content-tablet: 80vw;
 $content-phone: 80vw;
-
-$gradient-opacity: 0.05;
-$gradient-main: linear-gradient(to right, rgba(#00ff75, $gradient-opacity), rgba(#00c2ff, $gradient-opacity) 20%, rgba(#00c2ff, $gradient-opacity) 80%, rgba(#ff3030, $gradient-opacity));
-
-$gradient-hero: linear-gradient(to top, #222d40, #131c2d);
 
 // ==========
 // RESPONSIVENESS
@@ -90,4 +86,12 @@ $phone_max: 980px;
     @media (max-width: $phone_max) {
         @content;
     }
+}
+
+// ==========
+// HELPERS
+// ==========
+
+@mixin stroke($color: #000, $size: 1px) {
+    text-shadow: -#{$size} -#{$size} 0 $color, 0 -#{$size} 0 $color, #{$size} -#{$size} 0 $color, #{$size} 0 0 $color, #{$size} #{$size} 0 $color, 0 #{$size} 0 $color, -#{$size} #{$size} 0 $color, -#{$size} 0 0 $color;
 }

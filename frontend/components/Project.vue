@@ -1,16 +1,17 @@
 <template>
     <article class="project">
         <div class="images">
-            <nuxt-img class="image-2" :src="img + '-2.png'" format="webp" alt="Project Preview" />
+            <nuxt-img :class="'image-2' + (flip ? ' image-front' : '')" :src="img + '-2.png'" format="webp" alt="Project Preview" />
             <nuxt-img class="image-1" :src="img + '-1.png'" format="webp" alt="Project Preview" />
         </div>
         <div class="text">
             <div class="project-header">
-                <h4 class="name">{{ name }}</h4>
+                <h4 class="title">{{ title }}</h4>
                 <div class="tags">
                     <div class="tag" v-for="tag in tags">{{ tag }}</div>
                 </div>
             </div>
+            <h5 class="subtitle">{{ subtitle }}</h5>
             <p class="desc">
                 {{ desc }}
             </p>
@@ -18,7 +19,6 @@
             <div class="buttons">
                 <nuxt-link v-if="website" :href="website" class="website">{{ $t("works.button1") }}</nuxt-link>
                 <nuxt-link v-if="source" :href="source" class="source">{{ $t("works.button2") }}</nuxt-link>
-                <nuxt-link v-if="view" :href="view" class="view">{{ $t("works.button3") }}</nuxt-link>
             </div>
         </div>
     </article>
@@ -33,7 +33,7 @@
 
     width: 100%;
 
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
 
     &:last-child {
         margin-bottom: 0;
@@ -46,7 +46,7 @@
     }
 }
 
-$image-width: 25rem;
+$image-width: 30rem;
 
 .images {
     position: relative;
@@ -70,7 +70,7 @@ $image-width: 25rem;
 
     width: $image-width;
 
-    border-radius: 10px;
+    border-radius: 5px;
 
     box-shadow: 0 0 16px 0 rgba(black, 0.25);
 
@@ -81,14 +81,14 @@ $image-width: 25rem;
 
 .image-1 {
     position: static;
-}
-
-.image-1 {
     transform: translate(-2.5rem, -2rem);
 }
-
 .image-2 {
     transform: translate(2.5rem, 2rem);
+}
+
+.image-front {
+    z-index: 100;
 }
 
 .text {
@@ -106,8 +106,10 @@ $image-width: 25rem;
 .project-header {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
 
     @include phone-only {
         flex-direction: column;
@@ -118,8 +120,8 @@ $image-width: 25rem;
     }
 }
 
-.name {
-    margin: 0 2rem 0 0;
+.title {
+    margin: 00;
 
     font-size: 2rem;
     font-weight: 700;
@@ -138,28 +140,38 @@ $image-width: 25rem;
     justify-content: flex-start;
     align-items: center;
 
+    gap: 0.75rem;
+
     @include phone-only {
         justify-content: center;
     }
 }
 
 .tag {
-    margin-right: 1rem;
-    padding: 0.5rem 1rem 0.35rem;
+    padding: 0.65rem 1rem 0.5rem;
 
     border-radius: 5px;
 
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 400;
-    background-color: rgba(white, 0.1);
+    background-color: rgba(white, 0.2);
     color: white;
 }
 
+.subtitle {
+    margin: 0.75rem 0 0 0;
+
+    font-size: 1rem;
+    font-weight: 400;
+    color: $lightblue;
+}
+
 .desc {
-    margin: 1rem 0 1.5rem;
+    margin: 2rem 0 2rem;
 
     font-size: 1.1rem;
-    line-height: 1.9rem;
+    line-height: 2rem;
+    text-indent: 3rem;
 
     @include phone-only {
         margin-bottom: 0;
@@ -174,6 +186,8 @@ $image-width: 25rem;
     justify-content: flex-start;
     align-items: center;
 
+    gap: 1.25rem;
+
     @include phone-only {
         display: none;
     }
@@ -183,72 +197,42 @@ $image-width: 25rem;
     width: 100%;
 }
 
-@mixin button {
-    margin-right: 1rem;
-    padding: 0.5rem 1.5rem;
+@mixin button($primary: rgba(white, 0.2), $secondary: rgba(white, 0.5)) {
+    padding: 0.75rem 1.75rem;
 
-    border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
 
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
+    background-color: $primary;
     color: white;
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &:hover {
-        background-color: white;
-        color: black;
+        background-color: $secondary;
     }
 }
 
 .website {
-    @include button;
-
-    border-color: $green;
-
-    &:hover {
-        background-color: $green;
-        color: white;
-    }
+    @include button(rgba($blue, 0.4), rgba($blue, 1));
 }
 
 .source {
     @include button;
-
-    border-color: white;
-
-    &:hover {
-        background-color: white;
-    }
-}
-
-.view {
-    @include button;
-
-    border-color: #007fdb;
-
-    &-disabled {
-        border-color: #007fdb;
-    }
-
-    &:hover {
-        background-color: #007fdb;
-        color: white;
-    }
 }
 </style>
 
 <script setup>
 const props = defineProps({
-    name: String,
+    title: String,
+    subtitle: String,
     img: String,
     tags: Array,
     website: String,
     source: String,
     desc: String,
-    align: Boolean,
-    view: String,
+    flip: Boolean,
 });
 </script>

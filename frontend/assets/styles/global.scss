@@ -48,10 +48,6 @@ body {
     background-color: $background-color;
 }
 
-.page {
-    background-image: $gradient-main;
-}
-
 // ==========
 // SCROLLBAR
 // ==========
@@ -88,7 +84,7 @@ body {
 .section {
     width: 100%;
 
-    padding: 5rem 0;
+    padding: 8rem 0;
 
     @include phone-only {
         padding: 7rem 0;
@@ -98,12 +94,12 @@ body {
 .section-title {
     width: fit-content;
 
-    margin: 0 auto 5rem;
+    margin: 0 auto 4.5rem;
 
     font-size: 3rem;
 
     &-index {
-        color: #1fb3e2;
+        color: $lightblue;
     }
 
     @include phone-only {

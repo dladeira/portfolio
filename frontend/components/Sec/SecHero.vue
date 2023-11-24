@@ -7,23 +7,11 @@
             <div class="blob blob-4" />
         </div>
         <div class="inner-container">
-            <div class="main">
-                <div class="text">
-                    <h1 class="title">
-                        {{ $t("hero.title") }}
-                    </h1>
-                    <h2 class="subtitle">
-                        {{ $t("hero.subtitle") }}
-                    </h2>
-                </div>
-                <div class="buttons">
-                    <nuxt-link @click="scrollTo('about')" class="button about">
-                        {{ $t("hero.button1") }}
-                    </nuxt-link>
-                    <nuxt-link @click="scrollTo('contact')" class="button contact">
-                        {{ $t("hero.button2") }}
-                    </nuxt-link>
-                </div>
+            <div class="text">
+                <h1 class="title">
+                    {{ $t("hero.title") }}
+                </h1>
+                <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
             </div>
 
             <nuxt-img class="hero" src="/hero.png" format="webp" alt="Hero" lazy="false" id="hero" />
@@ -61,29 +49,18 @@
 .container {
     width: 100%;
 
-    background-image: $gradient-hero;
-
     overflow: hidden;
 }
 
-.main {
+.text {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 
     width: 100%;
 
-    animation: text-in 1s forwards;
-    animation-delay: 500ms;
-
-    opacity: 0;
-}
-
-.text {
-    width: 100%;
-
-    margin-top: 15rem;
+    margin-top: 10rem;
 
     @include phone-only {
         margin-top: 10rem;
@@ -94,9 +71,14 @@
     margin: 0;
 
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 7rem;
     letter-spacing: 2px;
     color: white;
+
+    animation: text-in 1s forwards;
+    animation-delay: 500ms;
+
+    opacity: 0;
 
     @include phone-only {
         width: 100%;
@@ -110,11 +92,17 @@
 .subtitle {
     margin: 0.5rem 0 0;
 
-    font-weight: 3;
-    font-size: 4rem;
+    font-weight: 700;
+    font-size: 5.25rem;
     letter-spacing: 2px;
-    line-height: 5rem;
-    color: white;
+    color: $background-color;
+
+    animation: text-in 1s forwards;
+    animation-delay: 700ms;
+
+    opacity: 0;
+
+    @include stroke(rgba(white, 0.2), 2px);
 
     @include laptop-only {
         max-width: 80vw;
@@ -137,14 +125,13 @@
 
 .hero {
     position: absolute;
-    right: -50px;
-    bottom: -50px;
+    bottom: -8rem;
 
-    width: 29rem;
+    width: 24rem;
 
     margin-top: auto;
 
-    filter: drop-shadow(-12px -8px 0 black);
+    filter: drop-shadow(-10px -6px 0 black);
     opacity: 0;
     user-select: none;
 
@@ -163,101 +150,17 @@
     animation: hero-in 1s forwards;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    margin-top: 2rem;
-
-    @include phone-only {
-        flex-direction: column;
-        justify-content: center;
-
-        width: 90%;
-
-        margin: 1.5rem auto 0;
-    }
-}
-
-.button {
-    padding: 1rem 5rem;
-
-    border-radius: 1000px;
-
-    font-size: 2.25rem;
-    font-weight: 400;
-    text-align: center;
-    text-decoration: none;
-    background-color: white;
-    color: black;
-
-    box-shadow: 8px 8px 0 0 #007fdb;
-    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
-
-    &:hover {
-        cursor: pointer;
-        box-shadow: none;
-        transform: translate(8px, 8px);
-    }
-
-    @include phone-only {
-        width: 90%;
-        max-width: 250px;
-
-        padding: 1.25rem 0rem;
-
-        font-size: 1.25rem;
-    }
-}
-
-.contact {
-    position: relative;
-
-    margin-left: 2.5rem;
-
-    border: 2px solid white;
-
-    background: none;
-    color: white;
-
-    box-shadow: none;
-
-    @include phone-only {
-        margin: 2rem 0 0;
-    }
-}
-
-.contact:hover::after {
-    top: 0;
-    left: 0;
-}
-
-.contact::after {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-
-    height: 100%;
-    width: 100%;
-
-    border-radius: 1000px;
-    border: transparent;
-
-    background-color: rgba(white, 0.2);
-
-    content: "";
-}
-
 .socials {
     position: absolute;
     bottom: 0;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
 
     animation: socials-in 1s forwards;
     animation-delay: 1.3s;
@@ -273,25 +176,21 @@
 }
 
 .icon {
-    height: 24px;
-    width: 24px;
+    height: 1.25rem;
+    width: 1.25rem;
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
-    filter: invert(60%);
+    filter: invert(40%);
 
     &:hover {
         filter: invert(100%);
     }
-
-    &-wrapper {
-        margin-bottom: 1rem;
-    }
 }
 
 .flag {
-    height: 20px;
-    width: 30px;
+    height: 1rem;
+    width: 1.5rem;
 
     border-radius: 3px;
 
@@ -308,17 +207,6 @@
         cursor: pointer;
         opacity: 1;
     }
-
-    &-wrapper {
-        margin-bottom: 1rem;
-    }
-}
-
-.line {
-    height: 10vh;
-    width: 2px;
-
-    background-color: white;
 }
 
 @keyframes hero-in {
@@ -375,7 +263,7 @@
 
     border-radius: 1000px;
 
-    background-color: rgba(#007fdb, 0.5);
+    background-color: rgba(#007fdb, 0.2);
 
     animation: blob-in 1s forwards;
     animation-delay: 1.3s;

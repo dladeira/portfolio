@@ -10,41 +10,41 @@
     },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Freelance Web Developer",
-        "button1": "About me",
-        "button2": "Contact"
+        "subtitle": "Full-Stack Developer"
     },
     "about": {
         "header": "About me",
-        "title": "Ambitious Programmer",
-        "desc1": "My name is Daniel Ladeira and I am a 'trilingual web developer' based in 'Europe'. I specialize in coding websites but I also have experience in the following fields:",
-        "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites. I love challenges and am always ready to learn something new.",
+        "title": "Daniel Ladeira",
+        "desc1": "My name is Daniel Ladeira and I am a 'trilingual web developer' based in 'Europe'. I specialize in 'creating websites' but have done some work in the following fields:",
+        "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites.",
         "list": {
-            "1": "Web Design/Development",
-            "2": "Data Visualization (dashboards)",
-            "3": "Java Software Development",
-            "4": "System Administration and Hosting"
+            "1": "Rust Applications",
+            "2": "Java Applications",
+            "3": "Data Visualization",
+            "4": "System Administration"
         }
     },
     "works": {
         "header": "Works",
         "projects": {
             "1": {
-                "title": "MCSS",
-                "desc": "A production ready, SEO optimized Minecraft server statistics website. Project showcases good use of space and hierarchy to present a lot of information using a modern dark mode dashboard design."
+                "title": "Hoplite",
+                "subtitle": "July 2023 - Present",
+                "desc": "A website featuring the minecraft server Hoplite. My role was to improve the existing website and tebex configuration."
             },
             "2": {
-                "title": "LTracker",
-                "desc": "A calendar application use for time tracking. Minimalist and light-theme design aimed at solving a very specific problem, what am I spending too much and too little time on?"
+                "title": "MCSS",
+                "subtitle": "Personal Project",
+                "desc": "A minecraft server statistics SaaS application. Integrates with a plugin to display useful player statistics."
             },
             "3": {
-                "title": "Website Prototypes",
-                "desc": "A collection of website designs for local businesses. Designed using a prototyping tool called Figma. Features unique and modern design elements and information packed pages."
+                "title": "Polanner",
+                "subtitle": "Personal Project",
+                "desc": "A calendar application used for time tracking. Integrates with a desktop application and 3rd party apps."
             }
         },
         "button1": "View website",
-        "button2": "Source code",
-        "button3": "View collection"
+        "button2": "Source code"
     },
     "contact": {
         "header": "Contact",
