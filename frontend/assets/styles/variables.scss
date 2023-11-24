@@ -55,10 +55,6 @@ $small_phone_max: 600px;
             @content;
         }
     }
-
-    @media (max-height: $desktop_height_min) {
-        @content;
-    }
 }
 
 @mixin tablet-only {

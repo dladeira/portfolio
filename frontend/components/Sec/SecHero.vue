@@ -62,6 +62,10 @@
 
     margin-top: 10rem;
 
+    @include laptop-only {
+        margin-top: 11rem;
+    }
+
     @include tablet-only {
         margin-top: 13rem;
     }
@@ -80,6 +84,10 @@
     animation-delay: 500ms;
 
     opacity: 0;
+
+    @include laptop-only {
+        font-size: 8rem;
+    }
 
     @include tablet-only {
         font-size: 7rem;
@@ -110,6 +118,10 @@
 
     @include stroke(rgba(white, 0.2), 2px);
 
+    @include laptop-only {
+        font-size: 6rem;
+    }
+
     @include tablet-only {
         font-size: 5.5rem;
     }
@@ -137,6 +149,10 @@
     filter: drop-shadow(-10px -6px 0 black);
     opacity: 0;
     user-select: none;
+
+    @include laptop-only {
+        width: 27rem;
+    }
 
     @include tablet-only {
         width: 26rem;
