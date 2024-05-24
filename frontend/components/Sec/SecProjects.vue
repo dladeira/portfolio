@@ -33,6 +33,14 @@ const projects = [
         website: "https://hoplite.gg",
     },
     {
+        title: t("works.projects.3.title"),
+        subtitle: t("works.projects.3.subtitle"),
+        img: "project-polanner",
+        tags: ["Nuxt", "MongoDB", "Tauri"],
+        desc: t("works.projects.3.desc"),
+        website: "https://polanner.com",
+    },
+    {
         title: t("works.projects.2.title"),
         subtitle: t("works.projects.2.subtitle"),
         img: "project-mcss",
@@ -40,16 +48,6 @@ const projects = [
         desc: t("works.projects.2.desc"),
         website: "https://mcss.ladeira.eu",
         source: "https://github.com/dladeira/mcss",
-    },
-    {
-        title: t("works.projects.3.title"),
-        subtitle: t("works.projects.3.subtitle"),
-        img: "project-polanner",
-        tags: ["Nuxt", "MongoDB", "Tauri"],
-        desc: t("works.projects.3.desc"),
-        website: "https://polanner.com",
-        source: "https://github.com/dladeira/polanner",
-        flip: true,
     },
 ];
 </script>

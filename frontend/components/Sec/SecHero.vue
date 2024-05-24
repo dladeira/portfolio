@@ -14,8 +14,6 @@
                 <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
             </div>
 
-            <nuxt-img class="hero" src="/hero.png" format="webp" alt="Hero" lazy="false" id="hero" />
-
             <div class="socials left">
                 <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
                 <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
@@ -60,10 +58,10 @@
 
     width: 100%;
 
-    margin-top: 10rem;
+    margin-top: 13rem;
 
     @include laptop-only {
-        margin-top: 11rem;
+        margin-top: 12rem;
     }
 
     @include tablet-only {
