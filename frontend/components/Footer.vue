@@ -1,12 +1,7 @@
 <template>
     <div class="container">
         <div class="content">
-            <div class="copy">© 2023 Daniel Ladeira</div>
-            <div class="icons">
-                <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" alt="Dribbble icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" alt="StackOverflow icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" alt="Github icon" /></nuxt-link>
-            </div>
+            <div class="copy">© {{ new Date().getFullYear() }} Daniel Ladeira</div>
         </div>
     </div>
 </template>
@@ -19,7 +14,7 @@
 
     padding: 1.5rem 0;
 
-    background-color: rgba(#101318, 30%);
+    background-color: $bg-color-2;
 }
 
 .content {
@@ -34,7 +29,7 @@
 }
 
 .copy {
-    color: $gray;
+    color: rgb(white, 0.2);
 }
 
 .icon {

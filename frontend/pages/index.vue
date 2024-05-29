@@ -1,7 +1,7 @@
 <template>
     <SecHero />
     <SecAbout />
-    <SecProjects />
+    <SecWorks />
     <SecContact />
 </template>
 

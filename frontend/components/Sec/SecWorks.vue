@@ -1,5 +1,5 @@
 <template>
-    <section class="section" id="projects">
+    <section class="section" id="works">
         <h3 class="section-title"><span class="section-title-index">02.</span> {{ $t("works.header") }}</h3>
         <div class="content">
             <Project v-for="project of projects" :title="project.title" :subtitle="project.subtitle" :desc="project.desc" :img="project.img" :tags="project.tags" :website="project.website" :source="project.source" :flip="project.flip" />
@@ -8,6 +8,11 @@
 </template>
 
 <style lang="scss" scoped>
+.section {
+    width: 100%;
+    background-color: $bg-color-1;
+}
+
 .content {
     display: flex;
     flex-direction: column;

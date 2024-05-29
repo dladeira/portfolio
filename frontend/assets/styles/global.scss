@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 html,
 body,
@@ -10,13 +10,13 @@ body,
 
     margin: 0;
 
-    font-family: "League Spartan", sans-serif;
+    font-family: "Inter", sans-serif;
     color: white;
 
     scroll-behavior: smooth;
 
     @include desktop-only {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     @include laptop-only {
@@ -38,14 +38,6 @@ body,
 
 * {
     box-sizing: border-box;
-}
-
-// ==========
-// GRADIENT
-// ==========
-
-body {
-    background-color: $background-color;
 }
 
 // ==========
@@ -99,7 +91,7 @@ body {
     font-size: 3rem;
 
     &-index {
-        color: $lightblue;
+        color: white;
     }
 
     @include phone-only {

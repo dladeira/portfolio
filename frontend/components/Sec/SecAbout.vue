@@ -22,6 +22,8 @@
 
 <style lang="scss" scoped>
 .section {
+    background-color: $bg-color-2;
+
     @include phone-only {
         padding-top: 7rem;
     }

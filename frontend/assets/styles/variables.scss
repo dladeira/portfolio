@@ -1,11 +1,12 @@
-$blue: #007fdb;
-$lightblue: #1fb3e2;
-$darkblue: #0066db;
-$navy: #142d4f;
-$gray: #676767;
-$green: #00c714;
+$blue: #00c1ff;
+$red: #f94b4b;
 
-$background-color: #141b2d;
+$bg-color-1: #141b2d;
+$bg-color-2: #1b2439;
+
+$block-left: 5rem;
+$block-width: 5rem;
+$block-margin: 4rem;
 
 $content-desktop: 1300px;
 $content-laptop: 1000px;
@@ -89,12 +90,4 @@ $small_phone_max: 600px;
     @media (max-width: $small_phone_max) {
         @content;
     }
-}
-
-// ==========
-// HELPERS
-// ==========
-
-@mixin stroke($color: #000, $size: 1px) {
-    text-shadow: -#{$size} -#{$size} 0 $color, 0 -#{$size} 0 $color, #{$size} -#{$size} 0 $color, #{$size} 0 0 $color, #{$size} #{$size} 0 $color, 0 #{$size} 0 $color, -#{$size} #{$size} 0 $color, -#{$size} 0 0 $color;
 }

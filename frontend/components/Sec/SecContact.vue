@@ -23,6 +23,8 @@
 <style lang="scss" scoped>
 .section {
     padding-bottom: 8rem;
+
+    background-color: $bg-color-2;
 }
 
 .form {

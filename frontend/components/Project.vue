@@ -164,7 +164,7 @@ $image-width: 30rem;
 
     font-size: 1rem;
     font-weight: 400;
-    color: $lightblue;
+    color: $blue;
 
     @include phone-only {
         display: none;

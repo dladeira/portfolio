@@ -4,18 +4,18 @@
             <div class="brand">
                 <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
             </div>
-            <div class="links">
-                <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
-                    <nuxt-img class="icon" src="/icon-user.svg" />
-                    <div class="link-text">{{ $t("navbar.link1") }}</div>
+            <div class="languages">
+                <nuxt-link :class="$i18n.locale == 'en' ? 'language-active' : 'language'" :href="switchLocalePath('en')" aria-label="Switch to English">
+                    <nuxt-img class="language-flag" src="/flag-us.png" alt="US Flag" />
+                    <div class="language-text">English</div>
                 </nuxt-link>
-                <nuxt-link :href="localePath('/')" @click="scrollTo('projects')" class="link">
-                    <nuxt-img class="icon" src="/icon-resume.svg" />
-                    <div class="link-text">{{ $t("navbar.link2") }}</div>
+                <nuxt-link :class="$i18n.locale == 'pl' ? 'language-active' : 'language'" :href="switchLocalePath('pl')" aria-label="Zmień na polski">
+                    <nuxt-img class="language-flag" src="/flag-pl.png" alt="PL Flag" />
+                    <div class="language-text">Polish</div>
                 </nuxt-link>
-                <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
-                    <nuxt-img class="icon" src="/icon-contact.svg" />
-                    <div class="link-text">{{ $t("navbar.link3") }}</div>
+                <nuxt-link :class="$i18n.locale == 'pt' ? 'language-active' : 'language'" :href="switchLocalePath('pt')" aria-label="Muda para portugês">
+                    <nuxt-img class="language-flag" src="/flag-pt.png" alt="PT Flag" />
+                    <div class="language-text">Portuguese</div>
                 </nuxt-link>
             </div>
         </div>
@@ -60,17 +60,15 @@
     justify-content: flex-start;
     align-items: center;
 
-    width: 800px;
+    width: 100%;
 
-    margin: 30px auto;
+    padding: 30px 10% 0 calc($block-left + $block-width + $block-margin);
 
     opacity: 0;
     z-index: 2;
 
     animation: navbar-in 1s forwards;
     animation-delay: 500ms;
-
-    @include resizable-width;
 
     @include phone-only {
         flex-direction: column;
@@ -100,104 +98,51 @@
 }
 
 .brand-light {
-    color: #9fcff1;
+    color: $blue;
 }
 
-.links {
+.languages {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    gap: 3rem;
 }
 
-.link {
-    position: relative;
+.language {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    gap: 0.75rem;
 
-    border-bottom: 1px solid transparent;
-
-    padding: 0.5rem;
-    margin: 0 1rem;
-
-    font-size: 1.25rem;
-    text-align: center;
     text-decoration: none;
-    color: white;
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0.3;
 
-    overflow: hidden;
-
-    & .link-text {
-        position: relative;
-    }
-
-    &:hover .link-text::before {
-        position: absolute;
-        bottom: -2px;
-
-        height: 1px;
-
-        border-radius: 100px;
-
-        background-color: white;
-
-        content: "";
-
-        animation: slide-in ease-out 300ms forwards;
-    }
-
-    & .link-text::before {
-        position: absolute;
-        bottom: -2px;
-
-        height: 1px;
-        // width: 100%;
-
-        border-radius: 100px;
-
-        background-color: white;
-
-        content: "";
-
-        animation: slide-out ease-out 300ms forwards;
-    }
-
-    @keyframes slide-in {
-        from {
-            width: 0%;
-        }
-        to {
-            width: 100%;
-        }
-    }
-
-    @keyframes slide-out {
-        from {
-            left: 0;
-            width: 100%;
-        }
-        to {
-            left: 100%;
-            width: 0%;
-        }
-    }
-
-    @include phone-only {
-        margin: 0 0.5rem;
-        font-size: 1rem;
+    &-active,
+    &:hover {
+        @extend .language;
+        opacity: 1;
     }
 }
 
-.icon {
-    margin-right: 0.5rem;
+.language-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
 
-    @include phone-only {
-        height: 16px;
-        width: 16px;
+.language-flag {
+    height: 1.7rem;
+    aspect-ratio: 1.7;
+
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
     }
 }
 
