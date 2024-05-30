@@ -1,42 +1,46 @@
 <template>
     <section class="section" id="works">
-        <h3 class="section-title"><span class="section-title-index">02.</span> {{ $t("works.header") }}</h3>
-        <div class="content">
-            <Project v-for="project of projects" :title="project.title" :subtitle="project.subtitle" :desc="project.desc" :img="project.img" :tags="project.tags" :website="project.website" :source="project.source" :flip="project.flip" />
+        <Block blue>
+            <h3 class="section-title">
+                {{ $t("works.header") }} <span class="section-title-shadow">{{ $t("works.header") }}</span>
+            </h3>
+        </Block>
+        <div class="form-block">
+            <Work v-for="work of works" :title="work.title" :subtitle="work.subtitle" :desc="work.desc" :img="work.img" :tags="work.tags" :website="work.website" :source="work.source" :flip="work.flip" />
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .section {
-    width: 100%;
+    position: relative;
+
+    margin: 0;
+
     background-color: $bg-color-1;
 }
 
-.content {
+.top-block {
+    height: 20vh;
+    width: $block-width;
+    background-color: $blue;
+}
+
+.form-block {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    gap: 8rem;
 
-    margin: 0 auto;
-
-    @include resizable-width;
+    padding: 8rem 0;
 }
 </style>
 
 <script setup>
 const { t } = useI18n();
 
-const projects = [
-    {
-        title: t("works.projects.1.title"),
-        subtitle: t("works.projects.1.subtitle"),
-        img: "project-hoplite",
-        tags: ["NEXT.js", "Tebex", "Strapi"],
-        desc: t("works.projects.1.desc"),
-        website: "https://hoplite.gg",
-    },
+const works = [
     {
         title: t("works.projects.3.title"),
         subtitle: t("works.projects.3.subtitle"),
@@ -44,6 +48,14 @@ const projects = [
         tags: ["Nuxt", "MongoDB", "Tauri"],
         desc: t("works.projects.3.desc"),
         website: "https://polanner.com",
+    },
+    {
+        title: t("works.projects.1.title"),
+        subtitle: t("works.projects.1.subtitle"),
+        img: "project-hoplite",
+        tags: ["NEXT.js", "Tebex", "Strapi"],
+        desc: t("works.projects.1.desc"),
+        website: "https://hoplite.gg",
     },
     {
         title: t("works.projects.2.title"),

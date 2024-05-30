@@ -7,8 +7,6 @@
 
 <style lang="scss" scoped>
 .input-wrapper {
-    width: 30%;
-
     @include phone-only {
         width: 100%;
 
@@ -20,10 +18,8 @@
     width: 100%;
 
     margin-bottom: 1rem;
-    padding-left: 1rem;
 
     font-size: 1rem;
-    font-weight: 700;
     color: white;
 }
 
@@ -33,7 +29,6 @@
     padding: 1rem 1rem;
 
     border: 1px solid transparent;
-    border-radius: 5px;
 
     font-size: 1rem;
     font-family: "League Spartan", sans-serif;

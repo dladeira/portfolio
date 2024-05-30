@@ -2,30 +2,33 @@
     <section class="container">
         <div class="inner-container">
             <div class="top-block" />
-            <div class="top-block-absolute" />
             <div class="text">
                 <h1 class="title">
                     {{ $t("hero.title") }}
                 </h1>
                 <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
                 <div class="buttons">
-                    <div class="button-primary" @click="scrollTo('contact')">Contact</div>
-                    <div class="button-secondary" @click="scrollTo('works')">Works</div>
+                    <div class="button-primary" @click="scrollTo('contact')">{{ $t("hero.buttons.contact") }}</div>
+                    <div class="button-secondary" @click="scrollTo('works')">{{ $t("hero.buttons.works") }}</div>
                 </div>
             </div>
             <div class="bot-block" />
+            <nuxt-img class="arrows" src="/arrows.png" format="webp" alt="Arrow Decorations" />
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .container {
-    height: 100vh;
-    width: 100%;
+    position: relative;
+    height: 99.6vh;
+    width: 99.6vw;
 
     margin: 0 auto;
 
     background-color: $bg-color-1;
+
+    overflow: hidden;
 }
 
 .inner-container {
@@ -42,13 +45,9 @@
 .top-block {
     height: 30vh;
     width: $block-width;
+    background-color: $blue;
 
-    &-absolute {
-        @extend .top-block;
-        position: absolute;
-        z-index: 100;
-        background-color: $blue;
-    }
+    box-shadow: $block-shadow;
 }
 
 .text {
@@ -146,6 +145,16 @@
     width: $block-width;
 
     background-color: $red;
+
+    box-shadow: $block-shadow;
+}
+
+.arrows {
+    position: absolute;
+    right: -10rem;
+    bottom: -10rem;
+
+    width: 45vw;
 }
 </style>
 

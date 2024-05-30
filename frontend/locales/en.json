@@ -3,14 +3,14 @@
         "title": "Web Developer",
         "description": "Trilingual freelance web developer based in Europe. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
     },
-    "navbar": {
-        "link1": "About me",
-        "link2": "Works",
-        "link3": "Contact"
-    },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Web Developer"
+        "subtitle": "Web Developer",
+        "buttons": {
+            "about": "About",
+            "works": "Works",
+            "contact": "Contact"
+        }
     },
     "about": {
         "header": "About me",
@@ -43,13 +43,12 @@
                 "desc": "A all-in-one time-tracking website for hobbyists. Integrates with a desktop application and 3rd party apps."
             }
         },
-        "button1": "View website",
-        "button2": "Source code"
+        "button1": "View Website"
     },
     "contact": {
         "header": "Contact",
         "send": "Send",
-        "send_hint": "A confirmation message will be sent to your email to verify ownership of the email",
+        "send_hint": "A confirmation message will be sent to your email",
         "inputs": {
             "name": "Name",
             "email": "Email",

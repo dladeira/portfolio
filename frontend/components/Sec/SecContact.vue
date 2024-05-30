@@ -1,12 +1,19 @@
 <template>
     <div class="section" id="contact">
-        <h3 class="section-title"><span class="section-title-index">03.</span> {{ $t("contact.header") }}</h3>
-        <div class="content">
+        <Block blue>
+            <h3 class="section-title">
+                {{ $t("contact.header") }} <span class="section-title-shadow">{{ $t("contact.header") }}</span>
+            </h3>
+        </Block>
+
+        <Block class="form-block" red>
             <form class="form" @submit.prevent="sendForm">
                 <div class="top">
-                    <FormText :name="$t('contact.inputs.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
-                    <FormText :name="$t('contact.inputs.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
-                    <FormText :name="$t('contact.inputs.budget')" id="budget" type="text" placeholder="$500" :disabled="messageSent" />
+                    <FormText :style="{ width: '80%' }" :name="$t('contact.inputs.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
+                    <FormText :style="{ width: '20%' }" :name="$t('contact.inputs.budget')" id="budget" type="text" placeholder="$200" :disabled="messageSent" />
+                </div>
+                <div class="top">
+                    <FormText :style="{ width: '100%' }" :name="$t('contact.inputs.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
                 </div>
                 <div class="mid">
                     <FormTextArea :name="$t('contact.inputs.message')" id="message" :placeholder="$t('contact.inputs.message_placeholder')" :disabled="messageSent" />
@@ -16,15 +23,41 @@
                     <div class="msg">{{ $t("contact.send_hint") }}</div>
                 </div>
             </form>
-        </div>
+        </Block>
+
+        <Block class="footer-block">
+            <div class="footer-container">
+                <div class="footer-copy">© {{ new Date().getFullYear() }} Daniel Ladeira</div>
+                <div class="footer-privacy">Privacy Policy</div>
+            </div>
+        </Block>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .section {
-    padding-bottom: 8rem;
+    position: relative;
+
+    margin: 0;
 
     background-color: $bg-color-2;
+
+    @include phone-only {
+        padding-top: 7rem;
+    }
+}
+
+$content-width: 50%;
+
+.form-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    width: $content-width;
+
+    padding: 8rem 0 2rem;
 }
 
 .form {
@@ -32,10 +65,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    margin: 0 auto;
-
-    @include resizable-width;
+    flex: 1;
 }
 
 .top,
@@ -45,6 +75,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 4rem;
 
     width: 100%;
 
@@ -78,17 +109,16 @@
     padding: 0.7rem 4.5rem;
 
     border: none;
-    border-radius: 5px;
 
     font-size: 1rem;
     font-weight: 400;
-    background-color: rgba($blue, 0.4);
+    background-color: $blue-btn;
     color: white;
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &:hover {
-        background-color: rgba($blue, 1);
+        background-color: $blue-btn-hover;
         color: white;
 
         cursor: pointer;
@@ -134,6 +164,27 @@
         line-height: 1.5rem;
         text-align: center;
     }
+}
+
+.footer-block {
+    width: $content-width;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+
+    padding: 1rem 0;
+
+    font-size: 0.75rem;
+    color: rgba(white, 0.2);
+}
+
+.footer-privacy {
+    text-decoration: underline;
 }
 </style>
 

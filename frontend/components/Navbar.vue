@@ -28,30 +28,8 @@
 
     width: 100%;
 
-    backdrop-filter: blur(5px);
     transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index: 4;
-
-    @include phone-only {
-        backdrop-filter: none;
-    }
-}
-
-.container-effect {
-    position: fixed;
-    background-color: rgba(black, 0.3);
-    box-shadow: 0px 0px 40px 40px rgba(black, 0.2);
-
-    @include phone-only {
-        background-color: rgba(black, 0.5);
-        box-shadow: none;
-    }
-
-    animation: navbar-in 500ms forwards;
-
-    &-hide {
-        animation: navbar-out 500ms forwards !important;
-    }
 }
 
 .inner-container {
@@ -181,28 +159,4 @@ function scrollTo(id) {
         window.location.pathname == "/" ? 0 : 100
     );
 }
-
-function listener() {
-    var nav = document.getElementById("navbar-container");
-
-    if (window.scrollY > window.innerHeight - 20) {
-        if (!nav.classList.contains("container-effect")) nav.classList.add("container-effect");
-    } else {
-        if (nav.classList.contains("container-effect")) {
-            nav.classList.add("container-effect-hide");
-            setTimeout(() => {
-                nav.classList.remove("container-effect");
-                nav.classList.remove("container-effect-hide");
-            }, 200);
-        }
-    }
-}
-
-onBeforeMount(() => {
-    document.addEventListener("scroll", listener);
-});
-
-onBeforeUnmount(() => {
-    document.removeEventListener("scroll", listener);
-});
 </script>

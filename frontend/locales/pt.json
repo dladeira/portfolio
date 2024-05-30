@@ -3,14 +3,14 @@
         "title": "Desenvolvedor Web",
         "description": "Desenvolvedor web trilíngue com base em Varsóvia, Polônia. Especializado em React/NEXT, Vue/NUXT, MongoDB e NodeJS."
     },
-    "navbar": {
-        "link1": "Sobre mim",
-        "link2": "Projetos",
-        "link3": "Contacto"
-    },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Desenvolvedor Web"
+        "subtitle": "Desenvolvedor Web",
+        "buttons": {
+            "about": "Sobre mim",
+            "works": "Projetos",
+            "contact": "Contacto"
+        }
     },
     "about": {
         "header": "Sobre mim",
@@ -43,13 +43,12 @@
                 "desc": "Um site de controle de tempo. Integra-se com uma aplicação de desktop e redes sociais"
             }
         },
-        "button1": "Ver página",
-        "button2": "Ver código"
+        "button1": "Ver Página"
     },
     "contact": {
         "header": "Contacto",
         "send": "Enviar",
-        "send_hint": "Uma mensagem de confirmação será enviada para o seu email para verificar a sua propriedade",
+        "send_hint": "Uma mensagem de confirmação será enviada para o seu email",
         "inputs": {
             "name": "Nome",
             "email": "Email",

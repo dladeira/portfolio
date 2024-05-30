@@ -1,58 +1,115 @@
 <template>
     <section class="section" id="about">
-        <h3 class="section-title"><span class="section-title-index">01.</span> {{ $t("about.header") }}</h3>
-        <div class="content">
-            <div class="img-wrapper">
-                <nuxt-img class="img" src="/hero.png" alt="Little Daniel Ladeira" format="webp" />
-            </div>
-            <div class="text">
-                <h4 class="title">{{ $t("about.title") }}</h4>
-                <p class="paragraph" v-html="formatMsg(t('about.desc1'))" />
-                <div class="list">
-                    <li class="list-item">{{ t("about.list.1") }}</li>
-                    <li class="list-item">{{ t("about.list.2") }}</li>
-                    <li class="list-item">{{ t("about.list.3") }}</li>
-                    <li class="list-item">{{ t("about.list.4") }}</li>
+        <Block blue>
+            <h3 class="section-title">
+                {{ $t("about.header") }} <span class="section-title-shadow">{{ $t("about.header") }}</span>
+            </h3>
+        </Block>
+        <div class="form-block">
+            <Block red>
+                <div class="content-text">
+                    <p class="text-paragraph" v-html="formatMsg(t('about.desc1'))" />
+                    <div class="text-list">
+                        <li>{{ t("about.list.1") }}</li>
+                        <li>{{ t("about.list.2") }}</li>
+                        <li>{{ t("about.list.3") }}</li>
+                        <li>{{ t("about.list.4") }}</li>
+                    </div>
+                    <p class="text-paragraph" v-html="formatMsg(t('about.desc2'))" />
                 </div>
-                <p class="paragraph" v-html="formatMsg(t('about.desc2'))" />
-            </div>
+            </Block>
+        </div>
+        <div class="img-wrapper">
+            <nuxt-img class="img" src="/hero.png" alt="Little Daniel Ladeira" format="webp" />
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .section {
-    background-color: $bg-color-2;
+    position: relative;
 
-    @include phone-only {
-        padding-top: 7rem;
-    }
+    margin: 0;
+
+    background-color: $bg-color-2;
 }
 
-.content {
+.form-block {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: stretch;
 
-    margin: 0 auto;
-
-    @include resizable-width;
+    padding: 6rem 0;
 
     @include phone-only {
         flex-direction: column;
     }
 }
 
+.bot-block {
+    width: $block-width;
+
+    margin-left: $block-left;
+
+    background-color: $red;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    width: 35%;
+}
+
+.text-paragraph {
+    margin: 0;
+
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    color: rgba(white, 0.5);
+
+    &-highlighted {
+        color: white;
+    }
+}
+
+.text-list {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    margin: 0 auto;
+
+    font-size: 1.25rem;
+    color: rgba(white, 0.5);
+
+    @include phone-only {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
 .img-wrapper {
-    height: 26rem;
-    width: 26rem;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    height: 24rem;
+    width: 24rem;
 
     border-radius: 50px;
 
-    background-color: rgba(white, 0.05);
+    margin: 0 auto;
+
+    background-color: rgba(black, 0.1);
 
     overflow: hidden;
+
+    transform: translate(-50%, -50%);
 
     @include phone-only {
         display: none;
@@ -62,69 +119,9 @@
 .img {
     display: block;
 
-    width: 80%;
+    height: 100%;
 
     margin: 0 auto;
-
-    filter: drop-shadow(-8px -6px 0 black);
-    transform: translateY(3rem);
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    width: 50%;
-
-    @include phone-only {
-        width: 90%;
-    }
-}
-
-.title {
-    margin: 0 0 1.5rem;
-
-    font-size: 1.5rem;
-    font-weight: 700;
-
-    @include phone-only {
-        margin-bottom: 0;
-    }
-}
-
-.paragraph {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    color: #afafaf;
-
-    &-highlighted {
-        color: white;
-    }
-}
-
-.list {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 1rem;
-
-    font-size: 1rem;
-
-    @include phone-only {
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
-    }
-}
-
-.paragraph {
-    text-indent: 2rem;
-
-    @include phone-only {
-        margin: 1rem 0;
-    }
 }
 </style>
 

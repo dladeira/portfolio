@@ -35,7 +35,6 @@ body,
         font-size: 14px;
     }
 }
-
 * {
     box-sizing: border-box;
 }
@@ -44,21 +43,17 @@ body,
 // SCROLLBAR
 // ==========
 
-body {
-    overflow: overlay;
-}
-
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
     height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
+    background: $bg-color-1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.137);
 
     border-radius: 1000px;
 }
@@ -73,28 +68,13 @@ body {
 // SECTIONS
 // ==========
 
-.section {
-    width: 100%;
-
-    padding: 8rem 0;
-
-    @include phone-only {
-        padding: 4rem 0;
-    }
-}
-
 .section-title {
-    width: fit-content;
+    margin: 0;
+    padding-top: 5rem;
 
-    margin: 0 auto 3rem;
+    font-size: 4rem;
 
-    font-size: 3rem;
-
-    &-index {
-        color: white;
-    }
-
-    @include phone-only {
-        margin-bottom: 5rem;
+    &-shadow {
+        color: rgba(white, 0.1);
     }
 }

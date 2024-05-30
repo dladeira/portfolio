@@ -3,14 +3,14 @@
         "title": "Programista Stron WWW",
         "description": "Trzyjęzyczny programista stron internetowych z siedzibą w Europie. Specjalizuje się w React/NEXT, Vue/NUXT, MongoDB i NodeJS."
     },
-    "navbar": {
-        "link1": "O mnie",
-        "link2": "Projekty",
-        "link3": "Kontact"
-    },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Programista Stron Internetowych"
+        "subtitle": "Programista Stron Internetowych",
+        "buttons": {
+            "about": "O mnie",
+            "works": "Projekty",
+            "contact": "Kontakt"
+        }
     },
     "about": {
         "header": "O mnie",
@@ -43,13 +43,12 @@
                 "desc": "Witryna do śledzenia czasu. Integruje się z aplikacją komputerową oraz mediami społecznościowymi."
             }
         },
-        "button1": "Otwórz stronę",
-        "button2": "Zobacz kod"
+        "button1": "Otwórz Stronę"
     },
     "contact": {
         "header": "Kontakt",
         "send": "Wyślij",
-        "send_hint": "Wiadomość z potwierdzeniem zostanie wysłana na adres email w celu zweryfikowania własności adresu",
+        "send_hint": "Wiadomość z potwierdzeniem zostanie wysłana na adres email",
         "inputs": {
             "name": "Imie",
             "email": "Email",
