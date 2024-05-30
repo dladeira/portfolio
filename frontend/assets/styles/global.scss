@@ -20,7 +20,7 @@ body,
     }
 
     @include laptop-only {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     @include tablet-only {
@@ -75,6 +75,8 @@ body,
     font-size: 4rem;
 
     &-shadow {
+        margin-left: 1rem;
+
         color: rgba(white, 0.1);
     }
 }

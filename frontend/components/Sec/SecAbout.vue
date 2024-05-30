@@ -97,7 +97,7 @@
 .img-wrapper {
     position: absolute;
     top: 50%;
-    right: 5%;
+    right: 0;
     height: 24rem;
     width: 24rem;
 
@@ -110,7 +110,6 @@
     overflow: hidden;
 
     transform: translate(-50%, -50%);
-
     @include phone-only {
         display: none;
     }

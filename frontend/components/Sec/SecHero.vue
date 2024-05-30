@@ -107,7 +107,7 @@
     font-size: 1.5rem;
 
     box-shadow: 12px 12px 0 rgba(black, 0.2);
-    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: $shadow-transition;
 
     &:hover {
         cursor: pointer;

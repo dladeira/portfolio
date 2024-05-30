@@ -46,6 +46,10 @@
 
     width: 40%;
 
+    @include laptop-only {
+        width: 35%;
+    }
+
     @include phone-only {
         width: 100%;
     }
@@ -147,6 +151,8 @@
     margin: 0 6rem;
 
     overflow: hidden;
+
+    box-shadow: 12px 12px 0 rgba(black, 0.2);
 }
 
 .button-website {
@@ -159,10 +165,14 @@
     background-color: $blue-btn;
     color: white;
 
-    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 8px 8px 0 rgb(black, 0.2);
+    transition: $shadow-transition;
 
     &:hover {
-        background-color: $blue-btn-hover;
+        cursor: pointer;
+
+        transform: translate(8px, 8px);
+        box-shadow: 0px 0px 0 rgba(black, 0.2);
     }
 }
 </style>

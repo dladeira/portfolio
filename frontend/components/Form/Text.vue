@@ -7,17 +7,13 @@
 
 <style lang="scss" scoped>
 .input-wrapper {
-    @include phone-only {
-        width: 100%;
-
-        margin-bottom: 2rem;
-    }
+    width: 100%;
 }
 
 .name {
     width: 100%;
 
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
     font-size: 1rem;
     color: white;
