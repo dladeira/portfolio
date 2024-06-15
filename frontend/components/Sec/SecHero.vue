@@ -61,6 +61,11 @@
 
     margin-top: 30vh;
 
+    animation: from-bottom 1s forwards;
+    animation-delay: 500ms;
+
+    opacity: 0;
+
     @include tablet-below {
         align-items: center;
 
@@ -76,11 +81,6 @@
     text-align: center;
     color: white;
 
-    animation: text-in 1s forwards;
-    animation-delay: 500ms;
-
-    opacity: 0;
-
     @include tablet-below {
         font-size: 3rem;
     }
@@ -92,12 +92,7 @@
     font-weight: 400;
     font-size: 3rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.4);
-
-    animation: text-in 1s forwards;
-    animation-delay: 700ms;
-
-    opacity: 0;
+    color: rgba(white, 0.4);
 
     @include tablet-below {
         font-size: 1.5rem;
@@ -172,8 +167,8 @@
 
     margin-bottom: 0.5rem;
 
-    animation: socials-in 1s forwards;
-    animation-delay: 1.3s;
+    animation: from-bottom 1s forwards;
+    animation-delay: 700ms;
     opacity: 0;
 }
 
@@ -219,34 +214,10 @@
     }
 }
 
-@keyframes hero-in {
-    0% {
-        transform: translate(0, 100%);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(0, 0%);
-        opacity: 1;
-    }
-}
-
-@keyframes text-in {
+@keyframes from-bottom {
     0% {
         transform: translateY(70px);
         opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes socials-in {
-    0% {
-        transform: translateY(200px);
-        opacity: 1;
     }
 
     100% {

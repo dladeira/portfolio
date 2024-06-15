@@ -17,7 +17,7 @@
                 <div class="tag" v-for="tag in tags">{{ tag }}</div>
             </div>
 
-            <nuxt-link v-if="website" :href="website" class="view-website" target="_blank">{{ $t("works.button1") }}</nuxt-link>
+            <nuxt-link v-if="website" :href="website" class="view-website" target="_blank">{{ $t("works.button") }}</nuxt-link>
         </div>
         <div class="images">
             <nuxt-img class="image-2" :src="img + '-2.png'" format="webp" alt="Project Preview" />

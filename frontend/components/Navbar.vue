@@ -47,7 +47,7 @@
         box-shadow: none;
     }
 
-    animation: navbar-in 500ms forwards;
+    animation: navbar-in 700ms forwards;
 
     &-hide {
         animation: navbar-out 500ms forwards !important;

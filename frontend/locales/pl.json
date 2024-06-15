@@ -42,7 +42,7 @@
             "startup": "Start Up",
             "client": "Klient"
         },
-        "button1": "Otwórz stronę"
+        "button": "Otwórz stronę"
     },
     "contact": {
         "title": "Czy jesteś zainteresowany?",
