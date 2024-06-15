@@ -3,14 +3,14 @@
         "title": "Desenvolvedor Web",
         "description": "Desenvolvedor web trilíngue com base em Varsóvia, Polônia. Especializado em React/NEXT, Vue/NUXT, MongoDB e NodeJS."
     },
+    "navbar": {
+        "link1": "Sobre mim",
+        "link2": "Projetos",
+        "link3": "Contacto"
+    },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Desenvolvedor Web",
-        "buttons": {
-            "about": "Sobre mim",
-            "works": "Projetos",
-            "contact": "Contacto"
-        }
+        "subtitle": "Desenvolvedor Web"
     },
     "about": {
         "header": "Sobre mim",
@@ -26,7 +26,7 @@
     },
     "works": {
         "header": "Projetos",
-        "projects": {
+        "works": {
             "1": {
                 "title": "MCSS",
                 "subtitle": "Julho 2023 - Presente",
@@ -39,16 +39,17 @@
             },
             "3": {
                 "title": "Polanner",
-                "subtitle": "Start-Up",
+                "subtitle": "Projeto Pessoal",
                 "desc": "Um site de controle de tempo. Integra-se com uma aplicação de desktop e redes sociais"
             }
         },
-        "button1": "Ver Página"
+        "button1": "Ver página",
+        "button2": "Ver código"
     },
     "contact": {
         "header": "Contacto",
         "send": "Enviar",
-        "send_hint": "Uma mensagem de confirmação será enviada para o seu email",
+        "send_hint": "Uma mensagem de confirmação será enviada para o seu email para verificar a sua propriedade",
         "inputs": {
             "name": "Nome",
             "email": "Email",

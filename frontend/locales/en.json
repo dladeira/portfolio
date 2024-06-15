@@ -3,50 +3,54 @@
         "title": "Web Developer",
         "description": "Trilingual freelance web developer based in Europe. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
     },
+    "navbar": {
+        "link1": "About Me",
+        "link2": "Works",
+        "link3": "Contact"
+    },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Web Developer",
-        "buttons": {
-            "about": "About",
-            "works": "Works",
-            "contact": "Contact"
-        }
+        "subtitle": "Trilingual Web Developer"
     },
     "about": {
-        "header": "About me",
+        "header": "About Me",
         "title": "Daniel Ladeira",
-        "desc1": "My name is Daniel Ladeira and I am a 'trilingual web developer' based in 'Europe'. I specialize in 'creating websites' but have done some work in the following fields:",
-        "desc2": "I also speak 'English', 'Portuguese', and 'Polish' fluently and can translate websites.",
-        "list": {
-            "1": "Rust Applications",
-            "2": "Java Applications",
-            "3": "Data Visualization",
-            "4": "System Administration"
-        }
+        "desc1": "My name is 'Daniel Ladeira' and I am a 'trilingual web developer' based in Poland, fluent in 'English', 'Portuguese', and 'Polish'. My programming journey began in 2020, creating custom Minecraft plugins and servers, which later transitioned to web development.",
+        "desc2": "This year I'm starting my Bachelor's in 'Computer Science' at 'Vrije Universiteit', Amsterdam. While my primary focus is on 'freelance web development', I'm also growing a 'productivity startup' on the side.",
+        "desc3": "My skills span 'design' and 'coding', however recently I've developed an interest in marketing and content creation."
     },
     "works": {
         "header": "Works",
-        "projects": {
+        "works": {
             "1": {
-                "title": "Hoplite",
-                "subtitle": "July 2023 - Present",
-                "desc": "A website featuring the minecraft server Hoplite. My role was to improve the existing website and Tebex configuration."
+                "title": "Polanner",
+                "type": "Start Up",
+                "duration": "January 2024 - Present",
+                "desc": "A all-in-one time-tracking website for hobbyists. Integrates with a desktop application and 3rd party apps."
             },
             "2": {
-                "title": "MCSS",
-                "subtitle": "Personal Project",
-                "desc": "A minecraft server statistics SaaS application. Integrates with a plugin to display useful player statistics."
+                "title": "Hoplite",
+                "type": "Client",
+                "duration": "July 2023 - Present",
+                "desc": "A website featuring the minecraft server Hoplite. My role was to improve the existing website and Tebex configuration."
             },
             "3": {
-                "title": "Polanner",
-                "subtitle": "Start-Up",
-                "desc": "A all-in-one time-tracking website for hobbyists. Integrates with a desktop application and 3rd party apps."
+                "title": "MCSS",
+                "type": "Start Up",
+                "duration": "June 2023 - August 2023",
+                "desc": "A minecraft server statistics SaaS application. Integrates with a plugin to display useful player statistics."
             }
         },
-        "button1": "View Website"
+        "type": {
+            "startup": "Start Up",
+            "client": "Client"
+        },
+        "button1": "View website",
+        "button2": "Source code"
     },
     "contact": {
-        "header": "Contact",
+        "title": "Interested in what you see?",
+        "subtitle": "Feel free to send me a message",
         "send": "Send",
         "send_hint": "A confirmation message will be sent to your email",
         "inputs": {

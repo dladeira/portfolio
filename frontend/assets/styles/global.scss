@@ -15,45 +15,40 @@ body,
 
     scroll-behavior: smooth;
 
-    @include desktop-only {
-        font-size: 16px;
-    }
-
-    @include laptop-only {
-        font-size: 14px;
-    }
-
-    @include tablet-only {
-        font-size: 14px;
-    }
-
-    @include small-tablet-only {
-        font-size: 13px;
-    }
-
-    @include phone-only {
-        font-size: 12px;
-    }
+    font-family: 16px;
 }
+
 * {
     box-sizing: border-box;
+}
+
+// ==========
+// GRADIENT
+// ==========
+
+body {
+    background-color: $background-color;
 }
 
 // ==========
 // SCROLLBAR
 // ==========
 
+body {
+    overflow: overlay;
+}
+
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
     height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: $bg-color-1;
+    background: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.137);
+    background: rgba(255, 255, 255, 0.3);
 
     border-radius: 1000px;
 }
@@ -62,21 +57,4 @@ body,
     background: rgba(255, 255, 255, 0.7);
 
     border-radius: 1000px;
-}
-
-// ==========
-// SECTIONS
-// ==========
-
-.section-title {
-    margin: 0;
-    padding-top: 5rem;
-
-    font-size: 4rem;
-
-    &-shadow {
-        margin-left: 1rem;
-
-        color: rgba(white, 0.1);
-    }
 }

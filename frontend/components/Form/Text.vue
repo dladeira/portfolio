@@ -7,15 +7,22 @@
 
 <style lang="scss" scoped>
 .input-wrapper {
-    width: 100%;
+    width: 30%;
+
+    @include phone-only {
+        width: 100%;
+
+        margin-bottom: 2rem;
+    }
 }
 
 .name {
     width: 100%;
 
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 
     font-size: 1rem;
+    font-weight: 400;
     color: white;
 }
 
@@ -27,15 +34,15 @@
     border: 1px solid transparent;
 
     font-size: 1rem;
-    font-family: "League Spartan", sans-serif;
-    background-color: rgba(white, 0.1);
+    font-family: Inter, sans-serif;
+    background-color: rgba(white, 0.05);
     color: white;
 
     appearance: textfield;
     outline: none;
 
     &::placeholder {
-        color: rgba(white, 0.6);
+        color: rgba(white, 0.2);
     }
 
     &:focus {
@@ -66,5 +73,5 @@ const props = defineProps({
     type: String,
     id: String,
     disabled: Boolean,
-});
+})
 </script>

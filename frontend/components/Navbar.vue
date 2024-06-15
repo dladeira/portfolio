@@ -1,49 +1,84 @@
 <template>
-    <nav class="navbar-container">
-        <div class="brand">
-            <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
-        </div>
-        <div class="languages">
-            <nuxt-link :class="$i18n.locale == 'en' ? 'language-active' : 'language'" :href="switchLocalePath('en')" aria-label="Switch to English">
-                <nuxt-img class="language-flag" src="/flag-us.png" alt="US Flag" />
-                <div class="language-text">English</div>
-            </nuxt-link>
-            <nuxt-link :class="$i18n.locale == 'pl' ? 'language-active' : 'language'" :href="switchLocalePath('pl')" aria-label="Zmień na polski">
-                <nuxt-img class="language-flag" src="/flag-pl.png" alt="PL Flag" />
-                <div class="language-text">Polish</div>
-            </nuxt-link>
-            <nuxt-link :class="$i18n.locale == 'pt' ? 'language-active' : 'language'" :href="switchLocalePath('pt')" aria-label="Muda para portugês">
-                <nuxt-img class="language-flag" src="/flag-pt.png" alt="PT Flag" />
-                <div class="language-text">Portuguese</div>
-            </nuxt-link>
+    <nav class="container" id="navbar-container">
+        <div class="inner-container">
+            <div class="brand">
+                <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
+            </div>
+            <div class="links">
+                <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
+                    <nuxt-img class="icon" src="/icon-user.svg" />
+                    <div class="link-text">{{ $t("navbar.link1") }}</div>
+                </nuxt-link>
+                <nuxt-link :href="localePath('/')" @click="scrollTo('works')" class="link">
+                    <nuxt-img class="icon" src="/icon-resume.svg" />
+                    <div class="link-text">{{ $t("navbar.link2") }}</div>
+                </nuxt-link>
+                <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
+                    <nuxt-img class="icon" src="/icon-contact.svg" />
+                    <div class="link-text">{{ $t("navbar.link3") }}</div>
+                </nuxt-link>
+            </div>
         </div>
     </nav>
 </template>
 
 <style lang="scss" scoped>
-.navbar-container {
+.container {
+    position: absolute;
+
+    width: 100%;
+
+    backdrop-filter: blur(5px);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 4;
+
+    @include phone-only {
+        backdrop-filter: none;
+    }
+}
+
+.container-effect {
+    position: fixed;
+    background-color: rgba(black, 0.3);
+    box-shadow: 0px 0px 40px 40px rgba(black, 0.2);
+
+    @include phone-only {
+        background-color: rgba(black, 0.5);
+        box-shadow: none;
+    }
+
+    animation: navbar-in 500ms forwards;
+
+    &-hide {
+        animation: navbar-out 500ms forwards !important;
+    }
+}
+
+.inner-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
-    margin: 2.5rem 0 auto;
+    width: 800px;
 
-    width: 75%;
+    margin: 30px auto;
 
     opacity: 0;
+    z-index: 2;
 
     animation: navbar-in 1s forwards;
     animation-delay: 500ms;
 
+    @include resizable-width;
+
     @include phone-only {
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
 
-        width: fit-content;
+        width: 90%;
 
-        margin: 2rem 0;
+        margin: 1.75rem auto 1.25rem;
     }
 }
 
@@ -68,54 +103,101 @@
     color: $blue;
 }
 
-.languages {
+.links {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 3rem;
-
-    @include phone-only {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
 }
 
-.language {
+.link {
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 0.75rem;
 
+    border-bottom: 1px solid transparent;
+
+    padding: 0.5rem 0;
+
+    font-size: 1.25rem;
+    text-align: center;
     text-decoration: none;
+    color: white;
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    opacity: 0.3;
 
-    &-active,
-    &:hover {
-        @extend .language;
-        opacity: 1;
+    overflow: hidden;
+
+    & .link-text {
+        position: relative;
+    }
+
+    &:hover .link-text::before {
+        position: absolute;
+        bottom: -2px;
+
+        height: 1px;
+
+        border-radius: 100px;
+
+        background-color: white;
+
+        content: "";
+
+        animation: slide-in ease-out 300ms forwards;
+    }
+
+    & .link-text::before {
+        position: absolute;
+        bottom: -2px;
+
+        height: 1px;
+        // width: 100%;
+
+        border-radius: 100px;
+
+        background-color: white;
+
+        content: "";
+
+        animation: slide-out ease-out 300ms forwards;
+    }
+
+    @keyframes slide-in {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes slide-out {
+        from {
+            left: 0;
+            width: 100%;
+        }
+        to {
+            left: 100%;
+            width: 0%;
+        }
+    }
+
+    @include phone-only {
+        margin: 0 0.5rem;
+        font-size: 1rem;
     }
 }
 
-.language-text {
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: white;
-}
+.icon {
+    margin-right: 0.75rem;
 
-.language-flag {
-    height: 1.7rem;
-    aspect-ratio: 1.7;
-
-    border-radius: 5px;
-
-    &:hover {
-        cursor: pointer;
+    @include phone-only {
+        height: 16px;
+        width: 16px;
     }
 }
 
@@ -148,10 +230,34 @@
 function scrollTo(id) {
     setTimeout(
         () => {
-            const ele = document.getElementById(id);
-            window.scrollTo(ele.offsetLeft, ele.offsetTop);
+            const ele = document.getElementById(id)
+            window.scrollTo(ele.offsetLeft, ele.offsetTop)
         },
         window.location.pathname == "/" ? 0 : 100
-    );
+    )
 }
+
+function listener() {
+    var nav = document.getElementById("navbar-container")
+
+    if (window.scrollY > window.innerHeight - 20) {
+        if (!nav.classList.contains("container-effect")) nav.classList.add("container-effect")
+    } else {
+        if (nav.classList.contains("container-effect")) {
+            nav.classList.add("container-effect-hide")
+            setTimeout(() => {
+                nav.classList.remove("container-effect")
+                nav.classList.remove("container-effect-hide")
+            }, 200)
+        }
+    }
+}
+
+onBeforeMount(() => {
+    document.addEventListener("scroll", listener)
+})
+
+onBeforeUnmount(() => {
+    document.removeEventListener("scroll", listener)
+})
 </script>

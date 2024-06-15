@@ -1,28 +1,36 @@
 <template>
-    <Block class="project" red>
+    <article class="project">
         <div class="text">
-            <div class="project-header">
-                <h4 class="title">{{ title }}</h4>
-                <div class="tags">
-                    <div class="tag" v-for="tag in tags">{{ tag }}</div>
+            <div class="project-header-outer">
+                <div class="project-header">
+                    <h4 class="title">{{ title }}</h4>
+                    <h5 :class="'type type-' + type">{{ typeText }}</h5>
                 </div>
+                <div class="duration">{{ duration }}</div>
             </div>
-            <h5 class="subtitle">{{ subtitle }}</h5>
+
             <p class="desc">
                 {{ desc }}
             </p>
 
-            <nuxt-link :href="website" class="button-website" target="_blank">{{ $t("works.button1") }}</nuxt-link>
+            <div class="tags">
+                <div class="tag" v-for="tag in tags">{{ tag }}</div>
+            </div>
+
+            <nuxt-link v-if="website" :href="website" class="view-website" target="_blank">{{ $t("works.button1") }}</nuxt-link>
         </div>
-        <nuxt-img class="image" :src="img + '.png'" format="webp" alt="Project Preview" />
-    </Block>
+        <div class="images">
+            <nuxt-img :class="'image-2' + (flip ? ' image-front' : '')" :src="img + '-2.png'" format="webp" alt="Project Preview" />
+            <nuxt-img class="image-1" :src="img + '-1.png'" format="webp" alt="Project Preview" />
+        </div>
+    </article>
 </template>
 
 <style lang="scss" scoped>
 .project {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
 
     width: 100%;
@@ -43,16 +51,19 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 2rem;
 
     width: 40%;
+}
 
-    @include laptop-only {
-        width: 35%;
-    }
+.project-header-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
 
-    @include phone-only {
-        width: 100%;
-    }
+    width: 100%;
 }
 
 .project-header {
@@ -75,7 +86,7 @@
 .title {
     margin: 00;
 
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
 
     @include phone-only {
@@ -86,12 +97,33 @@
     }
 }
 
+.type {
+    margin: 0;
+    padding: 0.75rem 1.25rem;
+
+    border-radius: 5px;
+
+    font-size: 0.75rem;
+    font-weight: 400;
+
+    &-startup {
+        background-color: rgba($green, 0.2);
+        color: $green;
+    }
+
+    &-client {
+        background-color: rgba($blue, 0.2);
+        color: $blue;
+    }
+}
+
 .tags {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+
+    gap: 0.75rem;
 
     @include phone-only {
         justify-content: center;
@@ -99,35 +131,37 @@
 }
 
 .tag {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.25rem;
 
-    font-size: 1rem;
+    border-radius: 5px;
+
+    font-size: 0.75rem;
     font-weight: 400;
-    background-color: rgba(white, 0.1);
+    background-color: rgba(white, 0.2);
     color: white;
 }
 
-.subtitle {
-    margin: 0.5rem 0 0 0;
+.duration {
+    margin: 0;
 
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
     color: $blue;
+
+    @include phone-only {
+        display: none;
+    }
 }
 
 .desc {
-    margin: 1.5rem 0 2rem;
+    flex-grow: 1;
 
-    font-size: 1.25rem;
-    line-height: 2.25rem;
-    color: rgba(white, 0.5);
+    margin: 0;
 
-    @include phone-only {
-        margin-bottom: 0;
-
-        text-align: center;
-        text-indent: 0;
-    }
+    line-height: 160%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
 }
 
 .buttons {
@@ -145,45 +179,78 @@
     }
 }
 
-.image {
-    flex: 1;
+.view-website {
+    border-bottom: 1px solid $blue;
 
-    margin: 0 6rem;
-
-    overflow: hidden;
-
-    box-shadow: 12px 12px 0 rgba(black, 0.2);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-.button-website {
-    margin-top: auto;
-    padding: 0.9rem 2.75rem;
+// ==========
+// IMAGES
+// ==========
 
-    font-size: 1rem;
-    font-weight: 400;
-    text-decoration: none;
-    background-color: $blue-btn;
-    color: white;
+$image-width: 35rem;
 
-    box-shadow: 8px 8px 0 rgb(black, 0.2);
-    transition: $shadow-transition;
+.images {
+    position: relative;
 
-    &:hover {
-        cursor: pointer;
+    width: $image-width;
 
-        transform: translate(8px, 8px);
-        box-shadow: 0px 0px 0 rgba(black, 0.2);
+    padding: 2rem 0;
+
+    @include phone-only {
+        width: 80%;
+
+        margin: 0 auto;
     }
+}
+
+.image-1,
+.image-2 {
+    position: absolute;
+
+    width: $image-width;
+
+    border-radius: 5px;
+
+    box-shadow: 0 0 16px 0 rgba(black, 0.25);
+
+    @include phone-only {
+        width: 100%;
+    }
+}
+
+.image-1 {
+    position: static;
+    transform: translate(-2.5rem, -2rem);
+}
+.image-2 {
+    transform: translate(2.5rem, 2rem);
+}
+
+.image-front {
+    z-index: 100;
+}
+
+.image {
+    width: 100%;
 }
 </style>
 
 <script setup>
 const props = defineProps({
     title: String,
-    subtitle: String,
+    type: String,
+    duration: String,
     img: String,
     tags: Array,
     website: String,
     desc: String,
-});
+})
+
+const { t } = useI18n()
+
+const typeText = t("works.type." + props.type)
 </script>

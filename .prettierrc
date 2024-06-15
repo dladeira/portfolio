@@ -1,5 +1,6 @@
 {
     "tabWidth": 4,
     "useTabs": false,
-    "printWidth": 1000
+    "printWidth": 1000,
+    "semi": false
 }

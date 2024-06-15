@@ -1,20 +1,14 @@
 <template>
     <div class="section" id="contact">
-        <Block blue>
-            <h3 class="section-title">
-                {{ $t("contact.header") }} <span class="section-title-shadow">{{ $t("contact.header") }}</span>
-            </h3>
-        </Block>
-
-        <div class="content-container">
-            <Block class="form-block" red>
+        <div class="section-inner">
+            <h3 class="section-title">{{ $t("contact.title") }}</h3>
+            <h3 class="section-subtitle">{{ $t("contact.subtitle") }}</h3>
+            <div class="content">
                 <form class="form" @submit.prevent="sendForm">
                     <div class="top">
-                        <FormText :style="{ width: '80%' }" :name="$t('contact.inputs.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
-                        <FormText :style="{ width: '20%' }" :name="$t('contact.inputs.budget')" id="budget" type="text" placeholder="$200" :disabled="messageSent" />
-                    </div>
-                    <div class="top">
-                        <FormText :style="{ width: '100%' }" :name="$t('contact.inputs.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
+                        <FormText :name="$t('contact.inputs.name')" id="name" type="text" placeholder="Daniel Ladeira" :disabled="messageSent" />
+                        <FormText :name="$t('contact.inputs.email')" id="email" type="email" placeholder="user@example.com" :disabled="messageSent" />
+                        <FormText :name="$t('contact.inputs.budget')" id="budget" type="text" placeholder="$500" :disabled="messageSent" />
                     </div>
                     <div class="mid">
                         <FormTextArea :name="$t('contact.inputs.message')" id="message" :placeholder="$t('contact.inputs.message_placeholder')" :disabled="messageSent" />
@@ -24,50 +18,40 @@
                         <div class="msg">{{ $t("contact.send_hint") }}</div>
                     </div>
                 </form>
-            </Block>
-
-            <Block class="footer-block">
-                <div class="footer-container">
-                    <div class="footer-copy">© {{ new Date().getFullYear() }} Daniel Ladeira</div>
-                    <div class="footer-privacy">Privacy Policy</div>
-                </div>
-            </Block>
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .section {
-    position: relative;
+    background-color: $background-color-2;
 
-    margin: 0;
-
-    background-color: $bg-color-2;
-
-    @include phone-only {
-        padding-top: 7rem;
-    }
+    padding: 6rem 0;
 }
 
-.content-container {
-    width: 50%;
-
-    @include laptop-only {
-        width: 70%;
-    }
-
-    @include tablet-only {
-        width: 70%;
-    }
-}
-
-.form-block {
+.section-inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
 
-    padding: 8rem 0 2rem;
+    @include resizable-width;
+
+    margin: 0 auto;
+}
+
+.section-title {
+    margin: 0 0 0.5rem;
+
+    font-size: 3rem;
+}
+
+.section-subtitle {
+    margin: 0 0 4rem;
+
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .form {
@@ -75,7 +59,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+
+    margin: 0 auto;
+
+    @include resizable-width;
 }
 
 .top,
@@ -85,7 +72,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
 
     width: 100%;
 
@@ -104,6 +90,7 @@
 
 .bot {
     justify-content: flex-start;
+    gap: 2rem;
 
     margin-bottom: 0;
 
@@ -115,28 +102,28 @@
 }
 
 .send {
-    margin-right: 2rem;
-    padding: 0.7rem 4.5rem;
+    padding: 1rem 6rem;
 
     border: none;
 
     font-size: 1rem;
     font-weight: 400;
-    background-color: $blue-btn;
-    color: white;
+    background-color: rgba($blue, 0.2);
+    color: $blue;
 
-    box-shadow: 8px 8px 0 rgb(black, 0.2);
-    transition: $shadow-transition;
+    transition: all 200ms $transition-1;
 
     &:hover {
         cursor: pointer;
+    }
 
-        transform: translate(8px, 8px);
-        box-shadow: 0px 0px 0 rgba(black, 0.2);
+    &:hover {
+        background-color: rgba($blue, 0.3);
+        cursor: pointer;
     }
 
     &:disabled {
-        opacity: 0.3;
+        opacity: 0.1;
 
         background-color: #007fdb;
         color: white;
@@ -150,7 +137,6 @@
         width: 100%;
 
         background-color: rgba($blue, 0.2);
-        color: white;
 
         margin: 0;
         padding: 0.75rem 5rem;
@@ -176,33 +162,16 @@
         text-align: center;
     }
 }
-
-.footer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-
-    padding: 1rem 0;
-
-    font-size: 0.75rem;
-    color: rgba(white, 0.2);
-}
-
-.footer-privacy {
-    text-decoration: underline;
-}
 </style>
 
 <script setup>
-const verifyPopup = useState("popupVerify");
-const messageSent = useState("messageSent");
-const config = useRuntimeConfig();
+const verifyPopup = useState("popupVerify")
+const messageSent = useState("messageSent")
+const config = useRuntimeConfig()
 
 async function sendForm(e) {
-    verifyPopup.value = true;
-    messageSent.value = true;
+    verifyPopup.value = true
+    messageSent.value = true
 
     const { error } = await useFetch(config.WEB_SERVER + "/api/msg", {
         method: "POST",
@@ -212,8 +181,8 @@ async function sendForm(e) {
             budget: e.target.budget.value,
             message: e.target.message.value,
         },
-    });
+    })
 
-    if (error.value) return console.log(error.value);
+    if (error.value) return console.log(error.value)
 }
 </script>

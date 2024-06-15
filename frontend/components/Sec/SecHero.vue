@@ -1,112 +1,92 @@
 <template>
     <section class="container">
-        <Navbar />
-        <Block class="mid-block" notMobile>
-            <div class="text">
-                <h1 class="title">
-                    {{ $t("hero.title") }}
-                </h1>
-                <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
-            </div>
-        </Block>
-        <Block class="bot-block" red>
+        <div class="header">
+            <h1 class="title">
+                {{ $t("hero.title") }}
+            </h1>
+            <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
             <div class="buttons">
-                <div class="button-secondary button-mobile" @click="scrollTo('about')">{{ $t("hero.buttons.about") }}</div>
-                <div class="button-secondary" @click="scrollTo('works')">{{ $t("hero.buttons.works") }}</div>
-                <div class="button-primary" @click="scrollTo('contact')">{{ $t("hero.buttons.contact") }}</div>
+                <button class="button-contact">Contact</button>
+                <button class="button-works">Works</button>
             </div>
-        </Block>
-        <nuxt-img class="arrows" src="/arrows.png" format="webp" alt="Arrow Decorations" />
+        </div>
+
+        <div class="socials left">
+            <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
+            <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
+            <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
+        </div>
+        <div class="socials right">
+            <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" alt="US Flag" /></nuxt-link>
+            <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" alt="PL Flag" /></nuxt-link>
+            <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" alt="PT Flag" /></nuxt-link>
+        </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .container {
     position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
     height: 100vh;
-    width: 100%;
 
     margin: 0 auto;
 
-    background-color: $bg-color-1;
+    background-color: $background-color-1;
 
-    overflow: hidden;
+    @include resizable-width;
 }
 
-.top-block {
-    height: 25vh;
-
-    width: 100%;
-}
-
-.mid-block {
-    @include phone-only {
-        margin-top: auto;
-    }
-}
-
-.text {
+.header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0;
 
-    margin-bottom: 4rem;
+    width: 100%;
+
+    margin-top: 30vh;
+
+    @include laptop-only {
+        margin-top: 11rem;
+    }
+
+    @include tablet-only {
+        margin-top: 13rem;
+    }
 }
 
 .title {
-    margin: 0;
+    margin: 0 0 0.5rem;
 
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 2px;
+    text-align: center;
     color: white;
 
     animation: text-in 1s forwards;
     animation-delay: 500ms;
 
     opacity: 0;
-
-    @include phone-only {
-        font-size: 2.75rem;
-    }
 }
 
 .subtitle {
-    margin: 0;
+    margin: 0.5rem 0 0;
 
-    font-size: 4rem;
     font-weight: 400;
-    letter-spacing: 2px;
-    color: rgba(white, 0.2);
+    font-size: 3rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
 
     animation: text-in 1s forwards;
     animation-delay: 700ms;
 
     opacity: 0;
-
-    @include phone-only {
-        font-size: 2.75rem;
-    }
-}
-
-.bot-block {
-    flex: 1;
-
-    width: 100%;
-
-    @include phone-only {
-        flex: none;
-
-        margin-top: auto;
-    }
 }
 
 .buttons {
@@ -114,56 +94,113 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1.5rem;
 
-    @include phone-only {
-        flex-direction: column;
-        align-items: stretch;
-
-        margin-bottom: 3rem;
-    }
+    margin-top: 3rem;
 }
 
-.button-primary,
-.button-secondary {
-    height: fit-content;
+.button-contact,
+.button-works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    padding: 1.25rem 6rem;
+    height: 3.75rem;
+    width: 15rem;
 
-    font-size: 1.5rem;
+    border: none;
 
-    box-shadow: 12px 12px 0 rgba(black, 0.2);
-    transition: $shadow-transition;
+    font-size: 1rem;
+
+    box-shadow: $button-shadow;
+    transition: all 200ms $transition-1;
 
     &:hover {
         cursor: pointer;
 
-        transform: translate(12px, 12px);
-        box-shadow: 0px 0px 0 rgba(black, 0.2);
+        transform: translate(0.5rem, 0.5rem);
+        box-shadow: 0 0 0 rgba(black, 0.15);
     }
 }
 
-.button-primary {
+.button-contact {
     background-color: white;
     color: black;
 }
 
-.button-secondary {
+.button-works {
     background-color: rgba(white, 0.1);
     color: white;
 }
 
-.button-mobile {
-    @include desktop-only {
-        display: none;
+.socials {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 0.5rem;
+
+    animation: socials-in 1s forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.icon {
+    height: 1.25rem;
+    width: 1.25rem;
+
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    filter: invert(40%);
+
+    &:hover {
+        filter: invert(100%);
+    }
+}
+
+.flag {
+    height: 1.25rem;
+    width: 2rem;
+
+    border-radius: 3px;
+
+    opacity: 0.3;
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &-active {
+        @extend .flag;
+
+        opacity: 1;
     }
 
-    @include laptop-only {
-        display: none;
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+@keyframes hero-in {
+    0% {
+        transform: translate(0, 100%);
+        opacity: 1;
     }
 
-    @include tablet-only {
-        display: none;
+    100% {
+        transform: translate(0, 0%);
+        opacity: 1;
     }
 }
 
@@ -179,25 +216,15 @@
     }
 }
 
-.arrows {
-    position: absolute;
-    right: -10rem;
-    bottom: -10rem;
-
-    width: 55rem;
-
-    @include laptop-only {
-        width: 50rem;
+@keyframes socials-in {
+    0% {
+        transform: translateY(200px);
+        opacity: 1;
     }
 
-    @include tablet-only {
-        bottom: -5rem;
-
-        width: 40rem;
-    }
-
-    @include phone-only {
-        display: none;
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 </style>
@@ -206,10 +233,10 @@
 function scrollTo(id) {
     setTimeout(
         () => {
-            const ele = document.getElementById(id);
-            window.scrollTo(ele.offsetLeft, ele.offsetTop);
+            const ele = document.getElementById(id)
+            window.scrollTo(ele.offsetLeft, ele.offsetTop)
         },
         window.location.pathname == "/" ? 0 : 100
-    );
+    )
 }
 </script>

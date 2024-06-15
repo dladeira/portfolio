@@ -1,67 +1,77 @@
 <template>
     <section class="section" id="about">
-        <Block blue>
-            <h3 class="section-title">
-                {{ $t("about.header") }} <span class="section-title-shadow">{{ $t("about.header") }}</span>
-            </h3>
-        </Block>
-        <div class="form-block">
-            <Block red>
-                <div class="content-text">
-                    <p class="text-paragraph" v-html="formatMsg(t('about.desc1'))" />
-                    <div class="text-list">
-                        <li>{{ t("about.list.1") }}</li>
-                        <li>{{ t("about.list.2") }}</li>
-                        <li>{{ t("about.list.3") }}</li>
-                        <li>{{ t("about.list.4") }}</li>
-                    </div>
-                    <p class="text-paragraph" v-html="formatMsg(t('about.desc2'))" />
-                </div>
-            </Block>
-        </div>
-        <div class="img-wrapper">
-            <nuxt-img class="img" src="/hero.png" alt="Little Daniel Ladeira" format="webp" />
+        <h3 class="section-title">{{ $t("about.header") }}</h3>
+        <div class="content">
+            <div class="text">
+                <h4 class="title">{{ $t("about.title") }}</h4>
+                <p class="paragraph" v-html="formatMsg(t('about.desc1'))" />
+                <p class="paragraph" v-html="formatMsg(t('about.desc2'))" />
+                <p class="paragraph" v-html="formatMsg(t('about.desc3'))" />
+            </div>
+            <div />
+            <div class="img-wrapper">
+                <nuxt-img class="img" src="/hero.png" alt="Little Daniel Ladeira" format="webp" />
+            </div>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .section {
-    position: relative;
-
-    margin: 0;
-
-    background-color: $bg-color-2;
-}
-
-.form-block {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
+
+    background-color: $background-color-2;
 
     padding: 6rem 0;
+}
+
+.section-title {
+    margin: 0 0 4rem;
+
+    font-size: 3rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 40% 1fr min-content;
+
+    margin: 0 auto;
+
+    @include resizable-width;
 
     @include phone-only {
         flex-direction: column;
     }
 }
 
-.content-text {
+.text {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 1.5rem;
 
-    width: 35%;
+    width: 100%;
 }
 
-.text-paragraph {
-    margin: 0;
+.title {
+    margin: 0 0 1.5rem;
 
-    font-size: 1.25rem;
-    line-height: 2.5rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    @include phone-only {
+        margin-bottom: 0;
+    }
+}
+
+.paragraph {
+    margin: 0 0 1.5rem;
+
+    font-size: 1rem;
+    line-height: 160%;
     color: rgba(white, 0.5);
 
     &-highlighted {
@@ -69,50 +79,24 @@
     }
 }
 
-.text-list {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-
-    margin: 0 auto;
-
-    font-size: 1.25rem;
-    color: rgba(white, 0.5);
-
-    @include phone-only {
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
-    }
-}
-
 .img-wrapper {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    height: 24rem;
-    width: 24rem;
-
     border-radius: 50px;
-
-    margin: 0 auto;
 
     background-color: rgba(black, 0.1);
 
     overflow: hidden;
 
-    transform: translate(-50%, -50%);
-    @include phone-only {
-        display: none;
-    }
+    aspect-ratio: 1 / 1;
 }
 
 .img {
     display: block;
 
-    height: 100%;
+    width: 100%;
 
     margin: 0 auto;
+
+    transform: translate(1%, 0);
 }
 </style>
 
