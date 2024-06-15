@@ -15,19 +15,23 @@ body,
 
     scroll-behavior: smooth;
 
-    font-family: 16px;
+    font-size: 16px;
+
+    @include laptop-only {
+        font-size: 14px;
+    }
+
+    @include small-laptop-only {
+        font-size: 12px;
+    }
+
+    @include tablet-below {
+        font-size: 12px;
+    }
 }
 
 * {
     box-sizing: border-box;
-}
-
-// ==========
-// GRADIENT
-// ==========
-
-body {
-    background-color: $background-color;
 }
 
 // ==========

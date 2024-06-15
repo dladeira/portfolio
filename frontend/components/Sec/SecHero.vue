@@ -1,44 +1,54 @@
 <template>
     <section class="container">
-        <div class="header">
-            <h1 class="title">
-                {{ $t("hero.title") }}
-            </h1>
-            <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
-            <div class="buttons">
-                <button class="button-contact">Contact</button>
-                <button class="button-works">Works</button>
+        <div class="inner-container">
+            <div class="header">
+                <h1 class="title">
+                    {{ $t("hero.title") }}
+                </h1>
+                <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
+                <div class="buttons">
+                    <button class="button-contact" @click="scrollTo('contact')">Contact</button>
+                    <button class="button-works" @click="scrollTo('works')">Works</button>
+                </div>
             </div>
-        </div>
 
-        <div class="socials left">
-            <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
-            <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
-            <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
-        </div>
-        <div class="socials right">
-            <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" alt="US Flag" /></nuxt-link>
-            <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" alt="PL Flag" /></nuxt-link>
-            <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" alt="PT Flag" /></nuxt-link>
+            <div class="socials left">
+                <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
+            </div>
+            <div class="socials right">
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" alt="US Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" alt="PL Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" alt="PT Flag" /></nuxt-link>
+            </div>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .container {
+    height: 100vh;
+
+    background-color: $background-color-1;
+}
+
+.inner-container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
-    height: 100vh;
+    height: 100%;
 
     margin: 0 auto;
 
-    background-color: $background-color-1;
-
     @include resizable-width;
+
+    @include tablet-below {
+        align-items: center;
+    }
 }
 
 .header {
@@ -51,12 +61,10 @@
 
     margin-top: 30vh;
 
-    @include laptop-only {
-        margin-top: 11rem;
-    }
+    @include tablet-below {
+        align-items: center;
 
-    @include tablet-only {
-        margin-top: 13rem;
+        margin-top: 12rem;
     }
 }
 
@@ -65,7 +73,6 @@
 
     font-weight: 700;
     font-size: 4rem;
-    letter-spacing: 2px;
     text-align: center;
     color: white;
 
@@ -73,6 +80,10 @@
     animation-delay: 500ms;
 
     opacity: 0;
+
+    @include tablet-below {
+        font-size: 3rem;
+    }
 }
 
 .subtitle {
@@ -87,6 +98,10 @@
     animation-delay: 700ms;
 
     opacity: 0;
+
+    @include tablet-below {
+        font-size: 1.5rem;
+    }
 }
 
 .buttons {
@@ -97,6 +112,13 @@
     gap: 1.5rem;
 
     margin-top: 3rem;
+
+    @include tablet-below {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem auto 0;
+    }
 }
 
 .button-contact,
@@ -120,6 +142,11 @@
 
         transform: translate(0.5rem, 0.5rem);
         box-shadow: 0 0 0 rgba(black, 0.15);
+    }
+
+    @include tablet-below {
+        height: 3rem;
+        width: 70vw;
     }
 }
 

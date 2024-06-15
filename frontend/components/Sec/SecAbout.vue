@@ -42,8 +42,13 @@
 
     @include resizable-width;
 
-    @include phone-only {
-        flex-direction: column;
+    @include small-laptop-only {
+        grid-template-columns: 50% 1fr min-content;
+    }
+
+    @include tablet-below {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
@@ -54,6 +59,10 @@
     align-items: flex-start;
 
     width: 100%;
+
+    @include tablet-below {
+        align-items: center;
+    }
 }
 
 .title {
@@ -61,10 +70,6 @@
 
     font-size: 2.25rem;
     font-weight: 700;
-
-    @include phone-only {
-        margin-bottom: 0;
-    }
 }
 
 .paragraph {
@@ -76,6 +81,10 @@
 
     &-highlighted {
         color: white;
+    }
+
+    @include tablet-below {
+        text-align: center;
     }
 }
 
@@ -101,20 +110,20 @@
 </style>
 
 <script setup>
-const { t } = useI18n();
+const { t } = useI18n()
 
 function formatMsg(msg) {
-    var msg = msg.split("'");
-    var final_msg = "";
+    var msg = msg.split("'")
+    var final_msg = ""
 
     for (var index in msg) {
-        final_msg += msg[index];
+        final_msg += msg[index]
 
         if (index < msg.length - 1)
-            if (index % 2 == 0) final_msg += '<span style="color: white">';
-            else final_msg += "</span>";
+            if (index % 2 == 0) final_msg += '<span style="color: white">'
+            else final_msg += "</span>"
     }
 
-    return final_msg;
+    return final_msg
 }
 </script>

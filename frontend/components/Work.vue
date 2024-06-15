@@ -20,7 +20,7 @@
             <nuxt-link v-if="website" :href="website" class="view-website" target="_blank">{{ $t("works.button1") }}</nuxt-link>
         </div>
         <div class="images">
-            <nuxt-img :class="'image-2' + (flip ? ' image-front' : '')" :src="img + '-2.png'" format="webp" alt="Project Preview" />
+            <nuxt-img class="image-2" :src="img + '-2.png'" format="webp" alt="Project Preview" />
             <nuxt-img class="image-1" :src="img + '-1.png'" format="webp" alt="Project Preview" />
         </div>
     </article>
@@ -39,10 +39,9 @@
         margin-bottom: 0;
     }
 
-    @include phone-only {
-        flex-direction: column-reverse;
-
-        margin-bottom: 10rem;
+    @include tablet-below {
+        flex-direction: column;
+        gap: 2rem;
     }
 }
 
@@ -54,6 +53,12 @@
     gap: 2rem;
 
     width: 40%;
+
+    @include tablet-below {
+        width: 100%;
+
+        align-items: center;
+    }
 }
 
 .project-header-outer {
@@ -73,14 +78,6 @@
     align-items: center;
 
     width: 100%;
-
-    @include phone-only {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        margin-bottom: 0.5em;
-    }
 }
 
 .title {
@@ -88,13 +85,6 @@
 
     font-size: 2.25rem;
     font-weight: 700;
-
-    @include phone-only {
-        margin: 0;
-
-        font-size: 3rem;
-        text-align: center;
-    }
 }
 
 .type {
@@ -162,6 +152,10 @@
     font-size: 1rem;
     font-weight: 400;
     color: white;
+
+    @include tablet-below {
+        text-align: center;
+    }
 }
 
 .buttons {
@@ -191,12 +185,8 @@
 // IMAGES
 // ==========
 
-$image-width: 35rem;
-
 .images {
     position: relative;
-
-    width: $image-width;
 
     padding: 2rem 0;
 
@@ -211,11 +201,19 @@ $image-width: 35rem;
 .image-2 {
     position: absolute;
 
-    width: $image-width;
+    width: 35rem;
 
     border-radius: 5px;
 
     box-shadow: 0 0 16px 0 rgba(black, 0.25);
+
+    @include laptop-only {
+        width: 30rem;
+    }
+
+    @include small-laptop-only {
+        width: 25rem;
+    }
 
     @include phone-only {
         width: 100%;
@@ -226,12 +224,9 @@ $image-width: 35rem;
     position: static;
     transform: translate(-2.5rem, -2rem);
 }
+
 .image-2 {
     transform: translate(2.5rem, 2rem);
-}
-
-.image-front {
-    z-index: 100;
 }
 
 .image {

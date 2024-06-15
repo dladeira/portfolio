@@ -2,17 +2,8 @@ $blue: #00c1ff;
 $gray: #676767;
 $green: #00c714;
 
-$background-color: #141b2d;
-
 $background-color-1: #141b2d;
 $background-color-2: #1b2439;
-
-$content-desktop: 1300px;
-$content-laptop: 1000px;
-$content-tablet: 80vw;
-$content-phone: 80vw;
-
-$margin-desktop: 200px;
 
 $transition-1: cubic-bezier(0.165, 0.84, 0.44, 1);
 $button-shadow: 0.75rem 0.75rem 0 rgba(black, 0.15);
@@ -23,26 +14,27 @@ $button-shadow: 0.75rem 0.75rem 0 rgba(black, 0.15);
 
 $desktop_height_min: 900px;
 $laptop_max: 1512px;
-$tablet_max: 1340px;
+$small_laptop_max: 1312px;
+$tablet_max: 1000px;
 $small_tablet_max: 1080px;
 $phone_max: 980px;
 $small_phone_max: 600px;
 
 @mixin resizable-width {
     @include desktop-only {
-        width: calc(100vw - $margin-desktop * 2);
+        width: calc(100vw - 200px * 2);
     }
 
     @include laptop-only {
-        width: $content-laptop;
+        width: calc(100vw - 100px * 2);
     }
 
     @include tablet-only {
-        width: $content-tablet;
+        width: 80vw;
     }
 
     @include phone-only {
-        width: $content-phone;
+        width: 80vw;
     }
 }
 
@@ -62,11 +54,25 @@ $small_phone_max: 600px;
     }
 }
 
+@mixin small-laptop-only {
+    @media (max-width: $small_laptop_max) {
+        @media (min-width: $tablet_max) {
+            @content;
+        }
+    }
+}
+
 @mixin tablet-only {
     @media (max-width: $tablet_max) {
         @media (min-width: $phone_max) {
             @content;
         }
+    }
+}
+
+@mixin tablet-below {
+    @media (max-width: $tablet_max) {
+        @content;
     }
 }
 

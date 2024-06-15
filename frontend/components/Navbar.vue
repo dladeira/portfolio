@@ -109,6 +109,13 @@
     justify-content: flex-start;
     align-items: center;
     gap: 3rem;
+
+    @include tablet-below {
+        justify-content: space-between;
+        gap: 0;
+
+        width: 100%;
+    }
 }
 
 .link {
