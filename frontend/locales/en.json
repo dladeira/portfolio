@@ -24,19 +24,16 @@
         "works": {
             "1": {
                 "title": "Polanner",
-                "type": "Start Up",
                 "duration": "January 2024 - Present",
                 "desc": "A all-in-one time-tracking website for hobbyists. Integrates with a desktop application and 3rd party apps."
             },
             "2": {
                 "title": "Hoplite",
-                "type": "Client",
                 "duration": "July 2023 - Present",
                 "desc": "A website featuring the minecraft server Hoplite. My role was to improve the existing website and Tebex configuration."
             },
             "3": {
                 "title": "MCSS",
-                "type": "Start Up",
                 "duration": "June 2023 - August 2023",
                 "desc": "A minecraft server statistics SaaS application. Integrates with a plugin to display useful player statistics."
             }
@@ -45,7 +42,6 @@
             "startup": "Start Up",
             "client": "Client"
         },
-        "button1": "View website",
         "button2": "Source code"
     },
     "contact": {

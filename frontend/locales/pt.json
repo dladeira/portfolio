@@ -15,41 +15,40 @@
     "about": {
         "header": "Sobre mim",
         "title": "Daniel Ladeira",
-        "desc1": "O meu nome é Daniel Ladeira e sou um programador trilíngue baseado na 'Europa'. Principalmente crio páginas de internet, mas também tenho experiência nas seguintes áreas:",
-        "desc2": "Também falo 'Inglês', 'Português', e 'Polaco' e consigo traduzir sites nessas linguas.",
-        "list": {
-            "1": "Aplicações de Rust",
-            "2": "Aplicações de Java",
-            "3": "Visualização de Dados",
-            "4": "Administração de Sistemas Linux"
-        }
+        "desc1": "O meu nome é Daniel Ladeira e sou um programador trilíngue que fala 'Inglês', 'Português' e 'Polaco', baseado na 'Polónia'. Começei a programar no ano 2020 criando plugins e servidores para Minecraft, que depois transformou se em uma paixão para paginas da internet,",
+        "desc2": "Este ano vou começar os meus 'estudos de Informatica' em 'Vrije Universiteit', Amsterdão. Embora meu foco principal seja 'desenvolvimento web freelance', também estou a desenvolver uma aplicação para ajudar com a produtividade.",
+        "desc3": "As minhas habilidades são focadas em 'design' e 'codificação', recentemente desenvolvi um interesse em marketing e content creation"
     },
     "works": {
         "header": "Projetos",
         "works": {
             "1": {
-                "title": "MCSS",
-                "subtitle": "Julho 2023 - Presente",
-                "desc": "Um site sobre o servidor minecraft Hoplite. A minha função era melhorar o site existente e a configuração do Tebex."
+                "title": "Polanner",
+                "duration": "Janeiro 2024 ' Presente",
+                "desc": "Um site de controle de tempo. Integra-se com uma aplicação de desktop e redes sociais"
             },
             "2": {
-                "title": "MCSS",
-                "subtitle": "Projeto Pessoal",
-                "desc": "Uma aplicação de SaaS sobre estatísticas de servidores de Minecraft. Integra-se com um plugin para exibir estatísticas úteis de jogadores."
+                "title": "Hoplite",
+                "duration": "Julho 2023 - Presente",
+                "desc": "Um site sobre o servidor minecraft Hoplite. A minha função era melhorar o site existente e a configuração do Tebex."
             },
             "3": {
-                "title": "Polanner",
-                "subtitle": "Projeto Pessoal",
-                "desc": "Um site de controle de tempo. Integra-se com uma aplicação de desktop e redes sociais"
+                "title": "MCSS",
+                "duration": "Junho 2023 - Agosto 2023",
+                "desc": "Uma aplicação de SaaS sobre estatísticas de servidores de Minecraft. Integra-se com um plugin para exibir estatísticas úteis de jogadores."
             }
         },
-        "button1": "Ver página",
-        "button2": "Ver código"
+        "type": {
+            "startup": "Start Up",
+            "client": "Cliente"
+        },
+        "button1": "Ver página"
     },
     "contact": {
-        "header": "Contacto",
+        "title": "Interessado no que você vê?",
+        "subtitle": "Me mande uma mensagem",
         "send": "Enviar",
-        "send_hint": "Uma mensagem de confirmação será enviada para o seu email para verificar a sua propriedade",
+        "send_hint": "Uma mensagem de confirmação será enviada para o seu email",
         "inputs": {
             "name": "Nome",
             "email": "Email",
