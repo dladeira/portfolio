@@ -1,60 +1,49 @@
 <template>
-    <nav class="container" id="navbar-container">
-        <div class="inner-container">
-            <div class="brand">
-                <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
-            </div>
-            <div class="languages">
-                <nuxt-link :class="$i18n.locale == 'en' ? 'language-active' : 'language'" :href="switchLocalePath('en')" aria-label="Switch to English">
-                    <nuxt-img class="language-flag" src="/flag-us.png" alt="US Flag" />
-                    <div class="language-text">English</div>
-                </nuxt-link>
-                <nuxt-link :class="$i18n.locale == 'pl' ? 'language-active' : 'language'" :href="switchLocalePath('pl')" aria-label="Zmień na polski">
-                    <nuxt-img class="language-flag" src="/flag-pl.png" alt="PL Flag" />
-                    <div class="language-text">Polish</div>
-                </nuxt-link>
-                <nuxt-link :class="$i18n.locale == 'pt' ? 'language-active' : 'language'" :href="switchLocalePath('pt')" aria-label="Muda para portugês">
-                    <nuxt-img class="language-flag" src="/flag-pt.png" alt="PT Flag" />
-                    <div class="language-text">Portuguese</div>
-                </nuxt-link>
-            </div>
+    <nav class="navbar-container">
+        <div class="brand">
+            <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
+        </div>
+        <div class="languages">
+            <nuxt-link :class="$i18n.locale == 'en' ? 'language-active' : 'language'" :href="switchLocalePath('en')" aria-label="Switch to English">
+                <nuxt-img class="language-flag" src="/flag-us.png" alt="US Flag" />
+                <div class="language-text">English</div>
+            </nuxt-link>
+            <nuxt-link :class="$i18n.locale == 'pl' ? 'language-active' : 'language'" :href="switchLocalePath('pl')" aria-label="Zmień na polski">
+                <nuxt-img class="language-flag" src="/flag-pl.png" alt="PL Flag" />
+                <div class="language-text">Polish</div>
+            </nuxt-link>
+            <nuxt-link :class="$i18n.locale == 'pt' ? 'language-active' : 'language'" :href="switchLocalePath('pt')" aria-label="Muda para portugês">
+                <nuxt-img class="language-flag" src="/flag-pt.png" alt="PT Flag" />
+                <div class="language-text">Portuguese</div>
+            </nuxt-link>
         </div>
     </nav>
 </template>
 
 <style lang="scss" scoped>
-.container {
-    position: absolute;
-
-    width: 100%;
-
-    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-    z-index: 4;
-}
-
-.inner-container {
+.navbar-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
-    width: 100%;
+    margin: 2.5rem 0 auto;
 
-    padding: 30px 10% 0 calc($block-left + $block-width + $block-margin);
+    width: 75%;
 
     opacity: 0;
-    z-index: 2;
 
     animation: navbar-in 1s forwards;
     animation-delay: 500ms;
 
     @include phone-only {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-        width: 90%;
+        width: fit-content;
 
-        margin: 1.75rem auto 1.25rem;
+        margin: 2rem 0;
     }
 }
 
@@ -85,6 +74,12 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+
+    @include phone-only {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
 }
 
 .language {

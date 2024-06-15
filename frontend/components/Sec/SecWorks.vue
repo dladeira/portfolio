@@ -20,12 +20,6 @@
     background-color: $bg-color-1;
 }
 
-.top-block {
-    height: 20vh;
-    width: $block-width;
-    background-color: $blue;
-}
-
 .form-block {
     display: flex;
     flex-direction: column;

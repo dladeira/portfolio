@@ -1,28 +1,36 @@
 <template>
     <section class="container">
-        <div class="inner-container">
-            <div class="top-block" />
+        <Navbar />
+        <Block class="mid-block" notMobile>
             <div class="text">
                 <h1 class="title">
                     {{ $t("hero.title") }}
                 </h1>
                 <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
-                <div class="buttons">
-                    <div class="button-primary" @click="scrollTo('contact')">{{ $t("hero.buttons.contact") }}</div>
-                    <div class="button-secondary" @click="scrollTo('works')">{{ $t("hero.buttons.works") }}</div>
-                </div>
             </div>
-            <div class="bot-block" />
-            <nuxt-img class="arrows" src="/arrows.png" format="webp" alt="Arrow Decorations" />
-        </div>
+        </Block>
+        <Block class="bot-block" red>
+            <div class="buttons">
+                <div class="button-secondary button-mobile" @click="scrollTo('about')">{{ $t("hero.buttons.about") }}</div>
+                <div class="button-secondary" @click="scrollTo('works')">{{ $t("hero.buttons.works") }}</div>
+                <div class="button-primary" @click="scrollTo('contact')">{{ $t("hero.buttons.contact") }}</div>
+            </div>
+        </Block>
+        <nuxt-img class="arrows" src="/arrows.png" format="webp" alt="Arrow Decorations" />
     </section>
 </template>
 
 <style lang="scss" scoped>
 .container {
     position: relative;
-    height: 99.6vh;
-    width: 99.6vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    height: 100vh;
+    width: 100%;
 
     margin: 0 auto;
 
@@ -31,23 +39,16 @@
     overflow: hidden;
 }
 
-.inner-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+.top-block {
+    height: 25vh;
 
-    height: 100%;
-
-    margin: 0 $block-left;
+    width: 100%;
 }
 
-.top-block {
-    height: 30vh;
-    width: $block-width;
-    background-color: $blue;
-
-    box-shadow: $block-shadow;
+.mid-block {
+    @include phone-only {
+        margin-top: auto;
+    }
 }
 
 .text {
@@ -57,7 +58,7 @@
     align-items: flex-start;
     gap: 0;
 
-    margin-left: calc($block-width + $block-margin);
+    margin-bottom: 4rem;
 }
 
 .title {
@@ -66,13 +67,16 @@
     font-weight: 700;
     font-size: 5rem;
     letter-spacing: 2px;
-    text-align: center;
     color: white;
 
     animation: text-in 1s forwards;
     animation-delay: 500ms;
 
     opacity: 0;
+
+    @include phone-only {
+        font-size: 2.75rem;
+    }
 }
 
 .subtitle {
@@ -81,27 +85,49 @@
     font-size: 4rem;
     font-weight: 400;
     letter-spacing: 2px;
-    text-align: center;
     color: rgba(white, 0.2);
 
     animation: text-in 1s forwards;
     animation-delay: 700ms;
 
     opacity: 0;
+
+    @include phone-only {
+        font-size: 2.75rem;
+    }
+}
+
+.bot-block {
+    flex: 1;
+
+    width: 100%;
+
+    @include phone-only {
+        flex: none;
+
+        margin-top: auto;
+    }
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 2rem;
 
-    transform: translateY(100%);
+    @include phone-only {
+        flex-direction: column;
+        align-items: stretch;
+
+        margin-bottom: 3rem;
+    }
 }
 
 .button-primary,
 .button-secondary {
+    height: fit-content;
+
     padding: 1.25rem 6rem;
 
     font-size: 1.5rem;
@@ -127,6 +153,20 @@
     color: white;
 }
 
+.button-mobile {
+    @include desktop-only {
+        display: none;
+    }
+
+    @include laptop-only {
+        display: none;
+    }
+
+    @include tablet-only {
+        display: none;
+    }
+}
+
 @keyframes text-in {
     0% {
         transform: translateY(70px);
@@ -139,22 +179,26 @@
     }
 }
 
-.bot-block {
-    flex-grow: 1;
-
-    width: $block-width;
-
-    background-color: $red;
-
-    box-shadow: $block-shadow;
-}
-
 .arrows {
     position: absolute;
     right: -10rem;
     bottom: -10rem;
 
-    width: 45vw;
+    width: 55rem;
+
+    @include laptop-only {
+        width: 50rem;
+    }
+
+    @include tablet-only {
+        bottom: -5rem;
+
+        width: 40rem;
+    }
+
+    @include phone-only {
+        display: none;
+    }
 }
 </style>
 

@@ -47,14 +47,6 @@
     }
 }
 
-.bot-block {
-    width: $block-width;
-
-    margin-left: $block-left;
-
-    background-color: $red;
-}
-
 .content-text {
     display: flex;
     flex-direction: column;

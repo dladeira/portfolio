@@ -1,6 +1,6 @@
 <template>
-    <div class="block-container">
-        <div :class="'block ' + (blue || red ? (blue ? 'block-blue' : 'block-red') : 'block-transparent')" />
+    <div :class="`block-container ${notMobile ? 'block-container-not-mobile' : ''}`">
+        <div :class="`block ${blue || red ? (blue ? 'block-blue' : 'block-red') : 'block-transparent'} ${notMobile ? 'block-not-mobile' : ''}`" />
         <slot />
     </div>
 </template>
@@ -11,11 +11,17 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
+
+    &-not-mobile {
+        @include phone-only {
+            margin-left: 3rem;
+        }
+    }
 }
 .block {
-    width: $block-width;
+    width: 5rem;
 
-    margin: 0 $block-margin 0 $block-left;
+    margin: 0 5rem;
 
     box-shadow: $block-shadow;
 
@@ -30,6 +36,18 @@
     &-transparent {
         box-shadow: none;
     }
+
+    &-not-mobile {
+        @include phone-only {
+            display: none;
+        }
+    }
+
+    @include phone-only {
+        width: 4rem;
+
+        margin: 0 2rem 0 3rem;
+    }
 }
 </style>
 
@@ -37,5 +55,6 @@
 const props = defineProps({
     blue: Boolean,
     red: Boolean,
+    notMobile: Boolean,
 });
 </script>

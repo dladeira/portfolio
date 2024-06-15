@@ -1,7 +1,5 @@
 <template>
-    <Navbar />
     <slot />
-    <Footer />
     <PopupVerify v-if="popupVerify" />
     <PopupSent v-if="popupSent" />
 </template>
