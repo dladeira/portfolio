@@ -201,7 +201,7 @@
 
     width: 35rem;
 
-    border-radius: 5px;
+    border-radius: 10px;
 
     box-shadow: 0 0 16px 0 rgba(black, 0.25);
 
