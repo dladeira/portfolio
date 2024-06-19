@@ -123,11 +123,9 @@
 .tag {
     padding: 0.75rem 1.25rem;
 
-    border-radius: 5px;
-
     font-size: 0.75rem;
     font-weight: 400;
-    background-color: rgba(white, 0.2);
+    background-color: rgba(white, 0.1);
     color: white;
 }
 
