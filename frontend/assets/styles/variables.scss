@@ -1,11 +1,11 @@
 $blue: #00c1ff;
-$gray: #676767;
+$gray: #8a8d96;
 $green: #00c714;
 
 $background-color-1: #141b2d;
 $background-color-2: #1b2439;
 
-$transition-1: cubic-bezier(0.165, 0.84, 0.44, 1);
+$transition: cubic-bezier(0.165, 0.84, 0.44, 1);
 $button-shadow: 0.75rem 0.75rem 0 rgba(black, 0.15);
 
 // ==========
@@ -22,11 +22,11 @@ $small_phone_max: 600px;
 
 @mixin resizable-width {
     @include desktop-only {
-        width: calc(100vw - 200px * 2);
+        width: calc(100vw - 300px * 2);
     }
 
     @include laptop-only {
-        width: calc(100vw - 100px * 2);
+        width: calc(100vw - 200px * 2);
     }
 
     @include tablet-only {

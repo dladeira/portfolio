@@ -3,25 +3,26 @@
         <div class="text">
             <div class="project-header-outer">
                 <div class="project-header">
-                    <h4 class="title">{{ title }}</h4>
-                    <h5 :class="'type type-' + type">{{ typeText }}</h5>
+                    <h4 class="title">{{ $t(`works.list.${id}.title`) }}</h4>
+                    <h5 :class="'type type-' + type">{{ $t("works.type." + type) }}</h5>
                 </div>
-                <div class="duration">{{ duration }}</div>
+                <div class="duration">{{ $t(`works.list.${id}.duration`) }}</div>
             </div>
 
-            <p class="desc">
-                {{ desc }}
-            </p>
+            <p class="desc">{{ $t(`works.list.${id}.desc`) }}</p>
 
             <div class="tags">
                 <div class="tag" v-for="tag in tags">{{ tag }}</div>
             </div>
 
-            <nuxt-link v-if="website" :href="website" class="view-website" target="_blank">{{ $t("works.button") }}</nuxt-link>
+            <div class="buttons">
+                <nuxt-link v-if="website" :href="website" class="link link-website" target="_blank">{{ $t("works.website") }} <nuxt-img src="/icons/view-website.svg" class="link-website-icon" alt="Visit Website Icon" /> </nuxt-link>
+                <nuxt-link v-if="case" :href="`/case-studies/${id}`" class="link link-case">{{ $t("works.case") }}</nuxt-link>
+            </div>
         </div>
         <div class="images">
-            <nuxt-img class="image-2" :src="img + '-2.png'" format="webp" alt="Project Preview" />
-            <nuxt-img class="image-1" :src="img + '-1.png'" format="webp" alt="Project Preview" />
+            <nuxt-img class="image-2" :src="`/works/${id}-2.png`" format="webp" alt="Project Preview" />
+            <nuxt-img class="image-1" :src="`/works/${id}-1.png`" format="webp" alt="Project Preview" />
         </div>
     </article>
 </template>
@@ -50,7 +51,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1.5rem;
 
     width: 40%;
 
@@ -66,7 +67,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.25rem;
 
     width: 100%;
 }
@@ -90,8 +91,6 @@
 .type {
     margin: 0;
     padding: 0.75rem 1.25rem;
-
-    border-radius: 5px;
 
     font-size: 0.75rem;
     font-weight: 400;
@@ -171,12 +170,48 @@
     }
 }
 
-.view-website {
-    border-bottom: 1px solid $blue;
+$border-expand: 2px;
+
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: $border-expand;
+    padding-bottom: 0.25rem;
+
+    border-bottom: 1px solid white;
 
     color: white;
     text-decoration: none;
     font-size: 1rem;
+
+    &:hover {
+        margin-bottom: 0;
+
+        border-bottom: calc($border-expand + 1px) solid white;
+    }
+}
+
+.link-website {
+    border-color: $blue !important;
+
+    &:hover &-icon {
+        transform: translate(0.25rem, -0.25rem);
+    }
+
+    &-icon {
+        height: 0.55rem;
+
+        margin-left: 0.5rem;
+
+        transition: 200ms $transition all;
+    }
+}
+
+.link-case {
+    border-color: $green !important;
 }
 
 // ==========
@@ -185,6 +220,8 @@
 
 .images {
     position: relative;
+
+    width: 35%;
 
     padding: 2rem 0;
 
@@ -199,7 +236,7 @@
 .image-2 {
     position: absolute;
 
-    width: 35rem;
+    width: 100%;
 
     border-radius: 10px;
 
@@ -234,16 +271,10 @@
 
 <script setup>
 const props = defineProps({
-    title: String,
+    id: String,
     type: String,
-    duration: String,
-    img: String,
     tags: Array,
     website: String,
-    desc: String,
+    case: Boolean,
 })
-
-const { t } = useI18n()
-
-const typeText = t("works.type." + props.type)
 </script>

@@ -36,7 +36,7 @@
 
 .content {
     display: grid;
-    grid-template-columns: 40% 1fr min-content;
+    grid-template-columns: 50% 1fr min-content;
 
     margin: 0 auto;
 
@@ -113,7 +113,7 @@
 const { t } = useI18n()
 
 function formatMsg(msg) {
-    var msg = msg.split("'")
+    var msg = msg.split("*")
     var final_msg = ""
 
     for (var index in msg) {

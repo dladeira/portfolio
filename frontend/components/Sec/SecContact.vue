@@ -111,7 +111,7 @@
     background-color: rgba($blue, 0.2);
     color: $blue;
 
-    transition: all 200ms $transition-1;
+    transition: all 200ms $transition;
 
     &:hover {
         cursor: pointer;

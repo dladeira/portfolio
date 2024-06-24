@@ -14,8 +14,6 @@
     width: 100%;
 
     padding: 1rem 0;
-
-    background-color: $background-color-2;
 }
 
 .content {

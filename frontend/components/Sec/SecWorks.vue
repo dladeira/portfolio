@@ -2,7 +2,7 @@
     <section class="section" id="works">
         <h3 class="section-title">{{ $t("works.header") }}</h3>
         <div class="content">
-            <Work v-for="work of works" :title="work.title" :type="work.type" :duration="work.duration" :desc="work.desc" :img="work.img" :tags="work.tags" :website="work.website" />
+            <Work v-for="work of works" :id="work.id" :type="work.type" :tags="work.tags" :website="work.website" :case="work.case" />
         </div>
     </section>
 </template>
@@ -43,29 +43,21 @@ const { t } = useI18n()
 
 const works = [
     {
-        title: t("works.works.1.title"),
+        id: "polanner",
         type: "startup",
-        duration: t("works.works.1.duration"),
-        desc: t("works.works.1.desc"),
-        img: "polanner",
         tags: ["Nuxt", "MongoDB", "Tauri"],
         website: "https://polanner.com",
+        case: true,
     },
     {
-        title: t("works.works.2.title"),
+        id: "hoplite",
         type: "client",
-        duration: t("works.works.2.duration"),
-        desc: t("works.works.2.desc"),
-        img: "hoplite",
         tags: ["NEXT.js", "Tebex", "Strapi"],
         website: "https://hoplite.gg",
     },
     {
-        title: t("works.works.3.title"),
+        id: "mcss",
         type: "startup",
-        duration: t("works.works.3.duration"),
-        img: "mcss",
-        desc: t("works.works.3.desc"),
         tags: ["Nuxt", "MongoDB", "Java"],
         website: "https://mcss.ladeira.eu",
     },

@@ -11,6 +11,7 @@ body,
     margin: 0;
 
     font-family: "Inter", sans-serif;
+    background-color: $background-color-1;
     color: white;
 
     scroll-behavior: smooth;
@@ -48,7 +49,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
+    background: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {

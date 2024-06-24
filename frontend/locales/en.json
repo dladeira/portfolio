@@ -15,24 +15,24 @@
     "about": {
         "header": "About Me",
         "title": "Daniel Ladeira",
-        "desc1": "My name is 'Daniel Ladeira' and I am a 'trilingual web developer' based in Poland, fluent in 'English', 'Portuguese', and 'Polish'. My programming journey began in 2020, creating custom Minecraft plugins and servers, which later transitioned to web development.",
-        "desc2": "This year I'm starting my Bachelor's in 'Computer Science' at 'Vrije Universiteit', Amsterdam. While my primary focus is on 'freelance web development', I'm also growing a 'productivity startup' on the side.",
-        "desc3": "My skills span 'design' and 'coding', however recently I've developed an interest in marketing and content creation."
+        "desc1": "My name is *Daniel Ladeira* and I am a *trilingual web developer* based in Poland, fluent in *English*, *Portuguese*, and *Polish*. My programming journey began in 2020, creating custom Minecraft plugins and servers, which later transitioned to web development.",
+        "desc2": "This year I'm starting my Bachelor*s in *Computer Science* at *Vrije Universiteit*, Amsterdam. While my primary focus is on *freelance web development*, I'm also growing a *productivity startup* on the side.",
+        "desc3": "My skills span *design* and *coding*, however recently I*ve developed an interest in marketing and content creation."
     },
     "works": {
         "header": "Works",
-        "works": {
-            "1": {
+        "list": {
+            "polanner": {
                 "title": "Polanner",
                 "duration": "January 2024 - Present",
                 "desc": "A all-in-one time-tracking website for hobbyists. Integrates with a desktop application and 3rd party apps."
             },
-            "2": {
+            "hoplite": {
                 "title": "Hoplite",
                 "duration": "July 2023 - Present",
                 "desc": "A website featuring the minecraft server Hoplite. My role was to improve the existing website and Tebex configuration."
             },
-            "3": {
+            "mcss": {
                 "title": "MCSS",
                 "duration": "June 2023 - August 2023",
                 "desc": "A minecraft server statistics SaaS application. Integrates with a plugin to display useful player statistics."
@@ -42,7 +42,8 @@
             "startup": "Start Up",
             "client": "Client"
         },
-        "button": "View website"
+        "website": "View Website",
+        "case": "Read Case Study"
     },
     "contact": {
         "title": "Interested in what you see?",

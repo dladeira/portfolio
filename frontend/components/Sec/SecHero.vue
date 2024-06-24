@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <section class="container" id="hero">
         <div class="inner-container">
             <div class="header">
                 <h1 class="title">
@@ -13,14 +13,14 @@
             </div>
 
             <div class="socials left">
-                <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icon-dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icon-so.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
-                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icon-gh.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://dribbble.com/dladeira"><nuxt-img src="/icons/dribbble.svg" class="icon" format="webp" alt="Dribbble icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel"><nuxt-img src="/icons/stack-overflow.svg" class="icon" format="webp" alt="StackOverflow icon" /></nuxt-link>
+                <nuxt-link class="icon-wrapper" href="https://github.com/dladeira"><nuxt-img src="/icons/github.svg" class="icon" format="webp" alt="Github icon" /></nuxt-link>
             </div>
             <div class="socials right">
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flag-us.png" alt="US Flag" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flag-pl.png" alt="PL Flag" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flag-pt.png" alt="PT Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" /></nuxt-link>
             </div>
         </div>
     </section>
@@ -130,7 +130,7 @@
     font-size: 1rem;
 
     box-shadow: $button-shadow;
-    transition: all 200ms $transition-1;
+    transition: all 200ms $transition;
 
     &:hover {
         cursor: pointer;
