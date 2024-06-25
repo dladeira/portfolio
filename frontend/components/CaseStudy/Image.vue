@@ -25,6 +25,10 @@
     border-radius: 10px;
 
     box-shadow: 0 0 16px 0 rgba(black, 0.1);
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .csi-hint {
@@ -47,6 +51,10 @@
     width: 100%;
 
     transition: all $transition 500ms;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &-open {
         @extend .csi-popup;
