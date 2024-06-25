@@ -59,7 +59,7 @@
 
     width: 100%;
 
-    margin-top: 30vh;
+    margin-top: 28vh;
 
     animation: from-bottom 1s forwards;
     animation-delay: 500ms;
@@ -74,10 +74,10 @@
 }
 
 .title {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.25rem;
 
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 6rem;
     text-align: center;
     color: white;
 
@@ -87,10 +87,10 @@
 }
 
 .subtitle {
-    margin: 0.5rem 0 0;
+    margin: 0;
 
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     color: rgba(white, 0.4);
 
@@ -104,9 +104,9 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 2rem;
 
-    margin-top: 3rem;
+    margin-top: 5rem;
 
     @include tablet-below {
         flex-direction: column;
@@ -127,7 +127,7 @@
 
     border: none;
 
-    font-size: 1rem;
+    font-size: 1.25rem;
 
     box-shadow: $button-shadow;
     transition: all 200ms $transition;
