@@ -121,6 +121,12 @@
     width: 100%;
 
     margin-bottom: 5rem;
+
+    @include tablet-below {
+        flex-direction: column;
+
+        margin-bottom: 0;
+    }
 }
 
 .header-text {
@@ -129,6 +135,11 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0.5rem;
+
+    @include tablet-below {
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 
 .title {
@@ -137,6 +148,10 @@
     font-size: 3rem;
     font-weight: 700;
     color: white;
+
+    @include tablet-below {
+        text-align: center;
+    }
 }
 
 .duration {
@@ -145,6 +160,11 @@
     font-size: 1.25rem;
     font-weight: 400;
     color: $blue;
+
+    @include tablet-below {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
 
 .header-tags {
@@ -153,6 +173,10 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
+
+    @include tablet-below {
+        display: none;
+    }
 }
 
 .header-tag {
@@ -196,6 +220,11 @@
     align-items: flex-start;
 
     width: 100%;
+
+    @include tablet-below {
+        flex-wrap: wrap;
+        gap: 2rem 0;
+    }
 }
 
 .block-carousel-item {
@@ -203,11 +232,15 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 1.25rem;
+
+    @include tablet-below {
+        gap: 0.5rem;
+    }
 }
 
 .block-carousel-item-title {
-    margin: 0 0 0.5rem;
+    margin: 0;
 
     font-size: 1rem;
     font-weight: 400;
@@ -229,11 +262,19 @@
     align-items: center;
     gap: 1rem;
 
+    @include phone-only {
+        gap: 0.5rem;
+    }
+
     & div {
         height: 2rem;
         width: 2rem;
 
         border-radius: 10px;
+
+        @include phone-only {
+            border-radius: 5px;
+        }
     }
 }
 
@@ -277,11 +318,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 1.5rem;
+
+    @include tablet-below {
+        grid-template-columns: 1fr;
+    }
 }
 
 .block-image-eighth-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0 1.5rem;
+
+    @include tablet-below {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 </style>
