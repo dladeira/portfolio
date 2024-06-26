@@ -6,10 +6,10 @@
                     {{ $t("hero.title") }}
                 </h1>
                 <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
-                <div class="buttons">
+                <!-- <div class="buttons">
                     <button class="button-contact" @click="scrollTo('contact')">Contact</button>
                     <button class="button-works" @click="scrollTo('works')">Works</button>
-                </div>
+                </div> -->
             </div>
 
             <div class="socials left">
@@ -82,7 +82,7 @@
     color: white;
 
     @include tablet-below {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 }
 
@@ -95,65 +95,65 @@
     color: rgba(white, 0.4);
 
     @include tablet-below {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
 
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
+// .buttons {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//     gap: 2rem;
 
-    margin-top: 5rem;
+//     margin-top: 5rem;
 
-    @include tablet-below {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 3rem auto 0;
-    }
-}
+//     @include tablet-below {
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         margin: 3rem auto 0;
+//     }
+// }
 
-.button-contact,
-.button-works {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// .button-contact,
+// .button-works {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
-    height: 3.75rem;
-    width: 15rem;
+//     height: 3.75rem;
+//     width: 15rem;
 
-    border: none;
+//     border: none;
 
-    font-size: 1.25rem;
+//     font-size: 1.25rem;
 
-    box-shadow: $button-shadow;
-    transition: all 200ms $transition;
+//     box-shadow: $button-shadow;
+//     transition: all 200ms $transition;
 
-    &:hover {
-        cursor: pointer;
+//     &:hover {
+//         cursor: pointer;
 
-        transform: translate(0.5rem, 0.5rem);
-        box-shadow: 0 0 0 rgba(black, 0.15);
-    }
+//         transform: translate(0.5rem, 0.5rem);
+//         box-shadow: 0 0 0 rgba(black, 0.15);
+//     }
 
-    @include tablet-below {
-        height: 3rem;
-        width: 70vw;
-    }
-}
+//     @include tablet-below {
+//         height: 3rem;
+//         width: 70vw;
+//     }
+// }
 
-.button-contact {
-    background-color: white;
-    color: black;
-}
+// .button-contact {
+//     background-color: white;
+//     color: black;
+// }
 
-.button-works {
-    background-color: rgba(white, 0.1);
-    color: white;
-}
+// .button-works {
+//     background-color: rgba(white, 0.1);
+//     color: white;
+// }
 
 .socials {
     position: absolute;
