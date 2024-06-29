@@ -6,10 +6,6 @@
                     {{ $t("hero.title") }}
                 </h1>
                 <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
-                <!-- <div class="buttons">
-                    <button class="button-contact" @click="scrollTo('contact')">Contact</button>
-                    <button class="button-works" @click="scrollTo('works')">Works</button>
-                </div> -->
             </div>
 
             <div class="socials left">
@@ -55,7 +51,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
     width: 100%;
 
@@ -77,7 +73,7 @@
     margin: 0 0 0.25rem;
 
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 7rem;
     text-align: center;
     color: white;
 
@@ -99,62 +95,6 @@
     }
 }
 
-// .buttons {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-start;
-//     align-items: flex-start;
-//     gap: 2rem;
-
-//     margin-top: 5rem;
-
-//     @include tablet-below {
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         margin: 3rem auto 0;
-//     }
-// }
-
-// .button-contact,
-// .button-works {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     height: 3.75rem;
-//     width: 15rem;
-
-//     border: none;
-
-//     font-size: 1.25rem;
-
-//     box-shadow: $button-shadow;
-//     transition: all 200ms $transition;
-
-//     &:hover {
-//         cursor: pointer;
-
-//         transform: translate(0.5rem, 0.5rem);
-//         box-shadow: 0 0 0 rgba(black, 0.15);
-//     }
-
-//     @include tablet-below {
-//         height: 3rem;
-//         width: 70vw;
-//     }
-// }
-
-// .button-contact {
-//     background-color: white;
-//     color: black;
-// }
-
-// .button-works {
-//     background-color: rgba(white, 0.1);
-//     color: white;
-// }
-
 .socials {
     position: absolute;
     bottom: 0;
@@ -165,7 +105,7 @@
     align-items: center;
     gap: 1rem;
 
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 
     animation: from-bottom 1s forwards;
     animation-delay: 700ms;
@@ -181,8 +121,8 @@
 }
 
 .icon {
-    height: 1.25rem;
-    width: 1.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
