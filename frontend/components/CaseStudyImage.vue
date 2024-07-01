@@ -50,7 +50,7 @@
     height: 100%;
     width: 100%;
 
-    transition: all $transition 500ms;
+    transition: background-color $transition 500ms, backdrop-filter $transition 500ms;
 
     &:hover {
         cursor: pointer;

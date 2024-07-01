@@ -18,7 +18,7 @@
     height: 100vh;
     width: 100vw;
 
-    transition: all $transition 500ms;
+    transition: background-color $transition 500ms, backdrop-filter $transition 500ms;
 
     overflow: hidden;
 
@@ -29,6 +29,10 @@
 
         background-color: rgba(black, 0.6);
         backdrop-filter: blur(4px);
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &-closed {
@@ -61,5 +65,5 @@ const props = defineProps({
 })
 
 const popupOpen = useState("popup-image-open")
-const popupImage = useState("popup-image-image")
+const popupImage = useState("popup-image-image", () => "none")
 </script>

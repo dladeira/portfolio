@@ -22,6 +22,11 @@
     "works": {
         "header": "Projetos",
         "list": {
+            "infracharm": {
+                "title":"InfraCharm",
+                "duration": "Junho",
+                "desc": "Redesenhando o site existente da InfraCharm, uma empresa de TI baseada na Virgínia."
+            },
             "polanner": {
                 "title": "Polanner",
                 "duration": "Janeiro 2024 ' Presente",

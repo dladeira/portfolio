@@ -22,6 +22,11 @@
     "works": {
         "header": "Projekty",
         "list": {
+            "infracharm": {
+                "title":"InfraCharm",
+                "duration": "Czerwieć",
+                "desc": "Przeprojektowanie istniejącej strony internetowej InfraCharm, firmy IT z siedzibą w Wirginii."
+            },
             "polanner": {
                 "title": "Polanner",
                 "duration": "Styczen 2024 - Obecnie",

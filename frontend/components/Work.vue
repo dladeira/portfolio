@@ -21,8 +21,18 @@
             </div>
         </div>
         <div class="images">
-            <nuxt-img class="image-2" :src="`/works/${id}-2.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-2.png`)" />
-            <nuxt-img class="image-1" :src="`/works/${id}-1.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-1.png`)" />
+            <div class="image-1">
+                <div class="image-hover">
+                    <nuxt-img class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
+                    <nuxt-img class="image" :src="`/works/${id}-2.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-2.png`)" />
+                </div>
+            </div>
+            <div class="image-2">
+                <div class="image-hover">
+                    <nuxt-img class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
+                    <nuxt-img class="image" :src="`/works/${id}-1.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-1.png`)" />
+                </div>
+            </div>
         </div>
     </article>
 </template>
@@ -242,6 +252,13 @@ $border-expand: 2px;
 
     box-shadow: 0 0 16px 0 rgba(black, 0.25);
 
+    overflow: hidden;
+    line-height: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+
     @include laptop-only {
         width: 30rem;
     }
@@ -256,15 +273,65 @@ $border-expand: 2px;
 }
 
 .image-1 {
+    transform: translate(2.5rem, 2rem);
+}
+
+.image-2 {
     position: static;
     transform: translate(-2.5rem, -2rem);
 }
 
-.image-2 {
-    transform: translate(2.5rem, 2rem);
+.image-hover {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+
+        content: "";
+
+        transition: $transition 400ms background-color;
+        pointer-events: none;
+    }
+
+    &-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        height: 2rem;
+        width: 2rem;
+
+        transform: translate(-50%, -50%);
+
+        filter: invert(1);
+
+        opacity: 0;
+        transition: $transition 400ms opacity;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    &:hover {
+        & .image-hover-icon {
+            opacity: 1;
+        }
+
+        &::after {
+            background-color: rgba(black, 0.4);
+        }
+    }
 }
 
 .image {
+    height: 100%;
     width: 100%;
 }
 </style>
@@ -281,8 +348,14 @@ const props = defineProps({
 const popupOpen = useState("popup-image-open")
 const popupImage = useState("popup-image-image")
 
-function clickImage(img) {
-    popupOpen.value = true
-    popupImage.value = img
+function clickImage(src) {
+    var img = new Image()
+    img.onload = () => {
+        setTimeout(() => {
+            popupOpen.value = true
+        }, 10)
+        popupImage.value = src
+    }
+    img.src = src
 }
 </script>
