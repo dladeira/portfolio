@@ -21,8 +21,8 @@
             </div>
         </div>
         <div class="images">
-            <nuxt-img class="image-2" :src="`/works/${id}-2.png`" format="webp" alt="Project Preview" />
-            <nuxt-img class="image-1" :src="`/works/${id}-1.png`" format="webp" alt="Project Preview" />
+            <nuxt-img class="image-2" :src="`/works/${id}-2.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-2.png`)" />
+            <nuxt-img class="image-1" :src="`/works/${id}-1.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-1.png`)" />
         </div>
     </article>
 </template>
@@ -277,4 +277,12 @@ const props = defineProps({
     website: String,
     case: Boolean,
 })
+
+const popupOpen = useState("popup-image-open")
+const popupImage = useState("popup-image-image")
+
+function clickImage(img) {
+    popupOpen.value = true
+    popupImage.value = img
+}
 </script>

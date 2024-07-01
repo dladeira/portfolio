@@ -4,6 +4,7 @@
     <Footer />
     <PopupVerify v-if="popupVerify" />
     <PopupSent v-if="popupSent" />
+    <PopupImage />
 </template>
 
 <script setup>

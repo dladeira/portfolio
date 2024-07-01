@@ -1,8 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "dev": "NODE_NO_WARNINGS=1 nuxt dev --port 3000 --dotenv ../.env",
-        "build": "NODE_NO_WARNINGS=1 nuxt build --dotenv ../.env",
+        "dev": "nuxt dev --port 3000 --dotenv ../.env",
+        "build": "nuxt build --dotenv ../.env",
         "start": "NITRO_PORT=3030 node ./.output/server/index.mjs",
         "postinstall": "nuxt prepare"
     },

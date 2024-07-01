@@ -22,6 +22,11 @@
     "works": {
         "header": "Works",
         "list": {
+            "infracharm": {
+                "title":"InfraCharm",
+                "duration": "June 2024",
+                "desc": "Redesigning the existing website for InfraCharm, a IT company based out of Virginia."
+            },
             "polanner": {
                 "title": "Polanner",
                 "duration": "January 2024 - Present",

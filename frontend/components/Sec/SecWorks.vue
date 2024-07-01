@@ -42,18 +42,24 @@
 const { t } = useI18n()
 
 const works = [
-    {
-        id: "polanner",
-        type: "startup",
-        tags: ["Nuxt", "MongoDB", "Tauri"],
-        website: "https://polanner.com",
-        case: true,
+{
+        id: "infracharm",
+        type: "client",
+        tags: ["Nuxt", "Figma"],
+        website: "https://slot1.ladeira.eu",
     },
     {
         id: "hoplite",
         type: "client",
         tags: ["NEXT.js", "Tebex", "Strapi"],
         website: "https://hoplite.gg",
+    },
+    {
+        id: "polanner",
+        type: "startup",
+        tags: ["Nuxt", "MongoDB", "Tauri"],
+        website: "https://polanner.com",
+        case: true,
     },
     {
         id: "mcss",
