@@ -23,7 +23,7 @@
         "header": "Projetos",
         "list": {
             "infracharm": {
-                "title":"InfraCharm",
+                "title": "InfraCharm",
                 "duration": "Junho",
                 "desc": "Redesenhando o site existente da InfraCharm, uma empresa de TI baseada na Virgínia."
             },
@@ -49,6 +49,33 @@
         },
         "website": "Ver Página",
         "case": "Ver Relatório"
+    },
+    "reviews": {
+        "title": "Testemunhos",
+        "marbar": {
+            "desc": "Daniel é um *desenvolvedor excecional* que entrega *trabalho de alta qualidade* consistentemente. Ele é *fiável* e conclui o trabalho *bem antes do prazo*, e muitas vezes em *curto prazo*. *Eu recomendo-o vivamente*",
+            "name": "Marbar",
+            "position": "Gestor de Operações",
+            "company": "Hoplite"
+        },
+        "infracharm": {
+            "desc": "[Daniel] concluiu serviços de desenvolvimento web para mim. *O site ficou excelente* e foi *rápidos a fazer as mudanças necessárias*. Excelente!",
+            "name": "InfraCharm",
+            "position": "Owner",
+            "company": "InfraCharm"
+        },
+        "spaceley": {
+            "desc": "[Daniel] *projetou* e *programou* um site para mim que *ficou excelente*! Também me deu *instruções claras* sobre como instalar/executar o site. *Bom serviço, sem queixas da minha parte.*",
+            "name": "Spaceley",
+            "position": "Owner",
+            "company": "SpaceyDevs"
+        },
+        "adnrl": {
+            "desc": "Este site é *absolutamente incrível*. Sou relativamente novo em sites e não consegui instalar-lo, mas [o Daniel] ajudou-me a pôr o site a funcionar, e *eu adoro a página*. *Eu definitivamente recomendo-o a qualquer pessoa*.",
+            "name": "Adnrl",
+            "position": "Owner",
+            "company": "TropicMC"
+        }
     },
     "contact": {
         "title": "Interessado no que você vê?",

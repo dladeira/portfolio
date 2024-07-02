@@ -2,6 +2,7 @@
     <SecHero />
     <SecAbout />
     <SecWorks />
+    <SecReviews />
     <SecContact />
 </template>
 

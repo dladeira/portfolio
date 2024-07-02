@@ -25,7 +25,7 @@
 
 <style lang="scss" scoped>
 .section {
-    background-color: $background-color-2;
+    background-color: $background-color-1;
 
     padding: 6rem 0;
 }
