@@ -42,7 +42,7 @@
 const { t } = useI18n()
 
 const works = [
-{
+    {
         id: "infracharm",
         type: "client",
         tags: ["Nuxt", "Figma"],
@@ -57,7 +57,7 @@ const works = [
     {
         id: "polanner",
         type: "startup",
-        tags: ["Nuxt", "MongoDB", "Tauri"],
+        tags: ["Nuxt", "MongoDB", "Tauri", "Stripe"],
         website: "https://polanner.com",
         case: true,
     },

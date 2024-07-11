@@ -10,6 +10,7 @@
                 <div class="header-tag">MongoDB</div>
                 <div class="header-tag">Jest</div>
                 <div class="header-tag">Tauri</div>
+                <div class="header-tag">Stripe</div>
                 <div class="header-tag">ChatGPT</div>
                 <div class="header-tag">Figma</div>
             </div>
