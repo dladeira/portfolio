@@ -25,22 +25,22 @@
             "infracharm": {
                 "title": "InfraCharm",
                 "duration": "June 2024",
-                "desc": "Redesigning the existing website for InfraCharm, a IT company based out of Virginia."
+                "desc": "Redesigned InfraCharm's website, an IT company in Virginia, creating a new site from the ground up."
             },
             "polanner": {
                 "title": "Polanner",
                 "duration": "January 2024 - Present",
-                "desc": "A all-in-one time-tracking website for hobbyists. Integrates with a desktop application and 3rd party apps."
+                "desc": "Developed Polanner, an automated time-tracking app. Built both the website and a desktop application for seamless integration."
             },
             "hoplite": {
                 "title": "Hoplite",
                 "duration": "July 2023 - Present",
-                "desc": "A website featuring the minecraft server Hoplite. My role was to improve the existing website and Tebex configuration."
+                "desc": "Enhanced website and Tebex configuration for the Hoplite Minecraft server website, handling both design and implementation."
             },
             "mcss": {
                 "title": "MCSS",
                 "duration": "June 2023 - August 2023",
-                "desc": "A minecraft server statistics SaaS application. Integrates with a plugin to display useful player statistics."
+                "desc": "Created a SaaS application for Minecraft server statistics. Developed the website and a server plugin."
             }
         },
         "type": {
