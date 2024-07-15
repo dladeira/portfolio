@@ -52,6 +52,7 @@
 
     font-size: 1.25rem;
     font-weight: 400;
+    color: rgba(white, 0.5);
 }
 
 .form {
