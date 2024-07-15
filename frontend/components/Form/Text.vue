@@ -7,7 +7,7 @@
 
 <style lang="scss" scoped>
 .input-wrapper {
-    width: 30%;
+    width: 100%;
 
     @include phone-only {
         width: 100%;
@@ -32,6 +32,7 @@
     padding: 1rem 1rem;
 
     border: 1px solid transparent;
+    border-radius: 5px;
 
     font-size: 1rem;
     font-family: Inter, sans-serif;
@@ -48,7 +49,7 @@
     &:focus {
         outline: none;
 
-        border: 1px solid rgba(white, 0.4);
+        border: 1px solid rgba(white, 0.2);
     }
 
     &:disabled {

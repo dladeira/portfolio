@@ -27,6 +27,7 @@
     padding: 1rem 1rem;
 
     border: 1px solid transparent;
+    border-radius: 5px;
 
     font-size: 1rem;
     font-family: Inter, sans-serif;

@@ -102,6 +102,8 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
 
+    border-radius: 5px;
+
     font-size: 0.75rem;
     font-weight: 400;
 
@@ -130,7 +132,9 @@
 }
 
 .tag {
-    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+
+    padding: 0.75rem 1.5rem;
 
     font-size: 0.75rem;
     font-weight: 400;
@@ -155,7 +159,7 @@
 
     margin: 0;
 
-    line-height: 160%;
+    line-height: 180%;
     font-size: 1rem;
     font-weight: 400;
     color: white;
@@ -326,6 +330,7 @@ $border-expand: 2px;
 
         &::after {
             background-color: rgba(black, 0.4);
+            backdrop-filter: blur(3px);
         }
     }
 }

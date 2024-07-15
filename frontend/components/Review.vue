@@ -19,17 +19,19 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    height: 22rem;
+    height: 21rem;
 
-    padding: 1.5rem;
+    padding: 1rem 1.5rem 1.5rem;
 
-    background-color: lighten($background-color-2, 5);
+    border-radius: 10px;
+
+    background-color: #181f34;
 }
 
 .review-text {
     margin: 0;
 
-    line-height: 160%;
+    line-height: 180%;
     color: rgba(white, 0.5);
 }
 
@@ -37,7 +39,7 @@
     height: 3rem;
     width: 3rem;
 
-    margin: auto 0 1rem;
+    margin: auto 0 0.75rem;
 
     border-radius: 1000px;
 }
@@ -45,14 +47,14 @@
 .review-title {
     margin: 0;
 
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .review-position {
-    margin: 0.3rem 0 0;
+    margin: 0.35rem 0 0;
 
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: rgba(white, 0.5);
 
     &-company {

@@ -72,6 +72,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 
     width: 100%;
 
@@ -105,6 +106,7 @@
     padding: 1rem 6rem;
 
     border: none;
+    border-radius: 5px;
 
     font-size: 1rem;
     font-weight: 400;

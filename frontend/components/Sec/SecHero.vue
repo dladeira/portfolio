@@ -55,7 +55,7 @@
 
     width: 100%;
 
-    margin-top: 28vh;
+    margin-top: 30vh;
 
     animation: from-bottom 1s forwards;
     animation-delay: 500ms;
@@ -70,10 +70,10 @@
 }
 
 .title {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.5rem;
 
     font-weight: 700;
-    font-size: 7rem;
+    font-size: 6rem;
     text-align: center;
     color: white;
 

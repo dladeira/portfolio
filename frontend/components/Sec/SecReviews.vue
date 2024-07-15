@@ -31,7 +31,7 @@
 .reviews-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
 
     @include resizable-width;
 
