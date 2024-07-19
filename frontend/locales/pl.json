@@ -56,25 +56,29 @@
             "desc": "Daniel to *wyjątkowy deweloper*, który konsekwentnie dostarcza *prace wysokiej jakości*. Jest *niezawodny* i kończy pracę *znacznie przed terminem*, a często również na *krótkie terminy*. *Serdecznie go polecam*!",
             "name": "Marbar",
             "position": "Menedżer Operacyjny",
-            "company": "Hoplite"
+            "company": "Hoplite",
+            "date": "Czerwieć 2024"
         },
         "infracharm": {
             "desc": "[Daniel] wykonał usługi tworzenia stron internetowych dla mnie. *Strona wyszła świetnie*, a on był *szybki w wprowadzaniu wymaganych zmian*. Świetnie!",
             "name": "InfraCharm",
             "position": "Właściciel",
-            "company": "InfraCharm"
+            "company": "InfraCharm",
+            "date": "Lipiec 2024"
         },
         "spaceley": {
             "desc": "[Daniel] *zaprojektował* i *zaprogramował* dla mnie stronę internetową, która *wygląda świetnie*! Dał mi również *konkretne instrukcje* dotyczące instalacji/uruchomienia strony. *Dobra obsługa, żadnych skarg z mojej strony.*",
             "name": "Spaceley",
             "position": "Właściciel",
-            "company": "SpaceyDevs"
+            "company": "SpaceyDevs",
+            "date": "Kwiecień 2023"
         },
         "adnrl": {
             "desc": "Ta strona jest *absolutnie niesamowita*. Jestem mało doświadczony w kwestii stron internetowych i nie mogłem sobie poradzić z instalacją, ale [Daniel] pomógł mi uruchomić stronę i *bardzo mi się podoba*. *Z pewnością poleciłbym go każdemu*.",
             "name": "Adnrl",
             "position": "Właściciel",
-            "company": "TropicMC"
+            "company": "TropicMC",
+            "date": "Kwiecień 2023"
         }
     },
     "contact": {

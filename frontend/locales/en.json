@@ -56,25 +56,29 @@
             "desc": "Daniel is an *exceptional developer* who consistently delivers *high-quality work*. He is *reliable* and completes work *well before the deadline*, and often on *short notice* as well. *I highly recommend him*!",
             "name": "Marbar",
             "position": "Operations Manager",
-            "company": "Hoplite"
+            "company": "Hoplite",
+            "date": "June 2024"
         },
         "infracharm": {
             "desc": "[Daniel] completed web development services for me. *Website came out great* and they were *quick to make the required changes*. Great!",
             "name": "InfraCharm",
             "position": "Owner",
-            "company": "InfraCharm"
+            "company": "InfraCharm",
+            "date": "July 2024"
         },
         "spaceley": {
             "desc": "[Daniel] has *designed* and *developed* a website for me that *looks great*! They also gave me *clear instructions* on how to install/run the website. *Good service, no complaints from me.*",
             "name": "Spaceley",
             "position": "Owner",
-            "company": "SpaceyDevs"
+            "company": "SpaceyDevs",
+            "date": "April 2023"
         },
         "adnrl": {
             "desc": "This website is *absolutely amazing*. I am pretty new to websites and couldn't get it figured out, but [Daniel] helped me get the website running, and *I love it so much*. *I would definitely recommend him to anyone*.",
             "name": "Adnrl",
             "position": "Owner",
-            "company": "TropicMC"
+            "company": "TropicMC",
+            "date": "April 2023"
         }
     },
     "contact": {

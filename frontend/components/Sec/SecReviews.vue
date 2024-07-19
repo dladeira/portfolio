@@ -30,13 +30,13 @@
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 40% 40%;
+    gap: 4rem 20%;
 
     @include resizable-width;
 
     @include tablet-only {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     @include phone-only {
