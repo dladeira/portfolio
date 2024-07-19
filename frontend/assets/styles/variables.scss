@@ -40,9 +40,7 @@ $small_phone_max: 600px;
 
 @mixin desktop-only {
     @media (min-width: $laptop_max) {
-        @media (min-height: $desktop_height_min) {
-            @content;
-        }
+        @content;
     }
 }
 
