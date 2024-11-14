@@ -1,0 +1,19 @@
+name: Update Master
+on:
+  push:
+    branches: [master]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest:
+    steps:
+      - name: SSH Commands
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+            host: ${{ secrets.SSH_PROD_HOST }}
+            username: ${{ secrets.SSH_PROD_USERNAME }}
+            password: ${{ secrets.SSH_PROD_PASSWORD }}
+            port: ${{ secrets.SSH_PROD_PORT }}
+            script: |
+                cd /home/daniel/projects/webdev/portfolio/
+                sh update.sh
