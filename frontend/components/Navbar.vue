@@ -2,21 +2,26 @@
     <nav class="container" id="navbar-container">
         <div class="inner-container">
             <div class="brand" @click="scrollTo('hero')">
-                <nuxt-link :href="localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
+                <nuxt-link href="/" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
             </div>
             <div class="links">
-                <nuxt-link :href="localePath('/')" @click="scrollTo('about')" class="link">
+                <nuxt-link href="/about" :class="route.path == '/about' ? 'link-active' : 'link'">
                     <nuxt-img class="icon" src="/icons/navbar/about.svg" />
                     <div class="link-text">{{ $t("navbar.link1") }}</div>
                 </nuxt-link>
-                <nuxt-link :href="localePath('/')" @click="scrollTo('works')" class="link">
+                <nuxt-link href="/works" :class="route.path == '/works' ? 'link-active' : 'link'">
                     <nuxt-img class="icon" src="/icons/navbar/works.svg" />
                     <div class="link-text">{{ $t("navbar.link2") }}</div>
                 </nuxt-link>
-                <nuxt-link :href="localePath('/')" @click="scrollTo('contact')" class="link">
+                <nuxt-link href="/contact" :class="route.path == '/contact' ? 'link-active' : 'link'">
                     <nuxt-img class="icon" src="/icons/navbar/contact.svg" />
                     <div class="link-text">{{ $t("navbar.link3") }}</div>
                 </nuxt-link>
+            </div>
+            <div class="flags">
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" /></nuxt-link>
             </div>
         </div>
     </nav>
@@ -50,12 +55,13 @@
 .inner-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
     width: 800px;
 
-    margin: 30px auto;
+    margin: 0 auto;
+    padding: 3rem 0;
 
     opacity: 0;
     z-index: 2;
@@ -76,9 +82,10 @@
 }
 
 .brand {
-    margin: 0 auto 0 0;
+    width: 10rem;
+    margin: 0;
 
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
     color: white;
@@ -101,7 +108,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
 
     @include tablet-below {
         justify-content: space-between;
@@ -131,39 +138,21 @@
 
     overflow: hidden;
 
+    opacity: 0.6;
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    &-active {
+        @extend .link;
+
+        opacity: 1;
+    }
+
     & .link-text {
         position: relative;
-    }
-
-    &:hover .link-text::before {
-        position: absolute;
-        bottom: -2px;
-
-        height: 1px;
-
-        border-radius: 100px;
-
-        background-color: white;
-
-        content: "";
-
-        animation: slide-in ease-out 300ms forwards;
-    }
-
-    & .link-text::before {
-        position: absolute;
-        bottom: -2px;
-
-        height: 1px;
-        // width: 100%;
-
-        border-radius: 100px;
-
-        background-color: white;
-
-        content: "";
-
-        animation: slide-out ease-out 300ms forwards;
     }
 
     @keyframes slide-in {
@@ -224,9 +213,42 @@
         box-shadow: 0px 0px 40px 40px rgba(black, 0);
     }
 }
+
+.flags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+
+    width: 10rem;
+}
+
+.flag {
+    height: 1.25rem;
+    width: 2rem;
+
+    border-radius: 3px;
+
+    opacity: 0.3;
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &-active {
+        @extend .flag;
+
+        opacity: 1;
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
 </style>
 
 <script setup>
+const route = useRoute()
+
 function scrollTo(id) {
     setTimeout(
         () => {

@@ -4,7 +4,7 @@
         "description": "Freelance freelance web developer based in Europe. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS."
     },
     "navbar": {
-        "link1": "About Me",
+        "link1": "About me",
         "link2": "Works",
         "link3": "Contact"
     },

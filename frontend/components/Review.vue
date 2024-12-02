@@ -1,7 +1,7 @@
 <template>
     <div class="review">
         <div class="review-header">
-            <nuxt-img class="review-img" :src="`/reviews/${id}.png`" />
+            <nuxt-img class="review-img" :src="`/people/${id}.png`" />
             <div class="review-header-text">
                 <h4 class="review-title">{{ $t(`reviews.${id}.name`) }}</h4>
                 <h5 class="review-position">
