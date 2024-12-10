@@ -33,24 +33,8 @@
 
     width: 100%;
 
-    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index: 4;
 }
-
-// .container-effect {
-//     display: none;
-//     position: fixed;
-
-//     background-color: $background-color-1;
-
-//     box-shadow: 0px 0px 40px 40px rgba(black, 0.2);
-
-//     animation: navbar-in 700ms forwards;
-
-//     &-hide {
-//         animation: navbar-out 500ms forwards !important;
-//     }
-// }
 
 .inner-container {
     display: flex;
@@ -170,19 +154,6 @@
     }
 }
 
-// @keyframes navbar-out {
-//     0% {
-//         transform: translateY(0);
-//     }
-
-//     100% {
-//         transform: translateY(-100px);
-//         opacity: 1;
-//         background-color: transparent;
-//         box-shadow: 0px 0px 40px 40px rgba(black, 0);
-//     }
-// }
-
 .flags {
     display: flex;
     flex-direction: row;
@@ -227,28 +198,4 @@ function scrollTo(id) {
         window.location.pathname == "/" ? 0 : 100
     )
 }
-
-// function listener() {
-//     var nav = document.getElementById("navbar-container")
-
-//     if (window.scrollY > window.innerHeight - 20) {
-//         if (!nav.classList.contains("container-effect")) nav.classList.add("container-effect")
-//     } else {
-//         if (nav.classList.contains("container-effect")) {
-//             nav.classList.add("container-effect-hide")
-//             setTimeout(() => {
-//                 nav.classList.remove("container-effect")
-//                 nav.classList.remove("container-effect-hide")
-//             }, 200)
-//         }
-//     }
-// }
-
-// onBeforeMount(() => {
-//     document.addEventListener("scroll", listener)
-// })
-
-// onBeforeUnmount(() => {
-//     document.removeEventListener("scroll", listener)
-// })
 </script>
