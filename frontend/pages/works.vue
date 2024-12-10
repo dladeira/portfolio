@@ -48,7 +48,7 @@ const works = [
             icon: "/people/magic.png",
             name: "Blake",
             tag: "Candia Studios",
-            text: "Couldn't give a bigger vouch for Daniel - been screwed over by developers nearly every single time. Breathe of fresh air to have got such an incredible and advanced SaaS tool made at such a reasonable price. He also added a few things not on the original document without penalties and was very patient throughout the process. 10/10 would and will be working with him again.",
+            text: "Couldn't give a bigger vouch for Daniel - been screwed over by developers nearly every single time. Breath of fresh air to have got such an incredible and advanced SaaS tool made at such a reasonable price. He also added a few things not on the original document without penalties and was very patient throughout the process. 10/10 would and will be working with him again.",
         },
         backgroundGradient: ["#1A1126", "#0E051B"],
     },
