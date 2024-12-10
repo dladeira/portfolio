@@ -32,8 +32,13 @@
                 <a class="button-visit" :href="website" target="_blank"> Visit Website <nuxt-img class="button-visit-icon" src="/icons/external.svg" /> </a>
             </div>
         </div>
-
-        <nuxt-img :src="`/works/${id}-1.png`" class="image" />
+        <div class="image-wrapper">
+            <div class="image-hover">
+                <nuxt-img class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
+                <nuxt-img :src="`/works/${id}-1.png`" class="image" alt="Work Preview" format="webp" @click="clickImage(`/works/${id}-1.png`)" />
+                <!-- <nuxt-img class="image" :src="`/works/${id}-1.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-1.png`)" /> -->
+            </div>
+        </div>
     </article>
 </template>
 
@@ -215,17 +220,78 @@
     }
 }
 
-.image {
+.image-wrapper {
     position: absolute;
     right: -23rem;
+    // right: 0rem;
     height: 25rem;
 
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
 
     opacity: 0;
 
+    overflow: hidden;
+
     animation: 1s forwards slide-from-right;
     animation-delay: 200ms;
+}
+
+.image-hover {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+
+        content: "";
+
+        border-radius: 0.75rem;
+
+        transition: $transition 400ms background-color;
+        pointer-events: none;
+    }
+
+    &-icon {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+
+        height: 2rem;
+        width: 2rem;
+
+        transform: translate(-50%, -50%);
+
+        filter: invert(1);
+
+        opacity: 0;
+        transition: $transition 400ms opacity;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        & .image-hover-icon {
+            opacity: 1;
+        }
+
+        &::after {
+            background-color: rgba(black, 0.4);
+            backdrop-filter: blur(3px);
+        }
+    }
+}
+
+.image {
+    height: 100%;
 }
 </style>
 
