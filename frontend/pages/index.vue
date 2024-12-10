@@ -37,7 +37,7 @@
 }
 
 .text-header {
-    animation: slide-in 1s forwards;
+    animation: slide-from-top 1s forwards;
     animation-delay: 0s;
     opacity: 0.001;
 }
@@ -114,7 +114,7 @@
 
     margin-top: 4rem;
 
-    animation: slide-in 1s forwards;
+    animation: slide-from-top 1s forwards;
     animation-delay: 0s;
     opacity: 0.001;
 }
@@ -130,16 +130,5 @@
     justify-content: flex-start;
     align-items: center;
     gap: 4rem;
-}
-
-@keyframes slide-in {
-    0% {
-        transform: translateY(-100px);
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 </style>

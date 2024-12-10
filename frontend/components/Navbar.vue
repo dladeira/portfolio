@@ -66,7 +66,7 @@
     opacity: 0.001;
     z-index: 2;
 
-    animation: navbar-in 1s forwards;
+    animation: slide-from-top 1s forwards;
     animation-delay: 500ms;
 
     @include resizable-width;
@@ -170,29 +170,18 @@
     }
 }
 
-@keyframes navbar-in {
-    0% {
-        transform: translateY(-100px);
-    }
+// @keyframes navbar-out {
+//     0% {
+//         transform: translateY(0);
+//     }
 
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes navbar-out {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-100px);
-        opacity: 1;
-        background-color: transparent;
-        box-shadow: 0px 0px 40px 40px rgba(black, 0);
-    }
-}
+//     100% {
+//         transform: translateY(-100px);
+//         opacity: 1;
+//         background-color: transparent;
+//         box-shadow: 0px 0px 40px 40px rgba(black, 0);
+//     }
+// }
 
 .flags {
     display: flex;

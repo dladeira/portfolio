@@ -28,7 +28,7 @@
 
     padding: 1rem 0;
 
-    animation: from-bottom 1s forwards;
+    animation: fade-in 1s forwards;
     animation-delay: 700ms;
     opacity: 0.001;
 }
@@ -99,16 +99,6 @@
 
     &:hover {
         cursor: pointer;
-        opacity: 1;
-    }
-}
-
-@keyframes from-bottom {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
         opacity: 1;
     }
 }

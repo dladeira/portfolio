@@ -221,6 +221,11 @@
     height: 25rem;
 
     border-radius: 0.5rem;
+
+    opacity: 0;
+
+    animation: 1s forwards slide-from-right;
+    animation-delay: 200ms;
 }
 </style>
 

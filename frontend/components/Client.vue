@@ -1,14 +1,14 @@
 <template>
-    <div class="person">
+    <a :href="external" target="_blank" class="person">
         <nuxt-img class="person-image" :src="icon" />
         <div class="person-content">
-            <a :href="external" target="_blank" class="person-header">
+            <div class="person-header">
                 <p class="person-name">{{ name }}</p>
                 <nuxt-img v-if="external" src="/icons/external.svg" class="person-external" />
-            </a>
+            </div>
             <p class="person-stat">{{ tag }}</p>
         </div>
-    </div>
+    </a>
 </template>
 
 <style lang="scss" scoped>
@@ -18,6 +18,13 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
+
+    text-decoration: none;
+
+    &:hover .person-external {
+        opacity: 1;
+        cursor: pointer;
+    }
 }
 
 .person-image {
@@ -41,15 +48,8 @@
     align-items: center;
     gap: 0.75rem;
 
-    text-decoration: none;
-
     font-weight: 400;
     color: white;
-
-    &:hover .person-external {
-        opacity: 1;
-        cursor: pointer;
-    }
 }
 
 .person-name {

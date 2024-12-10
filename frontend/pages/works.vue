@@ -11,6 +11,11 @@
 
     font-weight: 700;
     font-size: 2.5rem;
+
+    animation: 1s forwards fade-in;
+    animation-delay: 300ms;
+
+    opacity: 0;
 }
 
 .works {
@@ -19,6 +24,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 4rem;
+
+    opacity: 0;
+
+    animation: 1s forwards slide-from-top;
 }
 </style>
 
