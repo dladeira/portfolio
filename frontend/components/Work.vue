@@ -1,88 +1,82 @@
 <template>
-    <article class="project">
-        <div class="text">
-            <div class="project-header-outer">
-                <div class="project-header">
-                    <h4 class="title">{{ $t(`works.list.${id}.title`) }}</h4>
-                    <h5 :class="'type type-' + type">{{ $t("works.type." + type) }}</h5>
+    <article class="work" :style="{ background: `linear-gradient(90deg, ${hexToOpacityRgb(backgroundGradient[0], 0.7)}, ${hexToOpacityRgb(backgroundGradient[1], 0.7)})` }">
+        <div class="content">
+            <div class="header">
+                <div class="logo-row">
+                    <nuxt-img :src="`/works/${id}-logo.png`" class="logo" />
+
+                    <div class="client-container" v-if="type == 'client'">
+                        <p class="client-label">Client</p>
+                        <WorkClient :external="client.external" :name="client.name" :tag="client.tag" :icon="client.icon" />
+                    </div>
+
+                    <div class="startup-type" v-if="type == 'startup'">Start Up</div>
                 </div>
-                <div class="duration">{{ $t(`works.list.${id}.duration`) }}</div>
+                <div class="tags">
+                    <WorkTag v-for="tag of tags" :tag="tag" />
+                </div>
             </div>
 
-            <p class="desc">{{ $t(`works.list.${id}.desc`) }}</p>
-
-            <div class="tags">
-                <div class="tag" v-for="tag in tags">{{ tag }}</div>
+            <div class="review" v-if="review">
+                <div class="review-header">
+                    <nuxt-img class="review-image" :src="review.icon" />
+                    <div class="review-header-text">
+                        <p class="review-text-name">{{ review.name }}</p>
+                        <p class="review-text-tag">{{ review.tag }}</p>
+                    </div>
+                </div>
+                <p class="review-text">"{{ review.text }}""</p>
             </div>
 
             <div class="buttons">
-                <nuxt-link v-if="website" :href="website" class="link link-website" target="_blank">{{ $t("works.website") }} <nuxt-img src="/icons/view-website.svg" class="link-website-icon" alt="Visit Website Icon" /> </nuxt-link>
-                <nuxt-link v-if="case" :href="`/case-studies/${id}`" class="link link-case">{{ $t("works.case") }}</nuxt-link>
+                <a class="button-visit" :href="website" target="_blank"> Visit Website <nuxt-img class="button-visit-icon" src="/icons/external.svg" /> </a>
             </div>
         </div>
-        <div class="images">
-            <div class="image-1">
-                <div class="image-hover">
-                    <nuxt-img class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
-                    <nuxt-img class="image" :src="`/works/${id}-2.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-2.png`)" />
-                </div>
-            </div>
-            <div class="image-2">
-                <div class="image-hover">
-                    <nuxt-img class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
-                    <nuxt-img class="image" :src="`/works/${id}-1.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-1.png`)" />
-                </div>
-            </div>
-        </div>
+
+        <nuxt-img :src="`/works/${id}-1.png`" class="image" />
     </article>
 </template>
 
 <style lang="scss" scoped>
-.project {
+.work {
+    position: relative;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
 
+    height: calc(25rem + 8rem);
     width: 100%;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+    padding: 4rem 5rem;
 
-    @include tablet-below {
-        flex-direction: column;
-        gap: 2rem;
-    }
+    border-radius: 1.25rem;
+
+    overflow: hidden;
 }
 
-.text {
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 100%;
+    width: calc(100% - 46rem + 20rem - 3rem);
+}
+
+.header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1.5rem;
 
-    width: 40%;
-
-    @include tablet-below {
-        width: 100%;
-
-        align-items: center;
-    }
-}
-
-.project-header-outer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0.25rem;
-
     width: 100%;
 }
 
-.project-header {
+.logo-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,31 +85,29 @@
     width: 100%;
 }
 
-.title {
-    margin: 00;
-
-    font-size: 2.25rem;
-    font-weight: 700;
+.client-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
 }
 
-.type {
+.client-label {
     margin: 0;
-    padding: 0.75rem 1.25rem;
+    font-size: 0.75rem;
+    color: rgba(white, 0.5);
+}
+
+.startup-type {
+    padding: 0.75rem 2rem;
 
     border-radius: 5px;
 
     font-size: 0.75rem;
-    font-weight: 400;
-
-    &-startup {
-        background-color: rgba($green, 0.2);
-        color: $green;
-    }
-
-    &-client {
-        background-color: rgba($blue, 0.2);
-        color: $blue;
-    }
+    text-decoration: none;
+    background-color: rgba(white, 0.1);
+    color: white;
 }
 
 .tags {
@@ -123,231 +115,124 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 
-    gap: 0.75rem;
-
-    @include phone-only {
-        justify-content: center;
-    }
+    width: 100%;
 }
 
-.tag {
-    border-radius: 5px;
-
-    padding: 0.75rem 1.5rem;
-
-    font-size: 0.75rem;
-    font-weight: 400;
-    background-color: rgba(white, 0.1);
-    color: white;
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
-.duration {
-    margin: 0;
-
-    font-size: 1rem;
-    font-weight: 400;
-    color: $blue;
-
-    @include phone-only {
-        display: none;
-    }
-}
-
-.desc {
-    flex-grow: 1;
-
-    margin: 0;
-
-    line-height: 180%;
-    font-size: 1rem;
-    font-weight: 400;
-    color: white;
-
-    @include tablet-below {
-        text-align: center;
-    }
-}
-
-.buttons {
+.review-header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
-    gap: 1.25rem;
-
-    @include phone-only {
-        justify-content: center;
-
-        margin: 1.5rem 0 0.5rem;
-    }
+    gap: 1rem;
 }
 
-$border-expand: 2px;
+.review-image {
+    height: 2.5rem;
 
-.link {
+    border-radius: 10000px;
+}
+
+.review-header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.35rem;
+}
+
+.review-text-name {
+    margin: 0;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+}
+
+.review-text-tag {
+    margin: 0;
+
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(white, 0.5);
+}
+
+.review-text {
+    margin: 0;
+
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 180%;
+    color: rgba(white, 0.5);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.button-visit {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 0.75rem;
 
-    margin-bottom: $border-expand;
-    padding-bottom: 0.25rem;
+    padding: 0.75rem 2rem;
 
-    border-bottom: 1px solid white;
+    border-radius: 5px;
 
-    color: white;
+    font-size: 0.85rem;
     text-decoration: none;
-    font-size: 1rem;
+    background-color: rgba(white, 0.1);
+    color: white;
+
+    transition: 200ms $transition background-color;
 
     &:hover {
-        margin-bottom: 0;
+        background-color: rgba(white, 0.13);
 
-        border-bottom: calc($border-expand + 1px) solid white;
-    }
-}
-
-.link-website {
-    border-color: $blue !important;
-
-    &:hover &-icon {
-        transform: translate(0.25rem, -0.25rem);
-    }
-
-    &-icon {
-        height: 0.55rem;
-
-        margin-left: 0.5rem;
-
-        transition: 200ms $transition all;
-    }
-}
-
-.link-case {
-    border-color: $green !important;
-}
-
-// ==========
-// IMAGES
-// ==========
-
-.images {
-    position: relative;
-
-    width: 35%;
-
-    padding: 2rem 0;
-
-    @include phone-only {
-        width: 80%;
-
-        margin: 0 auto;
-    }
-}
-
-.image-1,
-.image-2 {
-    position: absolute;
-
-    width: 100%;
-
-    border-radius: 10px;
-
-    box-shadow: 0 0 16px 0 rgba(black, 0.25);
-
-    overflow: hidden;
-    line-height: 0;
-
-    &:hover {
         cursor: pointer;
     }
 
-    @include laptop-only {
-        width: 30rem;
-    }
-
-    @include small-laptop-only {
-        width: 25rem;
-    }
-
-    @include phone-only {
-        width: 100%;
-    }
-}
-
-.image-1 {
-    transform: translate(2.5rem, 2rem);
-}
-
-.image-2 {
-    position: static;
-    transform: translate(-2.5rem, -2rem);
-}
-
-.image-hover {
-    position: relative;
-
-    height: 100%;
-    width: 100%;
-
-    &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        height: 100%;
-        width: 100%;
-
-        content: "";
-
-        transition: $transition 400ms background-color;
-        pointer-events: none;
-    }
-
     &-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        height: 0.75rem;
 
-        height: 2rem;
-        width: 2rem;
-
-        transform: translate(-50%, -50%);
-
-        filter: invert(1);
-
-        opacity: 0;
-        transition: $transition 400ms opacity;
-        pointer-events: none;
-        z-index: 10;
-    }
-
-    &:hover {
-        & .image-hover-icon {
-            opacity: 1;
-        }
-
-        &::after {
-            background-color: rgba(black, 0.4);
-            backdrop-filter: blur(3px);
-        }
+        opacity: 0.5;
     }
 }
 
 .image {
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    right: -23rem;
+    height: 25rem;
+
+    border-radius: 0.5rem;
 }
 </style>
 
 <script setup>
 const props = defineProps({
     id: String,
-    type: String,
-    tags: Array,
     website: String,
-    case: Boolean,
+    tags: Array,
+    type: String,
+    client: Object,
+    review: Object,
+    backgroundGradient: Array,
 })
 
 const popupOpen = useState("popup-image-open")
@@ -362,5 +247,18 @@ function clickImage(src) {
         popupImage.value = src
     }
     img.src = src
+}
+
+function hexToOpacityRgb(hex, opacity) {
+    // Remove the hash at the start if it's there
+    hex = hex.replace(/^#/, "")
+
+    // Parse the r, g, b values
+    let bigint = parseInt(hex, 16)
+    let r = (bigint >> 16) & 255
+    let g = (bigint >> 8) & 255
+    let b = bigint & 255
+
+    return `rgba(${r}, ${g}, ${b}, 0.7)`
 }
 </script>

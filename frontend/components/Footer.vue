@@ -30,7 +30,7 @@
 
     animation: from-bottom 1s forwards;
     animation-delay: 700ms;
-    opacity: 0;
+    opacity: 0.001;
 }
 
 .content {
@@ -105,12 +105,10 @@
 
 @keyframes from-bottom {
     0% {
-        transform: translateY(70px);
         opacity: 0;
     }
 
     100% {
-        transform: translateY(0);
         opacity: 1;
     }
 }

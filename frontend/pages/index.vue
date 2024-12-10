@@ -1,39 +1,22 @@
 <template>
     <div class="page">
         <div class="text">
-            <h1 class="title">{{ $t("hero.title") }}</h1>
-            <h1 class="subtitle">{{ $t("hero.subtitle") }}</h1>
+            <div class="text-header">
+                <h1 class="title">{{ $t("hero.title") }}</h1>
+                <h1 class="subtitle">{{ $t("hero.subtitle") }}</h1>
 
-            <div class="buttons">
-                <a href="/works" class="button button-works">Works</a>
-                <a href="/contact" class="button button-contact">Contact</a>
+                <div class="buttons">
+                    <a href="/works" class="button button-works">Works</a>
+                    <a href="/contact" class="button button-contact">Contact</a>
+                </div>
             </div>
 
             <div class="worked">
                 <p class="worked-title">Worked with</p>
 
                 <div class="people">
-                    <div class="person">
-                        <nuxt-img class="person-image" src="/people/speedsilver.png" />
-                        <div class="person-text">
-                            <a href="https://www.youtube.com/@SpeedSilver" target="_blank" class="person-title">
-                                <p class="person-name">SpeedSilver</p>
-                                <nuxt-img src="/icons/external.svg" class="person-external" />
-                            </a>
-                            <p class="person-stat">3.5M subscribers</p>
-                        </div>
-                    </div>
-
-                    <div class="person">
-                        <nuxt-img class="person-image" src="/people/magic.png" />
-                        <div class="person-text">
-                            <a href="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" target="_blank" class="person-title">
-                                <p class="person-name">Magic</p>
-                                <nuxt-img src="/icons/external.svg" class="person-external" />
-                            </a>
-                            <p class="person-stat">310K subscribers</p>
-                        </div>
-                    </div>
+                    <Client name="SpeedSilver" tag="3.5M subscribers" icon="/people/speedsilver.png" external="https://www.youtube.com/@SpeedSilver" />
+                    <Client name="Magic" tag="310K subscribers" icon="/people/magic.png" external="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" />
                 </div>
             </div>
         </div>
@@ -51,6 +34,12 @@
     width: 100%;
 
     margin-top: 7rem;
+}
+
+.text-header {
+    animation: slide-in 1s forwards;
+    animation-delay: 0s;
+    opacity: 0.001;
 }
 
 .title {
@@ -124,6 +113,10 @@
     gap: 1rem;
 
     margin-top: 4rem;
+
+    animation: slide-in 1s forwards;
+    animation-delay: 0s;
+    opacity: 0.001;
 }
 
 .worked-title {
@@ -139,60 +132,14 @@
     gap: 4rem;
 }
 
-.person {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-}
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100px);
+    }
 
-.person-image {
-    height: 3rem;
-
-    border-radius: 1000px;
-}
-
-.person-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0.25rem;
-}
-
-.person-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.75rem;
-
-    text-decoration: none;
-
-    font-weight: 400;
-    color: white;
-}
-
-.person-name {
-    margin: 0;
-}
-
-.person-stat {
-    margin: 0;
-
-    font-size: 0.85rem;
-    color: rgba(white, 0.5);
-}
-
-.person-external {
-    opacity: 0.2;
-
-    transition: opacity 200ms $transition;
-
-    &:hover {
+    100% {
+        transform: translateY(0);
         opacity: 1;
-        cursor: pointer;
     }
 }
 </style>
