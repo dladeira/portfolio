@@ -65,3 +65,52 @@ body {
 
     border-radius: 1000px;
 }
+
+// ==========
+// UTILS
+// ==========
+
+.page-title {
+    margin: 4rem 0;
+
+    font-weight: 700;
+    font-size: 2.5rem;
+
+    animation: 1s forwards fade-in;
+    animation-delay: 300ms;
+
+    opacity: 0;
+}
+
+@keyframes slide-from-top {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0.001;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-from-right {
+    0% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

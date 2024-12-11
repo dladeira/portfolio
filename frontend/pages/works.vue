@@ -6,18 +6,6 @@
 </template>
 
 <style lang="scss" scoped>
-.page-title {
-    margin: 4rem 0;
-
-    font-weight: 700;
-    font-size: 2.5rem;
-
-    animation: 1s forwards fade-in;
-    animation-delay: 300ms;
-
-    opacity: 0;
-}
-
 .works {
     display: flex;
     flex-direction: column;
