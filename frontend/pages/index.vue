@@ -6,17 +6,17 @@
                 <h1 class="subtitle">{{ $t("hero.subtitle") }}</h1>
 
                 <div class="buttons">
-                    <a href="/works" class="button button-works">Works</a>
-                    <a href="/contact" class="button button-contact">Contact</a>
+                    <a href="/works" class="button button-works">{{ $t("navbar.link2") }}</a>
+                    <a href="/contact" class="button button-contact">{{ $t("navbar.link3") }}</a>
                 </div>
             </div>
 
             <div class="worked">
-                <p class="worked-title">Worked with</p>
+                <p class="worked-title">{{ $t("hero.worked") }}</p>
 
                 <div class="people">
-                    <Client name="SpeedSilver" tag="3.5M subscribers" icon="/people/speedsilver.png" external="https://www.youtube.com/@SpeedSilver" />
-                    <Client name="Magic" tag="310K subscribers" icon="/people/magic.png" external="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" />
+                    <Client name="SpeedSilver" :tag="`3.5M ${$t('hero.subscribers')}`" icon="/people/speedsilver.png" external="https://www.youtube.com/@SpeedSilver" />
+                    <Client name="Magic" :tag="`310K ${$t('hero.subscribers')}`" icon="/people/magic.png" external="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" />
                 </div>
             </div>
         </div>

@@ -10,75 +10,44 @@
     },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Desenvolvedor Web"
+        "subtitle": "Desenvolvedor Web",
+        "worked": "Trabalhei com",
+        "subscribers": "subscritores"
     },
     "about": {
-        "header": "Sobre mim",
+        "header": "Sobre Mim",
         "title": "Daniel Ladeira",
-        "desc1": "O meu nome é Daniel Ladeira e sou um programador trilíngue que fala *Inglês*, *Português* e *Polaco*, baseado na *Polónia*. Começei a programar no ano 2020 criando plugins e servidores para Minecraft, que depois transformou se em uma paixão para paginas da internet,",
-        "desc2": "Este ano vou começar os meus *estudos de Informatica* em *Vrije Universiteit*, Amsterdão. Embora meu foco principal seja *desenvolvimento web freelance*, também estou a desenvolver uma aplicação para ajudar com a produtividade.",
-        "desc3": "As minhas habilidades são focadas em *design* e *codificação*, recentemente desenvolvi um interesse em marketing e content creation"
+        "desc1": "O meu nome é Daniel Ladeira e sou um desenvolvedor web trilíngue baseado em Amsterdão, fluente em inglês, português e polaco. A minha aventura de programação começou em 2020, criando plugins e servidores de Minecraft, o que depois transformou se em programação web.",
+        "desc2": "Recentemente graduei da Escola Americana de Varsóvia, e este ano estou a iniciar a minha licenciatura em Informatika no Vrije Universiteit. A minha experiência profissional desenvolvimento web é trabalho freelance, mas recentemente tive interessado em trabalhar em grandes empresas, fazendo parte de algo maior do que eu. Prefiro trabalho híbrido e gosto de colaborar com outras pessoas.",
+        "desc3": "A minha paixão é \"user experience\" e \"design\", como podemos equilibrar a intuitividade e a estética do produto para uma experiência agradável para o utilizador. Tenho também um interesse único no conceito de \"quantified self\", como nos podemos melhorar através de dados, onde estou a desenvolver uma aplicação que nos ajuda a monitorizar a nossa produtividade e improdutividade.",
+        "headers": {
+            "education": "Educação",
+            "languages": "Línguas"
+        },
+        "languages": {
+            "english": "Inglês",
+            "polish": "Polaco",
+            "portuguese": "Português",
+            "native": "Nativo"
+        },
+        "education": {
+            "present": "Presente"
+        }
     },
     "works": {
         "header": "Projetos",
-        "list": {
-            "infracharm": {
-                "title": "InfraCharm",
-                "duration": "Junho",
-                "desc": "Redesenhando o site existente da InfraCharm, uma empresa de TI baseada na Virgínia."
-            },
-            "polanner": {
-                "title": "Polanner",
-                "duration": "Janeiro 2024 ' Presente",
-                "desc": "Um site de controle de tempo. Integra-se com uma aplicação de desktop e redes sociais"
-            },
-            "hoplite": {
-                "title": "Hoplite",
-                "duration": "Julho 2023 - Presente",
-                "desc": "Um site sobre o servidor minecraft Hoplite. A minha função era melhorar o site existente e a configuração do Tebex."
-            },
-            "mcss": {
-                "title": "MCSS",
-                "duration": "Junho 2023 - Agosto 2023",
-                "desc": "Uma aplicação de SaaS sobre estatísticas de servidores de Minecraft. Integra-se com um plugin para exibir estatísticas úteis de jogadores."
-            }
+        "reviews": {
+            "blake": "[Traduzido de Inglês] Não poderia recomendar mais o Daniel - fui prejudicado por desenvolvedores quase todas as vezes. Foi um alívio ter uma ferramenta SaaS tão incrível e avançada feita a um preço tão razoável. Ele também adicionou algumas coisas que não estavam no documento original sem penalizações e foi muito paciente durante todo o processo. 10/10, trabalharei com ele novamente.",
+            "marbar": "[Traduzido de Inglês] Daniel é um desenvolvedor excepcional que consistentemente entrega trabalhos de alta qualidade. Ele é confiável e conclui o trabalho bem antes do prazo, muitas vezes também em curto prazo. Eu o recomendo altamente!",
+            "jared": "[Traduzido de Inglês] [Daniel] completou serviços de desenvolvimento web para mim. O site ficou ótimo e eles foram rápidos em fazer as alterações necessárias. Ótimo!"
         },
-        "type": {
-            "startup": "Start Up",
-            "client": "Cliente"
+        "buttons": {
+            "visit": "Visitar Site"
         },
-        "website": "Ver Página",
-        "case": "Ver Relatório"
-    },
-    "reviews": {
-        "title": "Testemunhos",
-        "marbar": {
-            "desc": "Daniel é um *desenvolvedor excecional* que entrega *trabalho de alta qualidade* consistentemente. Ele é *fiável* e conclui o trabalho *bem antes do prazo*, e muitas vezes em *curto prazo*. *Eu recomendo-o vivamente*",
-            "name": "Marbar",
-            "position": "Gestor de Operações",
-            "company": "Hoplite",
-            "date": "Junho 2024"
-        },
-        "infracharm": {
-            "desc": "[Daniel] concluiu serviços de desenvolvimento web para mim. *O site ficou excelente* e foi *rápidos a fazer as mudanças necessárias*. Excelente!",
-            "name": "InfraCharm",
-            "position": "Owner",
-            "company": "InfraCharm",
-            "date": "Julho 2024"
-        },
-        "spaceley": {
-            "desc": "[Daniel] *projetou* e *programou* um site para mim que *ficou excelente*! Também me deu *instruções claras* sobre como instalar/executar o site. *Bom serviço, sem queixas da minha parte.*",
-            "name": "Spaceley",
-            "position": "Owner",
-            "company": "SpaceyDevs",
-            "date": "Abril 2023"
-        },
-        "adnrl": {
-            "desc": "Este site é *absolutamente incrível*. Sou relativamente novo em sites e não consegui instalar-lo, mas [o Daniel] ajudou-me a pôr o site a funcionar, e *eu adoro a página*. *Eu definitivamente recomendo-o a qualquer pessoa*.",
-            "name": "Adnrl",
-            "position": "Owner",
-            "company": "TropicMC",
-            "date": "Abril 2023"
+        "terms": {
+            "client": "Cliente",
+            "owner": "Proprietário",
+            "operations": "Operações"
         }
     },
     "contact": {
@@ -90,6 +59,7 @@
             "name": "Nome",
             "email": "Email",
             "budget": "Orçamento",
+            "budget_placeholder": "Nível Médio: €700 - €2000",
             "message": "Mensagem",
             "message_placeholder": "Descreva o que você quer"
         }

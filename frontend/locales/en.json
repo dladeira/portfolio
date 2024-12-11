@@ -10,75 +10,44 @@
     },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Freelance Web Developer"
+        "subtitle": "Freelance Web Developer",
+        "worked": "Worked with",
+        "subscribers": "subscribers"
     },
     "about": {
         "header": "About Me",
         "title": "Daniel Ladeira",
-        "desc1": "My name is *Daniel Ladeira* and I am a *trilingual web developer* based in Poland, fluent in *English*, *Portuguese*, and *Polish*. My programming journey began in 2020, creating custom Minecraft plugins and servers, which later transitioned to web development.",
-        "desc2": "This year I'm starting my Bachelor's in *Computer Science* at *Vrije Universiteit*, Amsterdam. While my primary focus is on *freelance web development*, I'm also growing a *productivity startup* on the side.",
-        "desc3": "My skills span *design* and *coding*, however recently I've developed an interest in marketing and content creation."
+        "desc1": "My name is Daniel Ladeira and I am a trilingual web developer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating custom Minecraft plugins and servers, which later transitioned to web development.",
+        "desc2": "I recently graduated from the American School of Warsaw, and this year I'm starting my Bachelor's in Computer Science at Vrije Universiteit. My professional experience spans freelance web development, however recently I've been interested in working in large companies, being part of something bigger than myself. I prefer hybrid work and enjoy collaborating with other people.",
+        "desc3": "My passion is for user experience and design, how can we balance product intuitiveness and aesthetics for a pleasant user experience. I also have a unique interest in quantified self, how we can improve ourselves through data, where I'm growing a app that helps us track our productivity and unproductivity.",
+        "headers": {
+            "education": "Education",
+            "languages": "Languages"
+        },
+        "languages": {
+            "english": "English",
+            "polish": "Polish",
+            "portuguese": "Portuguese",
+            "native": "Native"
+        },
+        "education": {
+            "present": "Present"
+        }
     },
     "works": {
         "header": "Works",
-        "list": {
-            "infracharm": {
-                "title": "InfraCharm",
-                "duration": "June 2024",
-                "desc": "Redesigned InfraCharm's website, an IT company in Virginia, creating a new site from the ground up."
-            },
-            "polanner": {
-                "title": "Polanner",
-                "duration": "January 2024 - Present",
-                "desc": "Developed Polanner, an automated time-tracking app. Built both the website and a desktop application for seamless integration."
-            },
-            "hoplite": {
-                "title": "Hoplite",
-                "duration": "July 2023 - Present",
-                "desc": "Enhanced website and Tebex configuration for the Hoplite Minecraft server website, handling both design and implementation."
-            },
-            "mcss": {
-                "title": "MCSS",
-                "duration": "June 2023 - August 2023",
-                "desc": "Created a SaaS application for Minecraft server statistics. Developed the website and a server plugin."
-            }
+        "reviews": {
+            "blake": "Couldn't give a bigger vouch for Daniel - been screwed over by developers nearly every single time. Breath of fresh air to have got such an incredible and advanced SaaS tool made at such a reasonable price. He also added a few things not on the original document without penalties and was very patient throughout the process. 10/10 would and will be working with him again.",
+            "marbar": "Daniel is an exceptional developer who consistently delivers high-quality work. He is reliable and completes work well before the deadline, and often on short notice as well. I highly recommend him!",
+            "jared": "[Daniel] completed web development services for me. Website came out great and they were quick to make the required changes. Great!"
         },
-        "type": {
-            "startup": "Start Up",
-            "client": "Client"
+        "buttons": {
+            "visit": "Visit Website"
         },
-        "website": "View Website",
-        "case": "Read Case Study"
-    },
-    "reviews": {
-        "title": "Reviews",
-        "marbar": {
-            "desc": "Daniel is an *exceptional developer* who consistently delivers *high-quality work*. He is *reliable* and completes work *well before the deadline*, and often on *short notice* as well. *I highly recommend him*!",
-            "name": "Marbar",
-            "position": "Operations Manager",
-            "company": "Hoplite",
-            "date": "June 2024"
-        },
-        "infracharm": {
-            "desc": "[Daniel] completed web development services for me. *Website came out great* and they were *quick to make the required changes*. Great!",
-            "name": "InfraCharm",
-            "position": "Owner",
-            "company": "InfraCharm",
-            "date": "July 2024"
-        },
-        "spaceley": {
-            "desc": "[Daniel] has *designed* and *developed* a website for me that *looks great*! They also gave me *clear instructions* on how to install/run the website. *Good service, no complaints from me.*",
-            "name": "Spaceley",
-            "position": "Owner",
-            "company": "SpaceyDevs",
-            "date": "April 2023"
-        },
-        "adnrl": {
-            "desc": "This website is *absolutely amazing*. I am pretty new to websites and couldn't get it figured out, but [Daniel] helped me get the website running, and *I love it so much*. *I would definitely recommend him to anyone*.",
-            "name": "Adnrl",
-            "position": "Owner",
-            "company": "TropicMC",
-            "date": "April 2023"
+        "terms": {
+            "client": "Client",
+            "owner": "Owner",
+            "operations": "Operations"
         }
     },
     "contact": {
@@ -90,6 +59,7 @@
             "name": "Name",
             "email": "Email",
             "budget": "Budget",
+            "budget_placeholder": "Mid-Level: $700 - $2000",
             "message": "Message",
             "message_placeholder": "Describe what you want"
         }

@@ -10,75 +10,44 @@
     },
     "hero": {
         "title": "Daniel Ladeira",
-        "subtitle": "Programista Stron Internetowych"
+        "subtitle": "Programista Stron Internetowych",
+        "worked": "Wspołpracowałem z",
+        "subscribers": "subskryberów"
     },
     "about": {
         "header": "O mnie",
         "title": "Daniel Ladeira",
-        "desc1": "Nazywam się Daniel Ladeira i jestem *trójjęzycznym programistą*, który mówi po *Angielsku*, *Polsku* i po *Portugalsku*, z siedzibą w *Polsce*. Zaczałem programować serwery i pluginy Minecraftowe w 2020 roku co przemieniło się w pasje dla stroń internetowych.",
-        "desc2": "W tym roku zaczynam *licencjat informatyki* na *Vrije Universiteit* w Amsterdamie. Chociaż skupiam się głównie na *tworzeniu stron internetowych*, rozwijam także *start-up zwiększający produktywność*",
-        "desc3": "Moje umiejętności obejmują *projektowanie i tworzenie* witryn internetowych, jednak ostatnio zainteresowałem się marketingiem i content creation"
+        "desc1": "Nazywam się Daniel Ladeira i jestem trójjęzycznym programistą z siedzibą w Amsterdamie. Mowię po angielsku, portugalsku i polsku. Zacząłem programować w 2020 poprzez tworzenia pluginów i serwerów do Minecrafta, co później przekształciło się w strony internetowe.",
+        "desc2": "Niedawno ukończyłem liceum w Ameryskiej Szkole w Warszawie, a w tym roku rozpoczynam studia licencjackie z informatyki na Vrije Universiteit. Moje doświadczenie zawodowe obejmuje pracę jako freelancer, jednak ostatnio zainteresowałem się pracą w dużych firmach, będąc częścią czegoś większego niż siebie. Wolę hybrydowy model pracy i lubię współpracować z innymi ludźmi.",
+        "desc3": "Moją pasją obejmuje \"user experience\" i design, jak możemy znaleźć równowagę pomiędzy intuicyjnością i estetyką produktu. Mam również zainteresowanie w \"quantified self\", jak możemy się ulepszyć poprzez dane, przy czym rozwijam aplikację, która pomaga śledzić produktywność i nieproduktywność.",
+        "headers": {
+            "education": "Edukacja",
+            "languages": "Języki"
+        },
+        "languages": {
+            "english": "Angielski",
+            "polish": "Polski",
+            "portuguese": "Portugalski",
+            "native": "Biegły"
+        },
+        "education": {
+            "present": "Obecnie"
+        }
     },
     "works": {
         "header": "Projekty",
-        "list": {
-            "infracharm": {
-                "title": "InfraCharm",
-                "duration": "Czerwieć",
-                "desc": "Przeprojektowanie istniejącej strony internetowej InfraCharm, firmy IT z siedzibą w Wirginii."
-            },
-            "polanner": {
-                "title": "Polanner",
-                "duration": "Styczen 2024 - Obecnie",
-                "desc": "Witryna do śledzenia czasu. Integruje się z aplikacją komputerową oraz mediami społecznościowymi."
-            },
-            "hoplite": {
-                "title": "Hoplite",
-                "duration": "Lipiec 2023 - Obecnie",
-                "desc": "Strona internetowa prezentująca serwer minecrafta \"Hoplite\". Moja rola polegała na ulepszeniu istniejącej strony internetowej oraz konfiguracji Tebex."
-            },
-            "mcss": {
-                "title": "MCSS",
-                "duration": "Czerwieć 2023 - Sierpień 2023",
-                "desc": "Aplikacja SaaS do statystyk serwera Minecraft. Integruje się z pluginem aby wyświetlić przydatne statystyki graczy."
-            }
+        "reviews": {
+            "blake": "[Przetłumaczone z angielskiego] Nie mógłbym bardziej polecić Daniela - byłem rozczarowany przez deweloperów prawie za każdym razem. To odświeżające, że udało się stworzyć tak niesamowite i zaawansowane narzędzie SaaS w tak rozsądnej cenie. Dodał także kilka rzeczy, które nie były w oryginalnym dokumencie, bez dodatkowych opłat i był bardzo cierpliwy przez cały proces. 10/10, będę z nim ponownie współpracować.",
+            "marbar": "[Przetłumaczone z angielskiego] Daniel to wyjątkowy deweloper, który konsekwentnie dostarcza wysokiej jakości pracę. Jest niezawodny i kończy pracę dobrze przed terminem, często także w krótkim czasie. Gorąco go polecam!",
+            "jared": "[Przetłumaczone z angielskiego] [Daniel] zrealizował dla mnie usługi związane z tworzeniem stron internetowych. Strona wyszła świetnie, a oni szybko wprowadzili wymagane zmiany. Świetnie!"
         },
-        "type": {
-            "startup": "Start Up",
-            "client": "Klient"
+        "buttons": {
+            "visit": "Odwiedź stronę"
         },
-        "website": "Otwórz Stronę",
-        "case": "Przeczytaj Opis"
-    },
-    "reviews": {
-        "title": "Recenzje",
-        "marbar": {
-            "desc": "Daniel to *wyjątkowy deweloper*, który konsekwentnie dostarcza *prace wysokiej jakości*. Jest *niezawodny* i kończy pracę *znacznie przed terminem*, a często również na *krótkie terminy*. *Serdecznie go polecam*!",
-            "name": "Marbar",
-            "position": "Menedżer Operacyjny",
-            "company": "Hoplite",
-            "date": "Czerwieć 2024"
-        },
-        "infracharm": {
-            "desc": "[Daniel] wykonał usługi tworzenia stron internetowych dla mnie. *Strona wyszła świetnie*, a on był *szybki w wprowadzaniu wymaganych zmian*. Świetnie!",
-            "name": "InfraCharm",
-            "position": "Właściciel",
-            "company": "InfraCharm",
-            "date": "Lipiec 2024"
-        },
-        "spaceley": {
-            "desc": "[Daniel] *zaprojektował* i *zaprogramował* dla mnie stronę internetową, która *wygląda świetnie*! Dał mi również *konkretne instrukcje* dotyczące instalacji/uruchomienia strony. *Dobra obsługa, żadnych skarg z mojej strony.*",
-            "name": "Spaceley",
-            "position": "Właściciel",
-            "company": "SpaceyDevs",
-            "date": "Kwiecień 2023"
-        },
-        "adnrl": {
-            "desc": "Ta strona jest *absolutnie niesamowita*. Jestem mało doświadczony w kwestii stron internetowych i nie mogłem sobie poradzić z instalacją, ale [Daniel] pomógł mi uruchomić stronę i *bardzo mi się podoba*. *Z pewnością poleciłbym go każdemu*.",
-            "name": "Adnrl",
-            "position": "Właściciel",
-            "company": "TropicMC",
-            "date": "Kwiecień 2023"
+        "terms": {
+            "client": "Klient",
+            "owner": "Właściciel",
+            "operations": "Operacje"
         }
     },
     "contact": {
@@ -90,6 +59,7 @@
             "name": "Imie",
             "email": "Email",
             "budget": "Budżet",
+            "budget_placeholder": "Średni poziom: 3000zł - 8000zł",
             "message": "Wiadomość",
             "message_placeholder": "Opisz co ty chcesz"
         }

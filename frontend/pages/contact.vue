@@ -1,19 +1,17 @@
 <template>
     <div class="page-header">
-        <h1 class="contact-title">Interested In What You See?</h1>
-        <h2 class="contact-subtitle">Feel free to send me a message</h2>
+        <h1 class="contact-title">{{ $t("contact.title") }}</h1>
+        <h2 class="contact-subtitle">{{ $t("contact.subtitle") }}</h2>
     </div>
 
     <div class="page-content">
-        <!-- <form class="form"> -->
         <form class="form" @submit.prevent="sendForm">
-            <FormText class="form-name" name="Name" placeholder="Daniel Ladeira" type="string" id="name" />
-            <FormText class="form-email" name="Email" placeholder="user@example.com" type="string" id="email" />
-            <FormText class="form-budget" name="Budget" placeholder="Mid-Level: $700 - $2000" type="string" id="budget" />
-            <FormTextArea class="form-textarea" name="Message" placeholder="Describe what you want" type="string" id="message" />
+            <FormText class="form-name" :name="$t('contact.inputs.name')" placeholder="Daniel Ladeira" type="string" id="name" />
+            <FormText class="form-email" :name="$t('contact.inputs.email')" placeholder="user@example.com" type="string" id="email" />
+            <FormText class="form-budget" :name="$t('contact.inputs.budget')" :placeholder="$t('contact.inputs.budget_placeholder')" type="string" id="budget" />
+            <FormTextArea class="form-textarea" :name="$t('contact.inputs.message')" :placeholder="$t('contact.inputs.message_placeholder')" type="string" id="message" />
             <div class="submit-row">
                 <button type="submit" class="button-submit">Send <nuxt-img class="button-submit-icon" src="/icons/send.svg" /></button>
-                <!-- <button class="button-submit">Send <nuxt-img class="button-submit-icon" src="/icons/send.svg" /></button> -->
                 <p class="submit-info">{{ $t("contact.send_hint") }}</p>
             </div>
         </form>

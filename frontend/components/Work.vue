@@ -6,7 +6,7 @@
                     <nuxt-img :src="`/works/${id}-logo.png`" class="logo" />
 
                     <div class="client-container" v-if="type == 'client'">
-                        <p class="client-label">Client</p>
+                        <p class="client-label">{{ $t("works.terms.client") }}</p>
                         <WorkClient :external="client.external" :name="client.name" :tag="client.tag" :icon="client.icon" />
                     </div>
 
@@ -25,11 +25,11 @@
                         <p class="review-text-tag">{{ review.tag }}</p>
                     </div>
                 </div>
-                <p class="review-text">"{{ review.text }}""</p>
+                <p class="review-text">"{{ review.text }}"</p>
             </div>
 
             <div class="buttons">
-                <a class="button-visit" :href="website" target="_blank"> Visit Website <nuxt-img class="button-visit-icon" src="/icons/external.svg" /> </a>
+                <a class="button-visit" :href="website" target="_blank"> {{ $t("works.buttons.visit") }} <nuxt-img class="button-visit-icon" src="/icons/external.svg" /> </a>
             </div>
         </div>
         <div class="image-wrapper">

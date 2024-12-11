@@ -2,18 +2,18 @@
     <nav class="container" id="navbar-container">
         <div class="inner-container">
             <div class="brand" @click="scrollTo('hero')">
-                <nuxt-link href="/" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
+                <nuxt-link href="/" class="brand">dladeira<span class="brand-light">.com</span></nuxt-link>
             </div>
             <div class="links">
-                <nuxt-link href="/about" :class="route.path == '/about' ? 'link-active' : 'link'">
+                <nuxt-link :href="localePath('/about')" :class="route.path.includes('/about') ? 'link-active' : 'link'">
                     <nuxt-img class="icon" src="/icons/navbar/about.svg" />
                     <div class="link-text">{{ $t("navbar.link1") }}</div>
                 </nuxt-link>
-                <nuxt-link href="/works" :class="route.path == '/works' ? 'link-active' : 'link'">
+                <nuxt-link :href="localePath('/works')" :class="route.path.includes('/works') ? 'link-active' : 'link'">
                     <nuxt-img class="icon" src="/icons/navbar/works.svg" />
                     <div class="link-text">{{ $t("navbar.link2") }}</div>
                 </nuxt-link>
-                <nuxt-link href="/contact" :class="route.path == '/contact' ? 'link-active' : 'link'">
+                <nuxt-link :href="localePath('/contact')" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
                     <nuxt-img class="icon" src="/icons/navbar/contact.svg" />
                     <div class="link-text">{{ $t("navbar.link3") }}</div>
                 </nuxt-link>

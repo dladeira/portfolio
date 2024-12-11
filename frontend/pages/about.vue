@@ -6,14 +6,14 @@
             <section class="section">
                 <h2 class="section-title-main">Daniel Ladeira</h2>
                 <div class="section-paragraphs">
-                    <p class="section-paragraph">My name is Daniel Ladeira and I am a trilingual web developer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating custom Minecraft plugins and servers, which later transitioned to web development.</p>
-                    <p class="section-paragraph">I recently graduated from the American School of Warsaw, and this year I'm starting my Bachelor's in Computer Science at Vrije Universiteit. My professional experience spans freelance web development, however recently I've been interested in working in large companies, being part of something bigger than myself. I prefer hybrid work and enjoy collaborating with other people.</p>
-                    <p class="section-paragraph">My passion is for user experience and design, how can we balance product intuitiveness and aesthetics for a pleasant user experience. I also have a unique interest in quantified self, how we can improve ourselves through data, where I'm growing a app that helps us track our productivity and unproductivity.</p>
+                    <p class="section-paragraph">{{ $t("about.desc1") }}</p>
+                    <p class="section-paragraph">{{ $t("about.desc2") }}</p>
+                    <p class="section-paragraph">{{ $t("about.desc3") }}</p>
                 </div>
             </section>
 
             <section class="section">
-                <h3 class="section-title">Education</h3>
+                <h3 class="section-title">{{ $t("about.headers.education") }}</h3>
                 <div class="section-images">
                     <div class="education">
                         <nuxt-img src="/education/asw.svg" class="education-image" />
@@ -21,33 +21,33 @@
                     </div>
                     <div class="education">
                         <nuxt-img src="/education/vrije.svg" class="education-image" />
-                        <p class="education-duration">2024 - Present</p>
+                        <p class="education-duration">2024 - {{ $t("about.education.present") }}</p>
                     </div>
                 </div>
             </section>
 
             <section class="section">
-                <h3 class="section-title">Languages</h3>
+                <h3 class="section-title">{{ $t("about.headers.languages") }}</h3>
                 <div class="section-images">
                     <div class="language">
                         <nuxt-img src="/flags/us.png" class="flag" />
                         <div class="language-info">
-                            <p class="language-name">English</p>
-                            <p class="language-level">Native</p>
+                            <p class="language-name">{{ $t("about.languages.english") }}</p>
+                            <p class="language-level">{{ $t("about.languages.native") }}</p>
                         </div>
                     </div>
                     <div class="language">
                         <nuxt-img src="/flags/pl.png" class="flag" />
                         <div class="language-info">
-                            <p class="language-name">Polish</p>
-                            <p class="language-level">Native</p>
+                            <p class="language-name">{{ $t("about.languages.polish") }}</p>
+                            <p class="language-level">{{ $t("about.languages.native") }}</p>
                         </div>
                     </div>
                     <div class="language">
                         <nuxt-img src="/flags/pt.png" class="flag" />
                         <div class="language-info">
-                            <p class="language-name">Portuguese</p>
-                            <p class="language-level">Native</p>
+                            <p class="language-name">{{ $t("about.languages.portuguese") }}</p>
+                            <p class="language-level">{{ $t("about.languages.native") }}</p>
                         </div>
                     </div>
                 </div>
