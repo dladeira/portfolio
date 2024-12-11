@@ -15,7 +15,7 @@
 
     opacity: 0;
 
-    animation: 1s forwards slide-from-top;
+    animation: $animation-duration forwards slide-from-top;
 }
 </style>
 

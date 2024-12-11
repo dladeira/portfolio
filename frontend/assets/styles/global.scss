@@ -76,15 +76,15 @@ body {
     font-weight: 700;
     font-size: 2.5rem;
 
-    animation: 1s forwards fade-in;
-    animation-delay: 300ms;
+    animation: $animation-title-duration forwards slide-from-top;
+    animation-delay: $animation-title-delay;
 
     opacity: 0;
 }
 
 @keyframes slide-from-top {
     0% {
-        transform: translateY(-100px);
+        transform: translateY(-50px);
         opacity: 0.001;
     }
 
@@ -96,7 +96,7 @@ body {
 
 @keyframes slide-from-right {
     0% {
-        transform: translateX(200px);
+        transform: translateX(100px);
     }
 
     100% {

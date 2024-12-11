@@ -19,24 +19,24 @@
 .name {
     width: 100%;
 
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
     font-size: 1rem;
     font-weight: 400;
-    color: white;
+    color: rgba(white, 0.5);
 }
 
 .input {
     width: 100%;
 
-    padding: 1rem 1rem;
+    padding: 0.75rem 1rem;
 
     border: 1px solid transparent;
     border-radius: 5px;
 
     font-size: 1rem;
     font-family: Inter, sans-serif;
-    background-color: rgba(white, 0.05);
+    background-color: rgba(white, 0.03);
     color: white;
 
     appearance: textfield;

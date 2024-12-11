@@ -1,12 +1,12 @@
-const express = require("express");
-const Message = require("./models/Message.js");
-const app = express();
-const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+const express = require("express")
+const Message = require("./models/Message.js")
+const app = express()
+const bodyParser = require("body-parser")
+const nodemailer = require("nodemailer")
 
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 
-let confirmations = [];
+let confirmations = []
 
 let transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -16,12 +16,12 @@ let transporter = nodemailer.createTransport({
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
     },
-});
+})
 
 app.get("/confirm/:code", async (req, res) => {
-    const code = req.params.code;
+    const code = req.params.code
 
-    const confirmation = confirmations.find((i) => i.code == code);
+    const confirmation = confirmations.find((i) => i.code == code)
 
     if (confirmation) {
         let msg = new Message({
@@ -30,7 +30,7 @@ app.get("/confirm/:code", async (req, res) => {
             budget: confirmation.body.budget,
             message: confirmation.body.message,
             date: Date.now(),
-        });
+        })
 
         try {
             transporter.sendMail({
@@ -47,22 +47,22 @@ app.get("/confirm/:code", async (req, res) => {
             Sincerely,<br/>
             Ladeira.eu
             `,
-            });
+            })
         } catch {}
 
-        await msg.save();
+        await msg.save()
 
-        confirmations = confirmations.filter((i) => i.code != code);
-        return res.redirect(process.env.WEB_SERVER + "/confirm");
+        confirmations = confirmations.filter((i) => i.code != code)
+        return res.redirect(process.env.WEB_SERVER + "/confirm")
     }
 
-    return res.send("ERROR: Invalid Code");
-});
+    return res.send("ERROR: Invalid Code")
+})
 
 app.post("/msg", async (req, res) => {
-    const { name, email, budget, message } = req.body;
-    let code = Math.round(Math.random() * 1000000000);
-    let confirmLink = process.env.API_SERVER + "/confirm/" + code;
+    const { name, email, budget, message } = req.body
+    let code = Math.round(Math.random() * 1000000000)
+    let confirmLink = process.env.API_SERVER + "/confirm/" + code
 
     confirmations.push({
         code,
@@ -72,7 +72,7 @@ app.post("/msg", async (req, res) => {
             budget,
             message,
         },
-    });
+    })
 
     try {
         transporter.sendMail({
@@ -96,10 +96,13 @@ app.post("/msg", async (req, res) => {
         
         Sincerely,
         Daniel Ladeira`,
-        });
-    } catch {}
+        })
+    } catch (e) {
+        console.log("Error sending mail")
+        console.log(e)
+    }
 
-    res.status(200).json({ success: "true" });
-});
+    res.status(200).json({ success: "true" })
+})
 
-module.exports = app;
+module.exports = app

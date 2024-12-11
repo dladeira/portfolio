@@ -42,7 +42,7 @@
 
     border-radius: 10px;
 
-    background-color: #2d343c;
+    background-color: $background-color-1;
 
     @include phone-only {
         width: 90%;
@@ -50,7 +50,7 @@
 }
 
 .popup-title {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 
     font-size: 2rem;
     font-weight: 700;
@@ -59,14 +59,15 @@
 .popup-desc {
     width: 100%;
 
-    margin-top: 1rem;
+    margin: 0;
 
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 160%;
+    color: rgba(white, 0.3);
 }
 
 .ok {
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding: 0.5rem 3rem;
 
     border: none;
@@ -74,12 +75,11 @@
 
     font-size: 1rem;
     font-weight: 400;
-    background-color: rgba($blue, 0.4);
-    color: white;
+    background-color: rgba($blue, 0.1);
+    color: $blue;
 
     &:hover {
-        background-color: rgba($blue, 1);
-        color: white;
+        background-color: rgba($blue, 0.15);
 
         cursor: pointer;
     }
@@ -87,9 +87,9 @@
 </style>
 
 <script setup>
-const verifyPopup = useState("popupVerify");
+const verifyPopup = useState("popupVerify")
 
 function closePopup(e) {
-    verifyPopup.value = false;
+    verifyPopup.value = false
 }
 </script>

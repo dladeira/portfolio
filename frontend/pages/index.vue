@@ -37,7 +37,7 @@
 }
 
 .text-header {
-    animation: slide-from-top 1s forwards;
+    animation: slide-from-top $animation-duration forwards;
     animation-delay: 0s;
     opacity: 0.001;
 }
@@ -114,7 +114,7 @@
 
     margin-top: 4rem;
 
-    animation: slide-from-top 1s forwards;
+    animation: slide-from-top $animation-duration forwards;
     animation-delay: 0s;
     opacity: 0.001;
 }

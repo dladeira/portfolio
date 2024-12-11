@@ -232,7 +232,7 @@
 
     overflow: hidden;
 
-    animation: 1s forwards slide-from-right;
+    animation: $animation-duration forwards slide-from-right;
     animation-delay: 200ms;
 }
 
