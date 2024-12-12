@@ -35,7 +35,15 @@
 
     z-index: 4;
 
-    background-color: $background-color-1;
+    background-color: rgba($background-color-1, 0.8);
+
+    backdrop-filter: blur(10px);
+
+    transition: $transition 200ms box-shadow;
+
+    &-effect {
+        box-shadow: 0 4px 20px rgba(black, 0.2);
+    }
 }
 
 .inner-container {
@@ -47,7 +55,7 @@
     width: 800px;
 
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 2rem 0;
 
     opacity: 0.001;
     z-index: 2;
@@ -200,4 +208,24 @@ function scrollTo(id) {
         window.location.pathname == "/" ? 0 : 100
     )
 }
+
+function listener() {
+    var nav = document.getElementById("navbar-container")
+
+    if (window.scrollY > 40) {
+        if (!nav.classList.contains("container-effect")) nav.classList.add("container-effect")
+    } else {
+        if (nav.classList.contains("container-effect")) {
+            nav.classList.remove("container-effect")
+        }
+    }
+}
+
+onBeforeMount(() => {
+    document.addEventListener("scroll", listener)
+})
+
+onBeforeUnmount(() => {
+    document.removeEventListener("scroll", listener)
+})
 </script>

@@ -35,7 +35,7 @@
 
     width: 100%;
 
-    margin-top: 7rem;
+    margin-top: 8rem;
 }
 
 .text-header {
@@ -150,13 +150,13 @@
     width: 29rem;
 
     overflow: hidden;
-}
-
-.hero {
-    width: 100%;
 
     opacity: 0;
 
     animation: slide-from-right $animation-duration forwards;
+}
+
+.hero {
+    width: 100%;
 }
 </style>

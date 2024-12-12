@@ -17,13 +17,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
-    padding-bottom: 6rem;
 }
 
 .layout-page-container {
     @include resizable-width;
-    margin: 7rem auto 0;
+    margin: 0 auto;
+    padding: 5rem 0 7rem;
 }
 </style>
 

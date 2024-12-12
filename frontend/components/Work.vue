@@ -36,7 +36,6 @@
             <div class="image-hover">
                 <nuxt-img class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
                 <nuxt-img :src="`/works/${id}-1.png`" class="image" alt="Work Preview" format="webp" @click="clickImage(`/works/${id}-1.png`)" />
-                <!-- <nuxt-img class="image" :src="`/works/${id}-1.png`" format="webp" alt="Project Preview" @click="clickImage(`/works/${id}-1.png`)" /> -->
             </div>
         </div>
     </article>
