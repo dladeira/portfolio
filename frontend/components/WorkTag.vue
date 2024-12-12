@@ -1,6 +1,6 @@
 <template>
     <div class="tag-container">
-        <NuxtImg class="tag-image" :src="`/tags/${tag}.svg`" />
+        <NuxtImg class="tag-image" :src="`/tags/${tag}.svg`" :alt="`${tag} logo`" />
         <p class="tag-text">{{ tag }}</p>
     </div>
 </template>

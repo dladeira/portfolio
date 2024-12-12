@@ -3,7 +3,7 @@
         <div class="content">
             <div class="header">
                 <div class="logo-row">
-                    <NuxtImg :src="`/works/${id}-logo.png`" class="logo" />
+                    <NuxtImg :src="`/works/${id}-logo.png`" class="logo" format="webp" :alt="`${id} logo`" />
 
                     <div class="type type-client" v-if="type == 'client'">
                         <p class="client-label">{{ $t("works.terms.client") }}</p>
@@ -19,7 +19,7 @@
 
             <div class="review" v-if="review">
                 <div class="review-header">
-                    <NuxtImg class="review-image" :src="review.icon" />
+                    <NuxtImg class="review-image" :src="review.icon" alt="Reviewer profile picture" />
                     <div class="review-header-text">
                         <p class="review-text-name">{{ review.name }}</p>
                         <p class="review-text-tag">{{ review.tag }}</p>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="buttons">
-                <a class="button-visit" :href="website" target="_blank"> {{ $t("works.buttons.visit") }} <NuxtImg class="button-visit-icon" src="/icons/external.svg" /> </a>
+                <a class="button-visit" :href="website" target="_blank"> {{ $t("works.buttons.visit") }} <NuxtImg class="button-visit-icon" src="/icons/external.svg" alt="External link icon" /> </a>
             </div>
         </div>
         <div class="image-wrapper">

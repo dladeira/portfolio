@@ -1,8 +1,8 @@
 <template>
-    <a class="social-wrapper" :href="link" target="_blank">
+    <component :is="link ? 'a' : 'div'" class="social-wrapper" :href="link" target="_blank">
         <NuxtImg class="social-icon" :src="icon" alt="Social Media Icon" height="20" width="20" />
         <p class="social-text">{{ text }}</p>
-    </a>
+    </component>
 </template>
 
 <style lang="scss" scoped>

@@ -11,7 +11,7 @@
             <FormText class="form-budget" :name="$t('contact.inputs.budget')" :placeholder="$t('contact.inputs.budget_placeholder')" type="string" id="budget" />
             <FormTextArea class="form-textarea" :name="$t('contact.inputs.message')" :placeholder="$t('contact.inputs.message_placeholder')" type="string" id="message" />
             <div class="submit-row">
-                <button type="submit" class="button-submit">Send <NuxtImg class="button-submit-icon" src="/icons/send.svg" /></button>
+                <button type="submit" class="button-submit">Send <NuxtImg class="button-submit-icon" src="/icons/send.svg" height="12" alt="Send icon" /></button>
                 <p class="submit-info">{{ $t("contact.send_hint") }}</p>
             </div>
         </form>
@@ -19,7 +19,7 @@
             <Social text="dladeira" icon="/icons/github.svg" link="https://github.com/dladeira" />
             <Social text="dladeira" icon="/icons/dribbble.svg" link="https://dribbble.com/dladeira" />
             <Social text="schwimmpanzer" icon="/icons/discord.svg" />
-            <Social text="Daniel" icon="/icons/overflow.svg" link="https://stackoverflow.com/users/preferences/9564834" />
+            <Social text="Daniel" icon="/icons/overflow.svg" link="https://stackoverflow.com/users/9564834/daniel" />
             <Social text="Daniel Ladeira" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" />
         </div>
     </div>

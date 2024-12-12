@@ -1,14 +1,14 @@
 <template>
-    <a :href="external" class="person" target="_blank">
-        <NuxtImg class="person-image" :src="icon" />
+    <component :is="external ? 'a' : 'div'" :href="external" class="person" target="_blank">
+        <NuxtImg class="person-image" :src="icon" format="webp" alt="Client profile picture" />
         <div class="person-content">
             <div class="person-header">
                 <p class="person-name">{{ name }}</p>
-                <NuxtImg v-if="external" src="/icons/external.svg" class="person-external" height="12" />
+                <NuxtImg v-if="external" src="/icons/external.svg" class="person-external" height="12" alt="External link icon" />
             </div>
             <p class="person-stat">{{ tag }}</p>
         </div>
-    </a>
+    </component>
 </template>
 
 <style lang="scss" scoped>

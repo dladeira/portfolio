@@ -9,6 +9,7 @@
     "devDependencies": {
         "@nuxt/image": "^1.8.1",
         "@nuxtjs/i18n": "^9.1.1",
+        "@nuxtjs/seo": "^2.0.2",
         "nuxt": "^3.14.1592",
         "nuxt-proxy": "^0.4.1",
         "sass": "^1.82.0"

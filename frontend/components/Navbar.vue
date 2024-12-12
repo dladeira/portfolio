@@ -6,22 +6,22 @@
             </div>
             <div class="links">
                 <nuxt-link :href="$localePath('/about')" :class="route.path.includes('/about') ? 'link-active' : 'link'">
-                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/about.svg" />
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/about.svg" alt="Page icon" />
                     <div class="link-text">{{ $t("navbar.link1") }}</div>
                 </nuxt-link>
                 <nuxt-link :href="$localePath('/works')" :class="route.path.includes('/works') ? 'link-active' : 'link'">
-                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/works.svg" />
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/works.svg" alt="Page icon" />
                     <div class="link-text">{{ $t("navbar.link2") }}</div>
                 </nuxt-link>
                 <nuxt-link :href="$localePath('/contact')" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
-                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/contact.svg" />
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/contact.svg" alt="Page icon" />
                     <div class="link-text">{{ $t("navbar.link3") }}</div>
                 </nuxt-link>
             </div>
             <div class="flags">
-                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('en')" aria-label="Switch to English"><NuxtImg :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" height="20" width="32" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pl')" aria-label="Zmień na polski"><NuxtImg :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" height="20" width="32" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pt')" aria-label="Muda para portugês"><NuxtImg :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" height="20" width="32" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('en')" aria-label="Switch to English"><NuxtImg :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US flag" height="20" width="32" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pl')" aria-label="Zmień na polski"><NuxtImg :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL flag" height="20" width="32" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pt')" aria-label="Muda para portugês"><NuxtImg :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT flag" height="20" width="32" /></nuxt-link>
             </div>
         </div>
     </nav>

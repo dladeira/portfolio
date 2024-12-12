@@ -5,11 +5,21 @@
                 <div class="copyright">© 2024 Daniel Ladeira</div>
             </div>
             <div class="icons">
-                <NuxtImg src="/icons/github.svg" class="icon icon-github" height="20" width="20" />
-                <NuxtImg src="/icons/dribbble.svg" class="icon icon-dribbble" height="20" width="20" />
-                <NuxtImg src="/icons/discord.svg" class="icon icon-discord" height="20" width="20" />
-                <NuxtImg src="/icons/overflow.svg" class="icon icon-overflow" height="20" width="20" />
-                <NuxtImg src="/icons/linkedin.svg" class="icon icon-linkedin" height="20" width="20" />
+                <a class="icon-wrapper" href="https://github.com/dladeira">
+                    <NuxtImg src="/icons/github.svg" class="icon icon-github" height="20" width="20" alt="Github logo" />
+                </a>
+                <a class="icon-wrapper" href="https://dribbble.com/dladeira">
+                    <NuxtImg src="/icons/dribbble.svg" class="icon icon-dribbble" height="20" width="20" alt="Dribbble logo" />
+                </a>
+                <div class="icon-wrapper">
+                    <NuxtImg src="/icons/discord.svg" class="icon icon-discord" height="20" width="20" alt="Discord logo" />
+                </div>
+                <a class="icon-wrapper" href="https://stackoverflow.com/users/9564834/daniel">
+                    <NuxtImg src="/icons/overflow.svg" class="icon icon-overflow" height="20" width="20" alt="Stack overflow logo" />
+                </a>
+                <a class="icon-wrapper" href="https://linkedin.com/in/dladeira">
+                    <NuxtImg src="/icons/linkedin.svg" class="icon icon-linkedin" height="20" width="20" alt="Linkedin logo" />
+                </a>
             </div>
             <div class="flags">
                 <nuxt-link class="flag-wrapper" :href="$switchLocalePath('en')" aria-label="Switch to English"><NuxtImg :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" /></nuxt-link>
@@ -67,6 +77,12 @@
     @include tablet-below {
         display: none;
     }
+}
+
+.icon-wrapper {
+    margin: 0;
+
+    line-height: 0;
 }
 
 .icon {
