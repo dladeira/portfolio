@@ -1,21 +1,16 @@
 {
-    "private": true,
     "scripts": {
         "dev": "nuxt dev --port 3000 --dotenv ../.env",
         "build": "nuxt build --dotenv ../.env",
+        "preview": "nuxt preview --dotenv ../.env",
         "start": "NITRO_PORT=3030 node ./.output/server/index.mjs",
         "postinstall": "nuxt prepare"
     },
     "devDependencies": {
-        "@nuxt/image": "^1.1.0",
-        "nuxt": "^3.8.2"
-    },
-    "dependencies": {
-        "@funken-studio/sitemap-nuxt-3": "^4.0.4",
-        "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
-        "@nuxtjs/i18n": "^8.0.0-beta.9",
-        "@nuxtjs/robots": "^3.0.0",
-        "nuxt-proxy": "^0.3.12",
-        "sass": "^1.57.1"
+        "@nuxt/image": "^1.8.1",
+        "@nuxtjs/i18n": "^9.1.1",
+        "nuxt": "^3.14.1592",
+        "nuxt-proxy": "^0.4.1",
+        "sass": "^1.82.0"
     }
 }

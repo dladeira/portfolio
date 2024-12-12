@@ -1,6 +1,6 @@
 <template>
     <div :class="popupOpen ? 'wi-container-open' : 'wi-container-closed'" @click="popupOpen = false">
-        <nuxt-img class="wi-image" :src="popupImage" :alt="alt" />
+        <NuxtImg class="wi-image" :src="popupImage" :alt="alt" />
     </div>
 </template>
 

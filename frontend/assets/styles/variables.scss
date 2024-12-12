@@ -79,6 +79,12 @@ $small_phone_max: 600px;
     }
 }
 
+@mixin above-tablet {
+    @media (min-width: $tablet_max) {
+        @content;
+    }
+}
+
 @mixin small-tablet-only {
     @media (max-width: $small_tablet_max) {
         @media (min-width: $phone_max) {

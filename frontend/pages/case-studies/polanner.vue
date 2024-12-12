@@ -29,7 +29,7 @@
                 <div class="block-carousel">
                     <div class="block-carousel-item">
                         <h4 class="block-carousel-item-title">Logo</h4>
-                        <nuxt-img src="/case-studies/polanner/logo.svg" class="block-carousel-item-brand" />
+                        <NuxtImg src="/case-studies/polanner/logo.svg" class="block-carousel-item-brand" />
                     </div>
                     <div class="block-carousel-item">
                         <h4 class="block-carousel-item-title">Font</h4>

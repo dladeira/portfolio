@@ -11,16 +11,16 @@
             <FormText class="form-budget" :name="$t('contact.inputs.budget')" :placeholder="$t('contact.inputs.budget_placeholder')" type="string" id="budget" />
             <FormTextArea class="form-textarea" :name="$t('contact.inputs.message')" :placeholder="$t('contact.inputs.message_placeholder')" type="string" id="message" />
             <div class="submit-row">
-                <button type="submit" class="button-submit">Send <nuxt-img class="button-submit-icon" src="/icons/send.svg" /></button>
+                <button type="submit" class="button-submit">Send <NuxtImg class="button-submit-icon" src="/icons/send.svg" /></button>
                 <p class="submit-info">{{ $t("contact.send_hint") }}</p>
             </div>
         </form>
         <div class="socials">
             <Social text="dladeira" icon="/icons/github.svg" link="https://github.com/dladeira" />
-            <Social text="Daniel Ladeira" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" />
+            <Social text="dladeira" icon="/icons/dribbble.svg" link="https://dribbble.com/dladeira" />
             <Social text="schwimmpanzer" icon="/icons/discord.svg" />
             <Social text="Daniel" icon="/icons/overflow.svg" link="https://stackoverflow.com/users/preferences/9564834" />
-            <Social text="dladeira" icon="/icons/dribbble.svg" link="https://dribbble.com/dladeira" />
+            <Social text="Daniel Ladeira" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" />
         </div>
     </div>
 </template>
@@ -48,6 +48,10 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: $blue;
+
+    @include tablet-below {
+        font-size: 2rem;
+    }
 }
 
 .contact-subtitle {
@@ -77,6 +81,10 @@
     width: 50%;
 
     animation: $animation-duration forwards slide-from-top;
+
+    @include tablet-below {
+        width: 100%;
+    }
 }
 
 .form-budget {
@@ -93,6 +101,8 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1.5rem;
+
+    grid-column: 1 / 3;
 }
 
 .button-submit {
@@ -131,6 +141,11 @@
     white-space: nowrap;
     font-size: 0.85rem;
     color: rgba(white, 0.2);
+
+    @include tablet-below {
+        white-space: wrap;
+        width: 100%;
+    }
 }
 
 .socials {
@@ -145,6 +160,10 @@
     opacity: 0;
 
     animation: $animation-duration forwards slide-from-right;
+
+    @include tablet-below {
+        display: none;
+    }
 }
 </style>
 

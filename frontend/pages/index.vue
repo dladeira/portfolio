@@ -6,8 +6,8 @@
                 <h1 class="subtitle">{{ $t("hero.subtitle") }}</h1>
 
                 <div class="buttons">
-                    <a href="/works" class="button button-works">{{ $t("navbar.link2") }}</a>
                     <a href="/contact" class="button button-contact">{{ $t("navbar.link3") }}</a>
+                    <a href="/works" class="button button-works">{{ $t("navbar.link2") }}</a>
                 </div>
             </div>
 
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="hero-wrapper">
-            <nuxt-img src="/hero.png" class="hero" />
+            <NuxtImg src="/hero.png" class="hero" />
         </div>
     </div>
 </template>
@@ -36,6 +36,25 @@
     width: 100%;
 
     margin-top: 8rem;
+
+    @include tablet-below {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin-top: 3rem;
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include tablet-below {
+        align-items: center;
+    }
 }
 
 .text-header {
@@ -50,6 +69,11 @@
     font-size: 5rem;
     font-weight: 700;
     color: white;
+
+    @include tablet-below {
+        font-size: 4rem;
+        text-align: center;
+    }
 }
 
 .subtitle {
@@ -58,6 +82,11 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: $blue;
+
+    @include tablet-below {
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 
 .buttons {
@@ -68,6 +97,10 @@
     gap: 2rem;
 
     margin-top: 2rem;
+
+    @include tablet-below {
+        justify-content: center;
+    }
 }
 
 .button {
@@ -88,7 +121,11 @@
         cursor: pointer;
     }
 
-    &-works {
+    @include tablet-below {
+        width: 12rem;
+    }
+
+    &-contact {
         background-color: rgba($blue, 0.1);
         color: $blue;
 
@@ -97,7 +134,7 @@
         }
     }
 
-    &-contact {
+    &-works {
         background-color: rgba(white, 0.1);
         color: white;
 
@@ -119,6 +156,10 @@
     animation: slide-from-top $animation-duration forwards;
     animation-delay: 0s;
     opacity: 0.001;
+
+    @include tablet-below {
+        margin-top: 2rem;
+    }
 }
 
 .worked-title {
@@ -154,6 +195,17 @@
     opacity: 0;
 
     animation: slide-from-right $animation-duration forwards;
+
+    @include tablet-below {
+        // display: none;
+
+        height: 70vw;
+        width: 70vw;
+
+        margin-top: 4rem;
+
+        animation-name: slide-from-top;
+    }
 }
 
 .hero {

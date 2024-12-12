@@ -16,11 +16,11 @@
                 <h3 class="section-title">{{ $t("about.headers.education") }}</h3>
                 <div class="section-images">
                     <div class="education">
-                        <nuxt-img src="/education/asw.svg" class="education-image" />
+                        <NuxtImg src="/education/asw.svg" class="education-image" />
                         <p class="education-duration">2013 - 2024</p>
                     </div>
                     <div class="education">
-                        <nuxt-img src="/education/vrije.svg" class="education-image" />
+                        <NuxtImg src="/education/vrije.svg" class="education-image" />
                         <p class="education-duration">2024 - {{ $t("about.education.present") }}</p>
                     </div>
                 </div>
@@ -30,21 +30,21 @@
                 <h3 class="section-title">{{ $t("about.headers.languages") }}</h3>
                 <div class="section-images">
                     <div class="language">
-                        <nuxt-img src="/flags/us.png" class="flag" />
+                        <NuxtImg src="/flags/us.png" class="flag" />
                         <div class="language-info">
                             <p class="language-name">{{ $t("about.languages.english") }}</p>
                             <p class="language-level">{{ $t("about.languages.native") }}</p>
                         </div>
                     </div>
                     <div class="language">
-                        <nuxt-img src="/flags/pl.png" class="flag" />
+                        <NuxtImg src="/flags/pl.png" class="flag" />
                         <div class="language-info">
                             <p class="language-name">{{ $t("about.languages.polish") }}</p>
                             <p class="language-level">{{ $t("about.languages.native") }}</p>
                         </div>
                     </div>
                     <div class="language">
-                        <nuxt-img src="/flags/pt.png" class="flag" />
+                        <NuxtImg src="/flags/pt.png" class="flag" />
                         <div class="language-info">
                             <p class="language-name">{{ $t("about.languages.portuguese") }}</p>
                             <p class="language-level">{{ $t("about.languages.native") }}</p>
@@ -53,7 +53,7 @@
                 </div>
             </section>
         </div>
-        <!-- <nuxt-img src="/hero-frame.png" class="hero" /> -->
+        <!-- <NuxtImg src="/hero-frame.png" class="hero" /> -->
     </div>
 </template>
 
@@ -79,6 +79,10 @@
     opacity: 0;
 
     animation: $animation-duration forwards slide-from-top;
+
+    @include tablet-below {
+        width: 100%;
+    }
 }
 
 .section {
@@ -125,6 +129,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 4rem;
+
+    @include tablet-below {
+        gap: 2rem;
+    }
 }
 
 .education {
@@ -175,6 +183,10 @@
     font-weight: 700;
     font-size: 1rem;
     color: white;
+
+    @include tablet-below {
+        font-size: 0.75rem;
+    }
 }
 
 .language-level {

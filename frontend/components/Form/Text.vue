@@ -8,12 +8,6 @@
 <style lang="scss" scoped>
 .input-wrapper {
     width: 100%;
-
-    @include phone-only {
-        width: 100%;
-
-        margin-bottom: 2rem;
-    }
 }
 
 .name {

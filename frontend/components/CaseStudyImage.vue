@@ -1,9 +1,9 @@
 <template>
     <div class="csi-container">
-        <nuxt-img class="csi-img" :src="src" :alt="alt" format="webp" @click="popupOpen = true" />
+        <NuxtImg class="csi-img" :src="src" :alt="alt" format="webp" @click="popupOpen = true" />
         <div class="csi-hint">Click to enlarge</div>
         <div :class="popupOpen ? 'csi-popup-open' : 'csi-popup-closed'" @click="popupOpen = false">
-            <nuxt-img class="csi-popup-image" :src="src" :alt="alt" loading="lazy" />
+            <NuxtImg class="csi-popup-image" :src="src" :alt="alt" loading="lazy" />
         </div>
     </div>
 </template>

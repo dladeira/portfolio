@@ -3,14 +3,14 @@
         <div class="content">
             <div class="header">
                 <div class="logo-row">
-                    <nuxt-img :src="`/works/${id}-logo.png`" class="logo" />
+                    <NuxtImg :src="`/works/${id}-logo.png`" class="logo" />
 
-                    <div class="client-container" v-if="type == 'client'">
+                    <div class="type type-client" v-if="type == 'client'">
                         <p class="client-label">{{ $t("works.terms.client") }}</p>
                         <WorkClient :external="client.external" :name="client.name" :tag="client.tag" :icon="client.icon" />
                     </div>
 
-                    <div class="startup-type" v-if="type == 'startup'">Start Up</div>
+                    <div class="type type-startup" v-if="type == 'startup'">Start Up</div>
                 </div>
                 <div class="tags">
                     <WorkTag v-for="tag of tags" :tag="tag" />
@@ -19,7 +19,7 @@
 
             <div class="review" v-if="review">
                 <div class="review-header">
-                    <nuxt-img class="review-image" :src="review.icon" />
+                    <NuxtImg class="review-image" :src="review.icon" />
                     <div class="review-header-text">
                         <p class="review-text-name">{{ review.name }}</p>
                         <p class="review-text-tag">{{ review.tag }}</p>
@@ -29,13 +29,13 @@
             </div>
 
             <div class="buttons">
-                <a class="button-visit" :href="website" target="_blank"> {{ $t("works.buttons.visit") }} <nuxt-img class="button-visit-icon" src="/icons/external.svg" /> </a>
+                <a class="button-visit" :href="website" target="_blank"> {{ $t("works.buttons.visit") }} <NuxtImg class="button-visit-icon" src="/icons/external.svg" /> </a>
             </div>
         </div>
         <div class="image-wrapper">
             <div class="image-hover">
-                <nuxt-img class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
-                <nuxt-img :src="`/works/${id}-1.png`" class="image" alt="Work Preview" format="webp" @click="clickImage(`/works/${id}-1.png`)" />
+                <NuxtImg class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
+                <NuxtImg :src="`/works/${id}-1.png`" class="image" alt="Work Preview" format="webp" @click="clickImage(`/works/${id}-1.png`)" />
             </div>
         </div>
     </article>
@@ -58,6 +58,15 @@
     border-radius: 1.25rem;
 
     overflow: hidden;
+
+    @include tablet-below {
+        flex-direction: column;
+        gap: 4rem;
+
+        height: fit-content;
+
+        padding: 2rem;
+    }
 }
 
 .content {
@@ -68,6 +77,12 @@
 
     height: 100%;
     width: calc(100% - 46rem + 20rem - 3rem);
+
+    @include tablet-below {
+        gap: 3rem;
+
+        width: 100%;
+    }
 }
 
 .header {
@@ -89,7 +104,21 @@
     width: 100%;
 }
 
-.client-container {
+.logo {
+    width: 20rem;
+
+    @include tablet-below {
+        width: 13rem;
+    }
+}
+
+.type {
+    @include tablet-below {
+        display: none !important;
+    }
+}
+
+.type-client {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -103,7 +132,7 @@
     color: rgba(white, 0.5);
 }
 
-.startup-type {
+.type-startup {
     padding: 0.75rem 2rem;
 
     border-radius: 5px;
@@ -222,7 +251,6 @@
 .image-wrapper {
     position: absolute;
     right: -23rem;
-    // right: 0rem;
     height: 25rem;
 
     border-radius: 0.75rem;
@@ -233,6 +261,10 @@
 
     animation: $animation-duration forwards slide-from-right;
     animation-delay: 200ms;
+
+    @include tablet-below {
+        display: none;
+    }
 }
 
 .image-hover {

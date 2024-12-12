@@ -1,10 +1,10 @@
 <template>
     <a :href="external" target="_blank" class="person">
-        <nuxt-img class="person-image" :src="icon" />
+        <NuxtImg class="person-image" :src="icon" />
         <div class="person-content">
             <div class="person-header">
                 <p class="person-name">{{ name }}</p>
-                <nuxt-img v-if="external" src="/icons/external.svg" class="person-external" />
+                <NuxtImg v-if="external" src="/icons/external.svg" class="person-external" height="12" />
             </div>
             <p class="person-stat">{{ tag }}</p>
         </div>
@@ -46,7 +46,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
 
     font-weight: 400;
     color: white;

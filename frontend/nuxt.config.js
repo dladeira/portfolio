@@ -1,35 +1,30 @@
-import en from "./locales/en.json";
-import pl from "./locales/pl.json";
-import pt from "./locales/pt.json";
-
 export default defineNuxtConfig({
     css: ["@/assets/styles/global.scss"],
+
     vite: {
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: '@import "@/assets/styles/variables.scss";',
+                    additionalData: '@use "@/assets/styles/variables.scss" as *;',
+                    api: "modern-compiler",
                 },
             },
         },
     },
+
     nitro: {
         compressPublicAssets: true,
     },
-    modules: ["nuxt-proxy", "@nuxt/image-edge", "@nuxtjs/i18n", "@funken-studio/sitemap-nuxt-3", "@nuxtjs/robots"],
+
+    // modules: ["nuxt-proxy", "@nuxtjs/i18n", "@funken-studio/sitemap-nuxt-3", "@nuxtjs/robots", "@nuxt/image"],
+    modules: ["nuxt-proxy", "@nuxtjs/i18n", "@nuxt/image"],
+
     i18n: {
         locales: ["en", "pl", "pt"],
         defaultLocale: "en",
-        vueI18n: {
-            legacy: false,
-            locale: "en",
-            messages: {
-                en,
-                pl,
-                pt,
-            },
-        },
+        vueI18n: "./i18n.config.js",
     },
+
     runtimeConfig: {
         proxy: {
             options: [
@@ -47,4 +42,6 @@ export default defineNuxtConfig({
             WEB_SERVER: process.env.WEB_SERVER,
         },
     },
-});
+
+    compatibilityDate: "2024-12-12",
+})

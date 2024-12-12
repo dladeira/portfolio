@@ -5,23 +5,23 @@
                 <nuxt-link href="/" class="brand">dladeira<span class="brand-light">.com</span></nuxt-link>
             </div>
             <div class="links">
-                <nuxt-link :href="localePath('/about')" :class="route.path.includes('/about') ? 'link-active' : 'link'">
-                    <nuxt-img class="icon" src="/icons/navbar/about.svg" />
+                <nuxt-link :href="$localePath('/about')" :class="route.path.includes('/about') ? 'link-active' : 'link'">
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/about.svg" />
                     <div class="link-text">{{ $t("navbar.link1") }}</div>
                 </nuxt-link>
-                <nuxt-link :href="localePath('/works')" :class="route.path.includes('/works') ? 'link-active' : 'link'">
-                    <nuxt-img class="icon" src="/icons/navbar/works.svg" />
+                <nuxt-link :href="$localePath('/works')" :class="route.path.includes('/works') ? 'link-active' : 'link'">
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/works.svg" />
                     <div class="link-text">{{ $t("navbar.link2") }}</div>
                 </nuxt-link>
-                <nuxt-link :href="localePath('/contact')" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
-                    <nuxt-img class="icon" src="/icons/navbar/contact.svg" />
+                <nuxt-link :href="$localePath('/contact')" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/contact.svg" />
                     <div class="link-text">{{ $t("navbar.link3") }}</div>
                 </nuxt-link>
             </div>
             <div class="flags">
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('en')" aria-label="Switch to English"><NuxtImg :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" height="20" width="32" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pl')" aria-label="Zmień na polski"><NuxtImg :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" height="20" width="32" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pt')" aria-label="Muda para portugês"><NuxtImg :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" height="20" width="32" /></nuxt-link>
             </div>
         </div>
     </nav>
@@ -68,10 +68,11 @@
     @include phone-only {
         flex-direction: column;
         justify-content: center;
+        gap: 1rem;
 
         width: 90%;
 
-        margin: 1.75rem auto 1.25rem;
+        margin: 0 auto;
     }
 }
 
@@ -87,7 +88,9 @@
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
     @include phone-only {
-        margin: 0 auto 1.5rem;
+        width: fit-content;
+
+        margin: 0 auto;
 
         font-size: 2.5rem;
     }
@@ -106,9 +109,7 @@
 
     @include tablet-below {
         justify-content: space-between;
-        gap: 0;
-
-        width: 100%;
+        gap: 2.5rem;
     }
 }
 
@@ -172,12 +173,13 @@
     gap: 1rem;
 
     width: 10rem;
+
+    @include tablet-below {
+        display: none;
+    }
 }
 
 .flag {
-    height: 1.25rem;
-    width: 2rem;
-
     border-radius: 3px;
 
     opacity: 0.3;

@@ -1,6 +1,6 @@
 <template>
     <div class="tag-container">
-        <nuxt-img class="tag-image" :src="`/tags/${tag}.svg`" />
+        <NuxtImg class="tag-image" :src="`/tags/${tag}.svg`" />
         <p class="tag-text">{{ tag }}</p>
     </div>
 </template>
@@ -12,6 +12,16 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0.4rem;
+
+    opacity: 0.5;
+}
+
+.tag-image {
+    height: 1.25rem;
+
+    @include tablet-below {
+        height: 1rem;
+    }
 }
 
 .tag-text {
@@ -20,6 +30,10 @@
     font-weight: 700;
     font-size: 1rem;
     color: white;
+
+    @include tablet-below {
+        font-size: 0.85rem;
+    }
 }
 </style>
 

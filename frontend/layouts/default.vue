@@ -20,9 +20,13 @@
 }
 
 .layout-page-container {
-    @include resizable-width;
     margin: 0 auto;
     padding: 5rem 0 7rem;
+
+    @include resizable-width;
+    @include tablet-below {
+        padding: 8rem 0 6rem;
+    }
 }
 </style>
 

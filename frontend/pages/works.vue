@@ -25,6 +25,7 @@ const { t } = useI18n()
 const works = [
     {
         id: "gamey",
+        imageHeight: 53,
         website: "https://gamey.ai",
         tags: ["Nuxt", "MongoDB", "Figma", "ElevenLabs", "AssemblyAI", "FFMPEG"],
         type: "client",
@@ -44,6 +45,7 @@ const works = [
     },
     {
         id: "hoplite",
+        imageHeight: 88,
         website: "https://hoplite.gg",
         tags: ["Next.js", "Tebex", "Strapi"],
         type: "client",
@@ -63,6 +65,7 @@ const works = [
     },
     {
         id: "infracharm",
+        imageHeight: 33,
         website: "https://infracharm.com",
         tags: ["Nuxt", "Figma"],
         type: "client",
@@ -80,6 +83,7 @@ const works = [
     },
     {
         id: "polanner",
+        imageHeight: 48,
         website: "https://polanner.com",
         tags: ["Nuxt", "Figma", "MongoDB", "Electron", "ChatGPT"],
         type: "startup",

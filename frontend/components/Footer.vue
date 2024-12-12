@@ -5,17 +5,17 @@
                 <div class="copyright">© 2024 Daniel Ladeira</div>
             </div>
             <div class="icons">
-                <nuxt-img src="/icons/github.svg" class="icon icon-github" />
-                <nuxt-img src="/icons/dribbble.svg" class="icon icon-dribbble" />
-                <nuxt-img src="/icons/discord.svg" class="icon icon-discord" />
-                <nuxt-img src="/icons/overflow.svg" class="icon icon-overflow" />
-                <nuxt-img src="/icons/linkedin.svg" class="icon icon-linkedin" />
+                <NuxtImg src="/icons/github.svg" class="icon icon-github" height="20" width="20" />
+                <NuxtImg src="/icons/dribbble.svg" class="icon icon-dribbble" height="20" width="20" />
+                <NuxtImg src="/icons/discord.svg" class="icon icon-discord" height="20" width="20" />
+                <NuxtImg src="/icons/overflow.svg" class="icon icon-overflow" height="20" width="20" />
+                <NuxtImg src="/icons/linkedin.svg" class="icon icon-linkedin" height="20" width="20" />
             </div>
-            <!-- <div class="flags">
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" /></nuxt-link>
-            </div> -->
+            <div class="flags">
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('en')" aria-label="Switch to English"><NuxtImg :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pl')" aria-label="Zmień na polski"><NuxtImg :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pt')" aria-label="Muda para portugês"><NuxtImg :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" /></nuxt-link>
+            </div>
         </div>
     </div>
 </template>
@@ -63,6 +63,10 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
+
+    @include tablet-below {
+        display: none;
+    }
 }
 
 .icon {
@@ -86,6 +90,10 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    @include above-tablet {
+        display: none;
+    }
 }
 
 .flag {
