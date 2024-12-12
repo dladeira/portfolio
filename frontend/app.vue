@@ -15,6 +15,7 @@ useI18n().onLanguageSwitched = (oldLocale, newLocale) => {
         htmlAttrs: {
             lang: newLocale,
         },
+        script: [{ src: "https://www.googletagmanager.com/gtag/js?id=G-DGXWE1276G" }],
     })
 }
 
@@ -24,6 +25,7 @@ useHead({
     htmlAttrs: {
         lang: useI18n().locale.value,
     },
+    script: [{ src: "https://www.googletagmanager.com/gtag/js?id=G-DGXWE1276G" }],
 })
 
 onBeforeMount(() => {
@@ -37,5 +39,13 @@ onBeforeMount(() => {
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
         f.parentNode.insertBefore(j, f)
     })(window, document, "script", "dataLayer", "GTM-PM785BGV")
+
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+        dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+
+    gtag("config", "G-DGXWE1276G")
 })
 </script>
