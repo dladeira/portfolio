@@ -29,11 +29,13 @@
 
 <style lang="scss" scoped>
 .container {
-    position: absolute;
+    position: fixed;
 
     width: 100%;
 
     z-index: 4;
+
+    background-color: $background-color-1;
 }
 
 .inner-container {

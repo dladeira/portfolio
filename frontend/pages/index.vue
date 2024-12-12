@@ -20,7 +20,9 @@
                 </div>
             </div>
         </div>
-        <nuxt-img src="/hero-frame.png" class="hero" :style="{ opacity: 0 }" />
+        <div class="hero-wrapper">
+            <nuxt-img src="/hero.png" class="hero" />
+        </div>
     </div>
 </template>
 
@@ -130,5 +132,31 @@
     justify-content: flex-start;
     align-items: center;
     gap: 4rem;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: rgba($blue, 0.1);
+
+    border-radius: 3rem;
+
+    padding: 3rem 0 0 1rem;
+
+    height: 29rem;
+    width: 29rem;
+
+    overflow: hidden;
+}
+
+.hero {
+    width: 100%;
+
+    opacity: 0;
+
+    animation: slide-from-right $animation-duration forwards;
 }
 </style>

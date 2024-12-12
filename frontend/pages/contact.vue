@@ -40,7 +40,6 @@
     opacity: 0;
 
     animation: $animation-title-duration forwards slide-from-top;
-    animation-delay: $animation-title-delay;
 }
 
 .contact-title {

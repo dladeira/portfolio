@@ -4,18 +4,18 @@
             <div class="left">
                 <div class="copyright">© 2024 Daniel Ladeira</div>
             </div>
-            <!-- <div class="icons">
+            <div class="icons">
                 <nuxt-img src="/icons/github.svg" class="icon icon-github" />
                 <nuxt-img src="/icons/dribbble.svg" class="icon icon-dribbble" />
                 <nuxt-img src="/icons/discord.svg" class="icon icon-discord" />
                 <nuxt-img src="/icons/overflow.svg" class="icon icon-overflow" />
                 <nuxt-img src="/icons/linkedin.svg" class="icon icon-linkedin" />
-            </div> -->
-            <div class="flags">
+            </div>
+            <!-- <div class="flags">
                 <nuxt-link class="flag-wrapper" :href="switchLocalePath('en')" aria-label="Switch to English"><nuxt-img :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" /></nuxt-link>
                 <nuxt-link class="flag-wrapper" :href="switchLocalePath('pl')" aria-label="Zmień na polski"><nuxt-img :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" /></nuxt-link>
                 <nuxt-link class="flag-wrapper" :href="switchLocalePath('pt')" aria-label="Muda para portugês"><nuxt-img :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" /></nuxt-link>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -68,9 +68,15 @@
 .icon {
     opacity: 0.5;
 
+    transition: all 200ms $transition;
+
     &:hover {
         cursor: pointer;
         opacity: 1;
+    }
+
+    &-discord:hover {
+        cursor: default;
     }
 }
 
@@ -89,7 +95,7 @@
     border-radius: 3px;
 
     opacity: 0.3;
-    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 200ms $transition;
 
     &-active {
         @extend .flag;
