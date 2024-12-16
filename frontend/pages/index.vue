@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="hero-wrapper">
-            <NuxtImg src="/hero.png" class="hero" format="webp" alt="Daniel Ladeira" />
+            <NuxtImg src="/hero.png" class="hero" format="webp" alt="Daniel Ladeira" :placeholder="[800, 782, 10]" />
         </div>
     </div>
 </template>

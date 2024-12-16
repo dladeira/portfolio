@@ -13,21 +13,21 @@
     align-items: center;
     gap: 0.4rem;
 
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .tag-image {
-    height: 1.25rem;
+    height: 1rem;
 
     @include tablet-below {
-        height: 1rem;
+        height: 0.85rem;
     }
 }
 
 .tag-text {
     margin: 0;
 
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1rem;
     color: white;
 

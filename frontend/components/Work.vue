@@ -35,7 +35,7 @@
         <div class="image-wrapper">
             <div class="image-hover">
                 <NuxtImg class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
-                <NuxtImg :src="`/works/${id}-1.png`" class="image" alt="Work Preview" format="webp" @click="clickImage(`/works/${id}-1.png`)" />
+                <NuxtImg :src="`/works/${id}-1.png`" class="image" alt="Work Preview" format="webp" @click="clickImage(`/works/${id}-1.png`)" :placeholder="[2800, 1480, 10]" />
             </div>
         </div>
     </article>
