@@ -9,24 +9,22 @@
 const { t } = useI18n()
 
 useI18n().onLanguageSwitched = (oldLocale, newLocale) => {
-    useHead({
-        title: `Daniel Ladeira / ${t("meta.title")}`,
-        meta: [{ name: "description", content: t("meta.description") }],
-        htmlAttrs: {
-            lang: newLocale,
-        },
-        script: [{ src: "https://www.googletagmanager.com/gtag/js?id=G-DGXWE1276G" }],
-    })
+    useHead(getHeadValue(newLocale))
 }
 
-useHead({
-    title: `Daniel Ladeira / ${t("meta.title")}`,
-    meta: [{ name: "description", content: t("meta.description") }],
-    htmlAttrs: {
-        lang: useI18n().locale.value,
-    },
-    script: [{ src: "https://www.googletagmanager.com/gtag/js?id=G-DGXWE1276G" }],
-})
+useHead(getHeadValue(useI18n().locale.value))
+
+function getHeadValue(locale) {
+    return {
+        title: `Daniel Ladeira / ${t("meta.title")}`,
+        titleTemplate: "%s",
+        meta: [{ name: "description", content: t("meta.description") }],
+        htmlAttrs: {
+            lang: locale,
+        },
+        script: [{ src: "https://www.googletagmanager.com/gtag/js?id=G-DGXWE1276G" }],
+    }
+}
 
 onBeforeMount(() => {
     ;(function (w, d, s, l, i) {
