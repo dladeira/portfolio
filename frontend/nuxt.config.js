@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     },
     modules: ["nuxt-proxy", "@nuxtjs/i18n", "@nuxt/image", "@nuxtjs/seo"],
     i18n: {
-        locales: ["en", "pl", "pt"],
+        locales: ["en", "pl", "pt", "la"],
         defaultLocale: "en",
         vueI18n: "./i18n.config.js",
     },
