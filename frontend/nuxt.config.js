@@ -19,6 +19,7 @@ export default defineNuxtConfig({
         locales: ["en", "pl", "pt", "la"],
         defaultLocale: "en",
         vueI18n: "./i18n.config.js",
+        skipSettingLocaleOnNavigate: true,
     },
     site: {
         url: "https://dladeira.com",

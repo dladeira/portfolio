@@ -22,9 +22,7 @@
                 </a>
             </div>
             <div class="flags">
-                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('en')" aria-label="Switch to English"><NuxtImg :class="$i18n.locale == 'en' ? 'flag-active' : 'flag'" src="/flags/us.png" alt="US Flag" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pl')" aria-label="Zmień na polski"><NuxtImg :class="$i18n.locale == 'pl' ? 'flag-active' : 'flag'" src="/flags/pl.png" alt="PL Flag" /></nuxt-link>
-                <nuxt-link class="flag-wrapper" :href="$switchLocalePath('pt')" aria-label="Muda para portugês"><NuxtImg :class="$i18n.locale == 'pt' ? 'flag-active' : 'flag'" src="/flags/pt.png" alt="PT Flag" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" v-for="locale of $i18n.locales" :href="$switchLocalePath(locale)" :aria-label="`Switch to ${locale.toUpperCase()}`"><NuxtImg :class="$i18n.locale == locale ? 'flag-active' : 'flag'" :src="`/flags/${locale}.png`" :alt="`${locale.toUpperCase()} flag`" height="20" width="32" /></nuxt-link>
             </div>
         </div>
     </div>

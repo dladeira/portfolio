@@ -1,12 +1,33 @@
 <template>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM785BGV" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <NuxtLayout>
-        <NuxtPage />
+        <NuxtPage
+            :transition="{
+                name: 'my',
+                mode: 'out-in',
+                onBeforeEnter,
+            }"
+        />
     </NuxtLayout>
 </template>
 
+<style lang="scss" scoped>
+.my-enter-active,
+.my-leave-active {
+    transition: opacity 0.15s;
+}
+.my-enter,
+.my-leave-active {
+    opacity: 0;
+}
+</style>
+
 <script setup>
-const { t } = useI18n()
+const { t, finalizePendingLocaleChange } = useI18n()
+
+async function onBeforeEnter() {
+    await finalizePendingLocaleChange()
+}
 
 useI18n().onLanguageSwitched = (oldLocale, newLocale) => {
     useHead(getHeadValue(newLocale))
