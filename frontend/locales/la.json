@@ -17,66 +17,66 @@
     "about": {
         "header": "De me",
         "title": "Daniel Ladeira",
-        "desc1": "Daniel Ladeira mihi nomen est et auctor paginarum interretialium ex Amstelodamum, peritus linguae Anglicae, Polonicae et Lusitanae. Iter meum de programmatio computatoria incepit in anno 2020, accessorium et ministratores de Minecraft creans, o que depois transformou se em programação web.",
-        "desc2": "Recentemente graduei da Escola Americana de Varsóvia, e este ano estou a iniciar a minha licenciatura em Informatika no Vrije Universiteit. A minha experiência profissional desenvolvimento web é trabalho freelance, mas recentemente tive interessado em trabalhar em grandes empresas, fazendo parte de algo maior do que eu. Prefiro trabalho híbrido e gosto de colaborar com outras pessoas.",
-        "desc3": "A minha paixão é \"user experience\" e \"design\", como podemos equilibrar a intuitividade e a estética do produto para uma experiência agradável para o utilizador. Tenho também um interesse único no conceito de \"quantified self\", como nos podemos melhorar através de dados, onde estou a desenvolver uma aplicação que nos ajuda a monitorizar a nossa produtividade e improdutividade.",
+        "desc1": "Daniel Ladeira mihi nomen est et auctor paginarum interretialium ex Amstelodamo, peritus linguae Anglicae, Polonicae et Lusitanae. Iter meum de programmatio computatoria incepit anno 2020, accessorium et ministratores de Minecraft creans, quod postea in auctoritatem paginarum interretialium versum est.",
+        "desc2": "TODO",
+        "desc3": "TODO",
         "headers": {
-            "education": "Educationes",
-            "languages": "Linguae"
+            "education": "TODO",
+            "languages": "TODO"
         },
         "languages": {
-            "english": "Anglice",
-            "polish": "Polonice",
-            "portuguese": "Lusitanice",
-            "native": "Nativo"
+            "english": "TODO",
+            "polish": "TODO",
+            "portuguese": "TODO",
+            "native": "TODO"
         },
         "education": {
-            "present": "Nunc"
+            "present": "TODO"
         }
     },
     "works": {
-        "header": "Projetos",
+        "header": "TODO",
         "reviews": {
-            "blake": "[Traduzido de Inglês] Não poderia recomendar mais o Daniel - fui prejudicado por desenvolvedores quase todas as vezes. Foi um alívio ter uma ferramenta SaaS tão incrível e avançada feita a um preço tão razoável. Ele também adicionou algumas coisas que não estavam no documento original sem penalizações e foi muito paciente durante todo o processo. 10/10, trabalharei com ele novamente.",
-            "marbar": "[Traduzido de Inglês] Daniel é um desenvolvedor excepcional que consistentemente entrega trabalhos de alta qualidade. Ele é confiável e conclui o trabalho bem antes do prazo, muitas vezes também em curto prazo. Eu o recomendo altamente!",
-            "jared": "[Traduzido de Inglês] [Daniel] completou serviços de desenvolvimento web para mim. O site ficou ótimo e eles foram rápidos em fazer as alterações necessárias. Ótimo!"
+            "blake": "TODO",
+            "marbar": "TODO",
+            "jared": "TODO"
         },
         "buttons": {
-            "visit": "Visitar Site"
+            "visit": "TODO"
         },
         "terms": {
-            "client": "Cliente",
-            "owner": "Proprietário",
-            "operations": "Operações",
-            "monthly_revenue": "Mensis Revenue",
-            "monthly_organic_searches": "Mensis Quaestiones Organicae",
-            "monthly_visits": "Mensis Visitationes",
-            "registered_users": "Usores Registrati",
-            "acquired_clients": "Clienti Acquisiti"
+            "client": "TODO",
+            "owner": "TODO",
+            "operations": "TODO",
+            "monthly_revenue": "TODO",
+            "monthly_organic_searches": "TODO",
+            "monthly_visits": "TODO",
+            "registered_users": "TODO",
+            "acquired_clients": "TODO"
         }
     },
     "contact": {
-        "title": "Interessado no que você vê?",
-        "subtitle": "Me mande uma mensagem",
-        "send": "Enviar",
-        "send_hint": "Uma mensagem de confirmação será enviada para o seu email",
+        "title": "TODO",
+        "subtitle": "TODO",
+        "send": "TODO",
+        "send_hint": "TODO",
         "inputs": {
-            "name": "Nome",
-            "email": "Email",
-            "budget": "Orçamento",
-            "budget_placeholder": "Nível Médio: €700 - €2000",
-            "message": "Mensagem",
-            "message_placeholder": "Descreva o que você quer"
+            "name": "TODO",
+            "email": "TODO",
+            "budget": "TODO",
+            "budget_placeholder": "TODO",
+            "message": "TODO",
+            "message_placeholder": "TODO"
         }
     },
     "popups": {
         "verify": {
-            "title": "Último passo!",
-            "desc": "Por favor carregar no link que foi enviado para o vosso email. Se você não carrega no link, nada vai ficar enviado a mim!"
+            "title": "TODO",
+            "desc": "TODO"
         },
         "confirm": {
-            "title": "Email enviado!",
-            "desc": "Vou responder em 48 horas"
+            "title": "TODO",
+            "desc": "TODO"
         }
     }
 }
