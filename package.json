@@ -1,8 +1,8 @@
 {
     "scripts": {
-        "dev": "nuxt dev --port 3000 --dotenv ../.env",
-        "build": "nuxt build --dotenv ../.env",
-        "preview": "nuxt preview --dotenv ../.env",
+        "dev": "nuxt dev --port 3000",
+        "build": "nuxt build",
+        "preview": "nuxt preview",
         "start": "NITRO_PORT=3030 node ./.output/server/index.mjs",
         "postinstall": "nuxt prepare"
     },
@@ -10,8 +10,13 @@
         "@nuxt/image": "^1.8.1",
         "@nuxtjs/i18n": "^9.1.1",
         "@nuxtjs/seo": "^2.0.2",
+        "nodemailer": "^6.9.16",
         "nuxt": "^3.14.1592",
-        "nuxt-proxy": "^0.4.1",
+        "nuxt-mongoose": "^1.0.6",
+        "nuxt-nodemailer": "^1.1.2",
         "sass": "^1.82.0"
+    },
+    "dependencies": {
+        "zod": "^3.24.1"
     }
 }

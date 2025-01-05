@@ -7,12 +7,12 @@
 
         <div class="page-content">
             <form class="form" @submit.prevent="sendForm">
-                <FormText class="form-name" :name="$t('contact.inputs.name')" placeholder="Daniel Ladeira" type="string" id="name" />
-                <FormText class="form-email" :name="$t('contact.inputs.email')" placeholder="user@example.com" type="string" id="email" />
-                <FormText class="form-budget" :name="$t('contact.inputs.budget')" :placeholder="$t('contact.inputs.budget_placeholder')" type="string" id="budget" />
-                <FormTextArea class="form-textarea" :name="$t('contact.inputs.message')" :placeholder="$t('contact.inputs.message_placeholder')" type="string" id="message" />
+                <FormText class="form-name" :name="$t('contact.inputs.name')" placeholder="Daniel Ladeira" type="string" id="name" :disabled="messageSent" />
+                <FormText class="form-email" :name="$t('contact.inputs.email')" placeholder="user@example.com" type="email" id="email" :disabled="messageSent" />
+                <FormText class="form-budget" :name="$t('contact.inputs.budget')" :placeholder="$t('contact.inputs.budget_placeholder')" type="string" id="budget" :disabled="messageSent" />
+                <FormTextArea class="form-textarea" :name="$t('contact.inputs.message')" :placeholder="$t('contact.inputs.message_placeholder')" type="string" id="message" :disabled="messageSent" />
                 <div class="submit-row">
-                    <button type="submit" class="button-submit">Send <NuxtImg class="button-submit-icon" src="/icons/send.svg" height="12" alt="Send icon" /></button>
+                    <button type="submit" class="button-submit" :disabled="messageSent">Send <NuxtImg class="button-submit-icon" src="/icons/send.svg" height="12" alt="Send icon" /></button>
                     <p class="submit-info">{{ $t("contact.send_hint") }}</p>
                 </div>
             </form>
@@ -125,17 +125,22 @@
 
     transition: 200ms $transition background-color;
 
-    &:hover {
+    &:hover:not(:disabled) {
         cursor: pointer;
         background-color: rgba($blue, 0.14);
     }
 
-    &:active {
+    &:active:not(:disabled) {
         background-color: rgba($blue, 0.2);
+    }
+
+    &:disabled {
+        opacity: 0.7;
     }
 }
 
 .button-submit-icon {
+    height: 0.85rem;
     filter: $blue-filter;
 }
 
@@ -172,13 +177,12 @@
 <script setup>
 const verifyPopup = useState("popupVerify")
 const messageSent = useState("messageSent")
-const config = useRuntimeConfig()
 
 async function sendForm(e) {
     verifyPopup.value = true
     messageSent.value = true
 
-    const { error } = await useFetch(config.public.WEB_SERVER + "/api/msg", {
+    const { error } = await useFetch("/api/send-message", {
         method: "POST",
         body: {
             name: e.target.name.value,

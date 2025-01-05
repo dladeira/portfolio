@@ -13,6 +13,14 @@
 
 <script setup>
 const { t, finalizePendingLocaleChange } = useI18n()
+const route = useRoute()
+const popupSent = useState("popupSent")
+
+onMounted(() => {
+    if (route.query.confirm) {
+        popupSent.value = true
+    }
+})
 
 async function onBeforeEnter() {
     await finalizePendingLocaleChange()

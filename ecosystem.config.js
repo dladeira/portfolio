@@ -1,9 +1,9 @@
 module.exports = {
     apps: [
         {
-            name: "portfolio-backend",
+            name: "portfolio",
             script: "npm",
             args: "start",
         },
     ],
-};
+}

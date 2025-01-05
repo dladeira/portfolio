@@ -1,19 +1,19 @@
 name: Update Master
 on:
-  push:
-    branches: [master]
+    push:
+        branches: [master]
 
 jobs:
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - name: SSH Commands
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-            host: ${{ secrets.SSH_HOST }}
-            username: ${{ secrets.SSH_USERNAME }}
-            password: ${{ secrets.SSH_PASSWORD }}
-            port: ${{ secrets.SSH_PORT }}
-            script: |
-                cd /home/${{ secrets.SSH_USERNAME }}/projects/webdev/portfolio/
-                sh update.sh
+    update:
+        runs-on: ubuntu-latest
+        steps:
+            - name: SSH Commands
+              uses: appleboy/ssh-action@v1.0.3
+              with:
+                  host: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USERNAME }}
+                  password: ${{ secrets.SSH_PASSWORD }}
+                  port: ${{ secrets.SSH_PORT }}
+                  script: |
+                      cd /home/${{ secrets.SSH_USERNAME }}/projects/webdev/portfolio/
+                      git pull origin && npm i && npm run build && pm2 start ecosystem.config.js

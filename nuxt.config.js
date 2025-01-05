@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     nitro: {
         compressPublicAssets: true,
     },
-    modules: ["nuxt-proxy", "@nuxtjs/i18n", "@nuxt/image", "@nuxtjs/seo"],
+    modules: ["@nuxtjs/i18n", "@nuxt/image", "@nuxtjs/seo", "nuxt-mongoose", "nuxt-nodemailer"],
     i18n: {
         locales: ["en", "pl", "pt", "la"],
         defaultLocale: "en",
@@ -24,21 +24,21 @@ export default defineNuxtConfig({
     site: {
         url: "https://dladeira.com",
     },
+    mongoose: {
+        uri: process.env.NUXT_MONGODB_URI,
+    },
+    nodemailer: {
+        from: "Daniel Ladeira <daniel@ladeira.eu>",
+        host: process.env.NUXT_SMTP_HOST,
+        port: process.env.NUXT_SMTP_PORT,
+        secure: true,
+        auth: {
+            user: process.env.NUXT_SMTP_USER,
+            pass: process.env.NUXT_SMTP_PASS,
+        },
+    },
     runtimeConfig: {
-        proxy: {
-            options: [
-                {
-                    target: process.env.API_SERVER,
-                    changeOrigin: true,
-                    pathRewrite: {
-                        "^/api": "/",
-                    },
-                    pathFilter: ["/api"],
-                },
-            ],
-        },
-        public: {
-            WEB_SERVER: process.env.WEB_SERVER,
-        },
+        ORIGIN: process.env.NUXT_ORIGIN,
+        MESSAGE_EMAIL: process.env.NUXT_MESSAGE_EMAIL,
     },
 })
