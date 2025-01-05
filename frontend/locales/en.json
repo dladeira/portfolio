@@ -37,7 +37,7 @@
     "works": {
         "header": "Works",
         "reviews": {
-            "blake": "Couldn't give a bigger vouch for Daniel - been screwed over by developers nearly every single time. Breath of fresh air to have got such an incredible and advanced SaaS tool made at such a reasonable price. He also added a few things not on the original document without penalties and was very patient throughout the process. 10/10 would and will be working with him again.",
+            "blake": "Couldn't give a bigger vouch for Daniel - been screwed over by developers nearly every single time. Breath of fresh air to have got such an incredible and advanced SaaS tool. Would and will be working with him again.",
             "marbar": "Daniel is an exceptional developer who consistently delivers high-quality work. He is reliable and completes work well before the deadline, and often on short notice as well. I highly recommend him!",
             "jared": "[Daniel] completed web development services for me. Website came out great and they were quick to make the required changes. Great!"
         },
@@ -47,7 +47,12 @@
         "terms": {
             "client": "Client",
             "owner": "Owner",
-            "operations": "Operations"
+            "operations": "Operations",
+            "monthly_revenue": "Monthly Revenue",
+            "monthly_organic_searches": "Monthly Organic Searches",
+            "monthly_visits": "Monthly Visits",
+            "registered_users": "Registered Users",
+            "acquired_clients": "Acquired Clients"
         }
     },
     "contact": {

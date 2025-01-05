@@ -17,6 +17,13 @@
                 </div>
             </div>
 
+            <div class="stats" v-if="stats">
+                <div class="stat" v-for="stat of stats">
+                    <h4 class="stat-title">{{ stat.title }}</h4>
+                    <p class="stat-subtitle">{{ stat.subtitle }}</p>
+                </div>
+            </div>
+
             <div class="review" v-if="review">
                 <div class="review-header">
                     <NuxtImg class="review-image" :src="review.icon" alt="Reviewer profile picture" />
@@ -50,7 +57,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    height: calc(25rem + 8rem);
+    height: calc(27rem + 8rem);
     width: 100%;
 
     padding: 4rem 5rem;
@@ -61,7 +68,6 @@
 
     @include tablet-below {
         flex-direction: column;
-        gap: 4rem;
 
         height: fit-content;
 
@@ -79,7 +85,7 @@
     width: calc(100% - 46rem + 20rem - 3rem);
 
     @include tablet-below {
-        gap: 3rem;
+        gap: 2rem;
 
         width: 100%;
     }
@@ -108,7 +114,7 @@
     width: 20rem;
 
     @include tablet-below {
-        width: 13rem;
+        width: 15rem;
     }
 }
 
@@ -152,6 +158,46 @@
     gap: 1.5rem;
 
     width: 100%;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+
+    margin: 1rem 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.25rem;
+
+    @include tablet-below {
+        gap: 0.5rem;
+    }
+}
+
+.stat-title {
+    margin: 0;
+
+    font-size: 1.5rem;
+    color: white;
+}
+
+.stat-subtitle {
+    margin: 0;
+
+    font-size: 1rem;
+    color: rgba(white, 0.5);
+
+    @include tablet-below {
+        font-size: 0.85rem;
+    }
 }
 
 .review {
@@ -250,8 +296,8 @@
 
 .image-wrapper {
     position: absolute;
-    right: -23rem;
-    height: 25rem;
+    right: -24rem;
+    height: 27rem;
 
     border-radius: 0.75rem;
 
@@ -335,6 +381,7 @@ const props = defineProps({
     client: Object,
     review: Object,
     backgroundGradient: Array,
+    stats: Array,
 })
 
 const popupOpen = useState("popup-image-open")

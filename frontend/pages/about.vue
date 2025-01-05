@@ -1,59 +1,61 @@
 <template>
-    <h1 class="page-title">{{ $t("about.header") }}</h1>
+    <div>
+        <h1 class="page-title">{{ $t("about.header") }}</h1>
 
-    <div class="page">
-        <div class="content">
-            <section class="section">
-                <h2 class="section-title-main">Daniel Ladeira</h2>
-                <div class="section-paragraphs">
-                    <p class="section-paragraph">{{ $t("about.desc1") }}</p>
-                    <p class="section-paragraph">{{ $t("about.desc2") }}</p>
-                    <p class="section-paragraph">{{ $t("about.desc3") }}</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <h3 class="section-title">{{ $t("about.headers.education") }}</h3>
-                <div class="section-images">
-                    <div class="education">
-                        <NuxtImg src="/education/asw.svg" class="education-image" alt="ASW logo" />
-                        <p class="education-duration">2013 - 2024</p>
+        <div class="page">
+            <div class="content">
+                <section class="section">
+                    <h2 class="section-title-main">Daniel Ladeira</h2>
+                    <div class="section-paragraphs">
+                        <p class="section-paragraph">{{ $t("about.desc1") }}</p>
+                        <p class="section-paragraph">{{ $t("about.desc2") }}</p>
+                        <p class="section-paragraph">{{ $t("about.desc3") }}</p>
                     </div>
-                    <div class="education">
-                        <NuxtImg src="/education/vrije.svg" class="education-image" alt="Vrije logo" />
-                        <p class="education-duration">2024 - {{ $t("about.education.present") }}</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="section">
-                <h3 class="section-title">{{ $t("about.headers.languages") }}</h3>
-                <div class="section-images">
-                    <div class="language">
-                        <NuxtImg src="/flags/en.png" class="flag" alt="US flag" />
-                        <div class="language-info">
-                            <p class="language-name">{{ $t("about.languages.english") }}</p>
-                            <p class="language-level">{{ $t("about.languages.native") }}</p>
+                <section class="section">
+                    <h3 class="section-title">{{ $t("about.headers.education") }}</h3>
+                    <div class="section-images">
+                        <div class="education">
+                            <NuxtImg src="/education/asw.svg" class="education-image" alt="ASW logo" />
+                            <p class="education-duration">2013 - 2024</p>
+                        </div>
+                        <div class="education">
+                            <NuxtImg src="/education/vrije.svg" class="education-image" alt="Vrije logo" />
+                            <p class="education-duration">2024 - {{ $t("about.education.present") }}</p>
                         </div>
                     </div>
-                    <div class="language">
-                        <NuxtImg src="/flags/pl.png" class="flag" alt="PL flag" />
-                        <div class="language-info">
-                            <p class="language-name">{{ $t("about.languages.polish") }}</p>
-                            <p class="language-level">{{ $t("about.languages.native") }}</p>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">{{ $t("about.headers.languages") }}</h3>
+                    <div class="section-images">
+                        <div class="language">
+                            <NuxtImg src="/flags/en.png" class="flag" alt="US flag" />
+                            <div class="language-info">
+                                <p class="language-name">{{ $t("about.languages.english") }}</p>
+                                <p class="language-level">{{ $t("about.languages.native") }}</p>
+                            </div>
+                        </div>
+                        <div class="language">
+                            <NuxtImg src="/flags/pl.png" class="flag" alt="PL flag" />
+                            <div class="language-info">
+                                <p class="language-name">{{ $t("about.languages.polish") }}</p>
+                                <p class="language-level">{{ $t("about.languages.native") }}</p>
+                            </div>
+                        </div>
+                        <div class="language">
+                            <NuxtImg src="/flags/pt.png" class="flag" alt="PT flag" />
+                            <div class="language-info">
+                                <p class="language-name">{{ $t("about.languages.portuguese") }}</p>
+                                <p class="language-level">{{ $t("about.languages.native") }}</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="language">
-                        <NuxtImg src="/flags/pt.png" class="flag" alt="PT flag" />
-                        <div class="language-info">
-                            <p class="language-name">{{ $t("about.languages.portuguese") }}</p>
-                            <p class="language-level">{{ $t("about.languages.native") }}</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
+            <!-- <NuxtImg src="/hero-frame.png" class="hero" /> -->
         </div>
-        <!-- <NuxtImg src="/hero-frame.png" class="hero" /> -->
     </div>
 </template>
 

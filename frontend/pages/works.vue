@@ -1,8 +1,10 @@
 <template>
-    <h1 class="page-title">{{ $t("works.header") }}</h1>
-    <section class="works">
-        <Work v-for="work of works" :id="work.id" :website="work.website" :tags="work.tags" :type="work.type" :client="work.client" :review="work.review" :backgroundGradient="work.backgroundGradient" />
-    </section>
+    <div>
+        <h1 class="page-title">{{ $t("works.header") }}</h1>
+        <section class="works">
+            <Work v-for="work of works" :id="work.id" :website="work.website" :tags="work.tags" :type="work.type" :client="work.client" :review="work.review" :backgroundGradient="work.backgroundGradient" :stats="work.stats" />
+        </section>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -29,6 +31,16 @@ const works = [
         website: "https://gamey.ai",
         tags: ["Nuxt", "MongoDB", "Figma", "ElevenLabs", "AssemblyAI", "FFMPEG"],
         type: "client",
+        stats: [
+            {
+                title: "+$2,000",
+                subtitle: t("works.terms.monthly_revenue"),
+            },
+            {
+                title: ">80",
+                subtitle: t("works.terms.registered_users"),
+            },
+        ],
         client: {
             name: "Magic",
             tag: `310K ${t("hero.subscribers")}`,
@@ -49,6 +61,20 @@ const works = [
         website: "https://hoplite.gg",
         tags: ["Next.js", "Tebex", "Strapi"],
         type: "client",
+        stats: [
+            {
+                title: "+$10,000",
+                subtitle: t("works.terms.monthly_revenue"),
+            },
+            {
+                title: ">45,000",
+                subtitle: t("works.terms.monthly_visits"),
+            },
+            {
+                title: ">15,000",
+                subtitle: t("works.terms.monthly_organic_searches"),
+            },
+        ],
         client: {
             name: "SpeedSilver",
             tag: `3.5M ${t("hero.subscribers")}`,
@@ -69,6 +95,12 @@ const works = [
         website: "https://infracharm.com",
         tags: ["Nuxt", "Figma"],
         type: "client",
+        stats: [
+            {
+                title: "+100",
+                subtitle: t("works.terms.acquired_clients"),
+            },
+        ],
         client: {
             name: "InfraCharm",
             icon: "/people/infracharm.png",

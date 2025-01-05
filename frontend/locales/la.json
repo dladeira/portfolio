@@ -47,7 +47,12 @@
         "terms": {
             "client": "Cliente",
             "owner": "Proprietário",
-            "operations": "Operações"
+            "operations": "Operações",
+            "monthly_revenue": "Mensis Revenue",
+            "monthly_organic_searches": "Mensis Quaestiones Organicae",
+            "monthly_visits": "Mensis Visitationes",
+            "registered_users": "Usores Registrati",
+            "acquired_clients": "Clienti Acquisiti"
         }
     },
     "contact": {
