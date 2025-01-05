@@ -1,5 +1,5 @@
 <template>
-    <h1 class="page-title">About Me</h1>
+    <h1 class="page-title">{{ $t("about.header") }}</h1>
 
     <div class="page">
         <div class="content">
@@ -30,7 +30,7 @@
                 <h3 class="section-title">{{ $t("about.headers.languages") }}</h3>
                 <div class="section-images">
                     <div class="language">
-                        <NuxtImg src="/flags/us.png" class="flag" alt="US flag" />
+                        <NuxtImg src="/flags/en.png" class="flag" alt="US flag" />
                         <div class="language-info">
                             <p class="language-name">{{ $t("about.languages.english") }}</p>
                             <p class="language-level">{{ $t("about.languages.native") }}</p>

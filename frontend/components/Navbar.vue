@@ -1,8 +1,8 @@
 <template>
     <nav class="container" id="navbar-container">
         <div class="inner-container">
-            <div class="brand" @click="scrollTo('hero')">
-                <nuxt-link href="/" class="brand">dladeira<span class="brand-light">.com</span></nuxt-link>
+            <div class="brand">
+                <nuxt-link :href="$localePath('/')" class="brand">dladeira<span class="brand-light">.com</span></nuxt-link>
             </div>
             <div class="links">
                 <nuxt-link :href="$localePath('/about')" :class="route.path.includes('/about') ? 'link-active' : 'link'">
@@ -198,6 +198,7 @@
 
 <script setup>
 const route = useRoute()
+const { locale: currentLocale, setLocale } = useI18n()
 
 function scrollTo(id) {
     setTimeout(

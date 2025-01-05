@@ -4,23 +4,12 @@
         <NuxtPage
             :transition="{
                 name: 'my',
-                mode: 'out-in',
+                mode: 'in-out',
                 onBeforeEnter,
             }"
         />
     </NuxtLayout>
 </template>
-
-<style lang="scss" scoped>
-.my-enter-active,
-.my-leave-active {
-    transition: opacity 0.15s;
-}
-.my-enter,
-.my-leave-active {
-    opacity: 0;
-}
-</style>
 
 <script setup>
 const { t, finalizePendingLocaleChange } = useI18n()
