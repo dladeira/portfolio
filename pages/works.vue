@@ -24,7 +24,7 @@
 <script setup>
 const { t } = useI18n()
 
-const works = [
+const works = computed(() => [
     {
         id: "gamey",
         imageHeight: 53,
@@ -121,5 +121,5 @@ const works = [
         type: "startup",
         backgroundGradient: ["#00B2FF", "#006B99"],
     },
-]
+])
 </script>

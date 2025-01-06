@@ -20,9 +20,10 @@ export default defineNuxtConfig({
         defaultLocale: "en",
         vueI18n: "./i18n.config.js",
         skipSettingLocaleOnNavigate: true,
+        baseUrl: process.env.NUXT_ORIGIN,
     },
     site: {
-        url: "https://dladeira.com",
+        url: process.env.NUXT_ORIGIN,
     },
     mongoose: {
         uri: process.env.NUXT_MONGODB_URI,
