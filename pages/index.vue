@@ -20,9 +20,6 @@
                 </div>
             </div>
         </div>
-        <div class="hero-wrapper">
-            <NuxtImg src="/hero.png" class="hero" format="webp" alt="Daniel Ladeira" :placeholder="[800, 782, 10]" />
-        </div>
     </div>
 </template>
 
@@ -35,7 +32,7 @@
 
     width: 100%;
 
-    margin-top: 8rem;
+    margin-top: 10rem;
 
     @include tablet-below {
         flex-direction: column;
@@ -71,7 +68,7 @@
     color: white;
 
     @include tablet-below {
-        font-size: 4rem;
+        font-size: 3.5rem;
         text-align: center;
     }
 }

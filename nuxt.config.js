@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     },
     modules: ["@nuxtjs/i18n", "@nuxt/image", "@nuxtjs/seo", "nuxt-mongoose", "nuxt-nodemailer"],
     i18n: {
-        locales: ["en", "pl", "pt", "la"],
+        locales: ["en", "pl", "pt"],
         defaultLocale: "en",
         vueI18n: "./i18n.config.js",
         skipSettingLocaleOnNavigate: true,

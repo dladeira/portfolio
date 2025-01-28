@@ -17,10 +17,6 @@
                     <h3 class="section-title">{{ $t("about.headers.education") }}</h3>
                     <div class="section-images">
                         <div class="education">
-                            <NuxtImg src="/education/asw.svg" class="education-image" alt="ASW logo" />
-                            <p class="education-duration">2013 - 2024</p>
-                        </div>
-                        <div class="education">
                             <NuxtImg src="/education/vrije.svg" class="education-image" alt="Vrije logo" />
                             <p class="education-duration">2024 - {{ $t("about.education.present") }}</p>
                         </div>
@@ -54,7 +50,6 @@
                     </div>
                 </section>
             </div>
-            <!-- <NuxtImg src="/hero-frame.png" class="hero" /> -->
         </div>
     </div>
 </template>
