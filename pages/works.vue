@@ -37,7 +37,7 @@ const works = computed(() => [
                 subtitle: t("works.terms.monthly_revenue"),
             },
             {
-                title: ">80",
+                title: "+80",
                 subtitle: t("works.terms.registered_users"),
             },
         ],
@@ -67,11 +67,11 @@ const works = computed(() => [
                 subtitle: t("works.terms.monthly_revenue"),
             },
             {
-                title: ">45,000",
+                title: "+45,000",
                 subtitle: t("works.terms.monthly_visits"),
             },
             {
-                title: ">15,000",
+                title: "+15,000",
                 subtitle: t("works.terms.monthly_organic_searches"),
             },
         ],
