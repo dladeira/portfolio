@@ -19,7 +19,7 @@
                 </nuxt-link>
             </div>
             <div class="flags">
-                <nuxt-link class="flag-wrapper" v-for="locale of $i18n.locales" :href="$switchLocalePath(locale)" :aria-label="`Switch to ${locale.toUpperCase()}`"><NuxtImg :class="$i18n.locale == locale ? 'flag-active' : 'flag'" :src="`/flags/${locale}.png`" :alt="`${locale.toUpperCase()} flag`" height="20" width="32" /></nuxt-link>
+                <nuxt-link class="flag-wrapper" v-for="locale of $i18n.locales.value" :href="$switchLocalePath(locale)" :aria-label="`Switch to ${locale.toUpperCase()}`"><NuxtImg :class="$i18n.locale == locale ? 'flag-active' : 'flag'" :src="`/flags/${locale}.png`" :alt="`${locale.toUpperCase()} flag`" height="20" width="32" /></nuxt-link>
             </div>
         </div>
     </nav>
@@ -33,14 +33,13 @@
 
     z-index: 4;
 
-    background-color: rgba($background-color-1, 0.8);
-
-    backdrop-filter: blur(10px);
-
     transition: $transition 200ms box-shadow;
 
     &-effect {
+        background-color: rgba($background-color-1, 0.8);
+
         box-shadow: 0 4px 20px rgba(black, 0.2);
+        backdrop-filter: blur(10px);
     }
 }
 
