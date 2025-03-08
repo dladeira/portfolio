@@ -8,15 +8,6 @@
                 <a class="icon-wrapper" target="_blank" href="https://github.com/dladeira">
                     <NuxtImg src="/icons/github.svg" class="icon icon-github" height="20" width="20" alt="Github logo" />
                 </a>
-                <a class="icon-wrapper" target="_blank" href="https://dribbble.com/dladeira">
-                    <NuxtImg src="/icons/dribbble.svg" class="icon icon-dribbble" height="20" width="20" alt="Dribbble logo" />
-                </a>
-                <div class="icon-wrapper">
-                    <NuxtImg src="/icons/discord.svg" class="icon icon-discord" height="20" width="20" alt="Discord logo" />
-                </div>
-                <a class="icon-wrapper" target="_blank" href="https://stackoverflow.com/users/9564834/daniel">
-                    <NuxtImg src="/icons/overflow.svg" class="icon icon-overflow" height="20" width="20" alt="Stack overflow logo" />
-                </a>
                 <a class="icon-wrapper" target="_blank" href="https://linkedin.com/in/dladeira">
                     <NuxtImg src="/icons/linkedin.svg" class="icon icon-linkedin" height="20" width="20" alt="Linkedin logo" />
                 </a>
@@ -131,3 +122,5 @@
     }
 }
 </style>
+
+<script setup></script>

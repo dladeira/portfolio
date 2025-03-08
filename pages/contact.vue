@@ -18,9 +18,7 @@
             </form>
             <div class="socials">
                 <Social text="dladeira" icon="/icons/github.svg" link="https://github.com/dladeira" />
-                <Social text="dladeira" icon="/icons/dribbble.svg" link="https://dribbble.com/dladeira" />
                 <Social text="dladeira" icon="/icons/discord.svg" />
-                <Social text="Daniel" icon="/icons/overflow.svg" link="https://stackoverflow.com/users/9564834/daniel" />
                 <Social text="Daniel Ladeira" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" />
             </div>
         </div>
