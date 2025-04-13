@@ -193,7 +193,6 @@
     margin: 0;
 
     font-size: 1rem;
-    font-weight: 500;
     color: rgba(white, 0.5);
 
     @include tablet-below {
@@ -276,7 +275,6 @@
     border-radius: 5px;
 
     font-size: 0.85rem;
-    font-weight: 500;
     text-decoration: none;
     background-color: rgba(white, 0.1);
     color: white;
