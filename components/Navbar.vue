@@ -2,7 +2,7 @@
     <nav class="container" id="navbar-container">
         <div class="inner-container">
             <div class="brand">
-                <nuxt-link :href="$localePath('/')" class="brand">ladeira<span class="brand-light">.eu</span></nuxt-link>
+                <nuxt-link :href="$localePath('/')" class="brand">Ladeira<span class="brand-light">.eu</span></nuxt-link>
             </div>
             <div class="links">
                 <nuxt-link :href="$localePath('/about')" :class="route.path.includes('/about') ? 'link-active' : 'link'">
