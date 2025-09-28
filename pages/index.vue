@@ -2,21 +2,21 @@
     <div class="page">
         <div class="text">
             <div class="text-header">
-                <h1 class="title">{{ $t("hero.title") }}</h1>
-                <h1 class="subtitle">{{ $t("hero.subtitle") }}</h1>
+                <h1 class="title">Daniel Ladeira</h1>
+                <h1 class="subtitle">Backend/DevOps Developer</h1>
 
                 <div class="buttons">
-                    <a href="/contact" class="button button-contact">{{ $t("navbar.link3") }}</a>
-                    <a href="/works" class="button button-works">{{ $t("navbar.link2") }}</a>
+                    <NuxtLink href="/contact" class="button button-contact">Contact</NuxtLink>
+                    <NuxtLink href="/works" class="button button-works">Freelance Work</NuxtLink>
                 </div>
             </div>
 
             <div class="worked">
-                <p class="worked-title">{{ $t("hero.worked") }}</p>
+                <p class="worked-title">Worked with</p>
 
                 <div class="people">
-                    <Client name="SpeedSilver" :tag="`3.5M ${$t('hero.subscribers')}`" icon="/people/speedsilver.png" external="https://www.youtube.com/@SpeedSilver" />
-                    <Client name="Magic" :tag="`310K ${$t('hero.subscribers')}`" icon="/people/magic.png" external="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" />
+                    <Client name="SpeedSilver" tag="3.5M subscribers" icon="/people/speedsilver.png" external="https://www.youtube.com/@SpeedSilver" />
+                    <Client name="Magic" tag="310K subscribers" icon="/people/magic.png" external="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" />
                 </div>
             </div>
         </div>

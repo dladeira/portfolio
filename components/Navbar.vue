@@ -2,24 +2,21 @@
     <nav class="container" id="navbar-container">
         <div class="inner-container">
             <div class="brand">
-                <nuxt-link :href="$localePath('/')" class="brand">ladeira<span class="brand-light">.eu</span></nuxt-link>
+                <nuxt-link href="/" class="brand">ladeira<span class="brand-light">.eu</span></nuxt-link>
             </div>
             <div class="links">
-                <nuxt-link :href="$localePath('/about')" :class="route.path.includes('/about') ? 'link-active' : 'link'">
+                <nuxt-link href="/about" :class="route.path.includes('/about') ? 'link-active' : 'link'">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/about.svg" alt="Page icon" />
-                    <div class="link-text">{{ $t("navbar.link1") }}</div>
+                    <div class="link-text">About me</div>
                 </nuxt-link>
-                <nuxt-link :href="$localePath('/works')" :class="route.path.includes('/works') ? 'link-active' : 'link'">
+                <nuxt-link href="/works" :class="route.path.includes('/works') ? 'link-active' : 'link'">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/works.svg" alt="Page icon" />
-                    <div class="link-text">{{ $t("navbar.link2") }}</div>
+                    <div class="link-text">Freelance Work</div>
                 </nuxt-link>
-                <nuxt-link :href="$localePath('/contact')" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
+                <nuxt-link href="/contact" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/contact.svg" alt="Page icon" />
-                    <div class="link-text">{{ $t("navbar.link3") }}</div>
+                    <div class="link-text">Contact</div>
                 </nuxt-link>
-            </div>
-            <div class="flags">
-                <nuxt-link class="flag-wrapper" v-for="locale of $i18n.locales.value" :href="$switchLocalePath(locale)" :aria-label="`Switch to ${locale.toUpperCase()}`"><NuxtImg :class="$i18n.locale == locale ? 'flag-active' : 'flag'" :src="`/flags/${locale}.png`" :alt="`${locale.toUpperCase()} flag`" height="20" width="32" /></nuxt-link>
             </div>
         </div>
     </nav>
@@ -197,7 +194,6 @@
 
 <script setup>
 const route = useRoute()
-const { locale: currentLocale, setLocale } = useI18n()
 
 function scrollTo(id) {
     setTimeout(

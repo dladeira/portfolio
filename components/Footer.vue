@@ -12,9 +12,6 @@
                     <NuxtImg src="/icons/linkedin.svg" class="icon icon-linkedin" height="20" width="20" alt="Linkedin logo" />
                 </a>
             </div>
-            <div class="flags">
-                <nuxt-link class="flag-wrapper" v-for="locale of $i18n.locales.value" :href="$switchLocalePath(locale)" :aria-label="`Switch to ${locale.toUpperCase()}`"><NuxtImg :class="$i18n.locale == locale ? 'flag-active' : 'flag'" :src="`/flags/${locale}.png`" :alt="`${locale.toUpperCase()} flag`" height="20" width="32" /></nuxt-link>
-            </div>
         </div>
     </div>
 </template>

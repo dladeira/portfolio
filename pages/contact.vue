@@ -1,19 +1,18 @@
 <template>
     <div>
         <div class="page-header">
-            <h1 class="contact-title">{{ $t("contact.title") }}</h1>
-            <h2 class="contact-subtitle">{{ $t("contact.subtitle") }}</h2>
+            <h1 class="contact-title">Interested in what you see?</h1>
+            <h2 class="contact-subtitle">Feel free to send me a message</h2>
         </div>
 
         <div class="page-content">
             <form class="form" @submit.prevent="sendForm">
-                <FormText class="form-name" :name="$t('contact.inputs.name')" placeholder="Daniel Ladeira" type="string" id="name" :disabled="messageSent" />
-                <FormText class="form-email" :name="$t('contact.inputs.email')" placeholder="user@example.com" type="email" id="email" :disabled="messageSent" />
-                <FormText class="form-budget" :name="$t('contact.inputs.budget')" :placeholder="$t('contact.inputs.budget_placeholder')" type="string" id="budget" :disabled="messageSent" />
-                <FormTextArea class="form-textarea" :name="$t('contact.inputs.message')" :placeholder="$t('contact.inputs.message_placeholder')" type="string" id="message" :disabled="messageSent" />
+                <FormText class="form-name" name="Name" placeholder="Daniel Ladeira" type="string" id="name" :disabled="messageSent" />
+                <FormText class="form-email" name="Email" placeholder="user@example.com" type="email" id="email" :disabled="messageSent" />
+                <FormTextArea class="form-textarea" name="Message" placeholder="Describe what you want" type="string" id="message" :disabled="messageSent" />
                 <div class="submit-row">
                     <button type="submit" class="button-submit" :disabled="messageSent">Send <NuxtImg class="button-submit-icon" src="/icons/send.svg" height="12" alt="Send icon" /></button>
-                    <p class="submit-info">{{ $t("contact.send_hint") }}</p>
+                    <p class="submit-info">{{ messageSent ? "Message sent! I will get back to you within 48 hours" : "" }}</p>
                 </div>
             </form>
             <div class="socials">
@@ -85,10 +84,6 @@
     @include tablet-below {
         width: 100%;
     }
-}
-
-.form-budget {
-    grid-column: 1 / 3;
 }
 
 .form-textarea {
@@ -173,23 +168,28 @@
 </style>
 
 <script setup>
-const verifyPopup = useState("popupVerify")
-const messageSent = useState("messageSent")
+const messageSent = ref(false)
 
 async function sendForm(e) {
-    verifyPopup.value = true
-    messageSent.value = true
-
     const { error } = await useFetch("/api/send-message", {
         method: "POST",
         body: {
             name: e.target.name.value,
             email: e.target.email.value,
-            budget: e.target.budget.value,
             message: e.target.message.value,
         },
     })
 
-    if (error.value) return console.log(error.value)
+    if (error.value) {
+        console.log(error.value)
+        return
+    }
+
+    messageSent.value = true
+
+    setTimeout(() => {
+        messageSent.value = false
+        e.target.reset()
+    }, 5000)
 }
 </script>

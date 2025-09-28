@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="page-title">{{ $t("works.header") }}</h1>
+        <h1 class="page-title">Works</h1>
         <section class="works">
             <Work v-for="work of works" :id="work.id" :website="work.website" :tags="work.tags" :type="work.type" :client="work.client" :review="work.review" :backgroundGradient="work.backgroundGradient" :stats="work.stats" />
         </section>
@@ -22,9 +22,7 @@
 </style>
 
 <script setup>
-const { t } = useI18n()
-
-const works = computed(() => [
+const works = [
     {
         id: "gamey",
         imageHeight: 53,
@@ -34,16 +32,16 @@ const works = computed(() => [
         stats: [
             {
                 title: "+$2,000",
-                subtitle: t("works.terms.monthly_revenue"),
+                subtitle: "Monthly Revenue",
             },
             {
                 title: "+80",
-                subtitle: t("works.terms.registered_users"),
+                subtitle: "Registered Users",
             },
         ],
         client: {
             name: "Magic",
-            tag: `310K ${t("hero.subscribers")}`,
+            tag: "310K subscribers",
             external: "https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw",
             icon: "/people/magic.png",
         },
@@ -51,7 +49,7 @@ const works = computed(() => [
             icon: "/people/magic.png",
             name: "Blake",
             tag: "Candia Studios",
-            text: t("works.reviews.blake"),
+            text: "Couldn't give a bigger vouch for Daniel - been screwed over by developers nearly every single time. Breath of fresh air to have got such an incredible and advanced SaaS tool. Would and will be working with him again.",
         },
         backgroundGradient: ["#1A1126", "#0E051B"],
     },
@@ -64,28 +62,28 @@ const works = computed(() => [
         stats: [
             {
                 title: "+$10,000",
-                subtitle: t("works.terms.monthly_revenue"),
+                subtitle: "Monthly Revenue",
             },
             {
                 title: "+45,000",
-                subtitle: t("works.terms.monthly_visits"),
+                subtitle: "Monthly Visits",
             },
             {
                 title: "+15,000",
-                subtitle: t("works.terms.monthly_organic_searches"),
+                subtitle: "Monthly Organic Searches",
             },
         ],
         client: {
             name: "SpeedSilver",
-            tag: `3.5M ${t("hero.subscribers")}`,
+            tag: "3.5M subscribers",
             external: "https://www.youtube.com/@SpeedSilver",
             icon: "/people/speedsilver.png",
         },
         review: {
             icon: "/people/marbar.png",
             name: "Marbar",
-            tag: `${t("works.terms.operations")} @ HopliteNetwork`,
-            text: t("works.reviews.marbar"),
+            tag: "Operations @ HopliteNetwork",
+            text: "Daniel is an exceptional developer who consistently delivers high-quality work. He is reliable and completes work well before the deadline, and often on short notice as well. I highly recommend him!",
         },
         backgroundGradient: ["#272124", "#503D2F"],
     },
@@ -98,7 +96,7 @@ const works = computed(() => [
         stats: [
             {
                 title: "+100",
-                subtitle: t("works.terms.acquired_clients"),
+                subtitle: "Acquired Clients",
             },
         ],
         client: {
@@ -108,8 +106,8 @@ const works = computed(() => [
         review: {
             icon: "/people/infracharm.png",
             name: "Jared",
-            tag: `${t("works.terms.owner")} @ Infracharm`,
-            text: t("works.reviews.jared"),
+            tag: "Owner @ Infracharm",
+            text: "[Daniel] completed web development services for me. Website came out great and they were quick to make the required changes. Great!",
         },
         backgroundGradient: ["#934A97", "#730F23"],
     },
@@ -121,5 +119,5 @@ const works = computed(() => [
         type: "startup",
         backgroundGradient: ["#00B2FF", "#006B99"],
     },
-])
+]
 </script>

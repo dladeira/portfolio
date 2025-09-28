@@ -9,10 +9,6 @@ export const Message = defineMongooseModel("Message", {
         type: "string",
         required: true,
     },
-    budget: {
-        type: "string",
-        required: true,
-    },
     message: {
         type: "string",
         required: true,

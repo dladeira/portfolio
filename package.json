@@ -8,11 +8,9 @@
     },
     "devDependencies": {
         "@nuxt/image": "^1.8.1",
-        "@nuxtjs/i18n": "^9.1.1",
-        "@nuxtjs/seo": "^2.0.2",
+        "@nuxtjs/seo": "^3.2.2",
         "nodemailer": "^6.9.16",
         "nuxt": "^3.14.1592",
-        "nuxt-mongoose": "^1.0.6",
         "nuxt-nodemailer": "^1.1.2",
         "sass": "^1.82.0"
     },

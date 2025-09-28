@@ -1,48 +1,18 @@
 <template>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM785BGV" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-    <NuxtLayout>
-        <NuxtPage
-            :transition="{
-                name: 'my',
-                mode: 'in-out',
-                onBeforeEnter,
-            }"
-        />
-    </NuxtLayout>
+    <NuxtLayout> <NuxtPage /> </NuxtLayout>
 </template>
 
 <script setup>
-const { t, finalizePendingLocaleChange } = useI18n()
-const route = useRoute()
-const popupSent = useState("popupSent")
-
-onMounted(() => {
-    if (route.query.confirm) {
-        popupSent.value = true
-    }
+useHead({
+    title: "Daniel Ladeira / Backend/DevOps Developer",
+    titleTemplate: "%s",
+    meta: [{ name: "description", content: "Backend/DevOps developer based in Europe. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS." }],
+    htmlAttrs: {
+        lang: "en",
+    },
+    script: [{ src: "https://www.googletagmanager.com/gtag/js?id=G-DGXWE1276G" }],
 })
-
-async function onBeforeEnter() {
-    await finalizePendingLocaleChange()
-}
-
-useI18n().onLanguageSwitched = (oldLocale, newLocale) => {
-    useHead(getHeadValue(newLocale))
-}
-
-useHead(getHeadValue(useI18n().locale.value))
-
-function getHeadValue(locale) {
-    return {
-        title: `Daniel Ladeira / ${t("meta.title")}`,
-        titleTemplate: "%s",
-        meta: [{ name: "description", content: t("meta.description") }],
-        htmlAttrs: {
-            lang: locale,
-        },
-        script: [{ src: "https://www.googletagmanager.com/gtag/js?id=G-DGXWE1276G" }],
-    }
-}
 
 onBeforeMount(() => {
     ;(function (w, d, s, l, i) {

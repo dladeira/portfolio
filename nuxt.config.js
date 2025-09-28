@@ -14,14 +14,7 @@ export default defineNuxtConfig({
     nitro: {
         compressPublicAssets: true,
     },
-    modules: ["@nuxtjs/i18n", "@nuxt/image", "@nuxtjs/seo", "nuxt-mongoose", "nuxt-nodemailer"],
-    i18n: {
-        locales: ["en", "pl", "pt"],
-        defaultLocale: "en",
-        vueI18n: "./i18n.config.js",
-        skipSettingLocaleOnNavigate: true,
-        baseUrl: process.env.NUXT_ORIGIN,
-    },
+    modules: ["@nuxt/image", "@nuxtjs/seo", "nuxt-nodemailer"],
     site: {
         url: process.env.NUXT_ORIGIN,
     },
@@ -29,7 +22,7 @@ export default defineNuxtConfig({
         uri: process.env.NUXT_MONGODB_URI,
     },
     nodemailer: {
-        from: "Daniel Ladeira <daniel@ladeira.eu>",
+        from: process.env.NUXT_SMTP_FROM_HEADER,
         host: process.env.NUXT_SMTP_HOST,
         port: process.env.NUXT_SMTP_PORT,
         secure: true,
@@ -40,6 +33,6 @@ export default defineNuxtConfig({
     },
     runtimeConfig: {
         ORIGIN: process.env.NUXT_ORIGIN,
-        MESSAGE_EMAIL: process.env.NUXT_MESSAGE_EMAIL,
+        SMTP_TO: process.env.NUXT_SMTP_TO,
     },
 })

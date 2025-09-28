@@ -6,7 +6,7 @@
                     <NuxtImg :src="`/works/${id}-logo.png`" class="logo" format="webp" :alt="`${id} logo`" />
 
                     <div class="type type-client" v-if="type == 'client'">
-                        <p class="client-label">{{ $t("works.terms.client") }}</p>
+                        <p class="client-label">Client</p>
                         <WorkClient :external="client.external" :name="client.name" :tag="client.tag" :icon="client.icon" />
                     </div>
 
@@ -36,7 +36,7 @@
             </div>
 
             <div class="buttons">
-                <a class="button-visit" :href="website" target="_blank"> {{ $t("works.buttons.visit") }} <NuxtImg class="button-visit-icon" src="/icons/external.svg" alt="External link icon" /> </a>
+                <a class="button-visit" :href="website" target="_blank"> Visit Website <NuxtImg class="button-visit-icon" src="/icons/external.svg" alt="External link icon" /> </a>
             </div>
         </div>
         <div class="image-wrapper">
