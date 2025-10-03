@@ -7,7 +7,7 @@
 
         <div class="page-content">
             <form class="form" @submit.prevent="sendForm">
-                <FormText class="form-name" name="Name" placeholder="Daniel Ladeira" type="string" id="name" :disabled="messageSent" />
+                <FormText class="form-name" name="Name" placeholder="Daniel Kazmierczak-Ladeira" type="string" id="name" :disabled="messageSent" />
                 <FormText class="form-email" name="Email" placeholder="user@example.com" type="email" id="email" :disabled="messageSent" />
                 <FormTextArea class="form-textarea" name="Message" placeholder="Describe what you want" type="string" id="message" :disabled="messageSent" />
                 <div class="submit-row">

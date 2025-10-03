@@ -5,9 +5,9 @@
         <div class="page">
             <div class="content">
                 <section class="section">
-                    <h2 class="section-title-main">Daniel Ladeira</h2>
+                    <h2 class="section-title-main">Daniel Kazmierczak-Ladeira</h2>
                     <div class="section-paragraphs">
-                        <p class="section-paragraph">My name is Daniel Ladeira and I am a Backend/DevOps developer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating Minecraft modifications in Java, then into freelance full stack development, and now into full-time Backend/DevOps.</p>
+                        <p class="section-paragraph">My name is Daniel Kazmierczak-Ladeira and I am a Backend/DevOps developer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating Minecraft modifications in Java, then into freelance full stack development, and now into full-time Backend/DevOps.</p>
                         <p class="section-paragraph">I'm currently working as a full-time Backend/DevOps Developer at a mid-sized Dutch startup, while pursuing my bachelor's in computer science on the side. I work best hybrid and enjoy collaborating with other people.</p>
                         <p class="section-paragraph">I'm super versed in anything JavaScript, though recently I've been expanding more into Rust and Python. As for DevOps, I'm currently deep diving into monitoring and observability (Grafana, OTEL, ClickStack) and deployment systems (Docker, Kubernetes).</p>
                     </div>
