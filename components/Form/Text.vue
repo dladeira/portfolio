@@ -1,7 +1,7 @@
 <template>
     <div class="input-wrapper">
-        <div class="name">{{ name }}</div>
-        <input class="input" :name="id" :type="type" :placeholder="placeholder" step="any" :disabled="disabled" required />
+        <label class="name" :for="id">{{ name }}</label>
+        <input class="input" :name="id" :type="type" :placeholder="placeholder" step="any" :disabled="disabled" required :id="id" />
     </div>
 </template>
 
@@ -11,11 +11,13 @@
 }
 
 .name {
+    display: block;
+
     width: 100%;
 
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
 
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 400;
     color: rgba(white, 0.5);
 }
@@ -40,10 +42,14 @@
         color: rgba(white, 0.2);
     }
 
+    &:hover {
+        background-color: rgba(white, 0.04);
+    }
+
     &:focus {
         outline: none;
 
-        border: 1px solid rgba(white, 0.2);
+        background-color: rgba(white, 0.04);
     }
 
     &:disabled {

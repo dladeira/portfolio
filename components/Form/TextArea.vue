@@ -1,7 +1,7 @@
 <template>
     <div class="input-wrapper">
-        <div class="name">{{ name }}</div>
-        <textarea class="input" :name="id" :type="type" :placeholder="placeholder" :disabled="disabled" required />
+        <label class="name" :for="id">{{ name }}</label>
+        <textarea class="input" :name="id" :type="type" :placeholder="placeholder" :disabled="disabled" required :id="id" />
     </div>
 </template>
 
@@ -11,17 +11,19 @@
 }
 
 .name {
+    display: block;
+
     width: 100%;
 
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
 
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 400;
     color: rgba(white, 0.5);
 }
 
 .input {
-    height: 12rem;
+    height: 16rem;
     width: 100%;
 
     padding: 0.75rem 1rem;
@@ -35,6 +37,7 @@
     color: white;
 
     outline: none;
+    resize: none;
 
     &::placeholder {
         color: rgba(white, 0.2);
@@ -42,8 +45,6 @@
 
     &:focus {
         outline: none;
-
-        border: 1px solid rgba(white, 0.4);
     }
 
     &:disabled {

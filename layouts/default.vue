@@ -15,11 +15,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    min-height: 100vh;
 }
 
 .layout-page-container {
     margin: 0 auto;
-    padding: 5rem 0 7rem;
+    padding: 5rem 0 0;
 
     @include resizable-width;
     @include tablet-below {

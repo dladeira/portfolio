@@ -34,7 +34,7 @@
 
     width: 100%;
 
-    margin: 4rem 0;
+    margin: 4rem 0 2.5rem;
 
     opacity: 0;
 
@@ -46,7 +46,7 @@
 
     font-size: 2.5rem;
     font-weight: 700;
-    color: $blue;
+    color: white;
 
     @include tablet-below {
         font-size: 2rem;
@@ -58,7 +58,7 @@
 
     font-size: 1rem;
     font-weight: 400;
-    color: white;
+    color: rgba(white, 0.5);
 }
 
 .page-content {
@@ -77,7 +77,7 @@
     grid-template-rows: 1fr;
     gap: 1.5rem;
 
-    width: 50%;
+    width: 55%;
 
     animation: $animation-duration forwards slide-from-top;
 
@@ -110,7 +110,7 @@
     border: none;
     border-radius: 5px;
 
-    padding: 0.75rem 5rem;
+    padding: 0.75rem 6rem;
 
     font-size: 1rem;
     background-color: rgba($blue, 0.1);
