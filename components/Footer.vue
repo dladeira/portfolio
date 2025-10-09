@@ -8,7 +8,6 @@
 
             <div class="nav-links">
                 <nuxt-link href="/" class="nav-link">Home</nuxt-link>
-                <nuxt-link href="/portfolio" class="nav-link">Portfolio</nuxt-link>
                 <nuxt-link href="/contact" class="nav-link">Contact</nuxt-link>
                 <nuxt-link href="/legal" class="nav-link">Legal</nuxt-link>
             </div>
@@ -42,16 +41,6 @@
     font-size: 0.75rem;
 
     @include resizable-width;
-
-    @media (max-width: 1536px) {
-        padding-left: 12rem;
-        padding-right: 12rem;
-    }
-
-    @include tablet-below {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 }
 
 .footer-top {

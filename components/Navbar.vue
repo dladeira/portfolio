@@ -7,10 +7,10 @@
             <div class="links">
                 <nuxt-link href="/about" :class="route.path.includes('/about') ? 'link-active' : 'link'">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/about.svg" alt="Page icon" />
-                    <div class="link-text">About me</div>
+                    <div class="link-text">About Me</div>
                 </nuxt-link>
-                <nuxt-link href="/works" :class="route.path.includes('/works') ? 'link-active' : 'link'">
-                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/works.svg" alt="Page icon" />
+                <nuxt-link href="/freelance" :class="route.path.includes('/freelance') ? 'link-active' : 'link'">
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/freelance.svg" alt="Page icon" />
                     <div class="link-text">Freelance Work</div>
                 </nuxt-link>
                 <nuxt-link href="/contact" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
@@ -49,7 +49,7 @@
     width: 800px;
 
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 1.25rem 0;
 
     opacity: 0.001;
     z-index: 2;
@@ -113,6 +113,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap: 0.65rem;
 
     border-bottom: 1px solid transparent;
 
@@ -151,7 +152,7 @@
 }
 
 .icon {
-    margin-right: 0.75rem;
+    width: 1.25rem;
 
     @include phone-only {
         height: 16px;

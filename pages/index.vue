@@ -7,7 +7,7 @@
 
                 <div class="buttons">
                     <NuxtLink href="/contact" class="button button-contact">Contact</NuxtLink>
-                    <NuxtLink href="/works" class="button button-works">Freelance Work</NuxtLink>
+                    <NuxtLink href="/freelance" class="button button-works">Freelance Work</NuxtLink>
                 </div>
             </div>
 
@@ -33,15 +33,15 @@
 
     width: 100%;
 
-    margin-top: 6rem;
+    margin-top: 5rem;
 
     @include tablet-below {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 8rem;
+        gap: 2rem;
 
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 }
 
@@ -50,6 +50,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    margin-bottom: 2rem;
 
     @include tablet-below {
         align-items: center;
@@ -65,9 +67,13 @@
 .title {
     margin: 0;
 
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: 700;
     color: white;
+
+    @include laptop-only {
+        font-size: 5rem;
+    }
 
     @include tablet-below {
         font-size: 3.5rem;
@@ -76,14 +82,14 @@
 }
 
 .subtitle {
-    margin: 0.5rem 0 0;
+    margin: 0;
 
     font-size: 2.75rem;
     font-weight: 700;
     color: $blue;
 
     @include tablet-below {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 }
@@ -182,7 +188,7 @@
     width: 35%;
 
     @include tablet-below {
-        width: 26rem;
+        width: 20rem;
     }
 }
 </style>

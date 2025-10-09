@@ -3,14 +3,12 @@
         <div class="content">
             <div class="header">
                 <div class="logo-row">
-                    <NuxtImg :src="`/works/${id}-logo.png`" class="logo" format="webp" :alt="`${id} logo`" />
+                    <NuxtImg :src="`/freelance/${id}-logo.png`" class="logo" format="webp" :alt="`${id} logo`" />
 
                     <div class="type type-client" v-if="type == 'client'">
                         <p class="client-label">Client</p>
                         <WorkClient :external="client.external" :name="client.name" :tag="client.tag" :icon="client.icon" />
                     </div>
-
-                    <div class="type type-startup" v-if="type == 'startup'">Start Up</div>
                 </div>
                 <div class="tags">
                     <WorkTag v-for="tag of tags" :tag="tag" />
@@ -42,7 +40,7 @@
         <div class="image-wrapper">
             <div class="image-hover">
                 <NuxtImg class="image-hover-icon" src="/icons/enlarge.svg" format="webp" alt="Enlarge Image Button" />
-                <NuxtImg :src="`/works/${id}-1.png`" class="image" alt="Work Preview" format="webp" @click="clickImage(`/works/${id}-1.png`)" :placeholder="[2800, 1480, 10]" />
+                <NuxtImg :src="`/freelance/${id}-1.png`" class="image" alt="Work Preview" format="webp" @click="clickImage(`/freelance/${id}-1.png`)" :placeholder="[2800, 1480, 10]" />
             </div>
         </div>
     </article>

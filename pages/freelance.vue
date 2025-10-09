@@ -1,9 +1,13 @@
 <template>
     <div>
-        <h1 class="page-title">Works</h1>
+        <h1 class="page-title">Freelance Work</h1>
         <section class="works">
             <Work v-for="work of works" :id="work.id" :website="work.website" :tags="work.tags" :type="work.type" :client="work.client" :review="work.review" :backgroundGradient="work.backgroundGradient" :stats="work.stats" />
         </section>
+
+        <div class="review-section">
+            <WorkReview v-for="review of reviews" :key="review.title" :title="review.title" :subtitle="review.subtitle" :image="review.image" :text="review.text" />
+        </div>
     </div>
 </template>
 
@@ -18,6 +22,45 @@
     opacity: 0;
 
     animation: $animation-duration forwards slide-from-top;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 7rem 0;
+}
+
+.reviews-title {
+    margin: 2rem 0;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+
+    opacity: 0;
+
+    animation: $animation-duration forwards slide-from-top;
+}
+
+.review-section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4rem;
+
+    margin: 7rem 0;
+
+    width: 100%;
+
+    @include tablet-below {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include phone-only {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 </style>
 
@@ -118,6 +161,27 @@ const works = [
         tags: ["Nuxt", "Figma", "MongoDB", "Electron", "ChatGPT"],
         type: "startup",
         backgroundGradient: ["#00B2FF", "#006B99"],
+    },
+]
+
+const reviews = [
+    {
+        title: "KH",
+        subtitle: "AstraNode",
+        image: "/people/kh.png",
+        text: "[Daniel] is a great designer with exceptional communication skills which resulted in a smooth and efficient commission process, from the initial call to delivery, he was there to answer any queries or makes changes to our liking.",
+    },
+    {
+        title: "Spaceley",
+        subtitle: "SpaceyDevs",
+        image: "/people/spaceley.png",
+        text: "[Daniel] has designed and developed a website for me that looks great! They also gave me clear instructions on how to install/run the website. Good service, no complaints from me.",
+    },
+    {
+        title: "Adnrl",
+        subtitle: "TropicMC",
+        image: "/people/adnrl.png",
+        text: "The website is absolutely amazing, I am pretty new to websites, and couldn't get it figured out. But [Daniel] helped me get the website up and running, and I love it so much. I would definitely recommend him to anybody.",
     },
 ]
 </script>
