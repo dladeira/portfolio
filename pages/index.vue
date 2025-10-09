@@ -2,7 +2,7 @@
     <div class="page">
         <div class="text">
             <div class="text-header">
-                <h1 class="title">Daniel Kazmierczak-Ladeira</h1>
+                <h1 class="title">Daniel Ladeira</h1>
                 <h1 class="subtitle">Backend/DevOps Developer</h1>
 
                 <div class="buttons">
@@ -63,7 +63,7 @@
 .title {
     margin: 0;
 
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
     color: white;
 

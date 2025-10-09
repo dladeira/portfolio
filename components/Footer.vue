@@ -2,7 +2,7 @@
     <div class="container">
         <div class="content">
             <div class="left">
-                <div class="copyright">© 2025 Daniel Kazmierczak-Ladeira</div>
+                <div class="copyright">© 2025 Daniel Ladeira</div>
             </div>
             <div class="icons">
                 <a class="icon-wrapper" target="_blank" href="https://github.com/dladeira">

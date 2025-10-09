@@ -5,7 +5,7 @@
 
 <script setup>
 useHead({
-    title: "Daniel Kazmierczak-Ladeira / Backend/DevOps Developer",
+    title: "Daniel Ladeira - Backend/DevOps Developer",
     titleTemplate: "%s",
     meta: [{ name: "description", content: "Backend/DevOps developer based in Europe. Specialized in React/NEXT, Vue/NUXT, MongoDB, and NodeJS." }],
     htmlAttrs: {
