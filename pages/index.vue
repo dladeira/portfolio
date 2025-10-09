@@ -20,6 +20,7 @@
                 </div>
             </div>
         </div>
+        <NuxtImg class="hero" src="hero.svg" />
     </div>
 </template>
 
@@ -32,14 +33,15 @@
 
     width: 100%;
 
-    margin-top: 10rem;
+    margin-top: 6rem;
 
     @include tablet-below {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        gap: 8rem;
 
-        margin-top: 3rem;
+        margin-top: 5rem;
     }
 }
 
@@ -76,7 +78,7 @@
 .subtitle {
     margin: 0.5rem 0 0;
 
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: 700;
     color: $blue;
 
@@ -172,40 +174,15 @@
     gap: 4rem;
 }
 
-.hero-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.hero {
+    animation: slide-from-top $animation-duration forwards;
+    animation-delay: 0s;
+    opacity: 0.001;
 
-    background-color: rgba($blue, 0.1);
-
-    border-radius: 3rem;
-
-    padding: 3rem 0 0 1rem;
-
-    height: 29rem;
-    width: 29rem;
-
-    overflow: hidden;
-
-    opacity: 0;
-
-    animation: slide-from-right $animation-duration forwards;
+    width: 35%;
 
     @include tablet-below {
-        // display: none;
-
-        height: 70vw;
-        width: 70vw;
-
-        margin-top: 4rem;
-
-        animation-name: slide-from-top;
+        width: 26rem;
     }
-}
-
-.hero {
-    width: 100%;
 }
 </style>

@@ -27,11 +27,11 @@ $small_phone_max: 600px;
 
 @mixin resizable-width {
     @include desktop-only {
-        width: calc(100vw - 300px * 2);
+        width: calc(1300px);
     }
 
     @include laptop-only {
-        width: calc(100vw - 200px * 2);
+        width: calc(950px);
     }
 
     @include tablet-only {
