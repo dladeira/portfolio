@@ -7,7 +7,7 @@
 
                 <div class="buttons">
                     <NuxtLink href="/contact" class="button button-contact">Contact</NuxtLink>
-                    <NuxtLink href="/freelance" class="button button-works">Freelance Work</NuxtLink>
+                    <a href="/resume.pdf" target="_blank" class="button button-works">View CV <img class="button-works-icon" src="/icons/external.svg" alt="External link icon" /></a>
                 </div>
             </div>
 
@@ -76,6 +76,7 @@
     }
 
     @include tablet-below {
+        margin-bottom: 0.25rem;
         font-size: 3.5rem;
         text-align: center;
     }
@@ -147,6 +148,14 @@
             background-color: rgba(white, 0.15);
         }
     }
+}
+
+.button-works-icon {
+    height: 0.75rem;
+
+    margin-left: 0.5rem;
+
+    opacity: 0.5;
 }
 
 .worked {

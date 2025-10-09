@@ -9,10 +9,17 @@
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/about.svg" alt="Page icon" />
                     <div class="link-text">About Me</div>
                 </nuxt-link>
+
                 <nuxt-link href="/freelance" :class="route.path.includes('/freelance') ? 'link-active' : 'link'">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/freelance.svg" alt="Page icon" />
                     <div class="link-text">Freelance Work</div>
                 </nuxt-link>
+
+                <a href="/resume.pdf" target="_blank" :class="route.path.includes('/resume.pdf') ? 'link-active' : 'link'">
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/resume.svg" alt="Page icon" />
+                    <div class="link-text">Resume</div>
+                </a>
+
                 <nuxt-link href="/contact" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/contact.svg" alt="Page icon" />
                     <div class="link-text">Contact</div>
@@ -62,7 +69,7 @@
     @include phone-only {
         flex-direction: column;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.75rem;
 
         width: 90%;
 
@@ -126,8 +133,6 @@
 
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
-    overflow: hidden;
-
     opacity: 0.6;
 
     &:hover {
@@ -141,13 +146,19 @@
         opacity: 1;
     }
 
-    & .link-text {
-        position: relative;
-    }
-
     @include phone-only {
+        flex-direction: column;
+
         margin: 0 0.5rem;
         font-size: 1rem;
+    }
+}
+
+.link-text {
+    position: relative;
+
+    @include phone-only {
+        font-size: 0.75rem;
     }
 }
 
