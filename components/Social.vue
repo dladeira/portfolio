@@ -1,6 +1,6 @@
 <template>
     <component :is="link ? 'a' : 'div'" class="social-wrapper" :href="link" target="_blank">
-        <NuxtImg class="social-icon" :src="icon" alt="Social Media Icon" height="20" width="20" />
+        <NuxtImg class="social-icon" :src="icon" alt="Social Media Icon" height="20" width="20" :style="{ transform: scale ? `scale(${scale})` : 'scale(1)' }" />
         <p class="social-text">{{ text }}</p>
     </component>
 </template>
@@ -43,5 +43,6 @@ const props = defineProps({
     icon: String,
     text: String,
     link: String,
+    scale: Number,
 })
 </script>

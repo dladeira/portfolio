@@ -18,7 +18,7 @@
             <div class="socials">
                 <Social text="dladeira" icon="/icons/github.svg" link="https://github.com/dladeira" />
                 <Social text="dladeira" icon="/icons/discord.svg" />
-                <Social text="Daniel Ladeira" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" />
+                <Social text="Daniel Ladeira" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" scale="0.96" />
             </div>
         </div>
     </div>
