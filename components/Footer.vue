@@ -16,9 +16,10 @@
         <div class="divider" />
 
         <div class="footer-bottom">
-            <div class="business-info">
-                <p class="info-text">KVK: 96336994</p>
-                <p class="info-text">VAT: NL005202827B22</p>
+            <div class="footer-socials">
+                <Social text="GitHub" icon="/icons/github.svg" link="https://github.com/dladeira" icon-only compact />
+                <Social text="Discord, username dladeira" icon="/icons/discord.svg" icon-only compact />
+                <Social text="LinkedIn" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" icon-only compact scale="0.96" />
             </div>
             <p class="location-text">Based in Amsterdam, The Netherlands</p>
         </div>
@@ -125,16 +126,11 @@
     }
 }
 
-.business-info {
+.footer-socials {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-}
-
-.info-text {
-    margin: 0;
-
-    color: #9ca3af;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .location-text {
