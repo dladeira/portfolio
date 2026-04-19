@@ -1,55 +1,47 @@
 <template>
-    <div class="page">
-        <div class="text">
-            <div class="text-header">
-                <h1 class="title">Daniel Ladeira</h1>
-                <h1 class="subtitle">Software Engineer</h1>
+    <div class="text">
+        <div class="text-header">
+            <h1 class="title">Daniel Ladeira</h1>
+            <h1 class="subtitle">Software Engineer</h1>
 
-                <div class="buttons">
-                    <NuxtLink href="/#contact" class="button button-contact">Contact</NuxtLink>
-                    <a href="/resume.pdf" target="_blank" class="button button-works">View CV <img class="button-works-icon" src="/icons/external.svg" alt="External link icon" /></a>
-                </div>
+            <div class="buttons">
+                <NuxtLink href="/#contact" class="button button-contact">Contact</NuxtLink>
+                <a href="/resume.pdf" target="_blank" class="button button-works">View CV <img class="button-works-icon" src="/icons/external.svg" alt="External link icon" /></a>
             </div>
+        </div>
 
-            <div class="worked">
-                <p class="worked-title">Worked with</p>
+        <div class="worked">
+            <p class="worked-title">Worked with</p>
 
-                <div class="people">
-                    <Client name="SpeedSilver" tag="3.5M subscribers" icon="/people/speedsilver.png" external="https://www.youtube.com/@SpeedSilver" />
-                    <Client name="Magic" tag="310K subscribers" icon="/people/magic.png" external="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" />
-                </div>
+            <div class="people">
+                <Client name="SpeedSilver" tag="3.5M subscribers" icon="/people/speedsilver.png" external="https://www.youtube.com/@SpeedSilver" />
+                <Client name="Magic" tag="310K subscribers" icon="/people/magic.png" external="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" />
             </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.page {
-    width: 100%;
-
-    margin-top: 8rem;
-
-    @include tablet-below {
-        margin-top: 2rem;
-    }
-}
-
 .text {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
+    width: 100%;
+
+    margin-top: 8rem;
     margin-bottom: 2rem;
 
     @include tablet-below {
         align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 0;
     }
 }
 
 .text-header {
     animation: slide-from-top $animation-duration forwards;
-    animation-delay: 0s;
     opacity: 0.001;
 }
 
@@ -79,7 +71,6 @@
     color: $blue;
 
     @include tablet-below {
-        font-size: 1.5rem;
         text-align: center;
     }
 }
@@ -157,7 +148,6 @@
     margin-top: 4rem;
 
     animation: slide-from-top $animation-duration forwards;
-    animation-delay: 0s;
     opacity: 0.001;
 
     @include tablet-below {

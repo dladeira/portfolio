@@ -24,10 +24,11 @@
     width: 100%;
 
     padding-right: min(34vw, 24rem);
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
 
     @include tablet-below {
         padding-right: 0;
+        padding-bottom: 2rem;
     }
 }
 
@@ -40,6 +41,10 @@
     gap: 10rem;
 
     width: 100%;
+
+    @include tablet-below {
+        gap: 7rem;
+    }
 }
 
 .home-hero-wrapper {
@@ -54,7 +59,6 @@
     width: 30rem;
 
     animation: slide-from-top $animation-duration forwards;
-    animation-delay: 0s;
     opacity: 0.001;
 
     @include tablet-below {

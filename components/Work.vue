@@ -136,17 +136,6 @@
     color: rgba(white, 0.5);
 }
 
-.type-startup {
-    padding: 0.75rem 2rem;
-
-    border-radius: 5px;
-
-    font-size: 0.75rem;
-    text-decoration: none;
-    background-color: rgba(white, 0.1);
-    color: white;
-}
-
 .tags {
     display: flex;
     flex-direction: row;

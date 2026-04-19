@@ -300,18 +300,4 @@
     animation: slide-from-top 500ms ease-out forwards 400ms;
     opacity: 0;
 }
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    animation: fade-in 500ms ease-out forwards 800ms;
-    opacity: 0;
-}
 </style>

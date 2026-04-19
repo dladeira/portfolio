@@ -12,33 +12,16 @@
 </template>
 
 <style lang="scss" scoped>
+.page-title {
+    @include page-title;
+}
+
 .works {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 4rem;
-
-    opacity: 0;
-
-    animation: $animation-duration forwards slide-from-top;
-}
-
-.section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    margin: 7rem 0;
-}
-
-.reviews-title {
-    margin: 2rem 0;
-
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: white;
 
     opacity: 0;
 

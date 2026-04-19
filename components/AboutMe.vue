@@ -2,53 +2,51 @@
     <section id="about" class="about-me">
         <h1 class="about-me-title">About Me</h1>
 
-        <div class="page">
-            <div class="content">
-                <section class="section section-description">
-                    <div class="section-paragraphs">
-                        <p class="section-paragraph">My name is Daniel Ladeira and I am a software engineer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating Minecraft modifications in Java.</p>
-                        <p class="section-paragraph">I'm currently working as a full-time software engineer at a fortune 500 tech company, while pursuing my bachelor's in computer science on the side. I work best hybrid and enjoy collaborating with other people..</p>
-                        <p class="section-paragraph">I'm super versed in anything JavaScript, though recently I've been expanding more into Rust and Python. I love DevOps as well, I’m currently deep diving into monitoring and observability (Grafana, OTEL, ClickStack) and deployment systems (Docker, Kubernetes).</p>
-                    </div>
-                </section>
+        <div class="content">
+            <section class="section section-description">
+                <div class="section-paragraphs">
+                    <p class="section-paragraph">My name is Daniel Ladeira and I am a software engineer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating Minecraft modifications in Java.</p>
+                    <p class="section-paragraph">I'm currently working as a full-time software engineer at a fortune 500 tech company, while pursuing my bachelor's in computer science on the side. I work best hybrid and enjoy collaborating with other people..</p>
+                    <p class="section-paragraph">I'm super versed in anything JavaScript, though recently I've been expanding more into Rust and Python. I love DevOps as well, I’m currently deep diving into monitoring and observability (Grafana, OTEL, ClickStack) and deployment systems (Docker, Kubernetes).</p>
+                </div>
+            </section>
 
-                <section class="section">
-                    <h3 class="section-title">Education</h3>
-                    <div class="section-images">
-                        <div class="education">
-                            <NuxtImg src="/education/vrije.svg" class="education-image" alt="Vrije logo" />
-                            <p class="education-duration">2024 - Present</p>
-                        </div>
+            <section class="section">
+                <h3 class="section-title">Education</h3>
+                <div class="section-images">
+                    <div class="education">
+                        <NuxtImg src="/education/vrije.svg" class="education-image" alt="Vrije logo" />
+                        <p class="education-duration">2024 - Present</p>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section class="section">
-                    <h3 class="section-title">Languages</h3>
-                    <div class="section-images">
-                        <div class="language">
-                            <NuxtImg src="/flags/en.png" class="flag" alt="US flag" />
-                            <div class="language-info">
-                                <p class="language-name">English</p>
-                                <p class="language-level">Native</p>
-                            </div>
-                        </div>
-                        <div class="language">
-                            <NuxtImg src="/flags/pl.png" class="flag" alt="PL flag" />
-                            <div class="language-info">
-                                <p class="language-name">Polish</p>
-                                <p class="language-level">Native</p>
-                            </div>
-                        </div>
-                        <div class="language">
-                            <NuxtImg src="/flags/pt.png" class="flag" alt="PT flag" />
-                            <div class="language-info">
-                                <p class="language-name">Portuguese</p>
-                                <p class="language-level">Native</p>
-                            </div>
+            <section class="section">
+                <h3 class="section-title">Languages</h3>
+                <div class="section-images">
+                    <div class="language">
+                        <NuxtImg src="/flags/en.png" class="flag" alt="US flag" />
+                        <div class="language-info">
+                            <p class="language-name">English</p>
+                            <p class="language-level">Native</p>
                         </div>
                     </div>
-                </section>
-            </div>
+                    <div class="language">
+                        <NuxtImg src="/flags/pl.png" class="flag" alt="PL flag" />
+                        <div class="language-info">
+                            <p class="language-name">Polish</p>
+                            <p class="language-level">Native</p>
+                        </div>
+                    </div>
+                    <div class="language">
+                        <NuxtImg src="/flags/pt.png" class="flag" alt="PT flag" />
+                        <div class="language-info">
+                            <p class="language-name">Portuguese</p>
+                            <p class="language-level">Native</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
 </template>
@@ -64,15 +62,6 @@
     @include page-title;
 
     margin-bottom: 1rem;
-}
-
-.page {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    width: 100%;
 }
 
 .content {
@@ -111,12 +100,6 @@
     font-weight: 700;
     font-size: 1rem;
     color: white;
-
-    &-main {
-        @extend .section-title;
-
-        font-size: 1.25rem;
-    }
 }
 
 .section-paragraphs {
@@ -179,6 +162,11 @@
     height: 2.5rem;
 
     border-radius: 5px;
+
+    @include tablet-below {
+        height: 2rem;
+        border-radius: 4px;
+    }
 }
 
 .language-info {

@@ -42,7 +42,7 @@
     &-effect {
         background-color: rgba($background-color-1, 0.8);
 
-        box-shadow: 0 4px 20px rgba(black, 0.2);
+        // box-shadow: 0 4px 20px rgba(black, 0.2);
         backdrop-filter: blur(10px);
     }
 }
@@ -140,12 +140,6 @@
         cursor: pointer;
     }
 
-    &-active {
-        @extend .link;
-
-        opacity: 1;
-    }
-
     @include phone-only {
         flex-direction: column;
 
@@ -168,38 +162,6 @@
     @include phone-only {
         height: 16px;
         width: 16px;
-    }
-}
-
-.flags {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-
-    width: 10rem;
-
-    @include tablet-below {
-        display: none;
-    }
-}
-
-.flag {
-    border-radius: 3px;
-
-    opacity: 0.3;
-    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
-
-    &-active {
-        @extend .flag;
-
-        opacity: 1;
-    }
-
-    &:hover {
-        cursor: pointer;
-        opacity: 1;
     }
 }
 </style>

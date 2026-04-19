@@ -5,12 +5,10 @@
             <h2 class="contact-subtitle">Feel free to reach out and send me a message</h2>
         </div>
 
-        <div class="page-content">
-            <div class="socials">
-                <Social text="dladeira" icon="/icons/github.svg" link="https://github.com/dladeira" />
-                <Social text="dladeira" icon="/icons/discord.svg" />
-                <Social text="Daniel Ladeira" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" scale="0.96" />
-            </div>
+        <div class="socials">
+            <Social text="dladeira" icon="/icons/github.svg" link="https://github.com/dladeira" />
+            <Social text="dladeira" icon="/icons/discord.svg" />
+            <Social text="Daniel Ladeira" icon="/icons/linkedin.svg" link="https://linkedin.com/in/dladeira" scale="0.96" />
         </div>
     </section>
 </template>
@@ -46,7 +44,7 @@
     color: white;
 
     @include tablet-below {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 }
 
@@ -58,22 +56,14 @@
     color: rgba(white, 0.5);
 }
 
-.page-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2.5rem;
-
-    width: 100%;
-}
-
 .socials {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1.5rem;
+
+    width: 100%;
 
     opacity: 0;
 
