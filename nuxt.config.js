@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     nitro: {
         compressPublicAssets: true,
     },
-    modules: ["@nuxt/image", "@nuxtjs/seo", "nuxt-nodemailer"],
+    modules: ["@nuxt/image", "@nuxtjs/seo"],
     site: {
         url: process.env.NUXT_ORIGIN,
     },

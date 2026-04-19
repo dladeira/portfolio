@@ -43,6 +43,6 @@ const props = defineProps({
     icon: String,
     text: String,
     link: String,
-    scale: Number,
+    scale: String,
 })
 </script>

@@ -66,17 +66,6 @@ body {
 // UTILS
 // ==========
 
-.page-title {
-    margin: 3rem 0;
-
-    font-weight: 700;
-    font-size: 2.5rem;
-
-    animation: $animation-title-duration forwards slide-from-top;
-
-    opacity: 0;
-}
-
 @keyframes slide-from-top {
     0% {
         transform: translateY(-40px);

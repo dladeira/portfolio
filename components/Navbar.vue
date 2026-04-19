@@ -5,22 +5,22 @@
                 <nuxt-link href="/" class="brand">dladeira<span class="brand-light">.com</span></nuxt-link>
             </div>
             <div class="links">
-                <nuxt-link href="/about" :class="route.path.includes('/about') ? 'link-active' : 'link'">
+                <nuxt-link href="/#about" class="link">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/about.svg" alt="Page icon" />
                     <div class="link-text">About Me</div>
                 </nuxt-link>
 
-                <nuxt-link href="/freelance" :class="route.path.includes('/freelance') ? 'link-active' : 'link'">
+                <nuxt-link href="/#experience" class="link">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/freelance.svg" alt="Page icon" />
-                    <div class="link-text">Freelance Work</div>
+                    <div class="link-text">Experience</div>
                 </nuxt-link>
 
-                <a href="/resume.pdf" target="_blank" :class="route.path.includes('/resume.pdf') ? 'link-active' : 'link'">
+                <a href="/resume.pdf" target="_blank" class="link">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/resume.svg" alt="Page icon" />
                     <div class="link-text">Resume</div>
                 </a>
 
-                <nuxt-link href="/contact" :class="route.path.includes('/contact') ? 'link-active' : 'link'">
+                <nuxt-link href="/#contact" class="link">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/contact.svg" alt="Page icon" />
                     <div class="link-text">Contact</div>
                 </nuxt-link>

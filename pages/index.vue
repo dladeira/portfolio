@@ -1,203 +1,64 @@
 <template>
-    <div class="page">
-        <div class="text">
-            <div class="text-header">
-                <h1 class="title">Daniel Ladeira</h1>
-                <h1 class="subtitle">Backend/DevOps Developer</h1>
-
-                <div class="buttons">
-                    <NuxtLink href="/contact" class="button button-contact">Contact</NuxtLink>
-                    <a href="/resume.pdf" target="_blank" class="button button-works">View CV <img class="button-works-icon" src="/icons/external.svg" alt="External link icon" /></a>
-                </div>
-            </div>
-
-            <div class="worked">
-                <p class="worked-title">Worked with</p>
-
-                <div class="people">
-                    <Client name="SpeedSilver" tag="3.5M subscribers" icon="/people/speedsilver.png" external="https://www.youtube.com/@SpeedSilver" />
-                    <Client name="Magic" tag="310K subscribers" icon="/people/magic.png" external="https://www.youtube.com/channel/UC0KMDDerdrOGTaqk3m-kWGw" />
-                </div>
-            </div>
+    <div class="home">
+        <div class="home-content">
+            <Hero />
+            <AboutMe />
+            <Experience />
+            <Contact />
         </div>
-        <NuxtImg class="hero" src="hero.svg" />
+        <div class="home-hero-wrapper">
+            <NuxtImg class="home-hero-fixed" src="/hero.svg" alt="" aria-hidden="true" />
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.page {
+.home {
+    position: relative;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     width: 100%;
 
-    margin-top: 5rem;
+    padding-right: min(34vw, 24rem);
+    padding-bottom: 5rem;
 
     @include tablet-below {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2rem;
-
-        margin-top: 2rem;
+        padding-right: 0;
     }
 }
 
-.text {
+.home-content {
+    position: relative;
+    z-index: 1;
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    gap: 10rem;
 
-    margin-bottom: 2rem;
-
-    @include tablet-below {
-        align-items: center;
-    }
+    width: 100%;
 }
 
-.text-header {
-    animation: slide-from-top $animation-duration forwards;
-    animation-delay: 0s;
-    opacity: 0.001;
+.home-hero-wrapper {
+    margin-left: auto;
 }
 
-.title {
-    margin: 0;
+.home-hero-fixed {
+    position: fixed;
 
-    font-size: 5.5rem;
-    font-weight: 700;
-    color: white;
+    top: 20%;
 
-    @include laptop-only {
-        font-size: 5rem;
-    }
-
-    @include tablet-below {
-        margin-bottom: 0.25rem;
-        font-size: 3.5rem;
-        text-align: center;
-    }
-}
-
-.subtitle {
-    margin: 0;
-
-    font-size: 2.75rem;
-    font-weight: 700;
-    color: $blue;
-
-    @include tablet-below {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2rem;
-
-    margin-top: 2rem;
-
-    @include tablet-below {
-        justify-content: center;
-    }
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 3rem;
-    width: 14rem;
-
-    border-radius: 5px;
-
-    text-decoration: none;
-
-    transition: background-color 200ms $transition;
-
-    &:hover {
-        cursor: pointer;
-    }
-
-    @include tablet-below {
-        width: 12rem;
-    }
-
-    &-contact {
-        background-color: rgba($blue, 0.1);
-        color: $blue;
-
-        &:hover {
-            background-color: rgba($blue, 0.15);
-        }
-    }
-
-    &-works {
-        background-color: rgba(white, 0.1);
-        color: white;
-
-        &:hover {
-            background-color: rgba(white, 0.15);
-        }
-    }
-}
-
-.button-works-icon {
-    height: 0.75rem;
-
-    margin-left: 0.5rem;
-
-    opacity: 0.5;
-}
-
-.worked {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
-
-    margin-top: 4rem;
+    width: 30rem;
 
     animation: slide-from-top $animation-duration forwards;
     animation-delay: 0s;
     opacity: 0.001;
 
     @include tablet-below {
-        margin-top: 2rem;
-    }
-}
-
-.worked-title {
-    margin: 0;
-    color: rgba(white, 0.5);
-}
-
-.people {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 4rem;
-}
-
-.hero {
-    animation: slide-from-top $animation-duration forwards;
-    animation-delay: 0s;
-    opacity: 0.001;
-
-    width: 35%;
-
-    @include tablet-below {
-        width: 20rem;
+        display: none;
     }
 }
 </style>

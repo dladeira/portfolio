@@ -1,15 +1,14 @@
 <template>
-    <div>
-        <h1 class="page-title">About Me</h1>
+    <section id="about" class="about-me">
+        <h1 class="about-me-title">About Me</h1>
 
         <div class="page">
             <div class="content">
-                <section class="section">
-                    <h2 class="section-title-main">Daniel Ladeira</h2>
+                <section class="section section-description">
                     <div class="section-paragraphs">
-                        <p class="section-paragraph">My name is Daniel Ladeira and I am a Backend/DevOps developer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating Minecraft modifications in Java, then into freelance full stack development, and now into full-time Backend/DevOps.</p>
-                        <p class="section-paragraph">I'm currently working as a full-time Backend/DevOps Developer at a mid-sized Dutch startup, while pursuing my bachelor's in computer science on the side. I work best hybrid and enjoy collaborating with other people.</p>
-                        <p class="section-paragraph">I'm super versed in anything JavaScript, though recently I've been expanding more into Rust and Python. As for DevOps, I'm currently deep diving into monitoring and observability (Grafana, OTEL, ClickStack) and deployment systems (Docker, Kubernetes).</p>
+                        <p class="section-paragraph">My name is Daniel Ladeira and I am a software engineer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating Minecraft modifications in Java.</p>
+                        <p class="section-paragraph">I'm currently working as a full-time software engineer at a fortune 500 tech company, while pursuing my bachelor's in computer science on the side. I work best hybrid and enjoy collaborating with other people..</p>
+                        <p class="section-paragraph">I'm super versed in anything JavaScript, though recently I've been expanding more into Rust and Python. I love DevOps as well, I’m currently deep diving into monitoring and observability (Grafana, OTEL, ClickStack) and deployment systems (Docker, Kubernetes).</p>
                     </div>
                 </section>
 
@@ -51,10 +50,22 @@
                 </section>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
+.about-me {
+    scroll-margin-top: 5rem;
+
+    width: 100%;
+}
+
+.about-me-title {
+    @include page-title;
+
+    margin-bottom: 1rem;
+}
+
 .page {
     display: flex;
     flex-direction: row;
@@ -88,6 +99,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
+
+    &-description {
+        margin-bottom: 0.5rem;
+    }
 }
 
 .section-title {
@@ -193,8 +208,4 @@
     font-size: 0.75rem;
     color: rgba(white, 0.5);
 }
-
-// .hero {
-//     width: 30%;
-// }
 </style>
