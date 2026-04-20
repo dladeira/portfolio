@@ -11,7 +11,7 @@
                     </div>
                     <p class="section-date">May 2026 - Present</p>
                 </div>
-                <p class="section-paragraph">Just started.</p>
+                <p class="section-paragraph">Just started</p>
             </section>
             <section class="section">
                 <div class="section-header">

@@ -3,7 +3,7 @@
         <div class="footer-top">
             <div class="branding">
                 <nuxt-link href="/" class="logo"> dladeira<span class="logo-domain">.com</span> </nuxt-link>
-                <p class="copyright">© 2025 dladeira</p>
+                <p class="copyright">© 2026 dladeira</p>
             </div>
 
             <div class="nav-links">
