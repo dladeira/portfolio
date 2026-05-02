@@ -6,7 +6,7 @@
             <section class="section section-description">
                 <div class="section-paragraphs">
                     <p class="section-paragraph">My name is Daniel Ladeira and I am a software engineer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating Minecraft modifications in Java.</p>
-                    <p class="section-paragraph">I'm currently working as a full-time software engineer at a fortune 500 tech company, while pursuing my bachelor's in computer science on the side. I work best hybrid and enjoy collaborating with other people..</p>
+                    <p class="section-paragraph">I'm currently working as a full-time software engineer at a fortune 500 tech company, while pursuing my bachelor's in computer science on the side. I work best hybrid and enjoy collaborating with other people.</p>
                     <p class="section-paragraph">I'm super versed in anything JavaScript, though recently I've been expanding more into Rust and Python. I love DevOps as well, I’m currently deep diving into monitoring and observability (Grafana, OTEL, ClickStack) and deployment systems (Docker, Kubernetes).</p>
                 </div>
             </section>
