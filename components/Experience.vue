@@ -29,7 +29,7 @@
                         <h4 class="section-company">Freelance</h4>
                         <p class="section-position">Full-Stack Web Developer</p>
                     </div>
-                    <p class="section-date">Feb 2025 - April 2026</p>
+                    <p class="section-date">July 2023 - Jan 2025</p>
                 </div>
                 <p class="section-paragraph">Collaborated with several large content creators developing multiple full-stack websites from scratch, adapting solution and tools to each client's needs. All designs, frontends, backends, deployments, and observability handled by me. Visitor figures range from a private internal tool, to over 45,000 monthly users.</p>
             </section>
