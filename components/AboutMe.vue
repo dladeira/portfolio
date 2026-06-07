@@ -5,9 +5,11 @@
         <div class="content">
             <section class="section section-description">
                 <div class="section-paragraphs">
-                    <p class="section-paragraph">My name is Daniel Ladeira and I am a software engineer based in Amsterdam, fluent in English, Portuguese, and Polish. My programming journey began in 2020, creating Minecraft modifications in Java.</p>
-                    <p class="section-paragraph">I'm currently working as a full-time software engineer at a fortune 500 tech company, while pursuing my bachelor's in computer science on the side. I work best hybrid and enjoy collaborating with other people.</p>
-                    <p class="section-paragraph">I'm super versed in anything JavaScript, though recently I've been expanding more into Rust and Python. I love DevOps as well, I’m currently deep diving into monitoring and observability (Grafana, OTEL, ClickStack) and deployment systems (Docker, Kubernetes).</p>
+                    <p class="section-paragraph">My name is Daniel Ladeira and I am a software engineer based in Amsterdam, fluent in English, Portuguese, and Polish.</p>
+                    <p class="section-paragraph">I started programming at 14, freelancing at 16, and landed my first full-time startup role by 18. Today, at 19, I'm balancing a CS degree while working for a F500 tech company.</p>
+                    <p class="section-paragraph">While I started coding very young and progressed really fast, I'm no exceptional developer. I just love what I do and pour an ungodly amount of hours into what I love.</p>
+                    <p class="section-paragraph">I work best hybrid and enjoy collaborating with other people. I'm super versed in anything JavaScript and Linux. I love backend, DevOps, monitoring and observability (Grafana, OTEL, ClickStack), and deployment systems (Docker, Kubernetes).</p>
+                    <p class="section-paragraph">Recently I've been expanding more into Rust, NixOS, ZFS, and taking my home lab to the next level.</p>
                 </div>
             </section>
 

@@ -17,7 +17,10 @@
 
                 <a href="/resume.pdf" target="_blank" class="link">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/resume.svg" alt="Page icon" />
-                    <div class="link-text">Resume</div>
+                    <div class="link-text">
+                        Resume
+                        <img class="link-external-icon" src="/icons/external.svg" alt="External link icon" />
+                    </div>
                 </a>
 
                 <nuxt-link href="/#contact" class="link">
@@ -150,10 +153,22 @@
 
 .link-text {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.35rem;
 
     @include phone-only {
         font-size: 0.75rem;
     }
+}
+
+.link-external-icon {
+    height: 0.6rem;
+
+    margin-left: 4px;
+
+    opacity: 0.5;
 }
 
 .icon {

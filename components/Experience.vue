@@ -6,8 +6,10 @@
             <section class="section">
                 <div class="section-header">
                     <div class="section-header-left">
-                        <h4 class="section-company">Fortune 500 Tech Company</h4>
-                        <p class="section-position">Software Engineer</p>
+                        <h4 class="section-company">
+                            <span class="section-company-anonymized">Fortune 500 Tech Company</span>
+                        </h4>
+                        <p class="section-position">Software Engineer I</p>
                     </div>
                     <p class="section-date">May 2026 - Present</p>
                 </div>
@@ -16,7 +18,9 @@
             <section class="section">
                 <div class="section-header">
                     <div class="section-header-left">
-                        <h4 class="section-company">Mid-Sized Dutch Startup</h4>
+                        <h4 class="section-company">
+                            <span class="section-company-anonymized">Mid-Sized Dutch Startup</span>
+                        </h4>
                         <p class="section-position">Backend / DevOps Developer</p>
                     </div>
                     <p class="section-date">Feb 2025 - April 2026</p>
@@ -105,6 +109,50 @@
 
 .section-company {
     margin: 0;
+}
+
+.section-company-anonymized {
+    position: relative;
+    display: inline-block;
+
+    border-bottom: 1px dashed $gray;
+
+    cursor: help;
+
+    &::after {
+        content: "Anonymized for personal privacy. Details available upon request";
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 50%;
+
+        width: max-content;
+        padding: 0.25rem 0.5rem;
+
+        border-radius: 5px;
+
+        background-color: rgba(black, 0.8);
+
+        font-size: 0.65rem;
+        font-weight: 400;
+        line-height: 150%;
+        color: rgba(white, 0.9);
+        text-align: center;
+        white-space: nowrap;
+
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateX(-50%);
+        transition: opacity 200ms $transition, visibility 200ms $transition;
+
+        z-index: 1;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .section-position {
