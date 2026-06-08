@@ -15,6 +15,11 @@
                     <div class="link-text">Experience</div>
                 </nuxt-link>
 
+                <nuxt-link href="/#contact" class="link">
+                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/contact.svg" alt="Page icon" />
+                    <div class="link-text">Contact</div>
+                </nuxt-link>
+
                 <a href="/resume.pdf" target="_blank" class="link">
                     <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/resume.svg" alt="Page icon" />
                     <div class="link-text">
@@ -22,11 +27,6 @@
                         <img class="link-external-icon" src="/icons/external.svg" alt="External link icon" />
                     </div>
                 </a>
-
-                <nuxt-link href="/#contact" class="link">
-                    <NuxtImg class="icon" height="24" width="24" src="/icons/navbar/contact.svg" alt="Page icon" />
-                    <div class="link-text">Contact</div>
-                </nuxt-link>
             </div>
         </div>
     </nav>
@@ -190,7 +190,7 @@ function scrollTo(id) {
             const ele = document.getElementById(id)
             window.scrollTo(ele.offsetLeft, ele.offsetTop)
         },
-        window.location.pathname == "/" ? 0 : 100
+        window.location.pathname == "/" ? 0 : 100,
     )
 }
 
