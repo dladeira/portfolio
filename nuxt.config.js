@@ -14,25 +14,5 @@ export default defineNuxtConfig({
     nitro: {
         compressPublicAssets: true,
     },
-    modules: ["@nuxt/image", "@nuxtjs/seo"],
-    site: {
-        url: process.env.NUXT_ORIGIN,
-    },
-    mongoose: {
-        uri: process.env.NUXT_MONGODB_URI,
-    },
-    nodemailer: {
-        from: process.env.NUXT_SMTP_FROM_HEADER,
-        host: process.env.NUXT_SMTP_HOST,
-        port: process.env.NUXT_SMTP_PORT,
-        secure: true,
-        auth: {
-            user: process.env.NUXT_SMTP_USER,
-            pass: process.env.NUXT_SMTP_PASS,
-        },
-    },
-    runtimeConfig: {
-        ORIGIN: process.env.NUXT_ORIGIN,
-        SMTP_TO: process.env.NUXT_SMTP_TO,
-    },
+    modules: ["@nuxt/image"],
 })

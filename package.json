@@ -2,18 +2,12 @@
     "scripts": {
         "dev": "nuxt dev --port 3000",
         "build": "nuxt build",
-        "preview": "nuxt preview",
-        "start": "NITRO_PORT=3030 node ./.output/server/index.mjs",
+        "start": "node ./.output/server/index.mjs",
         "postinstall": "nuxt prepare"
     },
     "devDependencies": {
         "@nuxt/image": "^1.8.1",
-        "@nuxtjs/seo": "^3.2.2",
         "nuxt": "^3.14.1592",
         "sass": "^1.82.0"
-    },
-    "dependencies": {
-        "dotenv": "^16.4.7",
-        "zod": "^3.24.1"
     }
 }
