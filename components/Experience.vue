@@ -120,7 +120,7 @@
     cursor: help;
 
     &::after {
-        content: "Anonymized for personal privacy. Details available upon request";
+        content: "Anonymized for privacy. Details available upon request";
         position: absolute;
         top: calc(100% + 0.5rem);
         left: 50%;
@@ -144,7 +144,9 @@
         visibility: hidden;
 
         transform: translateX(-50%);
-        transition: opacity 200ms $transition, visibility 200ms $transition;
+        transition:
+            opacity 200ms $transition,
+            visibility 200ms $transition;
 
         z-index: 1;
     }
