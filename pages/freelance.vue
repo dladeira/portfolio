@@ -116,7 +116,7 @@ const works = [
     {
         id: "infracharm",
         imageHeight: 33,
-        website: "https://infracharm.com",
+        website: "https://infracharm.com/?utm_source=manual&utm_medium=referral&utm_campaign=backlinks",
         tags: ["Nuxt", "Figma"],
         type: "client",
         stats: [
